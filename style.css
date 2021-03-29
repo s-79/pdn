@@ -1,0 +1,1149 @@
+/* ----------------------------------------------------------------------------- BACKGROUND */
+body {
+    background-image: url(img/arbre_reseau3_left.png),url(img/arbre_reseau3_right.png);
+    background-repeat: no-repeat,no-repeat;
+    background-position: top 6.2em left,top 5.7em right;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+section,.menus {
+    margin-top: 6em;
+}
+
+section {
+    min-height: 90vh;
+}
+
+.section_conn {
+      min-height: 0vh !important;
+}
+
+@media screen and (max-width: 80em){
+    body {
+        background-image: url(img/arbre_reseau3_left.png);
+        background-repeat: no-repeat;
+        background-position: top 9em left;
+        background-attachment: fixed;
+    }
+}
+
+/* ----------------------------------------------------------------------------- HEADER */
+.navbar {
+    background-color: #005a77;
+    font-size: 12px;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+}
+.nav-pills .nav-link {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 3px;
+    border: 2px solid #005a77 !important;
+    border-radius: 10px;
+}
+.nav-pills .nav-link.active,  .nav-pills .nav-link:hover {
+    color: #005a77;
+    background-color: #fff !important;
+    letter-spacing: 3px;
+}
+
+.nav-pills .nav-link.active i,  .nav-pills .nav-link:hover i {
+    color: #005a77;
+}
+
+.navbar-toggler{
+    color: #fff !important;
+    border-style: none;
+}
+
+.nav-link-toggle {
+  color: #e85017 !important;
+  text-align: center;
+  letter-spacing: 3px;
+  background-color: #fff !important;
+  border: 2px solid #005a77 !important;
+  border-radius: 10px;
+}
+
+/* .menuTxt{
+  border-bottom: 2px solid white !important;
+  padding-bottom: 0.5em;
+} */
+
+/* ----------------------------------------------------------------------------- TITRES */
+h1 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 30em){
+    h1{font-size: 1.25em;}
+}
+
+h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+}
+
+h3 {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    /* color : #fff; */
+}
+
+h4 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-bottom: 0rem !important;
+}
+
+figcaption h4 {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h5, a i{
+    color: #fff;
+    font-weight: normal;
+}
+
+h5, .adresse {
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 30em){
+    h5{font-size: 0.7em;}
+}
+
+h6 {
+    font-size: 0.73em;
+}
+
+@media screen and (max-width: 30em){
+    h6{font-size: 0.65em;}
+}
+
+/* ----------------------------------------------------------------------------- MODAL */
+
+div.infosStr {
+    line-height: 1;
+    text-transform: none;
+    font-weight:normal;
+}
+
+.initial {
+    text-transform: none;
+}
+
+.interligne  {
+    line-height: 1.3em;
+}
+
+.modal-footer,.modal-header {
+	padding-bottom: 0.3rem;
+}
+
+.modal-footer {
+    padding-top: 0.3rem;
+}
+
+.modal-body {
+    padding-bottom: 0rem;
+}
+
+/* ----------------------------------------------------------------------------- CARD */
+.card-body {
+    padding: 0.5rem;
+}
+
+/* ----------------------------------------------------------------------------- BOUTONS */
+
+.btn-outline-secondary {
+    color: #9ea6ae;
+	border-color: #ced4da;
+}
+
+.btn-outline-secondary:hover {
+	color: #495057;
+	background-color: #fff;
+	border-color: #ced4da;
+}
+
+.btn-outline-secondary:focus {
+    box-shadow: none!important;
+    border-color: #ced4da!important;
+    background-color: #fff!important;
+}
+
+/* ----------------------------------------------------------------------------- SPAN */
+
+span {
+    font-weight: bold;
+    /* color: #d82c2e; */
+}
+
+/* ----------------------------------------------------------------------------- TEXTES COULEURS */
+.orange {
+    color: #e85017;
+}
+
+.blue {
+    color: #005a77;
+}
+
+.actif {
+    color : green;
+}
+
+.inactif {
+    color : #e85017;
+}
+
+label {
+    color : #fff;
+}
+
+
+/* ----------------------------------------------------------------------------- LIENS */
+a:focus {
+    outline: none !important;
+}
+
+a i:hover, a:hover {
+    color: #e85017;
+    text-decoration:none;
+}
+.liens:hover {
+    color: #e85017 !important;
+    text-decoration:none;
+}
+
+a.dropdown-item {
+    font-size: 0.8em;
+}
+
+.rotate {
+    transform-origin: 50% 50%;
+    transform: rotateY( 180deg );
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+}
+
+.pointeur {
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------- FOOTER */
+footer {
+    background: #005a77;
+}
+
+.footer_conn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ----------------------------------------------------------------------------- RESPONSIVE */
+
+@media screen and (max-width: 576px){
+    #divChoixVille {
+        margin-top: 1em;
+    }
+
+    .orange-divider,#choixVille {
+        margin: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .osm {
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .navbar-brand {
+        font-size: 1.15rem;
+    }
+
+    .rowMenu div {
+        display: block !important;
+        text-align: center !important;
+    }
+
+    #menuPres {
+        margin-top: 1em !important;
+    }
+}
+
+/* ----------------------------------------------------------------------------- Présentation */
+
+@media screen and (max-width: 575px) {
+
+    .containerPres {
+      padding: 0.5em !important;
+      margin-top: 4em !important;
+    }
+    .bulleDispositif, .bulleCoordon, .bullePilotes {
+      display: none;
+    }
+    .contenuPres {
+      margin-top: 0em !important;
+    }
+    #objectifs {
+      margin-top: 0em !important;
+      margin-left: 1.5em !important;
+      margin-right: 1.5em !important;
+      margin-bottom: 0em !important;
+    }
+    .titreDispositif {
+      margin-top: 0em !important;
+      font-size: 0.8em !important;
+    }
+    .divDispositif {
+      padding: 1em !important;
+      margin: 0.5em !important;
+    }
+    .textPres {
+      font-size: 0.8em !important;
+      padding: 1em !important;
+      margin: 1em;
+    }
+    span.textPres {
+      margin: 0em !important;
+      padding: 5em 1em 0em 1em !important;
+    }
+    .bgDispositif {
+      background-position: 50% 2.7em !important;
+    }
+    #video {
+      width : 260px !important;
+      height : 180px !important;
+    }
+    .bgCoordo {
+      background-image: none !important;
+    }
+    #missions {
+      padding-top: 0em !important;
+    }
+    .pilotes {
+      display: block !important;
+      text-align: center;
+    }
+    .img-pilotes {
+      margin: 1em;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    .containerPres {
+      padding: 0.5em !important;
+      margin-top: 4em !important;
+    }
+    .bulleDispositif, .bulleCoordon, .bullePilotes {
+      display: none;
+    }
+    .contenuPres {
+      margin-top: 0em !important;
+    }
+    #objectifs {
+      margin-top: 0em !important;
+      margin-left: 1.5em !important;
+      margin-right: 1.5em !important;
+      margin-bottom: 0em !important;
+    }
+    .titreDispositif {
+      margin-top: 0em !important;
+      font-size: 0.9em !important;
+    }
+    .divDispositif {
+      padding: 1em !important;
+      margin: 0.5em !important;
+    }
+    .textPres {
+      font-size: 0.9em !important;
+      padding: 1em !important;
+      margin: 1em;
+    }
+    span.textPres {
+      margin: 0em !important;
+      padding: 5em 1em 0em 1em !important;
+    }
+    .bgDispositif {
+      background-position: 50% 2.7em !important;
+    }
+    .bgCoordo {
+      background-image: none !important;
+    }
+    #missions {
+      padding-top: 0em !important;
+    }
+    .pilotes {
+      display: block !important;
+      text-align: center;
+    }
+    .img-pilotes {
+      margin: 1em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .bulleDispositif, .bulleCoordo, .bullePilotes {
+      height : 120px !important;
+      left : -50px !important;
+      margin-bottom: 1em;
+    }
+    #objectifs {
+      margin-top: 0em !important;
+      margin-left: 1.5em !important;
+      margin-right: 1.5em !important;
+      margin-bottom: 0em !important;
+    }
+    .divDispositif {
+      padding: 1em !important;
+      margin: 0.5em !important;
+    }
+    .textPres {
+      font-size: 0.9em !important;
+      /* padding-left: 6em !important; */
+      padding: 1em !important;
+    }
+    #pres1_1a {
+      padding-left: 5em !important;
+    }
+    #pres1_2c {
+      padding-left: 11em !important;
+    }
+    #pres1_3a {
+      padding-left: 6em !important;
+    }
+    span.textPres {
+      margin: 0em !important;
+      padding: 5em 1em 0em 1em !important;
+    }
+    .bgDispositif {
+      background-position: 50% 2.5em !important;
+    }
+    #missions {
+      padding-top: 0em !important;
+    }
+    .pilotes {
+      display: block !important;
+      text-align: center;
+    }
+    .img-pilotes {
+      margin: 1em;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .divDispositif {
+    margin : 0em !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 640px) {
+  .footer_pres {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .containerPres {
+    min-height: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-height: 700px) {
+  .divDispositif {
+    margin-top : 12em !important;
+  }
+}
+
+/* ----------------------------------------------------------------------------- Page d'accueil */
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    #divAccPres, #divAccPdn {
+      justify-content: end !important;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    #divAccStr, #divAccOut {
+      justify-content: start !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .rowMenu {
+        width:100% !important;
+    }
+    /* section {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    } */
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1280px) {
+    .rowMenu {
+        width:90% !important;
+    }
+    /* section {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    } */
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1365px) {
+    .rowMenu {
+        width:80% !important;
+    }
+    /* section {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    } */
+}
+
+@media screen and (max-width: 400px) {
+    #etqPres, #etqStr, #etqPdn, #etqRes {
+        height : 50px;
+    }
+}
+
+/* ----------------------------------------------------------------------------- Structures */
+
+@media screen and (max-width: 388px){
+    .marginCard {
+      margin-left: 15px !important;
+      margin-right: 15px !important;
+    }
+}
+
+@media screen and (min-width: 389px){
+    .marginCard {
+      margin-left: 20px  !important;
+      margin-right: 20px !important;
+    }
+}
+
+@media screen and (min-width: 460px) and (max-width: 575px) {
+    #structures {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #structures {
+    flex-flow: row wrap !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    }
+    .cardHeight {
+      height: 150px;
+    }
+    .strCard {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+}
+
+/* ----------------------------------------------------------------------------- OSM */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .osm {
+        text-align: right;
+        padding-right: 0;
+    }
+}
+
+/* ----------------------------------------------------------------------------- Promeneurs */
+
+@media screen and (max-width: 575px) {
+    #promeneurs {
+    flex-flow: row wrap !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    }
+}
+
+@media screen and (max-width: 460px){
+    h3.modal-title.orange {
+        font-size: 0.85em;
+    }
+
+    #modalImg {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 388px){
+    .divfigure {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
+}
+
+@media screen and (min-width: 460px) and (max-width: 519px){
+    #promeneurs {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1199px){
+    #promeneurs {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+}
+
+/* ----------------------------------------------------------------------------- Ressources */
+
+@media screen and (max-width: 520px){
+    #sectionOut {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+
+    }
+    #divRessThem {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+    #divRessCat, #divRessThem, #divRessOut {
+      font-size: 0.82em;
+    }
+}
+
+/* ----------------------------------------------------------------------------- Bienvenue */
+
+@media screen and (max-width: 440px){
+    .bienvenuResp {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+      font-size: 0.87em;
+    }
+    .control-label {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+}
+
+/* ----------------------------------------------------------------------------- BACKGROUND */
+.orange-bg {
+    background: #e85017 !important;
+}
+
+.blue-bg {
+    /* background: #196a84; */
+    background: #005a77;
+}
+
+/* ----------------------------------------------------------------------------- BORDER */
+
+.border {
+    /* border : 1px solid #005a77 !important; */
+    border : none !important;
+}
+
+#divdetails {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+/* ----------------------------------------------------------------------------- FIGURE */
+figure{
+    margin-top: 0.55em;
+    border-left : 3px solid #005a77;
+    border-right : 1px solid #005a77;
+    border-top : 2px solid #005a77;
+    border-radius: 15% 15% 15% 15%;
+    /* border-radius: 0% 20%; */
+    opacity: 0.88;
+    box-shadow: 4px 4px 4px #bbb;
+}
+
+figure:hover {
+    margin-top : 0em;
+    opacity: 1;
+    /* border : 2px solid #d82c2e; */
+}
+
+.divfigure:hover {
+    /* padding:2px 13px 2px 13px; */
+
+}
+/* ----------------------------------------------------------------------------- INDEX */
+#coordo {
+    margin-bottom: 0.5rem !important;
+}
+
+.popover-body {
+    background-color: #e5eef1;
+    text-align: center;
+    font-weight: bold;
+    color : #005a77;
+}
+/* ----------------------------------------------------------------------------- STRUCTURE */
+.modalHeaderStr {
+    padding-top: 0.7em;
+}
+
+/* ----------------------------------------------------------------------------- PRESENTATION */
+.contenuPres {
+    margin-top: 10em;
+    max-width: 100%;
+}
+
+.bulleDispositif {
+    position: relative;
+    top: -100px;
+    left : -90px;
+}
+
+/* .iconeDispositif {
+    position: relative;
+    float : right;
+    top : -1em;
+    right : -1em;
+} */
+
+/* .iconeCoordo {
+    position: relative;
+    float : right;
+    top : 0em;
+    right : 0em;
+} */
+
+.bgDispositif {
+    background-image:url("img/pres/pdn dans rond100.PNG");
+    background-position : 98% 1em;
+    background-repeat:no-repeat;
+}
+
+.bgCoordo {
+    background-image:url('img/pres/fol93b70.jpg');
+    background-position : 98% 1em;
+    background-repeat:no-repeat;
+}
+
+.divDispositif {
+     margin-left: 5%;
+     margin-right: 5%;
+     margin-bottom: 5em;
+     color : #4e4e4e;
+     border : 2px solid #005a77;
+     border-radius: 20px;
+     box-shadow: 6px 6px 6px #aaa;
+     background-color: #fff;
+     padding : 2em 3em 1em 3em;
+}
+
+.titreDispositif {
+    position: relative;
+    margin-top: -9em;
+}
+
+.contenuDispositif {
+    position: relative;
+    margin-top: -0.5em;
+}
+
+.contenuDispositif {
+    position: relative;
+    margin-top: -0.5em;
+}
+
+#contenuDispositif1_2 {
+    position: relative;
+    margin-top: -3em !important;
+}
+
+.textPres {
+  font-size: 0.95em;
+	font-weight: 400;
+    /* padding-left: 3em; */
+    vertical-align: text-top;
+	/* line-height: 1.3; */
+}
+
+/* ----------------------------------------------------------------------------- Coordo */
+/* #divCoordo {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5em;
+    margin-top: -6em;
+    color : #4e4e4e;
+    border : 5px solid #005a77;
+    border-radius: 20px;
+    background-color: #fff;
+    padding : 3em;
+    position: relative;
+
+}
+
+#titreCoordo {
+    position: relative;
+    margin-top: -10em;
+}
+
+#bulleCoordo {
+    position: relative;
+    top: -110px;
+    left : -90px;
+}
+
+/* #contenuCoordo {
+    position: relative;
+    margin-top: -6em;
+} */
+
+/* ----------------------------------------------------------------------------- Financement */
+/* #divPilotes {
+    margin-left: 5%;
+    margin-right: 5%;
+    color : #4e4e4e;
+    border : 5px solid #005a77;
+    border-radius: 20px;
+    background-color: #fff;
+    padding : 3em;
+}
+
+#titrePilotes {
+    position: relative;
+    margin-top: -6em;
+}
+
+#bullePilotes {
+    position: relative;
+    top: -110px;
+    left : -90px;
+}
+ */
+
+/* ----------------------------------------------------------------------------- FORMULAIRE */ */
+select:focus {
+    box-shadow: none !important;
+}
+
+textarea {
+  resize: none;
+}
+
+#presentation
+{
+  vertical-align: top;
+}
+
+.form-control {
+    font-size: 1em;
+}
+
+input#imageFile.form-control-file-xs.col-5,input#localFile.form-control-file-xs.col-5 {
+    padding-left: 0px;
+}
+
+#imgFile {
+	margin-bottom: 0.6rem;
+}
+
+div.custom-control-sm {
+    margin-left: 1rem !important;
+}
+
+#choixMultiple {
+	margin-left: -1.25rem !important;
+}
+
+label#choixMultiple, {
+    font-size: 0.9rem;
+}
+
+label.form-check-label {
+    line-height: 1;
+    font-size: 0.9rem;
+}
+
+.input-group-text {
+	padding: .10rem .550rem;
+}
+
+input#idMail.form-control-sm.col-3 {
+    margin-left: 0.2rem !important;
+}
+
+input#actif.form-check-input.col-0,input#whatsApp.form-check-input.col-0, {
+    margin-left: 0rem !important;
+}
+
+#valide {
+    margin-left: 0rem;
+}
+
+#labelValide {
+    padding-left: 2em;
+}
+
+#labelActif {
+    margin-left: 0.75rem !important;
+}
+
+input,select {
+    border: medium none;
+}
+
+/* ----------------------------------------------------------------------------- DIVIDER */
+.orange-divider {
+    width: 235px;
+    height: 2px;
+    background: #e85017;
+    /* margin: 0 auto 20px; */
+}
+
+.orange-divider-pres {
+    height: 2px;
+    background: #e85017;
+    margin: auto;
+}
+
+.blue-divider {
+    width: 250px;
+    height: 2px;
+    background: #005a77;
+    margin: 0 auto 20px;
+}
+
+.white-divider {
+    width: 100%;
+    height: 17px;
+    background: #fff;
+    /* margin: 0 auto 20px; */
+}
+
+
+/* ----------------------------------------------------------------------------- ANIMATIONS */
+
+.icone, {
+    position: relative;
+    /* top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+/* bulle orange */
+#path828-9-2-6-3 {
+    stroke-dasharray:400 !important;
+    stroke-dashoffset:400;
+    animation: anim2 9s ease forwards;
+}
+
+/* bulle bleue */
+#path828-5-9 {
+    /* 1ère valeur : trait plein, 2ème valeur : vide */
+    stroke-dasharray:430 !important;
+    stroke-dashoffset:430;
+    animation: anim 5s ease forwards;
+}
+
+/* texte PDN */
+#path848 {
+    animation: opa 5.6s ease;
+    /* x1, y1, x2, y2 ou y est le temps et y la puissance du ratio */
+    /* animation: opa 3.5s cubic-bezier(0.9999, 1, 0.99, 0); */
+}
+
+/* texte 93 */
+#path17 {
+    animation: opa 3.3s step-end;
+}
+
+@keyframes opa {
+    from {
+        fill-opacity:0;
+        stroke-opacity:0;
+    }
+   to {
+       fill-opacity:1;
+       stroke-opacity:1;
+   }
+}
+
+@keyframes anim {
+   to {
+       stroke-dashoffset: 0;
+   }
+}
+
+@keyframes anim2 {
+   to {
+       stroke-dashoffset: 0;
+   }
+}
+
+/* ----------------------------------------------------------------------------- MENU PDN */
+.menu {
+
+    /* Quand on va scroller, il sera toujours présent */
+    /* position: fixed; */
+    /* Le mettre tout devant */
+    /* z-index: 10; */
+    /* On le cache au démarrage puis avec js, on lui mettyre + 300px pour le faire apparaitre */
+    /* right: -3000px; */
+    /* Pour cacher la scrollbar sur l'axe des X */
+    overflow-x: hidden;
+    /* transition: 0.5s; */
+}
+
+/* ----------------------------------------------------------------------------- STRUCTURES */
+
+@media screen and (min-width: 992px){
+    #visuMap {margin-left: 3.5em;}
+}
+
+
+.card {
+    margin-top: 0.65em !important;
+    box-shadow: 4px 4px 4px #bbb;
+    /* margin-bottom: 5px; */
+}
+
+.card:hover {
+    /* margin-left: 15px !important;
+    margin-right: 15px !important;*/
+    margin-top: 0em !important;
+    /* margin-bottom: 0px; */
+}
+
+.card-title {
+	margin-bottom: 0.35em;
+}
+
+
+/* ----------------------------------------------------------------------------- RESSOURCES */
+.selectedThem{
+    background: #e85017 !important;
+    color : #fff !important;
+}
+
+#divRessCat h2 {
+    font-size: 0.9em;
+}
+
+#divRessThem {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#divRessOut {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.borderCat {
+    /* border: 0.5px solid #e85017; */
+	/* display: inline-block; */
+	padding: .4em .6em;
+	text-align: center;
+	border-radius: .80rem;
+    color : #fff;
+    background-color: #005a77;
+    box-shadow: 4px 4px 4px #bbb;
+}
+
+.borderCat:hover {
+    background-color: #e85017 !important;
+}
+
+.borderThem {
+	padding: .2em .3em;
+	text-align: center;
+	border-radius: .80rem;
+    background-color: #fff;
+    color : #005a77;
+    box-shadow: 4px 4px 4px #bbb;
+}
+
+.borderThem:hover {
+    background-color: #e85017 !important;
+    color : #fff !important;
+}
+
+.borderOut {
+	padding: .2em .3em;
+	/* text-align: left; */
+    margin-bottom: 0em;
+	border-radius: .80rem;
+    /* border-radius: .80rem .80rem 0 0; */
+    background-color: #fff;
+    color : #005a77;
+    box-shadow: 4px 4px 4px #bbb;
+}
+
+.borderOut:hover {
+    background-color: #e85017 !important;
+    color : #fff !important;
+}
+
+.borderOutDetails {
+	padding: 1em;
+	/* text-align: left; */
+	/* border-radius: .80em; */
+    border-radius: 0em 0em .80rem .80rem;
+    background-color: #fff;
+    color : #005a77;
+    box-shadow: 4px 4px 4px #bbb;
+}
+
+.textDescription {
+  font-size: 0.9em !important;
+}
+
+/* ----------------------------------------------------------------------------- CONNEXION */
+
+.borderInput {
+    border : 0.5px solid #bbb;
+}
+
+#ValiderConnexion {
+    background-color: #005a77;
+    border-color: #005a77;
+    color : #fff;
+}
+
+#ValiderConnexion:hover {
+    background-color: #e85017;
+    border-color: #e85017;
+}
+
+
+
+/* ----------------------------------------------------------------------------- ADMIN */
+/* .priorité
+{
+    z-index : 2;
+} */
+
+/* ----------------------------------------------------------------------------- pour grossir une image au surval, donner la class grow */
+/* .grow img{
+transition: 1s ease;
+}
+
+.grow img:hover{
+-webkit-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05);
+transition: 1s ease;
+} */
