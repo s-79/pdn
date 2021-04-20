@@ -1,0 +1,148 @@
+<!--                                                                             ! ! ! - - P D N - - ! ! ! -->
+
+<div class="modal fade" id="modal_select_pdn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter des PDN à l'évenement</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="d-flex justify-content-start">
+          <button id="btn_select_AllPdn" type="button" class="btn btn-outline-secondary m-2">Tous</button>
+          <button id="btn_select_NoPdn" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
+      </div>
+
+      <div id="modal_list_pdn" class="modal-body py-0" style="overflow-y:scroll; overflow-x:hidden; height:500px;">
+      </div>
+      <div class="modal-footer">
+          <button id="btn_select_pdn" type="button" class="btn btn-primary">Séléctionner</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--                                                                             ! ! ! - - R E S S O U R C E S- - ! ! ! -->
+
+<div class="modal fade" id="modal_select_ress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'évenement</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="d-flex justify-content-start">
+          <button id="btn_select_AllRess" type="button" class="btn btn-outline-secondary m-2">Tous</button>
+          <button id="btn_select_NoRess" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
+      </div>
+
+      <div id="modal_list_ress" class="modal-body py-0" style="overflow-y:scroll; overflow-x:hidden; height:500px;">
+      </div>
+      <div class="modal-footer">
+          <button id="btn_select_ress" type="button" class="btn btn-primary">Séléctionner</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--                                                                             ! ! ! - - P A R T E N A I R E S- - ! ! ! -->
+
+<div class="modal fade" id="modal_select_part" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'évenement</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="d-flex justify-content-start">
+          <button id="btn_select_Allpart" type="button" class="btn btn-outline-secondary m-2">Tous</button>
+          <button id="btn_select_Nopart" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
+      </div>
+
+      <div id="modal_list_part" class="modal-body py-0" style="overflow-y:scroll; overflow-x:hidden; height:500px;">
+      </div>
+      <div class="modal-footer">
+          <button id="btn_select_part" type="button" class="btn btn-primary">Séléctionner</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--                                                                             ! ! ! - - C O O R D O - - ! ! ! -->
+
+<!--                                                                                                               Modal pour choisir ajouter / modifier un coordo -->
+<div class="modal fade" id="modal_coordo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter ou modifier/supprimer un.e coordo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+          Souhaitez-vous ajouter ou modifier/supprimer un.e coordo ?
+      </div>
+      <div class="modal-footer">
+          <button id="btn_coordo_create" type="button" class="btn btn-primary close-modal" data-bs-toggle="modal" data-bs-target="#modal_coordo_create">Ajouter</button>
+          <button id="btn_coordo_update" type="button" class="btn btn-warning close-modal" data-bs-toggle="modal" data-bs-target="#modal_coordo_update">Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---                                                                           Modal pour ajouter un·e coordo -->
+<div class="modal fade" id="modal_coordo_create" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter un.e coordo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form_coordo_create">
+                    <div class="form-floating mx-3 mt-3">
+                        <input type="text" class="form-control" id="create_prenom_coordo" placeholder="Nom *">
+                        <label for="create_prenom_coordo">Prénom *</label>
+                    </div>
+                    <div class="form-floating mx-3 mt-3">
+                        <input type="text" class="form-control" id="create_nom_coordo" placeholder="Nom *">
+                        <label for="create_nom_coordo">Nom *</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="coordo_create" type="button" class="btn btn-primary">Ajouter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---                                                                           Modal pour modifier un·e coordo -->
+<div class="modal fade" id="modal_coordo_update" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modifier ou supprimer un.e coordo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form_coordo_update">
+                    <div class="form-floating mx-3 mt-4">
+                        <select class="form-select" id="select_nom_coordo" aria-label="Nom du coordo">
+                        </select>
+                        <label for="select_nom_coordo">Séléctionner le nom du / de la coordo à modifier</label>
+                    </div>
+                    <div class="form-floating mx-3 mt-3">
+                        <input type="text" class="form-control" id="update_prenom_coordo" placeholder="Prénom du / de la coordo">
+                        <label for="update_prenom_coordo">Modifier le prénom du / de la coordo</label>
+                    </div>
+                    <div class="form-floating mx-3 mt-3">
+                        <input type="text" class="form-control" id="update_nom_coordo" placeholder="Nom du / de la coordo">
+                        <label for="update_nom_coordo">Modifier le nom du / de la coordo</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="coordo_update" type="button" class="btn btn-warning">Modifier</button>
+                <button id="coordo_delete" type="button" class="btn btn-danger">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -71,7 +71,7 @@ include("header.php"); ?>
 
 <script src="js/str.js"></script>
 <script src="js/ajax_str.js"></script>
-<script src="js/funct.js"></script>
+<script src="js/functions.js"></script>
 <script src="js/sessionStorage.js"></script>
 
 </html>
