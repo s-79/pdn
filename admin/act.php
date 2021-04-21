@@ -118,7 +118,7 @@ include("header.php"); ?>
                         </div>
                         <div class="row mt-3 pt-1 me-1">
                             <div class="form-floating mx-3 col-8">
-                                <input type="text" class="form-control" id="nb_outils" placeholder="Nombre de ressources">
+                                <input type="text" class="form-control" id="nb_ress" placeholder="Nombre de ressources">
                                 <label for="nb_ress" class="ps-4">Nb d'outils partagés</label>
                             </div>
                             <div class="pt-2 col-2">
@@ -191,6 +191,25 @@ include("header.php"); ?>
     </form>
 </div>
 
+<!--                                                                            Tableau Part -->
+<div id="div_tableau_part" class="container">
+<div class="row justify-content-center mt-5">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="d-none" scope="col" style="width:130px">#</th>
+                <th scope="col" style="width:130px">Partenaire</th>
+                <th scope="col" style="width:130px">Ville</th>
+                <th scope="col" style="width:130px">Prénom Ref</th>
+                <th scope="col" style="width:130px">Nom Ref</th>
+            </tr>
+        </thead>
+        <tbody id="tableau_part">
+        </tbody>
+    </table>
+</div>
+</div>
+
 <!--                                                                            Tableau PDN-->
 <div id="div_tableau_pdn" class="container">
 <div class="row justify-content-center mt-4">
@@ -198,32 +217,13 @@ include("header.php"); ?>
         <thead>
             <tr>
                 <th class="d-none" scope="col" style="width:130px">#</th>
-                <th scope="col" style="width:130px">Prénom</th>
-                <th scope="col" style="width:130px">Nom</th>
                 <th scope="col" style="width:130px">Structure</th>
                 <th scope="col" style="width:130px">Ville</th>
+                <th scope="col" style="width:130px">Prénom Pdn</th>
+                <th scope="col" style="width:130px">Nom Pdn</th>
             </tr>
         </thead>
         <tbody id="tableau_pdn">
-        </tbody>
-    </table>
-</div>
-</div>
-
-<!--                                                                            Tableau Part -->
-<div id="div_tableau_part" class="container d-none">
-<div class="row justify-content-center mt-5">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th class="d-none" scope="col" style="width:130px">#</th>
-                <th scope="col" style="width:130px">Nom</th>
-                <th scope="col" style="width:130px">Ville</th>
-                <th scope="col" style="width:130px">Prénom Ref</th>
-                <th scope="col" style="width:130px">Nom Ref</th>
-            </tr>
-        </thead>
-        <tbody id="tableau_part">
         </tbody>
     </table>
 </div>

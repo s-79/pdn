@@ -9,6 +9,10 @@ $id_act_coordo = mysqli_real_escape_string($conn, $_GET['id_act_coordo']);
 $id_act_ress = mysqli_real_escape_string($conn, $_GET['id_act_ress']);
 $id_act_pdn = mysqli_real_escape_string($conn, $_GET['id_act_pdn']);
 $id_act_part = mysqli_real_escape_string($conn, $_GET['id_act_part']);
+$uuid = mysqli_real_escape_string($conn, $_GET['uuid']);
+
+$id_act_table_part = mysqli_real_escape_string($conn, $_GET['id_act_table_part']);
+$id_act_table_pdn = mysqli_real_escape_string($conn, $_GET['id_act_table_pdn']);
 
 if($id) {
     $query = "SELECT * FROM `v_act` WHERE `id` = '$id';";
@@ -29,7 +33,7 @@ if($id) {
         $whatsapp = $row['whatsapp'];
         $twitter = $row['twitter'];
         $site = $row['site'];
-        $nb_outils = $row['nb_outils'];
+        $nb_ress = $row['nb_ress'];
         $duree = $row['duree'];
         $nb_pdn = $row['nb_pdn'];
         $nb_part = $row['nb_part'];
@@ -50,7 +54,7 @@ if($id) {
             "whatsapp" => $whatsapp,
             "twitter" => $twitter,
             "site" => $site,
-            "nb_outils" => $nb_outils,
+            "nb_ress" => $nb_ress,
             "duree" => $duree,
             "nb_pdn" => $nb_pdn,
             "nb_part" => $nb_part,
@@ -100,6 +104,61 @@ if($id) {
     while($row = mysqli_fetch_array($result)){
         $id = $row['id'];
         $return_arr[] = array("id" => $id);
+    }
+
+// ----------------------------------------------------------------------------- Récupération de l'id de l'action nouvellement créé
+} elseif($uuid) {
+    $query = "SELECT `id` FROM `v_act` WHERE `uuid` = '$uuid';";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $return_arr[] = array("id" => $id);
+    }
+
+// ----------------------------------------------------------------------------- Récupération des données des partenaires liés à l'action pour tableau
+} elseif($id_act_table_part) {
+    $query = "SELECT `id`, `nom`, `ville`, `prenom_ref`, `nom_ref` FROM `v_act_part` WHERE `act_id` = '$id_act_table_part';";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $nom = $row['nom'];
+        $ville = $row['ville'];
+        $prenom_ref = $row['prenom_ref'];
+        $nom_ref = $row['nom_ref'];
+
+        $return_arr[] = array(
+            "id" => $id,
+            "nom" => $nom,
+            "ville" => $ville,
+            "prenom_ref" => $prenom_ref,
+            "nom_ref" => $nom_ref
+        );
+    }
+
+// ----------------------------------------------------------------------------- Récupération des données des pdn liés à l'action pour tableau
+} elseif($id_act_table_pdn) {
+    $query = "SELECT `id`, `structure`, `ville`, `prenom`, `nom` FROM `v_act_pdn` WHERE `act_id` = '$id_act_table_pdn';";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $structure = $row['structure'];
+        $ville = $row['ville'];
+        $prenom = $row['prenom'];
+        $nom = $row['nom'];
+
+        $return_arr[] = array(
+            "id" => $id,
+            "structure" => $structure,
+            "ville" => $ville,
+            "prenom" => $prenom,
+            "nom" => $nom
+        );
     }
 }
 

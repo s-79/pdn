@@ -47,17 +47,16 @@ const ajaxListRess = (liste, checked) => {
                 res += `<label class="form-check-label text-dark" for="ress${id}">${nom}</label></div>`;
                 const ressId = `#ress${id}`;
                 $(ressId).prop('checked', false);
-                // ------------------------------------------------------------- Remplissage du tableau qui sera ensuite stocké dans une variable de session
+                // -------------------------------------------------------------  Remplissage du tableau, conversion en string Json et stockage dans la variable de session
                 arrayIdRess.push(ressId);
+                const jsonIdRess = JSON.stringify(arrayIdRess);
+                sessionStorage.setItem('jsonIdRess', jsonIdRess);
             }
             $(liste).html(res);
-            //------------------------------------------------------------------ Conversion du tableau en string Json et stockage dans la variable de session
-            const jsonIdRess = JSON.stringify(arrayIdRess);
-            sessionStorage.setItem('jsonIdRess', jsonIdRess);
 
             //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
             const jsonSelectedRess = sessionStorage.getItem('jsonSelectedRess');
-            sessionStorage.removeItem('jsonSelectedRess');
+            // sessionStorage.removeItem('jsonSelectedRess');
             //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
             if(jsonSelectedRess) {
                 const arraySelectedRess = JSON.parse(jsonSelectedRess);
@@ -86,17 +85,16 @@ const ajaxListPdn = (liste, checked) => {
                 res += `<label class="form-check-label text-dark" for="pdn${id}">${nom}</label></div>`;
                 const pdnId = `#pdn${id}`;
                 $(pdnId).prop('checked', false);
-                // ------------------------------------------------------------- Remplissage du tableau qui sera ensuite stocké dans une variable de session
+                // ------------------------------------------------------------- Remplissage du tableau, conversion en string Json et stockage dans la variable de session
                 arrayIdPdn.push(pdnId);
+                const jsonIdPdn = JSON.stringify(arrayIdPdn);
+                sessionStorage.setItem('jsonIdPdn', jsonIdPdn);
             }
             $(liste).html(res);
-            //------------------------------------------------------------------ Conversion du tableau en string Json et stockage dans la variable de session
-            const jsonIdPdn = JSON.stringify(arrayIdPdn);
-            sessionStorage.setItem('jsonIdPdn', jsonIdPdn);
 
             //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
             const jsonSelectedPdn = sessionStorage.getItem('jsonSelectedPdn');
-            sessionStorage.removeItem('jsonSelectedPdn');
+            // sessionStorage.removeItem('jsonSelectedPdn');
             //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
             if(jsonSelectedPdn) {
                 const arraySelectedPdn = JSON.parse(jsonSelectedPdn);
@@ -125,17 +123,16 @@ const ajaxListPart = (liste, checked) => {
                 res += `<label class="form-check-label text-dark" for="part${id}">${nom}</label></div>`;
                 const partId = `#part${id}`;
                 $(partId).prop('checked', false);
-                // ------------------------------------------------------------- Remplissage du tableau
+                // -------------------------------------------------------------  Remplissage du tableau, conversion en string Json et stockage dans la variable de session
                 arrayIdPart.push(partId);
+                const jsonIdPart = JSON.stringify(arrayIdPart);
+                sessionStorage.setItem('jsonIdPart', jsonIdPart);
             }
             $(liste).html(res);
-            //------------------------------------------------------------------ Conversion du tableau en string Json et stockage dans la variable de session
-            const jsonIdPart = JSON.stringify(arrayIdPart);
-            sessionStorage.setItem('jsonIdPart', jsonIdPart);
 
             //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
             const jsonSelectedPart = sessionStorage.getItem('jsonSelectedPart');
-            sessionStorage.removeItem('jsonSelectedPart');
+            // sessionStorage.removeItem('jsonSelectedPart');
             //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
             if(jsonSelectedPart) {
                 const arraySelectedPart = JSON.parse(jsonSelectedPart);
@@ -153,6 +150,7 @@ const ajaxListCoordo = (liste) => {
         data : {v_coordo:"v_coordo"},
         success: function(response){
             const len = response.length;
+            let arrayIdCoordo = [];
             let res = "";
             for (let i = 0; i < len; i++) {
                 const id = response[i].id;
@@ -160,8 +158,12 @@ const ajaxListCoordo = (liste) => {
                 res += `<div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="coordo${id}">
                 <label class="form-check-label text-white" for="coordo${id}">${nom}</label></div>`;
-                const intId = `#coordo${id}`;
-                $(intId).prop('checked', false);
+                const coordoId = `#coordo${id}`;
+                $(coordoId).prop('checked', false);
+                // -------------------------------------------------------------  Remplissage du tableau, conversion en string Json et stockage dans la variable de session
+                arrayIdCoordo.push(coordoId);
+                const jsonIdCoordo = JSON.stringify(arrayIdCoordo);
+                sessionStorage.setItem('jsonIdCoordo', jsonIdCoordo);
             }
             $(liste).html(res);
         }
@@ -189,7 +191,7 @@ const ajaxGetAct = (id_act) => {
             const whatsapp = response[0].whatsapp;
             const twitter = response[0].twitter;
             const site = response[0].site;
-            const nb_outils = response[0].nb_outils;
+            const nb_ress = response[0].nb_ress;
             const duree = response[0].duree;
             const nb_pdn = response[0].nb_pdn;
             const nb_part = response[0].nb_part;
@@ -209,7 +211,7 @@ const ajaxGetAct = (id_act) => {
             if (whatsapp === "1") $("#whatsapp").prop('checked', true);
             if (twitter === "1") $("#twitter").prop('checked', true);
             if (site === "1") $("#site").prop('checked', true);
-            $("#nb_ress").val(nb_outils);
+            $("#nb_ress").val(nb_ress);
             $("#duree").val(duree);
             $("#nb_pdn").val(nb_pdn);
             $("#nb_part").val(nb_part);
@@ -243,16 +245,16 @@ const ajaxGetRess = (id_act) => {
         dataType: 'JSON',
         data : {id_act_ress:id_act},
         success: function(response){
-            let arraySelectedPart = [];
+            let arraySelectedRess = [];
             const len = response.length;
             for (let i = 0; i < len; i++) {
                 let id = "#ress"
                 id += response[i].id;
-                arraySelectedPart.push(id);
+                arraySelectedRess.push(id);
             }
             //----------------------------------------------------------------- Stockage du tableau Selected
-            const jsonSelectedPart = JSON.stringify(arraySelectedPart);
-            sessionStorage.setItem('jsonSelectedPart', jsonSelectedPart);
+            const jsonSelectedRess = JSON.stringify(arraySelectedRess);
+            sessionStorage.setItem('jsonSelectedRess', jsonSelectedRess);
         }
     });
 }
@@ -299,168 +301,210 @@ const ajaxGetPart = (id_act) => {
     });
 }
 
-// //----------------------------------------------------------------------------- Remplissage du tableau des jeunes en fonction de l'id de l'événement
-// const ajaxActJeune = (id_act, liste) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {id_act:id_act},
-//         success: function(response){
-//             const len = response.length;
-//             let res = "";
-//             for (let i = 0; i < len; i++) {
-//                 const id = response[i].id;
-//                 const prenom = response[i].prenom;
-//                 const nom = response[i].nom;
-//                 const nom_ville = response[i].nom_ville;
-//                 const acc = response[i].acc;
-//                 res += `<tr style="cursor: pointer" onclick="id_jeune_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${prenom}</td><td>${nom}</td><td>${nom_ville}</td><td>${acc}</td></tr>`;
-//             }
-//             $(liste).append(res);
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Remplissage du tableau des pro en fonction de l'id de l'événement
-// const ajaxActPro = (id_act, liste) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {id_act_pro:id_act},
-//         success: function(response){
-//             const len = response.length;
-//             let res = "";
-//             for (let i = 0; i < len; i++) {
-//                 const id = response[i].id;
-//                 const prenom = response[i].prenom;
-//                 const nom = response[i].nom;
-//                 const structure = response[i].structure;
-//                 const ville = response[i].ville;
-//                 res += `<tr style="cursor: pointer" onclick="id_pro_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${prenom}</td><td>${nom}</td><td>${structure}</td><td>${ville}</td></tr>`;
-//             }
-//             $(liste).append(res);
-//         }
-//     });
-// }
+//----------------------------------------------------------------------------- Remplissage du tableau des partenaires en fonction de l'id de l'événement
+const ajaxActPart = (id_act, liste) => {
+    $.ajax({
+        url: "php/act_Get.php",
+        dataType: 'JSON',
+        data : {id_act_table_part:id_act},
+        success: function(response){
+            const len = response.length;
+            let res = "";
+            for (let i = 0; i < len; i++) {
+                const id = response[i].id;
+                const nom = response[i].nom;
+                const ville = response[i].ville;
+                const prenom_ref = response[i].prenom_ref;
+                const nom_ref = response[i].nom_ref;
+                res += `<tr style="cursor: pointer" onclick="id_part_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${nom}</td><td>${ville}</td><td>${prenom_ref}</td><td>${nom_ref}</td></tr>`;
+            }
+            $(liste).append(res);
+        }
+    });
+}
 
-// // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
-//
-// const act_Create = (mission, dat, id_ville, type, visio, intitule, uuid, id_projet, organise, nb_jeunes, nb_pros, commentaires) => {
-//     $.ajax({
-//         url: 'php/act.php',
-//         dataType: 'JSON',
-//         data : {mission:mission, dat:dat, id_ville:id_ville, type:type, visio:visio, intitule:intitule, uuid:uuid, id_projet:id_projet, organise:organise, nb_jeunes:nb_jeunes, nb_pros:nb_pros, commentaires:commentaires},
-//         complete: function(){
-//             //------------------------------------------------------------------ Récupération de l'id de l'événement créé
-//             //------------------------------------------------------------------ Puis récupération des intervenants et association avec l'évenemnt dans la table intervenir
-//             act_Get_Id(uuid);
-//
-//             alert("L'événement a bien été ajouté à la base de données.");
-//             //------------------------------------------------------------------ Réinitialisation de la pages des événements
-//             act_Reset();
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Récupération de l'id de l'événement créé
-// const act_Get_Id = (uuid) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {uuid:uuid},
-//         success: function(response){
-//             const id_act = response[0].id;
-//             act_Get_Inter(id_act);
-//         }
-//     });
-// }
-//
-// //------------------------------------------------------------------------------ Récupération des intervenants et association avec l'évenemnt dans la table intervenir
-// const act_Get_Inter = (id_act) => {
-//     $.ajax({
-//         url: "php/populate.php",
-//         dataType: 'JSON',
-//         data : {v_int:"v_int"},
-//         success: function(response){
-//             const len = response.length;
-//             let checkInt = [];
-//             for (let i = 0; i < len; i++) {
-//                 const id = response[i].id;
-//                 const nom = response[i].nom;
-//                 const intId = `#int${id}`;
-//                 let check =  $(intId).is(':checked');
-//                 if(check) checkInt.push(id);
-//             }
-//             for(id_int of checkInt) {
-//                 $.ajax({
-//                     url: 'php/act.php',
-//                     dataType: 'JSON',
-//                     data : {id_int:id_int, id_act:id_act},
-//                 });
-//             }
-//         }
-//     });
-// }
-//
-//
-// // ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
-//
-// const act_Update = (id, mission, dat, id_ville, type, visio, intitule, uuid, id_projet, organise, nb_jeunes, nb_pros, commentaires) => {
-//     $.ajax({
-//         url: 'php/act.php',
-//         dataType: 'JSON',
-//         data : {id:id, mission:mission, dat:dat, id_ville:id_ville, type:type, visio:visio, intitule:intitule, uuid:uuid, id_projet:id_projet, organise:organise, nb_jeunes:nb_jeunes, nb_pros:nb_pros, commentaires:commentaires},
-//         complete: function(){
-//             //------------------------------------------------------------------ Suppression des associations entre intervenants et cet événement dans la table intervenir
-//             //------------------------------------------------------------------ Puis récupération des intervenants et association avec l'évenemnt dans la table intervenir
-//             act_Delete_Int(id);
-//
-//             alert("L'événement a bien été modifié.");
-//             //----------------------------------------------------------------- Réinitialisation de la pages des événements
-//             act_Reset();
-//
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Suppression des associations entre intervenants et cet événement dans la table intervenir
-// const act_Delete_Int = (id_act) => {
-//     $.ajax({
-//         url: "php/act.php",
-//         dataType: 'JSON',
-//         data : {id_act_del_int:id_act},
-//         complete: function(){
-//             act_Get_Inter(id_act);
-//         }
-//     });
-// }
-//
-// // ----------------------------------------------------------------------------- ! ! ! - - D E L E T E - - ! ! !
-// const act_Delete = (id) => {
-//     //------------------------------------------------------------------------- Envoie de l'id vers la BDD pour suppression
-//     $.ajax({
-//         url: "php/act.php",
-//         dataType: 'JSON',
-//         data : {id_del:id},
-//         complete: function() {
-//             //------------------------------------------------------------------ Vérification : L'ID est-il bien supprimé de la BDD ?
-//             $.ajax({
-//                 url: "php/exist.php",
-//                 dataType: 'JSON',
-//                 data : {id_act:id},
-//                 success: function(response){
-//                     const exist = parseInt(response[0].exist);
-//                     if(exist === 1) alert("Suppression impossible : l'évenement est relié à des jeunes ou des intervenant.e.s dans la BDD.");
-//                     else {
-//                         alert("L'événement a bien été supprimé de la base de données.");
-//                         //------------------------------------------------------ Réinitialisation de la liste des types et noms d'organisme sur la page jeune (fonction dans orga.js)
-//                         act_Reset();
-//                     }
-//                 }
-//             });
-//         }
-//     });
-// }
+//----------------------------------------------------------------------------- Remplissage du tableau des PDN en fonction de l'id de l'action
+const ajaxActPdn = (id_act, liste) => {
+    $.ajax({
+        url: "php/act_Get.php",
+        dataType: 'JSON',
+        data : {id_act_table_pdn:id_act},
+        success: function(response){
+            const len = response.length;
+            let res = "";
+            for (let i = 0; i < len; i++) {
+                const id = response[i].id;
+                const structure = response[i].structure;
+                const ville = response[i].ville;
+                const prenom = response[i].prenom;
+                const nom = response[i].nom;
+                res += `<tr style="cursor: pointer" onclick="id_jeune_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${structure}</td><td>${ville}</td><td>${prenom}</td><td>${nom}</td></tr>`;
+            }
+            $(liste).append(res);
+        }
+    });
+}
+
+// ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
+
+const act_Create = (dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires) => {
+    $.ajax({
+        url: "php/act.php",
+        dataType: 'JSON',
+        data : {dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_pers:nb_pers, commentaires:commentaires},
+        complete: function(){
+            //------------------------------------------------------------------ Récupération de l'id de l'événement créé
+            //------------------------------------------------------------------ Puis récupération des intervenants et association avec l'évenemnt dans la table intervenir
+            act_Get_Id(uuid);
+
+            alert("L'action a bien été ajouté à la base de données.");
+            //------------------------------------------------------------------ Réinitialisation de la pages des événements
+            act_Reset();
+        }
+    });
+}
+
+//----------------------------------------------------------------------------- Récupération de l'id de l'événement créé
+const act_Get_Id = (uuid) => {
+    $.ajax({
+        url: "php/act_Get.php",
+        dataType: 'JSON',
+        data : {uuid:uuid},
+        success: function(response){
+            const id_act = response[0].id;
+            // ----------------------------------------------------------------- Envoie vers la BDD
+            act_Get_Coordo(id_act);
+            act_Get_Ress(id_act);
+            act_Get_Pdn(id_act);
+            act_Get_Part(id_act);
+        }
+    });
+}
+
+//------------------------------------------------------------------------------ Récupération des coordos et association avec l'évenemnt dans la table coordonner
+const act_Get_Coordo = (id_act) => {
+    let arraySelectedCoordo = [];
+    const jsonIdCoordo = sessionStorage.getItem('jsonIdCoordo');
+    const arrayIdCoordo = JSON.parse(jsonIdCoordo);
+    for(coordoId of arrayIdCoordo) {
+        let check = $(coordoId).is(':checked');
+        if(check) arraySelectedCoordo.push(coordoId);
+    }
+    for(id_coordo of arraySelectedCoordo) {
+        const idCoordoSplit = id_coordo.split("#coordo");
+        id_coordo = idCoordoSplit[1];
+        $.ajax({
+            url: 'php/act.php',
+            dataType: 'JSON',
+            data : {id_act:id_act, id_coordo:id_coordo}
+        });
+    }
+}
+
+//------------------------------------------------------------------------------ Récupération des ressources et association avec l'évenemnt dans la table coordonner
+const act_Get_Ress = (id_act) => {
+    let arraySelectedRess = [];
+    const jsonSelectedRess = sessionStorage.getItem('jsonSelectedRess');
+    if(jsonSelectedRess) arraySelectedRess = JSON.parse(jsonSelectedRess);
+    for(id_ress of arraySelectedRess) {
+        const idRessSplit = id_ress.split("#ress");
+        id_ress = idRessSplit[1];
+        $.ajax({
+            url: 'php/act.php',
+            dataType: 'JSON',
+            data : {id_act:id_act, id_ress:id_ress}
+        });
+    }
+}
+
+//------------------------------------------------------------------------------ Récupération des PDN et association avec l'évenemnt dans la table coordonner
+const act_Get_Pdn = (id_act) => {
+    let arraySelectedPdn = [];
+    const jsonSelectedPdn = sessionStorage.getItem('jsonSelectedPdn');
+    if(jsonSelectedPdn) arraySelectedPdn = JSON.parse(jsonSelectedPdn);
+    for(id_pdn of arraySelectedPdn) {
+        const idPdnSplit = id_pdn.split("#pdn");
+        id_pdn = idPdnSplit[1];
+        $.ajax({
+            url: 'php/act.php',
+            dataType: 'JSON',
+            data : {id_act:id_act, id_pdn:id_pdn}
+        });
+    }
+}
+
+//------------------------------------------------------------------------------ Récupération des partenaires et association avec l'évenemnt dans la table coordonner
+const act_Get_Part = (id_act) => {
+    let arraySelectedPart = [];
+    const jsonSelectedPart = sessionStorage.getItem('jsonSelectedPart');
+    if(jsonSelectedPart) arraySelectedPart = JSON.parse(jsonSelectedPart);
+    for(id_part of arraySelectedPart) {
+        const idPartSplit = id_part.split("#part");
+        id_part = idPartSplit[1];
+        $.ajax({
+            url: 'php/act.php',
+            dataType: 'JSON',
+            data : {id_act:id_act, id_part:id_part}
+        });
+    }
+}
+
+// ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
+
+const act_Update = (id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires) => {
+    $.ajax({
+        url: 'php/act.php',
+        dataType: 'JSON',
+        data : {id:id, dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_pers:nb_pers, commentaires:commentaires},
+        complete: function(){
+            //------------------------------------------------------------------ Suppression des associations avec les autres tables puis mis à jours des données
+            act_Maj_Asso(id);
+
+            alert("L'action a bien été modifiée.");
+            //----------------------------------------------------------------- Réinitialisation de la pages des événements
+            act_Reset();
+        }
+    });
+}
+
+//----------------------------------------------------------------------------- Suppression des associations entre coordos et cette action dans la table coordonner
+const act_Maj_Asso = (id_act) => {
+    $.ajax({
+        url: "php/act.php",
+        dataType: 'JSON',
+        data : {id_act_del_asso:id_act},
+        complete: function(){
+            act_Get_Coordo(id_act);
+            act_Get_Ress(id_act);
+            act_Get_Pdn(id_act);
+            act_Get_Part(id_act);
+        }
+    });
+}
+
+// ----------------------------------------------------------------------------- ! ! ! - - D E L E T E - - ! ! !
+const act_Delete = (id) => {
+    //------------------------------------------------------------------------- Envoie de l'id vers la BDD pour suppression des associations
+    $.ajax({
+        url: "php/act.php",
+        dataType: 'JSON',
+        data : {id_act_del_asso:id},
+        complete: function(){
+            //------------------------------------------------------------------ Envoie de l'id vers la BDD pour suppression de l'action
+            $.ajax({
+                url: "php/act.php",
+                dataType: 'JSON',
+                data : {id_del:id},
+                complete: function() {
+                    alert("L'action a bien été supprimée de la base de données.");
+                    //----------------------------------------------------------------- Réinitialisation de la liste des types et noms d'organisme sur la page jeune (fonction dans orga.js)
+                    act_Reset();
+                }
+            });
+        }
+    });
+
+}
 //
 // // ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !
 //

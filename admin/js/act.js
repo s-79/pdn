@@ -138,95 +138,105 @@ $(function(){
         act_Get(id_act);
     });
 
-    // // ------------------------------------------------------------------------- ! ! ! - - C R E A T E -- !!!
-    //
-    //
-    // //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON (+) DE CREATION D'UN NOUVEL ÉVÉNEMENT
-    // $("#new_act").click(function(){
-    //     // --------------------------------------------------------------------- Réinitialisation du formulaire et des listes select dynamiques sur la page événement (fonction ci-dessous)
-    //     act_Reset();
-    // });
-    //
-    // //------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON "ENREGISTRER LA FICHE" DANS LA PAGE JEUNE
-    // $('#act_create').click(function(){
-    //     // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
-    //     let mission = "";
-    //     let type = "";
-    //     for (let i = 0; i < 3; i++) {
-    //         let m = `#m${i}`;
-    //         if($(m).is(':checked')) {
-    //             mission = i;
-    //             let t = `#type_m${i}`;
-    //             type = $(t).val();
-    //         }
-    //     }
-    //     const dat = $("#date").val();
-    //     const id_ville = $("#ville").val();
-    //     // contrat_ville_Change(id_ville);
-    //     let visio =  $("#visio").is(':checked');
-    //     if(visio)visio=1;else{visio=0};
-    //     const intitule = $("#intitule").val();
-    //     const uuid = uuid_gen();
-    //     const id_projet = $("#projet").val();
-    //     const organise = $("#organise").val();
-    //     const nb_jeunes = $("#nb_jeunes").val();
-    //     const nb_pros = $("#nb_pros").val();
-    //     const commentaires = $("#commentaires").val();
-    //
-    //     // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
-    //     if(isNaN(mission) || !dat || !type || !id_ville || (!nb_jeunes && !nb_pros)) {
-    //         alert("Les champs Mission, Date, Type et Ville ainsi que le nombre de jeunes ou de pros sont obligatoires.");
-    //     } else {
-    //         // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-    //         if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Commentaire",commentaires,255)) {
-    //
-    //             //-------------------------------------------------------------- Envoie des infos vers la BDD
-    //             act_Create(mission, dat, id_ville, type, visio, intitule, uuid, id_projet, organise, nb_jeunes, nb_pros, commentaires);
-    //
-    //         }
-    //     }
-    // })
-    //
-    // // ------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
-    //
-    // //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON MODIFIER UN ÉVÉNEMENT
-    // $('#act_update').click(function(){
-    //     // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
-    //     const id = $('#id_act').val();
-    //     let mission = "";
-    //     let type = "";
-    //     for (let i = 0; i < 3; i++) {
-    //         let m = `#m${i}`;
-    //         if($(m).is(':checked')) {
-    //             mission = i;
-    //             let t = `#type_m${i}`;
-    //             type = $(t).val();
-    //         }
-    //     }
-    //     const dat = $("#date").val();
-    //     const id_ville = $("#ville").val();
-    //     let visio =  $("#visio").is(':checked');
-    //     if(visio)visio=1;else{visio=0};
-    //     const intitule = $("#intitule").val();
-    //     const uuid = uuid_gen();
-    //     const id_projet = $("#projet").val();
-    //     const organise = $("#organise").val();
-    //     const nb_jeunes = $("#nb_jeunes").val();
-    //     const nb_pros = $("#nb_pros").val();
-    //     const commentaires = $("#commentaires").val();
-    //
-    //     if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Commentaire",commentaires,100)) {
-    //         act_Update(id, mission, dat, id_ville, type, visio, intitule, uuid, id_projet, organise, nb_jeunes, nb_pros, commentaires);
-    //     }
-    // })
-    //
-    // // ------------------------------------------------------------------------- ! ! ! - - D E L E T E- - ! ! !
-    //
-    // //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON SUPPRIMER UN ORGANISME
-    // $('#act_delete').click(function(){
-    //     const id = $('#id_act').val();
-    //     act_Delete(id);
-    // })
+    // ------------------------------------------------------------------------- ! ! ! - - C R E A T E -- !!!
+
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON (+) DE CREATION D'UNE NOUVELLE ACTION
+    $("#new_act").click(function(){
+        // --------------------------------------------------------------------- Réinitialisation du formulaire et des listes select dynamiques sur la page événement (fonction ci-dessous)
+        act_Reset();
+    });
+
+    //------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON "ENREGISTRER LA FICHE" DANS LA PAGE JEUNE
+    $('#act_create').click(function(){
+        // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
+        const dat = $("#date").val();
+        const type = $("#type").val();
+        const organise = $("#organise").val();
+        const intitule = $("#intitule").val();
+        const uuid = uuid_gen();
+        const lieu = $("#lieu").val();
+        const ville = $("#ville").val();
+        const pj = $("#pj").val();
+        const support = $("#support").val();
+        let facebook =  $("#facebook").is(':checked');
+        if(facebook)facebook=1;else{facebook=0};
+        let whatsapp =  $("#whatsapp").is(':checked');
+        if(whatsapp)whatsapp=1;else{whatsapp=0};
+        let twitter =  $("#twitter").is(':checked');
+        if(twitter)twitter=1;else{twitter=0};
+        let site =  $("#site").is(':checked');
+        if(site)site=1;else{site=0};
+        let nb_ress = $("#nb_ress").val();
+        if (!nb_ress) nb_ress = 0;
+        const duree = $("#duree").val();
+        let nb_pdn = $("#nb_pdn").val();
+        if (!nb_pdn) nb_pdn = 0;
+        let nb_part = $("#nb_part").val();
+        if (!nb_part) nb_part = 0;
+        let nb_pers = $("#nb_pers").val();
+        if (!nb_pers) nb_pers = 0;
+        const commentaires = $("#commentaires").val();
+
+        // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
+        if(!dat || !type || !intitule || !support || !duree) {
+            alert("Les champs Date, Type, Intitulé, Support, Durée sont obligatoires.");
+        } else {
+            // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
+            if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Lieu",lieu,100)&& vLen("Ville",ville,100)) {
+
+                //-------------------------------------------------------------- Envoie des infos vers la BDD
+                act_Create(dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires);
+            }
+        }
+    })
+
+    // ------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON MODIFIER UNE ACTION
+    $('#act_update').click(function(){
+        // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
+        const id = $("#id_act").val();
+        const dat = $("#date").val();
+        const type = $("#type").val();
+        const organise = $("#organise").val();
+        const intitule = $("#intitule").val();
+        const uuid = uuid_gen();
+        const lieu = $("#lieu").val();
+        const ville = $("#ville").val();
+        const pj = $("#pj").val();
+        const support = $("#support").val();
+        let facebook =  $("#facebook").is(':checked');
+        if(facebook)facebook=1;else{facebook=0};
+        let whatsapp =  $("#whatsapp").is(':checked');
+        if(whatsapp)whatsapp=1;else{whatsapp=0};
+        let twitter =  $("#twitter").is(':checked');
+        if(twitter)twitter=1;else{twitter=0};
+        let site =  $("#site").is(':checked');
+        if(site)site=1;else{site=0};
+        let nb_ress = $("#nb_ress").val();
+        if (!nb_ress) nb_ress = 0;
+        const duree = $("#duree").val();
+        let nb_pdn = $("#nb_pdn").val();
+        if (!nb_pdn) nb_pdn = 0;
+        let nb_part = $("#nb_part").val();
+        if (!nb_part) nb_part = 0;
+        let nb_pers = $("#nb_pers").val();
+        if (!nb_pers) nb_pers = 0;
+        const commentaires = $("#commentaires").val();
+
+        if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Lieu",lieu,100)&& vLen("Ville",ville,100)) {
+            act_Update(id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires);
+        }
+    })
+
+    // ------------------------------------------------------------------------- ! ! ! - - D E L E T E- - ! ! !
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON SUPPRIMER UNE ACTION
+    $('#act_delete').click(function(){
+        const id = $('#id_act').val();
+        act_Delete(id);
+    })
 });
 
 // ----------------------------------------------------------------------------- ! ! ! - - F U N C T I O N S - - ! ! !
@@ -249,32 +259,35 @@ const act_Get = (id_act) => {
         ajaxGetPdn(id_act);
         //---------------------------------------------------------------------- Récupération des Partenaires liées à cet événement
         ajaxGetPart(id_act);
+        //---------------------------------------------------------------------- Remplissage des tableaux
+        ajaxActPart(id_act, "#tableau_part");
+        ajaxActPdn(id_act, "#tableau_pdn");
+
 
         //---------------------------------------------------------------------- Inversement des boutons en bas de page
         $("#btn_act_create").addClass("d-none");
         $("#btn_act_update").removeClass("d-none");
     }
-    //-------------------------------------------------------------------------- Remplissage de la liste des villes
-    // ajaxListVille("#ville");
 }
 
-// // ----------------------------------------------------------------------------- FONCTION RESET
-//
-// //------------------------------------------------------------------------------ Fonction de réinitialisation de la page événement
-// const act_Reset = () => {
-//     //-------------------------------------------------------------------------- Réinitialisation du formulaire
-//     document.getElementById("form_act").reset();
-//     $("#type_m1")[0].disabled = true;
-//     $("#type_m2")[0].disabled = true;
-//     //-------------------------------------------------------------------------- Remplissage de la liste des intervenants
-//     ajaxListInter("#inter");
-//     //-------------------------------------------------------------------------- Remplissage de la liste des villes
-//     ajaxListVille("#ville");
-//     //-------------------------------------------------------------------------- Réinitialisation du champs de recherche des événements
-//     ajaxListAct("#act_res");
-//     //-------------------------------------------------------------------------- Réinitialisation du tableau de jeunes
-//     $("#tableau").html("");
-//     //-------------------------------------------------------------------------- Inversement des boutons en bas de page
-//     $("#btn_act_update").addClass("d-none");
-//     $("#btn_act_create").removeClass("d-none");
-// }
+// ----------------------------------------------------------------------------- FONCTION RESET
+
+//------------------------------------------------------------------------------ Fonction de réinitialisation de la page événement
+const act_Reset = () => {
+    //-------------------------------------------------------------------------- Réinitialisation du formulaire
+    document.getElementById("form_act").reset();
+    //-------------------------------------------------------------------------- Remplissage de la liste des Coordos
+    ajaxListCoordo("#coordo");
+    //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
+    ajaxListAct("#act_res");
+    //-------------------------------------------------------------------------- Suppression des variables de session
+    sessionStorage.removeItem('jsonSelectedCoordo');
+    sessionStorage.removeItem('jsonSelectedRess');
+    sessionStorage.removeItem('jsonSelectedPdn');
+    sessionStorage.removeItem('jsonSelectedPart');
+    //-------------------------------------------------------------------------- Réinitialisation du tableau de jeunes
+    $("#tableau").html("");
+    //-------------------------------------------------------------------------- Inversement des boutons en bas de page
+    $("#btn_act_update").addClass("d-none");
+    $("#btn_act_create").removeClass("d-none");
+}
