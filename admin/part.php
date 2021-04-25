@@ -29,7 +29,7 @@ include("header.php"); ?>
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
-                            <h2>Dénomination</h2>
+                            <h1>Dénomination</h1>
                             <i id="new_part" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Créer un nouvel événement"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
@@ -59,7 +59,7 @@ include("header.php"); ?>
                 <!--                                                                                                              Contact -->
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h2 class="pt-3">Référent.e</h2>
+                        <h1 class="pt-3">Référent.e</h1>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
                         <input type="text" class="form-control d-none" id="id_part">
                         <div class="form-floating mx-3 mt-3 mb-3">
@@ -87,7 +87,7 @@ include("header.php"); ?>
                 <!--                                                                                                              Coordonnées -->
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h2 class="pt-3">PJ & Commentaires</h2>
+                        <h1 class="pt-3">PJ & Commentaires</h1>
                         <div class="form-floating mx-3 mt-4 mb-4">
                             <input type="file" class="form-control" id="pj" placeholder="Pièce Jointe">
                             <label for="pj">Pièce Jointe</label>
@@ -97,10 +97,10 @@ include("header.php"); ?>
                             <label for="commentaires">Commentaires</label>
                         </div>
                         <div id="btn_part_create" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
-                            <button type="button" id="part_create" class="btn btn-warning m-3">&nbsp;Enregistrer&nbsp;<br>la fiche</button>
+                            <button type="button" id="part_create" class="btn btn-warning m-3 px-3">Enregistrer<br>la fiche</button>
                         </div>
                         <div id="btn_part_update" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1 d-none">
-                            <button type="button" id="part_update" class="btn btn-warning m-3">&nbsp;Modifier&nbsp;<br>la fiche</button>
+                            <button type="button" id="part_update" class="btn btn-warning m-3 px-3">Modifier<br>la fiche</button>
                             <button type="button" id="part_delete" class="btn btn-danger m-3">Supprimer <br>la fiche</button>
                         </div>
                     </div>

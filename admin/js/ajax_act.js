@@ -42,7 +42,7 @@ const ajaxListRess = (liste, checked) => {
                 const id = response[i].id;
                 const nom = response[i].nom;
                 res += `<div class="form-check">`;
-                if(checked) res += `<input class="form-check-input" type="checkbox" value="" id="ress${id}" checked>`;
+                if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="ress${id}" checked>`;
                 else { res += `<input class="form-check-input" type="checkbox" value="" id="ress${id}">`}
                 res += `<label class="form-check-label text-dark" for="ress${id}">${nom}</label></div>`;
                 const ressId = `#ress${id}`;
@@ -54,13 +54,14 @@ const ajaxListRess = (liste, checked) => {
             }
             $(liste).html(res);
 
-            //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
-            const jsonSelectedRess = sessionStorage.getItem('jsonSelectedRess');
-            // sessionStorage.removeItem('jsonSelectedRess');
-            //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
-            if(jsonSelectedRess) {
-                const arraySelectedRess = JSON.parse(jsonSelectedRess);
-                for(ressId of arraySelectedRess) $(ressId).prop('checked', true);
+            if(!checked) {
+                //-------------------------------------------------------------- Récupération et suppression d'un éventuel tableau précédemment stockée
+                const jsonSelectedRess = sessionStorage.getItem('jsonSelectedRess');
+                //-------------------------------------------------------------- Si des cases ont déja été cochées, on les recoche
+                if(jsonSelectedRess) {
+                    const arraySelectedRess = JSON.parse(jsonSelectedRess);
+                    for(ressId of arraySelectedRess) $(ressId).prop('checked', true);
+                }
             }
         }
     });
@@ -80,7 +81,7 @@ const ajaxListPdn = (liste, checked) => {
                 const id = response[i].id;
                 const nom = response[i].nom;
                 res += `<div class="form-check">`;
-                if(checked) res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}" checked>`;
+                if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}" checked>`;
                 else { res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}">`}
                 res += `<label class="form-check-label text-dark" for="pdn${id}">${nom}</label></div>`;
                 const pdnId = `#pdn${id}`;
@@ -92,13 +93,14 @@ const ajaxListPdn = (liste, checked) => {
             }
             $(liste).html(res);
 
-            //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
-            const jsonSelectedPdn = sessionStorage.getItem('jsonSelectedPdn');
-            // sessionStorage.removeItem('jsonSelectedPdn');
-            //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
-            if(jsonSelectedPdn) {
-                const arraySelectedPdn = JSON.parse(jsonSelectedPdn);
-                for(pdnId of arraySelectedPdn) $(pdnId).prop('checked', true);
+            if(!checked) {
+                //-------------------------------------------------------------- Récupération et suppression d'un éventuel tableau précédemment stockée
+                const jsonSelectedPdn = sessionStorage.getItem('jsonSelectedPdn');
+                //-------------------------------------------------------------- Si des cases ont déja été cochées, on les recoche
+                if(jsonSelectedPdn) {
+                    const arraySelectedPdn = JSON.parse(jsonSelectedPdn);
+                    for(pdnId of arraySelectedPdn) $(pdnId).prop('checked', true);
+                }
             }
         }
     });
@@ -118,7 +120,7 @@ const ajaxListPart = (liste, checked) => {
                 const id = response[i].id;
                 const nom = response[i].nom;
                 res += `<div class="form-check">`;
-                if(checked) res += `<input class="form-check-input" type="checkbox" value="" id="part${id}" checked>`
+                if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="part${id}" checked>`
                 else { res += `<input class="form-check-input" type="checkbox" value="" id="part${id}">`}
                 res += `<label class="form-check-label text-dark" for="part${id}">${nom}</label></div>`;
                 const partId = `#part${id}`;
@@ -130,13 +132,14 @@ const ajaxListPart = (liste, checked) => {
             }
             $(liste).html(res);
 
-            //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
-            const jsonSelectedPart = sessionStorage.getItem('jsonSelectedPart');
-            // sessionStorage.removeItem('jsonSelectedPart');
-            //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
-            if(jsonSelectedPart) {
-                const arraySelectedPart = JSON.parse(jsonSelectedPart);
-                for(partId of arraySelectedPart) $(partId).prop('checked', true);
+            if(!checked) {
+                //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
+                const jsonSelectedPart = sessionStorage.getItem('jsonSelectedPart');
+                //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
+                if(jsonSelectedPart) {
+                    const arraySelectedPart = JSON.parse(jsonSelectedPart);
+                    for(partId of arraySelectedPart) $(partId).prop('checked', true);
+                }
             }
         }
     });

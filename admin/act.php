@@ -29,7 +29,7 @@ include("header.php"); ?>
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
-                            <h2>Action</h2>
+                            <h1>Action</h1>
                             <i id="new_act" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Créer une nouvelle action"></i>
                         </div>
                         <!--                                                    Récupération de l'id dans un input invisible -->
@@ -44,6 +44,7 @@ include("header.php"); ?>
                                 <option selected value="">Séléctionner un type d'événement *</option>
                                 <option value="Rencontre partenaire">Rencontre partenaire</option>
                                 <option value="Accompagnement PDN">Accompagnement PDN</option>
+                                <option value="Organisation réunion ou formation PDN">Organisation réunion ou formation PDN</option>
                                 <option value="Journée de formation PDN">Journée de formation PDN</option>
                                 <option value="Réunion de réseau PDN">Réunion de réseau PDN</option>
                                 <option value="Rencontre départementale">Rencontre départementale</option>
@@ -56,9 +57,15 @@ include("header.php"); ?>
                             </select>
                             <label for="type">Type *</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3 mb-3">
-                            <input type="text" class="form-control" id="organise" placeholder="Organisé par...">
-                            <label for="organise">Organisé par...</label>
+                        <div class="form-floating mx-3 mt-3">
+                            <select class="form-select type_m" id="organise" aria-label="Organisé par... *">
+                                <option selected value="">Séléctionner la structure organisatrice</option>
+                                <option value="FOL93">FOL93</option>
+                                <option value="Structures PDN">Structures PDN</option>
+                                <option value="Partenaires financeurs">Partenaires financeurs</option>
+                                <option value="Autres">Autres</option>
+                            </select>
+                            <label for="organise">Organisé par... *</label>
                         </div>
                         <div class="form-floating mx-3 mt-3 mb-3">
                             <input type="text" class="form-control" id="intitule" placeholder="Intitulé">
@@ -79,7 +86,7 @@ include("header.php"); ?>
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="row pt-3">
                             <div class="col-10">
-                                <h2>Modalités</h2>
+                                <h1>Modalités</h1>
                             </div>
                             <div class="col-2">
                                 <i id="pj" class="fas fa-paperclip fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter une pièce jointe"></i>
@@ -136,7 +143,7 @@ include("header.php"); ?>
                             <label for="duree">Durée *</label>
                         </div>
                         <div class="d-flex pt-3">
-                            <h2 class="pt-1">Coordination</h2>
+                            <h1 class="pt-1">Coordination</h1>
                             <i id="new_coordo" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-bs-toggle="modal" data-bs-target="#modal_coordo" data-toggle="tooltip" data-placement="top" title="Ajouter / Modifier un·e coordo"></i>
                         </div>
                         <div id="coordo" class="mx-3 mt-2 mb-4" style="overflow-y:scroll; overflow-x:hidden; height:69px;">
@@ -146,7 +153,7 @@ include("header.php"); ?>
                 <!--                                                            Participation -->
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h2 class="pt-3">Participation</h2>
+                        <h1 class="pt-3">Participation</h1>
 
                         <div class="row mt-4 me-1">
                             <div class="form-floating mx-3 col-8">
@@ -178,10 +185,10 @@ include("header.php"); ?>
                             <label for="commentaires">Commentaires</label>
                         </div>
                         <div id="btn_act_create" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
-                            <button type="button" id="act_create" class="btn btn-warning m-3">&nbsp;Enregistrer&nbsp;<br>la fiche</button>
+                            <button type="button" id="act_create" class="btn btn-warning m-3 px-3">Enregistrer<br>la fiche</button>
                         </div>
                         <div id="btn_act_update" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1 d-none">
-                            <button type="button" id="act_update" class="btn btn-warning m-3">&nbsp;Modifier&nbsp;<br>la fiche</button>
+                            <button type="button" id="act_update" class="btn btn-warning m-3 px-4">Modifier<br>la fiche</button>
                             <button type="button" id="act_delete" class="btn btn-danger m-3">Supprimer <br>la fiche</button>
                         </div>
                     </div>

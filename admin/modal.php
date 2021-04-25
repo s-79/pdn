@@ -4,10 +4,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter des PDN à l'évenement</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter des PDN à l'action</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="d-flex justify-content-start">
+      <div class="modal-body d-flex justify-content-start">
           <button id="btn_select_AllPdn" type="button" class="btn btn-outline-secondary m-2">Tous</button>
           <button id="btn_select_NoPdn" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
       </div>
@@ -27,10 +27,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'évenement</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'action</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="d-flex justify-content-start">
+      <div class="modal-body d-flex justify-content-start">
           <button id="btn_select_AllRess" type="button" class="btn btn-outline-secondary m-2">Tous</button>
           <button id="btn_select_NoRess" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
       </div>
@@ -50,10 +50,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'évenement</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter les partenaires de l'action</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="d-flex justify-content-start">
+      <div class="modal-body d-flex justify-content-start">
           <button id="btn_select_Allpart" type="button" class="btn btn-outline-secondary m-2">Tous</button>
           <button id="btn_select_Nopart" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
       </div>

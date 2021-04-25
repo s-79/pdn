@@ -37,7 +37,7 @@ $(function(){
         //------------------------------------------------------------------- -- Remplissage de la liste des RESSOURCES et evt click sur les boutons "tous" et "aucun"
         ajaxListRess("#modal_list_ress");
         $("#btn_select_AllRess").click(function() {ajaxListRess("#modal_list_ress", "checked");});
-        $("#btn_select_NoRess").click(function() {ajaxListRess("#modal_list_ress");});
+        $("#btn_select_NoRess").click(function() {ajaxListRess("#modal_list_ress", "unchecked");});
     });
 
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON + SELECT PDN
@@ -45,7 +45,7 @@ $(function(){
         //------------------------------------------------------------------- -- Remplissage de la liste des PDN et evt click sur les boutons "tous" et "aucun"
         ajaxListPdn("#modal_list_pdn");
         $("#btn_select_AllPdn").click(function() {ajaxListPdn("#modal_list_pdn", "checked");});
-        $("#btn_select_NoPdn").click(function() {ajaxListPdn("#modal_list_pdn");});
+        $("#btn_select_NoPdn").click(function() {ajaxListPdn("#modal_list_pdn", "unchecked");});
     });
 
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON + SELECT RESSOURCES
@@ -53,7 +53,7 @@ $(function(){
         //-------------------------------------------------------------------------- Remplissage de la liste des Partenaires et evt click sur les boutons "tous" et "aucun"
         ajaxListPart("#modal_list_part");
         $("#btn_select_Allpart").click(function() {ajaxListPart("#modal_list_part", "checked");});
-        $("#btn_select_Nopart").click(function() {ajaxListPart("#modal_list_part");});
+        $("#btn_select_Nopart").click(function() {ajaxListPart("#modal_list_part", "unchecked");});
     });
 
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON "SELECTIONNER" DANS LE MODAL RESS
@@ -259,10 +259,13 @@ const act_Get = (id_act) => {
         ajaxGetPdn(id_act);
         //---------------------------------------------------------------------- Récupération des Partenaires liées à cet événement
         ajaxGetPart(id_act);
+
+        //---------------------------------------------------------------------- Réinitialisation des tableaux Partenaires et PDN
+        $("#tableau_part").html("");
+        $("#tableau_pdn").html("");
         //---------------------------------------------------------------------- Remplissage des tableaux
         ajaxActPart(id_act, "#tableau_part");
         ajaxActPdn(id_act, "#tableau_pdn");
-
 
         //---------------------------------------------------------------------- Inversement des boutons en bas de page
         $("#btn_act_create").addClass("d-none");
@@ -285,8 +288,9 @@ const act_Reset = () => {
     sessionStorage.removeItem('jsonSelectedRess');
     sessionStorage.removeItem('jsonSelectedPdn');
     sessionStorage.removeItem('jsonSelectedPart');
-    //-------------------------------------------------------------------------- Réinitialisation du tableau de jeunes
-    $("#tableau").html("");
+    //-------------------------------------------------------------------------- Réinitialisation des tableaux Partenaires et PDN
+    $("#tableau_part").html("");
+    $("#tableau_pdn").html("");
     //-------------------------------------------------------------------------- Inversement des boutons en bas de page
     $("#btn_act_update").addClass("d-none");
     $("#btn_act_create").removeClass("d-none");

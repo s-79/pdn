@@ -9,6 +9,7 @@ include("header.php"); ?>
                     <option selected value="">Séléctionner un type d'événement *</option>
                     <option value="Rencontre partenaire">Rencontre partenaire</option>
                     <option value="Accompagnement PDN">Accompagnement PDN</option>
+                    <option value="Organisation réunion ou formation PDN">Organisation réunion ou formation PDN</option>
                     <option value="Journée de formation PDN">Journée de formation PDN</option>
                     <option value="Réunion de réseau PDN">Réunion de réseau PDN</option>
                     <option value="Rencontre départementale">Rencontre départementale</option>

@@ -7,10 +7,21 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h2, .titre {
+h1, .titre {
     font-size: x-large;
     font-weight: bold;
     color: white;
+}
+
+/* Dans bienvenue */
+h3 {
+    font-size: x-large;
+}
+
+/* Dans initiatives du formulaire */
+h4 {
+    font-size: medium;
+    font-weight: bold;
 }
 
 .pointeur {

@@ -2,12 +2,9 @@
 session_start();
 include("header.php"); ?>
 
-<!-- ml-5 mr-4 à la place de container ?  -->
 <section class="container-fluid">
 
-    <!-- <h1 class="blue">présentation</h1>
-    <div class="orange-divider"> </div> -->
-    <div class="d-block text-center pl-5 pr-5">
+    <div class="d-block text-center px-5" style="margin-top:7em;">
         <svg class="icone img-fluid"
         width="340"
         height="316"

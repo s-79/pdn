@@ -22,6 +22,26 @@ $nb_part = mysqli_real_escape_string($conn, $_GET['nb_part']);
 $nb_pers = mysqli_real_escape_string($conn, $_GET['nb_pers']);
 $commentaires = mysqli_real_escape_string($conn, $_GET['commentaires']);
 
+// $dat = "date";
+// $type = "type";
+// $organise = "organise";
+// $intitule = "intitule";
+// $uuid = "uuid";
+// $lieu = "lieu";
+// $ville = "ville";
+// $pj = "pj";
+// $support = "support";
+// $facebook = 1;
+// $whatsapp = 1;
+// $twitter = 1;
+// $site = 1;
+// $nb_ress = 2;
+// $duree = "durée";
+// $nb_pdn = 3;
+// $nb_part = 4;
+// $nb_pers = 5;
+// $commentaires = "commentaires";
+
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 $id_del = mysqli_real_escape_string($conn, $_GET['id_del']);
 
