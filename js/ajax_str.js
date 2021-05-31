@@ -63,7 +63,6 @@ const str_Get_Infos = idStr => {
             const site = response[0].site;
             const presentation = response[0].presentation;
             const image = response[0].image;
-
         	// ----------------------------------------------------------------- Création du modal de la structure cliquée
             $("#modalStrHeader").html(`<h3 class='modal-title orange font-weight-bold'>${nom}</h3><h4 class='blue initial'>${adresse}</br>${cp} ${ville}</br>${tel}</h4>`);
             $("#modalStrContentLeft").html(`<img src='${image}' width='100%' height='120' alt='${nom} - ${ville}' title='${nom} - ${ville}' /></br></br><h5><a href='${site}' class='blue liens font-weight-bold' target='_blank'><i class='fas fa-globe blue'></i></br>Site Internet</br>de la structure</a></h5>`);
@@ -103,6 +102,7 @@ const str_Get_Pdn = idStr => {
                 let actif = response[i].actif;
                 if (actif==="1") actif = "<i class='fa fa-circle actif'></i>";
                 else actif = "<i class='fa fa-circle inactif'></i>";
+                // n : name / v : variable
                 const rs = [{"n":"facebook","v":facebook}, {"n":"snapchat","v":snapchat}, {"n":"instagram","v":instagram}, {"n":"youtube","v":youtube}, {"n":"twitter","v":twitter}, {"n":"discord","v":discord}, {"n":"twitch","v":twitch}, {"n":"tiktok","v":tiktok}];
                 const len_rs = rs.length;
 
@@ -134,7 +134,7 @@ const str_Get_Pdn = idStr => {
             }
             $("#modalStrFooter").html(footer);
 
-            $("#modalStr").modal();
+            $("#modalStr").modal('show');
 
             // -----------------------------------------------------------------  Fonction click sur les réseaux sociaux
             const rs2 = ['facebook', 'instagram', 'snapchat', 'youtube', 'twitter', 'twitch', 'discord', 'tiktok', 'portablePro', 'whatsapp', 'mail'];
@@ -165,7 +165,7 @@ const clicked_rs = e => {
     });
 }
 
-// // ------------------------------------------------------------------------------------------------------------------- EVEMENTS CLICK SUR LES ICONES DU MODAL "PAS DE PDN DANS LA VILLE"
+// // ---------------------------------------------------------s----------------- EVEMENTS CLICK SUR LES ICONES DU MODAL "PAS DE PDN DANS LA VILLE"
 // $("body").delegate( "#CoordoFacebook", "click", function() {
 // 	$(".infosRSCoordo").removeClass("d-block");
 //   	$("#CoordoFacebookDetails").toggleClass("d-block");
@@ -194,12 +194,12 @@ const structure = (response, len) => {
         const image = response[i].image;
         // --------------------------------------------------------- Création des vignettes
         res += `<div class='strCard col-6 col-sm-6 col-md-4 col-lg-3 mb-4'>`;
-        res += `<div class='marginCard card border blue-bg'>`;
+        res += `<div id='${id}' class='card marginCard pointeur border bg_bleu'>`;
         res += `<div class='card-body text-center'>`;
-        res += 		`<h2 class='card-title text-white font-weight-bold'>${nom}</h2>`;
-        res += 		`<h3 class='card-text text-white'>${ville}</h3></div>`;
+        res += 		`<h3 class='card-title text-white'>${nom}</h3>`;
+        res += 		`<h4 class='card-text text-white'>${ville}</h4></div>`;
         res += 		`<a data-toggle='modal' data-target='#Modal${id}'>`;
-        res += 			`<img id='${id}' class='card-img pointeur cardHeight' src='${image}' height='180' alt='${nom} - ${ville}' title='${nom} - ${ville}'></a>`;
+        res += 			`<img class='card-img cardHeight' src='${image}' height='180' alt='${nom} - ${ville}' title='${nom} - ${ville}'></a>`;
         res += `</div></div>`;
     }
     $("#structures").html(res);

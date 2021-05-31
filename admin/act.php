@@ -146,7 +146,7 @@ include("header.php"); ?>
                             <h1 class="pt-1">Coordination</h1>
                             <i id="new_coordo" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-bs-toggle="modal" data-bs-target="#modal_coordo" data-toggle="tooltip" data-placement="top" title="Ajouter / Modifier un·e coordo"></i>
                         </div>
-                        <div id="coordo" class="mx-3 mt-2 mb-4" style="overflow-y:scroll; overflow-x:hidden; height:69px;">
+                        <div id="coordo" class="mx-3 mt-2 mb-4" style="overflow-y:scroll; overflow-x:hidden; height:69px; scrollbar-color: rgb(232, 80, 23) white;">
                         </div>
                     </div>
                 </div>

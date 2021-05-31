@@ -7,25 +7,49 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* ----------------------------------------------------------------------------- TEXTES */
+
+/* xx-small : une taille absolue de fonte de 0.6 x medium.
+x-small : une taille absolue de fonte de 0.75 x medium.
+small : une taille absolue de fonte de 8/9 x medium.
+medium : une taille absolue de fonte de 1 x medium.
+large, une taille absolue de fonte de 1.2 x medium.
+x-large : une taille absolue de fonte de 1.5 x medium.
+xx-large : une taille absolue de fonte de 2 x medium. */
+
 h1, .titre {
     font-size: x-large;
     font-weight: bold;
     color: white;
 }
 
-/* Dans bienvenue */
-h3 {
-    font-size: x-large;
+h2 {
+    font-size:  x-large;
 }
 
-/* Dans initiatives du formulaire */
-h4 {
-    font-size: medium;
+h3 {
+    font-size: 1.4em;
     font-weight: bold;
+}
+
+h4 {
+    font-size: large;
+}
+
+h5 {
+    font-size: medium;
 }
 
 .pointeur {
     cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------- DIVIDER */
+.orange-divider {
+    width: 235px;
+    height: 2px;
+    background: #e85017;
+    /* margin: 0 auto 20px; */
 }
 
 /* ----------------------------------------------------------------------------- NAVBAR */

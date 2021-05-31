@@ -23,7 +23,7 @@ $("#choixVille").change(function(){
 // ----------------------------------------------------------------------------- ! ! ! - - C L I C K - - ! ! !
 
 // ----------------------------------------------------------------------------- ÉVENEMENT CLICK SUR UNE VIGNETTE
-$("body").delegate( ".card-img", "click", function() {
+$("body").delegate( ".card", "click", function() {
 	// ------------------------------------------------------------------------- Récupération de l'id de la structure séléctionnée
 	const idStr = $(this).attr('id');
 	str_Get_Infos(idStr);

@@ -2,10 +2,10 @@
 session_start();
 include("header.php"); ?>
 
-<section class="container strCard mt-4">
-    <div class="row menus">
+<section class="container strCard mt-4" style="margin-top:8em !important;">
+    <div class="row">
         <div class="col-12 col-sm-6 col-md-4">
-            <h1 class="blue">les structures</h1>
+            <h1 class="bleu">LES STRUCTURES</h1>
             <div class="orange-divider"> </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 osm"><a href="osm/index.php" id="visuMap" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Visualiser sur une carte</a></div>
@@ -13,7 +13,7 @@ include("header.php"); ?>
         </select>
     </div>
 
-    <div id="structures" class="card-deck mt-5"></div>
+    <div id="structures" class="row mt-5"></div>
 </section>
 
 <?php include("footer.php");?>
