@@ -12,7 +12,7 @@
     <script src="../scripts/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="../scripts/fontawesome.min.css">
     <link rel="stylesheet" href="../scripts/bootstrap.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-xl navbar fixed-top">

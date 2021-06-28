@@ -80,6 +80,37 @@ $("#initiatives").change(function() {
 							<input type="text" class="form-control" id="intitule_init" placeholder="Intitulé">
 							<label for="intitule_init">Intitulé</label>
 						</div>
+						<div class="form-floating mx-3 mt-3">
+                            <select class="form-select" id="them_init1" aria-label="Thématique">
+                                <option selected value="">Séléctionner la thématique</option>
+                                <option value="Lien Social (informel)">Lien Social (informel)</option>
+                                <option value="Vie quotidienne">Vie quotidienne</option>
+                                <option value="Acc. Socio-pro">Acc. Socio-pro</option>
+                                <option value="Famille">Famille</option>
+                                <option value="Mobilité">Mobilité</option>
+                                <option value="Santé">Santé</option>
+                                <option value="Addiction">Addiction</option>
+                                <option value="Violence">Violence</option>
+                                <option value="E-violence">E-violence</option>
+                                <option value="Logement">Logement</option>
+                                <option value="Sexualité">Sexualité</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                            <label for="them_init1">Thématique</label>
+                        </div>
+                        <div class="form-floating mx-3 mt-3">
+                            <input type="number" class="form-control" id="nb_jeunes_init1" placeholder="Nombre de jeunes">
+                            <label for="nb_jeunes_init1">Nombre de jeunes</label>
+                        </div>
+                        <div class="form-floating mx-3 mt-3">
+                            <select class="form-select" id="age_init1" aria-label="Âge des jeunes">
+                                <option selected value="">Âge des jeunes</option>
+                                <option value="De 12 à 17 ans">De 12 à 17 ans</option>
+                                <option value="De 18 à 25 ans">De 18 à 25 ans</option>
+                                <option value="Plus de 25 ans">Plus de 25 ans</option>
+                        </select>
+                        <label for="age_init1">Âge des jeunes</label>
+                        </div>
 					</div>`;
 			$(`#btn_init${i}`).click(function() {
 				$(".init").addClass("d-none");

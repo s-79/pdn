@@ -1,0 +1,164 @@
+/* ----------------------------------------------------------------------------- BACKGROUND */
+body {
+    /* background-image: url(img/arbre_reseau3_left.png),url(img/arbre_reseau3_right.png); */
+    background-repeat: no-repeat,no-repeat;
+    background-position: top 6.2em left,top 5.7em right;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ----------------------------------------------------------------------------- TEXTES */
+
+/* xx-small : une taille absolue de fonte de 0.6 x medium.
+x-small : une taille absolue de fonte de 0.75 x medium.
+small : une taille absolue de fonte de 8/9 x medium.
+medium : une taille absolue de fonte de 1 x medium.
+large, une taille absolue de fonte de 1.2 x medium.
+x-large : une taille absolue de fonte de 1.5 x medium.
+xx-large : une taille absolue de fonte de 2 x medium. */
+
+h1, .titre {
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    font-size:  x-large;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: large;
+}
+
+h5 {
+    font-size: medium;
+}
+
+.pointeur {
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------- DIVIDER */
+.orange-divider {
+    width: 235px;
+    height: 2px;
+    background: #e85017;
+    /* margin: 0 auto 20px; */
+}
+
+/* ----------------------------------------------------------------------------- NAVBAR */
+.navbar {
+    background-color: rgb(0, 90, 119);
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+.nav-pills .nav-link {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+    color: rgb(232, 80, 23) !important;
+    background-color: #fff;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.nav-link-toggle {
+  color: rgb(0, 90, 119) !important;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #fff !important;
+  border-radius: 10px;
+}
+
+/* ----------------------------------------------------------------------------- COULEURS PLM */
+.orange {
+    color: rgb(232, 80, 23);
+}
+.bleu {
+    color: rgb(0, 90, 119);
+}
+.bg_orange {
+    background-color: rgb(232, 80, 23);
+}
+.bg_bleu {
+    background-color: rgb(0, 90, 119);
+}
+
+/* ----------------------------------------------------------------------------- Taille min des div */
+@media screen and (min-width: 1400px) {
+    .div_bleu {
+        min-width: 450px !important;
+    }
+}
+
+/* ----------------------------------------------------------------------------- ANIMATIONS */
+
+.icone, {
+    position: relative;
+    /* top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+/* bulle orange */
+#path828-9-2-6-3 {
+    stroke-dasharray:400 !important;
+    stroke-dashoffset:400;
+    animation: anim2 9s ease forwards;
+}
+
+/* bulle bleue */
+#path828-5-9 {
+    /* 1ère valeur : trait plein, 2ème valeur : vide */
+    stroke-dasharray:430 !important;
+    stroke-dashoffset:430;
+    animation: anim 5s ease forwards;
+}
+
+/* texte PDN */
+#path848 {
+    animation: opa 5.6s ease;
+    /* x1, y1, x2, y2 ou y est le temps et y la puissance du ratio */
+    /* animation: opa 3.5s cubic-bezier(0.9999, 1, 0.99, 0); */
+}
+
+/* texte 93 */
+#path17 {
+    animation: opa 3.3s step-end;
+}
+
+@keyframes opa {
+    from {
+        fill-opacity:0;
+        stroke-opacity:0;
+    }
+   to {
+       fill-opacity:1;
+       stroke-opacity:1;
+   }
+}
+
+@keyframes anim {
+   to {
+       stroke-dashoffset: 0;
+   }
+}
+
+@keyframes anim2 {
+   to {
+       stroke-dashoffset: 0;
+   }
+}
