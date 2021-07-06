@@ -1,6 +1,4 @@
 sql/
-admin/php/base.php
 php/base.php
 admin/.htaccess
-admin/.htaccessOvh
 admin/.htpasswd
