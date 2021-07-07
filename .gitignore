@@ -1,6 +1,6 @@
-sql/
+sql
 php/base.php
 admin/.htaccess
 admin/.htpasswd
-webfonts/
-scripts/
+webfonts
+scripts
