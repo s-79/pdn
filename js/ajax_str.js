@@ -108,7 +108,7 @@ const str_Get_Pdn = idStr => {
                 const len_rs = rs.length;
 
                 // ------------------------------------------------------------- Affichage de la photo des PDN
-                footerImg += `<img id='${id}' class='pt-1 pb-1 pr-2 pl-2 pointeur photo' src='${image}' height='100' alt='${prenom} ${nom}' title='${prenom} ${nom}' />`;
+                footerImg += `<img id='${id}' class='py-1 px-2 pointeur photo' src='${image}' height='100' alt='${prenom} ${nom}' title='${prenom} ${nom}' />`;
 
                 // ------------------------------------------------------------- Affichage des réseaux sociaux des PDN dans div invisible
         		footer += `<div id='infosRS${id}' class='footerRS d-none mt-0'><h6 class='mb-0 bleu interligne text-uppercase'>${prenom} ${nom} - ${fonction}&nbsp;&nbsp;&nbsp;${actif}</br>`;

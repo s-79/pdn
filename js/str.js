@@ -2,7 +2,7 @@
 
 $(function(){
 	// ------------------------------------------------------------------------ Mettre en valeur le menu actif
-	$("#strMenu").toggleClass("nav-link-toggle");
+	$("#menu_str").toggleClass("nav-link-toggle");
 	// ------------------------------------------------------------------------ Remplissage automatique du champ ville concaténé avec le code postal
 	ajaxListVille("#choixVille");
 	// ------------------------------------------------------------------------ Chargement de toutes les structures

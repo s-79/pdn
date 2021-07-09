@@ -1,14 +1,6 @@
-// $("#fd1_1").click(function(){
-    // const contenuPres_1_1 = document.getElementById("contenuPres_1_1");
-    // const contenuPres_1_2 = document.getElementById("contenuPres_1_2");
-    // TweenMax.to(contenuPres_1_1, 1,{left:"-200%", ease: Power1.easeInOut});
-    // const tl = new TimelineMax();
-    // tl.fromTo(contenuPres_1_2, 1,{x: "200%"}, {x: '0%', ease: Power1.easeInOut})
-// });
-
 // ---------------------------------------------------------------------------- Récupération et chargement du contenu php depuis une autre page
 $(function(){
-  // -------------------------------------------------------------------------------------------------------------- Mettre en valeur le menu actif
+  // --------------------------------------------------------------------------- Mettre en valeur le menu actif
 	$("#menuderoulantPres").toggleClass("nav-link-toggle");
 
     let reference = sessionStorage.getItem("ref");
@@ -48,12 +40,12 @@ $(function(){
 
 // ---------------------------------------------------------------------------- Clic sur le lien "Voir les actions et projets dévéloppés par la FOL93 au fil des années"
 $("body").delegate( "#modalFol93", "click", function() {
-    $("#modalPres").modal();
+    $("#modalPres").modal("show");
 });
 
 // ---------------------------------------------------------------------------- Clic sur le bouton + du modal
 $("body").delegate( "#plusModalpres", "click", function() {
-	$("#projetsMoadlPres").toggleClass("d-block");
+	$("#projetsModalPres").toggleClass("d-none");
 	// $("#plus").removeClass("fa-plus-circle");
 	$("#plusModalpres").toggleClass("fa-minus-circle");
 	$("#plusModalpres").toggleClass("fa-plus-circle");
