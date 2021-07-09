@@ -4,14 +4,14 @@ include "base.php";
 
 $return_arr = array();
 
-$choixVille = mysqli_real_escape_string($conn, $_GET['choixVille']);
+$selectedVille = mysqli_real_escape_string($conn, $_GET['selectedVille']);
 $allVille = mysqli_real_escape_string($conn, $_GET['allVille']);
 $idStr = mysqli_real_escape_string($conn, $_GET['idStr']);
 $idStr_Pdn = mysqli_real_escape_string($conn, $_GET['idStr_Pdn']);
 $idStr_Type = mysqli_real_escape_string($conn, $_GET['idStr_Type']);
 
-if($choixVille) {
-    $query = "CALL str_Get('$choixVille')";
+if($selectedVille) {
+    $query = "CALL str_Get('$selectedVille')";
 
     $result = mysqli_query($conn,$query);
 
@@ -83,7 +83,7 @@ if($choixVille) {
         $id = $row['id'];
         $prenom = $row['prenom'];
         $nom = $row['nom'];
-        $profession = $row['profession'];
+        $fonction = $row['fonction'];
         $mail_nom = $row['mail_nom'];
         $mail_domaine = $row['mail_domaine'];
         $portablePro = $row['portablePro'];
@@ -103,7 +103,7 @@ if($choixVille) {
             "id" => $id,
             "prenom" => $prenom,
             "nom" => $nom,
-            "profession" => $profession,
+            "fonction" => $fonction,
             "mail_nom" => $mail_nom,
             "mail_domaine" => $mail_domaine,
             "portablePro" => $portablePro,
