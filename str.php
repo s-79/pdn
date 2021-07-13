@@ -8,14 +8,12 @@ include("header.php"); ?>
             <h1 class="bleu">LES STRUCTURES</h1>
             <div class="orange-divider"> </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 mx-auto"><a href="osm/index.php" id="visuMap" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Visualiser sur une carte</a></div>
-        <div class="col-12 col-6 col-sm-4 col-md-3">
-            <select class="form-select ml-auto me-1" id="choixVille">
+        <div class="col-12 col-sm-6 col-md-4 text-center"><a href="osm/index.php" id="visuMap" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt pe-2"></i>Visualiser sur une carte</a></div>
+        <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-end">
+            <select class="form-select me-1" style="max-width:75%;" id="choixVille">
             </select>
         </div>
-
     </div>
-
     <div id="structures" class="row mt-5"></div>
 </section>
 
@@ -35,7 +33,7 @@ include("header.php"); ?>
                 <div id='modalStrContentRight' class='col-8'></div>
             </div>
             <div class="modal-footer text-center d-block">
-                <h4 class='orange text-uppercase fw-bold mt-0 mb-0'>Les promeneurs de la structure</br></h4>
+                <h4 class='orange fw-bold mt-0 mb-0'>LES PROMENEURS DE LA STUCTURE</br></h4>
                 <h5 class='bleu my-0'>(cliquer sur les photos puis sur les icônes pour + d'infos)</span></h5>
                 <div id='modalStrFooter' class='text-center'></div>
             </div>
@@ -43,7 +41,7 @@ include("header.php"); ?>
     </div>
 </div>
 
-<!--                                                                            MODAL PAS DE STR DANS LA VILLE -->
+<!--                                                                            MODAL PAS DE PDN DANS LA VILLE -->
 
 <div class="modal fade" id="modalNoStr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

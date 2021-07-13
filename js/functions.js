@@ -11,6 +11,11 @@ const displayList = (response) => {
     return res;
 }
 
+/* ----------------------------------------------------------------------------- Mettre la 1ère lettre en majuscule */
+const strUpFirst = a => {
+    return (a+'').charAt(0).toUpperCase()+a.substr(1);
+}
+
 //
 // /* ---------------------------------------------------------------------------- Affiche Liste
 // Procédure qui affiche dans une liste déroulante spécifiée  des informations extraites d'une chaine xml

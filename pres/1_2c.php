@@ -13,7 +13,10 @@
         • Respecter les valeurs de la République et de la laïcité</br>
         • Respecter la dignité de la personne</p>
         <div class="col-12 col-lg-6 text-center">
-            <iframe id="video" class="d-block mx-auto" width="358" height="250" src="https://www.youtube.com/embed/ycBxgDENGkc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <video id="video" class="d-block mx-auto" width="427" height="240" src="pres/Promeneurs Du Net - Une présence éducative sur Internet.webm"></video> -->
+            <video width="427" height="240" controls poster="pres/pdn.png">
+                <source src="pres/pdn.webm" type=video/webm>
+            </video>
         </div>
     </div>
 </div>

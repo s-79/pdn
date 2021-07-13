@@ -64,7 +64,7 @@ const str_Get_Infos = idStr => {
             const presentation = response[0].presentation;
             const image = response[0].image;
         	// ----------------------------------------------------------------- Création du modal de la structure cliquée
-            $("#modalStrHeader").html(`<h2 class='modal-title orange fw-bold text-uppercase'>${nom}</h2><h4 class='bleu mb-0'>${adresse}</br>${cp} ${ville}</br>${tel}</h4>`);
+            $("#modalStrHeader").html(`<h2 class='modal-title orange text-uppercase fw-bold'>${nom}</h2><h5 class='bleu mb-0'>${adresse}</br>${cp} ${ville}</br>${tel}</h5>`);
             $("#modalStrContentLeft").html(`<img src='${image}' width='100%' height='120' alt='${nom} - ${ville}' title='${nom} - ${ville}' /></br></br><h4><a href='${site}' class='liens bleu' target='_blank'><i class='fas fa-globe bleu'></i></br>Site Internet</br>de la structure</a></h4>`);
             $("#modalStrContentRight").html(`<h5 class='bleu'><i class='fas fa-arrow-right pe-2'></i>${presentation}</h5>`);
         }
@@ -101,47 +101,22 @@ const str_Get_Pdn = idStr => {
                 const tiktok = response[i].tiktok;
                 const image = response[i].image;
                 let actif = response[i].actif;
-                if (actif==="1") actif = "<i class='fa fa-circle actif'></i>";
-                else actif = "<i class='fa fa-circle inactif'></i>";
-                // n : name / v : variable
-                const rs = [{"n":"facebook","v":facebook}, {"n":"snapchat","v":snapchat}, {"n":"instagram","v":instagram}, {"n":"youtube","v":youtube}, {"n":"twitter","v":twitter}, {"n":"discord","v":discord}, {"n":"twitch","v":twitch}, {"n":"tiktok","v":tiktok}];
-                const len_rs = rs.length;
+                if (actif==="1") actif = "green;' data-bs-toggle='tooltip' data-bs-placement='top' title='Actif' ></i>";
+                else actif = "#e85017;' data-bs-toggle='tooltip' data-bs-placement='top' title='Inactif'></i>";
 
                 // ------------------------------------------------------------- Affichage de la photo des PDN
                 footerImg += `<img id='${id}' class='py-1 px-2 pointeur photo' src='${image}' height='100' alt='${prenom} ${nom}' title='${prenom} ${nom}' />`;
 
                 // ------------------------------------------------------------- Affichage des réseaux sociaux des PDN dans div invisible
-        		footer += `<div id='infosRS${id}' class='footerRS d-none mt-0'><h6 class='mb-0 bleu interligne text-uppercase'>${prenom} ${nom} - ${fonction}&nbsp;&nbsp;&nbsp;${actif}</br>`;
-
-                // ------------------------------------------------------------ Affichage des icones des réseaux sociaux existants dans la BDD
-                for (let i = 0; i < len_rs; i++) {
-                    const n = rs[i].n;
-                    const v = rs[i].v;
-                    if(v) footer += `<i id='${n}${id}' class='${n} bleu liens fab fa-${n} fa-lg pointeur pe-3'></i>`;
-                }
-                if(portablePro) footer += `<i id='portablePro${id}' class='portablePro bleu liens fas fa-mobile-alt fa-lg pointeur pe-3'></i>`;
-                if(whatsApp === "1") footer += `<i id='whatsapp${id}' class='whatsapp bleu liens fab fa-whatsapp fa-lg pointeur pe-3'></i>`;
-                footer += `<i id='mail${id}' class='mail bleu liens fas fa-envelope fa-lg pointeur'></i></h6></div>`;
-
-        		// ------------------------------------------------------------ Affichage des infos relatives aux réseaux sociaux des PDN
-                for (let i = 0; i < len_rs; i++) {
-                    const n = rs[i].n;
-                    const v = rs[i].v;
-                    if(v) {
-                        // Si l'appli ne permet pas de faire un lien vers le profil
-                        if(n==="snapchat" || n==="discord") footer += `<div class='class${n}${id} infosRS mt-1 d-none'><h6 class='mb-0 bleu'>${v}</h6></div>`;
-                        else {footer += `<div class='class${n}${id} infosRS mt-1 d-none'><h6 class='mb-0'><a class='bleu liens' href='${v}' target='_blank'>${v}</a></h6></div>`;}
-                    }
-                }
-                if(portablePro) footer += `<div class='classportablePro${id} infosRS mt-1 d-none'><h6 class='mb-0 bleu'>${portablePro}</h6></div>`;
-                if(whatsApp === "1") footer += `<div class='classwhatsapp${id} infosRS mt-1 d-none'><h6 class='mb-0 bleu'>${portablePro}</h6></div>`;
-                footer += `<div class='classmail${id} infosRS mt-1 d-none'><h6 class='mb-0'><a class='bleu' href='mailto:${mail_nom}@${mail_domaine}'>${mail_nom}(at)${mail_domaine}</a></h6></div>`;
+        		footer += `<div id='infosRS${id}' class='footerRS d-none mt-0'><h6 class='mb-0 bleu interligne text-uppercase fw-bold'>${prenom} ${nom} - ${fonction}&nbsp;&nbsp;&nbsp;<i class='fa fa-circle' style='color:${actif}</br>`;
+                footer += footer_rs(id, facebook, snapchat, instagram, youtube, twitter, discord, twitch, tiktok, portablePro, whatsApp, mail_nom, mail_domaine);
             }
+
             $("#modalStrFooter").html(footerImg);
             $("#modalStrFooter").append(footer);
             $("#modalStr").modal('show');
 
-            // -----------------------------------------------------------------  Fonction click sur les réseaux sociaux
+            // ----------------------------------------------------------------- Fonction click sur les réseaux sociaux
             const rs2 = ['facebook', 'instagram', 'snapchat', 'youtube', 'twitter', 'twitch', 'discord', 'tiktok', 'portablePro', 'whatsapp', 'mail'];
             for (e of rs2) clicked_rs(e);
         }
@@ -158,20 +133,7 @@ $("body").delegate( ".photo", "click", function() {
 	$(idInfosRS).toggleClass("d-none");
 });
 
-// ----------------------------------------------------------------------------- FONCTION CLICK SUR LES RÉSEAUX SOCIAUX
-const clicked_rs = e => {
-    $("body").delegate(`.${e}`, "click", function() {
-        $(".infosRS").addClass("d-none");
-        // On récupère l'id du RS sélectionné et on fait apparaitre la div correspondante
-    	let id = $(this).attr('id');
-    	const idSplit = id.split(`${e}`);
-    	id = idSplit[1];
-    	const details = `.class${e}${id}`;
-    	$(details).toggleClass("d-none");
-    });
-}
-
-// // ---------------------------------------------------------s----------------- EVEMENTS CLICK SUR LES ICONES DU MODAL "PAS DE PDN DANS LA VILLE"
+// ----------------------------------------------------------------------------- EVEMENTS CLICK SUR LES ICONES DU MODAL "PAS DE PDN DANS LA VILLE"
 $("body").delegate( "#CoordoFacebook", "click", function() {
 	$(".infosRSCoordo").addClass("d-none");
   	$("#CoordoFacebookDetails").removeClass("d-none");
@@ -198,15 +160,61 @@ const structure = (response, len) => {
         const nom = response[i].nom;
         const ville = response[i].ville;
         const image = response[i].image;
-        // --------------------------------------------------------- Création des vignettes
+        // -------------------------------------------------------------------- Création des vignettes
         res += `<div class='strCard col-6 col-sm-6 col-md-4 col-lg-3 mb-4'>`;
         res += `<div id='${id}' class='card pointeur border bg_bleu'>`;
-        res += `<div class='card-body text-center'>`;
-        res += 		`<h2 class='card-title text-white text-uppercase'>${nom}</h2>`;
-        res += 		`<h3 class='card-text text-white text-uppercase'>${ville}</h3></div>`;
+        res += `<div class='card-body text-uppercase text-center'>`;
+        res += 		`<h2 class='card-title text-white'>${nom}</h2>`;
+        res += 		`<h3 class='card-text text-white'>${ville}</h3></div>`;
         res += 		`<a data-toggle='modal' data-target='#Modal${id}'>`;
         res += 			`<img class='card-img cardHeight' src='${image}' height='180' alt='${nom} - ${ville}' title='${nom} - ${ville}'></a>`;
         res += `</div></div>`;
     }
     $("#structures").html(res);
+}
+
+// ----------------------------------------------------------------------------- FONCTION CLICK SUR LES RÉSEAUX SOCIAUX
+const clicked_rs = e => {
+    $("body").delegate(`.${e}`, "click", function() {
+        $(".infosRS").addClass("d-none");
+        // On récupère l'id du RS sélectionné et on fait apparaitre la div correspondante
+    	let id = $(this).attr('id');
+    	const idSplit = id.split(`${e}`);
+    	id = idSplit[1];
+    	const details = `.class${e}${id}`;
+    	$(details).toggleClass("d-none");
+    });
+}
+
+// ----------------------------------------------------------------------------- FONCTION CLICK SUR LES RÉSEAUX SOCIAUX
+const footer_rs = (id, facebook, snapchat, instagram, youtube, twitter, discord, twitch, tiktok, portablePro, whatsApp, mail_nom, mail_domaine) => {
+    let footer = "";
+    // n : name / v : variable
+    const rs = [{"n":"facebook","v":facebook}, {"n":"snapchat","v":snapchat}, {"n":"instagram","v":instagram}, {"n":"youtube","v":youtube}, {"n":"twitter","v":twitter}, {"n":"discord","v":discord}, {"n":"twitch","v":twitch}, {"n":"tiktok","v":tiktok}];
+    const len_rs = rs.length;
+    // ------------------------------------------------------------------------- Affichage des icones des réseaux sociaux existants dans la BDD
+    for (let i = 0; i < len_rs; i++) {
+        const n = rs[i].n;
+        const v = rs[i].v;
+        if(v) footer += `<i id='${n}${id}' class='${n} bleu liens fab fa-${n} fa-lg pointeur pe-3'></i>`;
+    }
+    if(portablePro) footer += `<i id='portablePro${id}' class='portablePro bleu liens fas fa-mobile-alt fa-lg pointeur pe-3'></i>`;
+    if(whatsApp === "1") footer += `<i id='whatsapp${id}' class='whatsapp bleu liens fab fa-whatsapp fa-lg pointeur pe-3'></i>`;
+    footer += `<i id='mail${id}' class='mail bleu liens fas fa-envelope fa-lg pointeur'></i></h6></div>`;
+
+    // ------------------------------------------------------------------------- Affichage des infos relatives aux réseaux sociaux des PDN
+    for (let i = 0; i < len_rs; i++) {
+        const n = rs[i].n;
+        const v = rs[i].v;
+        if(v) {
+            // Si l'appli ne permet pas de faire un lien vers le profil
+            if(n==="snapchat" || n==="discord") footer += `<div class='class${n}${id} infosRS mt-1 d-none'><h6 class='mb-0 bleu'>${v}</h6></div>`;
+            else {footer += `<div class='class${n}${id} infosRS mt-1 d-none'><h6 class='mb-0'><a class='bleu liens' href='${v}' target='_blank'>${v}</a></h6></div>`;}
+        }
+    }
+    if(portablePro) footer += `<div class='classportablePro${id} infosRS mt-1 d-none'><h6 class='mb-0 bleu'>${portablePro}</h6></div>`;
+    if(whatsApp === "1") footer += `<div class='classwhatsapp${id} infosRS mt-1 d-none'><h6 class='mb-0 bleu'>${portablePro}</h6></div>`;
+    footer += `<div class='classmail${id} infosRS mt-1 d-none'><h6 class='mb-0'><a class='bleu liens' href='mailto:${mail_nom}@${mail_domaine}'>${mail_nom}(at)${mail_domaine}</a></h6></div>`;
+
+    return footer;
 }

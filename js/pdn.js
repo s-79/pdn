@@ -1,12 +1,11 @@
 // ----------------------------------------------------------------------------- ! ! ! - - P O P U L A T E - - ! ! !
-
 $(function(){
 	// ------------------------------------------------------------------------ Mettre en valeur le menu actif
-	$("#menu_str").toggleClass("nav-link-toggle");
+	$("#menu_pdn").toggleClass("nav-link-toggle");
 	// ------------------------------------------------------------------------ Remplissage automatique du champ ville concaténé avec le code postal
 	ajaxListVille("#choixVille");
-	// ------------------------------------------------------------------------ Chargement de toutes les structures
-	all_Str();
+	// ------------------------------------------------------------------------ Chargement de tous les PDN
+	all_Pdn();
 });
 
 // ----------------------------------------------------------------------------- ! ! ! - - C H A N G E - - ! ! !
@@ -14,25 +13,27 @@ $(function(){
 // ----------------------------------------------------------------------------- ÉVENEMENT CHANGE SUR LE CHOIX DES VILLES
 $("#choixVille").change(function(){
 	const selectedVille = $("#choixVille").val();
-	// ------------------------------------------------------------------------- Chargement de toutes les structures
+	// ------------------------------------------------------------------------- Chargement de tous les PDN
 	if (selectedVille === "0") {
 		$("footer").removeClass('footer_absolute');
-		all_Str();
+		all_Pdn();
 	}
-	// ------------------------------------------------------------------------- Chargement des structures de la ville séléctionnée
+	// ------------------------------------------------------------------------- Chargement des PDN de la ville séléctionnée
 	else {
 		$("footer").addClass('footer_absolute');
-		selected_Str(selectedVille);
+		selected_Pdn(selectedVille);
 	}
 });
 
 // ----------------------------------------------------------------------------- ! ! ! - - C L I C K - - ! ! !
 
-// ----------------------------------------------------------------------------- ÉVENEMENT CLICK SUR UNE VIGNETTE
-$("body").delegate( ".card", "click", function() {
-	// ------------------------------------------------------------------------- Récupération de l'id de la structure séléctionnée
-	const idStr = $(this).attr('id');
-	str_Get_Infos(idStr);
-	str_Get_Pdn(idStr);
-	// str_Get_Type(idStr);
+// ----------------------------------------------------------------------------- EVEMENT CLICK SUR LA CARTE D'UN PDN
+$("body").delegate( ".divfigure", "click", function() {
+	const id = $(this).attr('id');
+	clicked_pdn(id);
+});
+
+// ----------------------------------------------------------------------------- EVEMENT CLICK SUR L'ICONE INFOS STRUCTURE
+$("body").delegate( "#btnInfosStr", "click", function() {
+	$(".infosStr").toggleClass("d-none");
 });
