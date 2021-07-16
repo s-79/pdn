@@ -30,21 +30,24 @@ if (isset($_POST['login']) && isset($_POST['mdp'])){
 				header('location: bienvenue.php');
 
 		}	else {
-			$message = "Identifiant ou mot de passe incorrect.";
+			$message = "Identifiant ou mot de passe incorrect";
 		}
 	} else {
-		$message = "Identifiant ou mot de passe incorrect.";
+		$message = "Identifiant ou mot de passe incorrect";
 	}
 }
 
 include("header.php"); ?>
 
-<div class="container-fluid" style="margin-top: 7em !important;">
-    <div class="d-flex justify-content-center">
-		<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-			<h1 class="pt-3">Connexion</h1>
+<section class="mt-4">
+    <h1 class="bleu">CONNEXION PDN</h1>
+    <div class="orange-divider"> </div>
+
+	<div class="d-flex justify-content-center mt-5">
+		<div class="bg_bleu p-2 rounded rounded-3">
+			<!-- <h1 class="pt-2">Connexion</h1> -->
 			<form action="" method="post">
-				<div class="form-floating mx-3 mt-4 mb-3">
+				<div class="form-floating mx-3 mt-4 mb-2">
 					<input type="text" name="login" class="form-control" placeholder="Identifiant">
 					<label for="login">Identifiant</label>
 				</div>
@@ -63,7 +66,8 @@ include("header.php"); ?>
 			</form>
 		</div>
 	</div>
-</div>
+
+</section>
 
 <footer class="text-center pt-4 pb-1 footer_absolute">
     <h5>Ligue de l'enseignement - FOL93 © <?php echo date('Y')?> / Tous droits réservés</h5>

@@ -3,7 +3,7 @@
 /* ----------------------------------------------------------------------------- Remplissage de la liste Ville - Récup données & append */
 const ajaxListVille = (liste) => {
     $.ajax({
-        url: "php/populate.php",
+        url: "php/str_Get.php",
         dataType: 'JSON',
         data : {v_ville:"v_ville"},
         success: function(response){
@@ -162,7 +162,7 @@ const structure = (response, len) => {
         const image = response[i].image;
         // -------------------------------------------------------------------- Création des vignettes
         res += `<div class='strCard col-6 col-sm-6 col-md-4 col-lg-3 mb-4'>`;
-        res += `<div id='${id}' class='card pointeur border bg_bleu'>`;
+        res += `<div id='${id}' class='card pointeur border_none bg_bleu'>`;
         res += `<div class='card-body text-uppercase text-center'>`;
         res += 		`<h2 class='card-title text-white'>${nom}</h2>`;
         res += 		`<h3 class='card-text text-white'>${ville}</h3></div>`;

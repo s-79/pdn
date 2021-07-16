@@ -78,7 +78,7 @@ a.dropdown-item {
 
 .rotate {
     transform-origin: 50% 50%;
-    transform: rotateY( 180deg );
+    transform: rotateY(180deg);
     -webkit-transform:rotate(180deg);
     -moz-transform:rotate(180deg);
 }
@@ -236,7 +236,7 @@ a.dropdown-item {
     margin-top: 0em;
 }
 
-.border {
+.border_none {
     border : none !important;
 }
 
@@ -249,7 +249,7 @@ a.dropdown-item {
 }
 
 /* ----------------------------------------------------------------------------- PROMENEURS */
-figure{
+figure {
     margin-top: 0.55em;
     border-left : 3px solid #005a77;
     border-right : 1px solid #005a77;
@@ -332,7 +332,7 @@ figure:hover {
     color : #fff !important;
 }
 
-/* .borderOutDetails {
+.borderOutDetails {
 	padding: 1em;
     border-radius: 0em 0em .80rem .80rem;
     background-color: #fff;
@@ -342,7 +342,7 @@ figure:hover {
 
 .textDescription {
   font-size: 0.9em !important;
-} */
+}
 
 /* ----------------------------------------------------------------------------- MODAL */
 
