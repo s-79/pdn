@@ -248,6 +248,12 @@ a.dropdown-item {
     line-height: 1.5em;
 }
 
+.btn-outline-secondary:hover {
+    background-color: white;
+    color : #2a2625;
+    border-color: #2a2625;
+}
+
 /* ----------------------------------------------------------------------------- PROMENEURS */
 figure {
     margin-top: 0.55em;
@@ -330,6 +336,10 @@ figure:hover {
 .borderOut:hover {
     background-color: #e85017 !important;
     color : #fff !important;
+}
+
+.borderOutClicked {
+	border-radius: .80em .80em 0rem 0rem !important;
 }
 
 .borderOutDetails {

@@ -50,7 +50,7 @@ function initMap() {
         var marker = L.marker([villes[ville].lat, villes[ville].lon]).addTo(macarte);
 
         // Nous ajoutons la popup. A noter que son contenu (ici la variable ville) peut être du HTML
-        marker.bindPopup("<strong>"+ville+"</strong><br /><a href='../structures.php'>+ d'infos sur la structure et ses Promeneurs du Net.</a>", {maxWidth: 500});
+        marker.bindPopup("<strong>"+ville+"</strong><br /><a href='../str.php'>+ d'infos sur la structure et ses Promeneurs du Net.</a>", {maxWidth: 500});
         // marker.bindPopup(ville);
     }
     // Nous ajoutons un marqueur sur la position centrale - La ligue ?
@@ -64,7 +64,7 @@ function initMap() {
 window.onload = function(){
     // -------------------------------------------------------------------------------------------------------------- Mettre en valeur le menu actif
     $("#strMenu").toggleClass("nav-link-toggle");
-    
+
     // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
     initMap();
 };

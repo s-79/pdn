@@ -30,7 +30,7 @@ include("header.php"); ?>
             <div class="modal-body text-center mb-2">
                 <p class="m-auto" style="font-size:0.8em;line-height:1.3">
                     • Accompagner les acteurs associatifs en mobilisant les ressources et compétences disponibles grâce à son Centre de Ressources. Le travail mené dans ces différents cadres correspond également à une capacité d’accompagnement des acteurs éducatifs sur le territoire.</br></br>
-                    • Une expertise pour l’accompagnement des projets de jeunes par le biais notamment du travail effectué dans le cadre : <span class="pointeur"><i id="plusModalpres" class="fas fa-plus-circle"></i></span></p>
+                    • Une expertise pour l’accompagnement des projets de jeunes : <span class="pointeur"><i id="plusModalpres" class="fas fa-plus-circle"></i></span></p>
                     <p id="projetsModalPres" class="m-auto d-none" style="font-size:0.8em;line-height:1.3"></br>
                      ◦ Du développement et de l'accompagnement du projet “Junior association” qui s'inscrit dans une double finalité de développement de la citoyenneté active des jeunes et du renouvellement de la vie associative;</br></br>
                      ◦ Des formations des volontaires en service civique dans le département sur le champ de la citoyenneté et du volontariat;</br></br>

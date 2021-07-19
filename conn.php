@@ -43,8 +43,8 @@ include("header.php"); ?>
     <h1 class="bleu">CONNEXION PDN</h1>
     <div class="orange-divider"> </div>
 
-	<div class="d-flex justify-content-center mt-5">
-		<div class="bg_bleu p-2 rounded rounded-3">
+	<div class="d-flex justify-content-center pt-3 mt-4">
+		<div class="bg_bleu py-1 px-3 rounded rounded-3" style="min-width:25em;">
 			<!-- <h1 class="pt-2">Connexion</h1> -->
 			<form action="" method="post">
 				<div class="form-floating mx-3 mt-4 mb-2">
@@ -60,8 +60,8 @@ include("header.php"); ?>
 					<p class="text-center fw-bold text-warning mt-2"><?php echo $message; ?></p>
 				<?php } ?>
 
-				<div class="form-group d-flex justify-content-center mx-3 mt-1">
-					<button type="submit" name="submit" class="btn btn-warning m-3">Se connecter</button>
+				<div class="form-group d-flex justify-content-center mx-3">
+					<button type="submit" name="submit" class="btn btn-warning m-2 mb-3">Se connecter</button>
 				</div>
 			</form>
 		</div>
@@ -78,6 +78,8 @@ include("header.php"); ?>
 
 </body>
 
-<script src="js/functions.js"></script>
+<script>
+	$("#menu_conn").toggleClass("nav-link-toggle");
+</script>
 
 </html>

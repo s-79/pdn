@@ -81,7 +81,7 @@ const ress_Get_Infos = (id_Ress, divInfosOutil) => {
                 const fichier = response[i].fichier;
                 const site_editeur = response[i].site_editeur;
 
-            	infos += `<div id='detail${id}' class='row borderOutDetails'>`;
+            	infos += `<div id='detail${id}' class='row mx-auto borderOutDetails'>`;
             	infos += `<div class='col-12 col-sm-3 d-block text-center'>`;
             	infos += `<img src='${image}' height='150px' class='img-fluid'>`;
             	if(fichier) {infos += `<h4 class='text-center initial mt-3'><a href='${fichier}' class='bleu liens fw-bold' target='_blank'><i class='fas fa-globe bleu'></i></br>Télécharger</br>la ressource</a></h4>`};

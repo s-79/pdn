@@ -134,20 +134,15 @@ $("body").delegate( ".photo", "click", function() {
 });
 
 // ----------------------------------------------------------------------------- EVEMENTS CLICK SUR LES ICONES DU MODAL "PAS DE PDN DANS LA VILLE"
-$("body").delegate( "#CoordoFacebook", "click", function() {
-	$(".infosRSCoordo").addClass("d-none");
-  	$("#CoordoFacebookDetails").removeClass("d-none");
-});
-
-$("body").delegate( "#CoordoTwitter", "click", function() {
-	$(".infosRSCoordo").addClass("d-none");
-  	$("#CoordoTwitterDetails").removeClass("d-none");
-});
-
-$("body").delegate( "#CoordoMail", "click", function() {
-	$(".infosRSCoordo").addClass("d-none");
-  	$("#CoordoMailDetails").removeClass("d-none");
-});
+const rsCoordo = ['Facebook','Twitter','Mail'];
+for (rs of rsCoordo) {
+    const divRs = `#Coordo${rs}`;
+    const divRSDetails = `#Coordo${rs}Details`;
+    $("body").delegate(divRs, "click", function() {
+        $(".infosRSCoordo").addClass("d-none");
+        $(divRSDetails).removeClass("d-none");
+    });
+}
 
 // ----------------------------------------------------------------------------- ! ! ! - - FONCTIONS DÉFINIES - - ! ! !
 

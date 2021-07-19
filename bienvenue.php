@@ -10,7 +10,7 @@ include("header.php");
 
 <div class="container-fluid" style="margin-top: 6em">
 	<div class="text-center mt-3">
-		<h2 class="mb-0">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h2>
+		<h1 class="mb-0 bleu text-uppercase">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
 </div>

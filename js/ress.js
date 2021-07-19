@@ -42,4 +42,6 @@ $("body").delegate( ".borderOut", "click", function() {
 	const idChevron = `#chevron${id_Out}`;
 	$(idChevron).toggleClass("rotate");
 	ress_Get_Infos(id_Out, divInfosOutil);
+	$(this).toggleClass("borderOutClicked");
+
 });
