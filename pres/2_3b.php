@@ -10,7 +10,7 @@
             Educateur-rices spécialisé-es, Tnformateur-rice jeunesse, Psychologue, Animateur jeunesse, Educateurs sportifs sont réunis au sein d'un même réseau afin de poursuivre leur mission d'accompagnement.</br></br>
             Le dispositif est aussi l'opportunité d'accéder à des formations en lien avec les usages numériques des jeunes mais aussi d'être outillés en matière de sensibilisation/prévention/animation en lien avec le numérique éducatif.</p>
         <div class="text-center mt-2">
-            <img src="img/pres/ligneOrange.png">
+            <img class="img-fluid" src="img/pres/ligneOrange.png">
         </div>
     </div>
 </div>

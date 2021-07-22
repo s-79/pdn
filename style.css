@@ -5,11 +5,12 @@ body {
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
     margin-top: 7em;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 section {
-    margin-left: 17%;
-    margin-right: 17%;
+    max-width: 80em;
 }
 
 .footer_absolute {
@@ -21,16 +22,11 @@ section {
 
 /* ----------------------------------------------------------------------------- TEXTES */
 /* xx-small 0.6, x-small 0.75, small 8/9, medium 1, large 1.2, x-large 1.5, xx-large 2 */
-h1 {
+h1, .titre {
     font-size: x-large;
     font-weight: bold;
     color: white;
 }
-
-.titre {
-     font-size: 1.1em;
-     font-weight: bold;
- }
 
 h2 {
     font-size: medium;
@@ -122,6 +118,10 @@ a.dropdown-item {
 .nav-link-toggle {
   color: rgb(232, 80, 23) !important;
   background-color: #fff !important;
+}
+
+#pdn_title {
+    display: none;
 }
 
 /* ----------------------------------------------------------------------------- COULEURS PDN */
@@ -423,4 +423,462 @@ figure:hover {
    to {
        stroke-dashoffset: 0;
    }
+}
+
+/* ----------------------------------------------------------------------------- ! ! ! R E S P O N S I V E ! ! !  */
+
+@media screen and (max-width: 80em) {
+    body {
+        background-image: url(img/arbre_reseau3_left.png);
+        background-repeat: no-repeat;
+        background-position: top 9em left;
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width: 434px) {
+    #pdn_title {
+        display: inline;
+    }
+    #prom_title {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------------------------- ACCUEIL */
+
+@media screen and (min-width: 1281px) and (max-width: 1485px) {
+    .rowMenu {
+        width:80% !important;
+    }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1280px) {
+    .rowMenu {
+        width:90% !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .rowMenu {
+        width:100% !important;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    #divAccStr, #divAccOut {
+      justify-content: start !important;
+    }
+    #divAccPres, #divAccPdn {
+      justify-content: end !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #etqPres, #etqStr, #etqPdn, #etqRes {
+        margin-bottom: 1em;
+    }
+    #menuPres {
+        margin-top: 1.5em !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #etqPres, #etqStr, #etqPdn, #etqRes {
+        height : 50px;
+    }
+}
+
+/* ----------------------------------------------------------------------------- PRÉSENTATION */
+
+@media screen and (max-width: 1500px) {
+    #sectionPres {
+        margin-left: 14%;
+        margin-right: 14%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #sectionPres {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #sectionPres {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-left: 0em !important;
+        padding-right: 0em !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-height: 640px) {
+  #footer_pres {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .containerPres {
+    min-height: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .bulleDispositif, .bulleCoordo, .bullePilotes {
+      height : 120px !important;
+      left : -50px !important;
+      margin-bottom: 1em;
+    }
+    #objectifs {
+      margin-top: 0em !important;
+      margin-left: 1.5em !important;
+      margin-right: 1.5em !important;
+      margin-bottom: 0em !important;
+    }
+    .divDispositif {
+      padding: 1em !important;
+      margin: 0.5em !important;
+    }
+    .textPres {
+      font-size: 0.9em !important;
+      padding: 1em !important;
+    }
+    .imgBgDispositif {
+        padding-top: 4em !important;
+    }
+    #pres1_1a {
+      padding-left: 5em !important;
+    }
+    #pres1_2c {
+      padding-left: 11em !important;
+    }
+    #pres1_3a {
+      padding-left: 6em !important;
+    }
+    span.textPres {
+      margin: 0em !important;
+      padding: 5em 1em 0em 1em !important;
+    }
+    .bgDispositif {
+      background-position: 50% 2.5em !important;
+    }
+    #missions {
+      padding-top: 0em !important;
+    }
+    .pilotes {
+      display: block !important;
+      text-align: center;
+    }
+    .img-pilotes {
+      margin: 1em;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    .containerPres {
+      padding: 0.5em !important;
+      margin-top: 4em !important;
+    }
+    .bulleDispositif, .bulleCoordon, .bullePilotes {
+      display: none;
+    }
+    .contenuPres {
+      margin-top: 0em !important;
+    }
+    #objectifs {
+      margin-top: 0em !important;
+      margin-left: 1.5em !important;
+      margin-right: 1.5em !important;
+      margin-bottom: 0em !important;
+    }
+    .titreDispositif {
+      margin-top: 0em !important;
+    }
+    .titreDispositif h2 {
+      font-size: 0.9em;
+    }
+    .divDispositif {
+      padding: 1em !important;
+      margin: 0.5em !important;
+    }
+    .textPres {
+      font-size: 0.9em !important;
+      padding: 1em !important;
+      margin: 1em;
+    }
+    span.textPres {
+      margin: 0em !important;
+      padding: 5em 1em 0em 1em !important;
+    }
+    .imgBgDispositif {
+        padding-top: 4em !important;
+    }
+    .bgDispositif {
+      background-position: 50% 2.7em !important;
+    }
+    .bgCoordo {
+      background-image: none !important;
+    }
+    #missions {
+      padding-top: 0em !important;
+    }
+    .pilotes {
+      display: block !important;
+      text-align: center;
+    }
+    .img-pilotes {
+      margin: 1em;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .containerPres {
+      padding: 0.5em !important;
+      margin-top: 4em !important;
+    }
+    .bulleDispositif, .bulleCoordon, .bullePilotes {
+      display: none;
+    }
+    .contenuPres {
+      margin-top: 0em !important;
+    }
+    #objectifs {
+      margin-top: 0em !important;
+      margin-left: 1.5em !important;
+      margin-right: 1.5em !important;
+      margin-bottom: 0em !important;
+    }
+    .titreDispositif {
+      margin-top: 0em !important;
+    }
+    .titreDispositif h2 {
+      font-size: 0.8em;
+    }
+    .divDispositif {
+      padding: 1em !important;
+      margin: 0.5em !important;
+    }
+    .textPres {
+      font-size: 0.8em !important;
+      padding: 1em !important;
+      margin: 1em;
+    }
+    span.textPres {
+      margin: 0em !important;
+      padding: 5em 1em 0em 1em !important;
+    }
+    .imgBgDispositif {
+        padding-top: 4em !important;
+    }
+    .bgDispositif {
+      background-position: 50% 2.7em !important;
+    }
+    #video {
+      width : 260px !important;
+      height : 180px !important;
+    }
+    .bgCoordo {
+      background-image: none !important;
+    }
+    #missions {
+      padding-top: 0em !important;
+    }
+    .pilotes {
+      display: block !important;
+      text-align: center;
+    }
+    .img-pilotes {
+      margin: 1em;
+    }
+}
+
+@media screen and (max-width: 492px) {
+    body {
+      line-height: 1.2em !important;
+    }
+    #sectionPres {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .bgDispositif {
+      background-position: 50% 2.3em !important;
+    }
+    .divDispositif h2 {
+        font-size: 0.73em;
+        line-height: 1.5em;
+        letter-spacing: 0em !important;
+    }
+    .divDispositif {
+        padding: 0.5em !important;
+    }
+    .textPres {
+        margin: 0;
+    }
+}
+
+/* ----------------------------------------------------------------------------- STRUCTURES */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #structures {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #structures {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    #structures {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .divVisuMap {
+        text-align: right !important;
+    }
+    #choixVille {
+        margin-top: 1em;
+        margin-right: 0em !important;
+        max-width: 220px !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        margin-top: 5em !important;
+    }
+
+    #structures {
+        margin-top: 1em !important;
+    }
+
+    .divTitre {
+        text-align: center;
+    }
+
+    .divTitre h1 {
+        margin-bottom: 0.1em;
+    }
+
+    .orange-divider {
+        margin: auto;
+    }
+
+    .divVisuMap {
+        margin-top: 1em;
+        text-align: center !important;
+    }
+
+    .divChoixVille {
+        justify-content: center !important;
+    }
+
+    #choixVille {
+        margin-top: 1em;
+        max-width: 220px !important;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 575px) {
+    #structures {
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+}
+
+@media screen and (min-width: 412px) and (max-width: 500px) {
+    #structures {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    #structures {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* ----------------------------------------------------------------------------- PROMENEURS */
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    #promeneurs {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #promeneurs {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #promeneurs {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #promeneurs {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    #promeneurs {
+        margin-left: 13%;
+        margin-right: 13%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 575px) {
+    #promeneurs {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #promeneurs {
+        margin-top: 1em !important;
+    }
+    #modalPdn h2, h3 {
+        font-size: 0.9em;
+    }
+}
+
+/* ----------------------------------------------------------------------------- RESSOURCES */
+
+@media screen and (max-width: 575px) {
+    #divRessCat {
+        margin-top: 1em !important;
+    }
+    .borderCat {
+        margin-top: 0.5em !important;
+    }
+    .borderThem {
+        margin-top: 0.1em !important;
+    }
+    #divRessOut, #divRessThem {
+        margin: 1em;
+    }
+    #ident {
+        min-width: 10em !important;
+    }
 }

@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-xl navbar fixed-top">
+<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php"><strong class="titre text-white">PROMENEURS DU NET</strong></a>
-        <a id="nav_img" class="navbar-brand" href="index.php"><img src="img/logo_header.png" class="rounded rounded-3 d-flex justify-content-start" alt="Promeneurs du Net"></a>
+        <a class="navbar-brand pt-1 pb-0" href="index.php"><strong id="pdn_title" class="titre text-white me-2">PDN</strong><strong id="prom_title" class="titre text-white me-2">PROMENEURS DU NET</strong>
+        <img src="img/logo_header.png" class="rounded rounded-3" style="padding-bottom:.1em;" alt="Promeneurs du Net"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

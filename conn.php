@@ -39,13 +39,13 @@ if (isset($_POST['login']) && isset($_POST['mdp'])){
 
 include("header.php"); ?>
 
-<section class="mt-4">
+<section class="mx-auto">
     <h1 class="bleu">CONNEXION PDN</h1>
     <div class="orange-divider"> </div>
 
 	<div class="d-flex justify-content-center pt-3 mt-4">
-		<div class="bg_bleu py-1 px-3 rounded rounded-3" style="min-width:25em;">
-			<!-- <h1 class="pt-2">Connexion</h1> -->
+		<div id="ident" class="bg_bleu py-1 px-3 rounded rounded-3" style="min-width:25em;">
+			<!-- <h1 class="pt-2">Identification</h1> -->
 			<form action="" method="post">
 				<div class="form-floating mx-3 mt-4 mb-2">
 					<input type="text" name="login" class="form-control" placeholder="Identifiant">

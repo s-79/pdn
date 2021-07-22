@@ -1,9 +1,3 @@
-// ----------------------------------------------------------------------------- ! ! ! - - P O P U L A T E - - ! ! !
-
-$(function(){
-
-});
-
 // ----------------------------------------------------------------------------- ! ! ! - - C H A N G E - - ! ! !
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CHANGE DANS LA LISTE DU NOM DE L'APPLICATION
@@ -156,8 +150,12 @@ for (e of rs) {
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON DE VALIDATION DU NOM DE L'APPLICATION
 $("#btn_modal_nom_rs").click(function() {
 	const rs = $("#get_nom_rs").val();
-	$("#nom_rs").html(rs);
-	$("#modal_rs").modal('show');
+	if(rs){
+		$("#nom_rs").html(rs);
+		$("#modal_rs").modal('show');
+	}
+	else{alert("Merci de choisir ou de saisir un nom d'application avant de valider.")}
+
 });
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LA CASE "AUTRE THÉMATIQUE"

@@ -14,6 +14,7 @@ include("header.php");
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
 </div>
+
 <h3 class="text-center mt-5">Que souhaites-tu faire ?</h3>
 <div class="d-grid gap-2 col-2 mx-auto">
   <button class="btn btn-outline-primary mt-4" type="button" onclick="document.location='form.php'">Remplir le formulaire</button>

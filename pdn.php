@@ -2,13 +2,13 @@
 session_start();
 include("header.php"); ?>
 
-<section class="mt-4">
+<section class="mx-auto">
     <div class="row">
-        <div class="col-12 col-sm-6">
+        <div class="divTitre col-12 col-sm-6">
             <h1 class="bleu">LES PROMENEURS</h1>
             <div class="orange-divider"> </div>
         </div>
-        <div class="col-12 col-sm-6 d-flex justify-content-end">
+        <div class="divChoixVille col-12 col-sm-6 d-flex justify-content-end">
             <select class="form-select me-1" style="max-width:50%;" id="choixVille">
             </select>
         </div>

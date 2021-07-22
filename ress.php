@@ -2,8 +2,10 @@
 session_start();
 include("header.php"); ?>
 
-<section id="sectionOut" class="mt-4">
-    <h1 class="bleu">LES RESSOURCES</h1>
+<section id="sectionOut" class="mx-auto">
+    <div class="divTitre">
+        <h1 class="bleu">LES RESSOURCES</h1>
+    </div>
     <div class="orange-divider"> </div>
 
     <div id="divRessCat" class="d-flex flex-wrap mt-4 justify-content-center"></div>

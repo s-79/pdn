@@ -105,8 +105,8 @@ const get_Ress = response => {
         const nom_editeur = response[i].nom_editeur;
         const age = response[i].age;
         cpt ++;
-        if (cpt%2===0) {ress += `<div id='outil${id}' class='row justify-content-between borderOut mt-1 pointeur' style='background-color:#fff;'>`;}
-        else {ress += `<div id='outil${id}' class='row justify-content-between borderOut mt-1 pointeur' style='background-color:#ccdee4;'>`;};
+        if (cpt%2===0) {ress += `<div id='outil${id}' class='row borderOut mt-1 pointeur' style='background-color:#fff;'>`;}
+        else {ress += `<div id='outil${id}' class='row borderOut mt-1 pointeur' style='background-color:#ccdee4;'>`;};
         ress += `<h3 class='col-10 col-sm-11 mb-1 mt-1'><span class='fw-bold'>${nom}</span>`;
         if (nom_editeur) ress += `&nbsp;-&nbsp;${nom_editeur}`;
         if (age) ress += `&nbsp;-&nbsp;${age}`;

@@ -23,10 +23,10 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-xl navbar fixed-top">
+<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php"><strong class="titre text-white">PROMENEURS DU NET</strong></a>
-        <a id="nav_img" class="navbar-brand" href="index.php"><img src="../img/logo_header.png" class="rounded rounded-3 d-flex justify-content-start" alt="Promeneurs du Net"></a>
+        <a class="navbar-brand pt-1 pb-0" href="index.php"><strong id="pdn_title" class="titre text-white me-2">PDN</strong><strong id="prom_title" class="titre text-white me-2">PROMENEURS DU NET</strong>
+        <img src="../img/logo_header.png" class="rounded rounded-3" style="padding-bottom:.1em;" alt="Promeneurs du Net"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -73,15 +73,15 @@
 
 <?php session_start(); ?>
 
-<section class="mt-4">
+<section class="mx-auto">
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="divTitreStr col-12 col-sm-6 col-md-4">
             <h1 class="bleu">LES STRUCTURES</h1>
             <div class="orange-divider"> </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 text-center"><a href="../str.php" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Visualiser par structure</a></div>
+        <div class="divVisuMap col-12 col-sm-6 col-md-4 text-center"><a href="../str.php" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Visualiser par structure</a></div>
     </div>
-    <div id="map" class='my-5'>
+    <div id="map" class='my-3'>
     </div>
     <!-- <div id="str" class="row mt-5"></div> -->
 </section>

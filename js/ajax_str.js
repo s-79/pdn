@@ -65,7 +65,7 @@ const str_Get_Infos = idStr => {
             const image = response[0].image;
         	// ----------------------------------------------------------------- Création du modal de la structure cliquée
             $("#modalStrHeader").html(`<h2 class='modal-title orange text-uppercase fw-bold'>${nom}</h2><h5 class='bleu mb-0'>${adresse}</br>${cp} ${ville}</br>${tel}</h5>`);
-            $("#modalStrContentLeft").html(`<img src='${image}' width='100%' height='120' alt='${nom} - ${ville}' title='${nom} - ${ville}' /></br></br><h4><a href='${site}' class='liens bleu' target='_blank'><i class='fas fa-globe bleu'></i></br>Site Internet</br>de la structure</a></h4>`);
+            $("#modalStrContentLeft").html(`<img class='img-fluid' src='${image}' width='100%' height='120' alt='${nom} - ${ville}' title='${nom} - ${ville}' /></br></br><h4><a href='${site}' class='liens bleu' target='_blank'><i class='fas fa-globe bleu'></i></br>Site Internet</br>de la structure</a></h4>`);
             $("#modalStrContentRight").html(`<h5 class='bleu'><i class='fas fa-arrow-right pe-2'></i>${presentation}</h5>`);
         }
 	});
@@ -156,7 +156,7 @@ const structure = (response, len) => {
         const ville = response[i].ville;
         const image = response[i].image;
         // -------------------------------------------------------------------- Création des vignettes
-        res += `<div class='strCard col-6 col-sm-6 col-md-4 col-lg-3 mb-4'>`;
+        res += `<div class='strCard col-12 col-md-6 col-lg-4 col-xl-3 mb-4'>`;
         res += `<div id='${id}' class='card pointeur border_none bg_bleu'>`;
         res += `<div class='card-body text-uppercase text-center'>`;
         res += 		`<h2 class='card-title text-white'>${nom}</h2>`;

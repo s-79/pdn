@@ -8,13 +8,13 @@
 include("header.php");
 ?>
 
-<div class="container-fluid" style="margin-top: 6.5em">
-	<div class="text-center mt-4">
-		<h2 class="mb-0">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h2>
+<div class="container-fluid" style="margin-top: 6em">
+	<div class="text-center mt-3">
+		<h1 class="mb-0 bleu text-uppercase">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
     <div id="form_coordo" class="d-flex justify-content-center mt-3">
-		<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
+		<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
 			<!--                                                                Coordonnées-->
 			<h1 class="pt-3">Coordonnées</h1>
 			<!--                                                                Récupération de l'id dans un input invisible -->
@@ -132,7 +132,7 @@ include("header.php");
 						<!-- <div class="mb-3" style="overflow-y:scroll; overflow-x:hidden; height:157px; scrollbar-color: rgb(232, 80, 23) white;"> -->
 						<div class="mb-3">
 							<div class="row mt-3 ms-3">
-								<div class="col-5">
+								<div class="col-6">
 									<input class="form-check-input" type="checkbox" value="" id="lien">
 									<label class="form-check-label text-white" for="lien">Lien Social</label>
 								</div>
@@ -142,9 +142,9 @@ include("header.php");
 								</div>
 							</div>
 							<div class="row mt-2 ms-3">
-								<div class="col-5">
+								<div class="col-6">
 									<input class="form-check-input" type="checkbox" value="" id="socio_pro">
-									<label class="form-check-label text-white" for="socio_pro">Acc. Socio-pro</label>
+									<label class="form-check-label text-white d-inline" for="socio_pro">Acc. Socio-pro</label>
 								</div>
 								<div class="col-6">
 									<input class="form-check-input" type="checkbox" value="" id="parentalite">
@@ -152,7 +152,7 @@ include("header.php");
 								</div>
 							</div>
 							<div class="row mt-2 ms-3">
-								<div class="col-5">
+								<div class="col-6">
 									<input class="form-check-input" type="checkbox" value="" id="sante">
 									<label class="form-check-label text-white" for="autsantere1">Santé</label>
 								</div>
@@ -162,7 +162,7 @@ include("header.php");
 								</div>
 							</div>
 							<div class="row mt-2 ms-3">
-								<div class="col-5">
+								<div class="col-6">
 									<input class="form-check-input" type="checkbox" value="" id="sexualite">
 									<label class="form-check-label text-white" for="sexualite">Sexualité</label>
 								</div>
@@ -172,7 +172,7 @@ include("header.php");
 								</div>
 							</div>
 							<div class="row mt-2 ms-3">
-								<div class="col-5">
+								<div class="col-6">
 									<input class="form-check-input" type="checkbox" value="" id="logement">
 									<label class="form-check-label text-white" for="logement">Logement</label>
 								</div>
@@ -189,7 +189,7 @@ include("header.php");
 
 						<div class="row mt-3 me-3">
 							<div class="col-9 text-white mt-1">
-								Combien en avez-vous organisées<br>ce mois-ci ?
+								Combien en avez-vous organisées ce mois-ci ?
 							</div>
 							<div class="col-3">
 								<select class="form-select mt-2" id="initiatives">
@@ -206,7 +206,7 @@ include("header.php");
 
 						<div class="row mt-3 me-3 mb-3">
 							<div class="col-9 text-white mt-1">
-								Combien pensez-vous en organiser<br>le mois prochain ?
+								Combien pensez-vous en organiser le mois prochain ?
 							</div>
 							<div class="col-3">
 								<select class="form-select mt-2" id="next_nitiatives">

@@ -2,14 +2,14 @@
 session_start();
 include("header.php"); ?>
 
-<section class="mt-4">
+<section class="mx-auto">
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="divTitre col-12 col-sm-6 col-md-4">
             <h1 class="bleu">LES STRUCTURES</h1>
             <div class="orange-divider"> </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 text-center"><a href="osm/index.php" id="visuMap" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt pe-2"></i>Visualiser sur une carte</a></div>
-        <div class="col-12 col-sm-4 col-md-4 d-flex justify-content-end">
+        <div class="divVisuMap col-12 col-sm-6 col-md-4 text-center"><a href="osm/index.php" id="visuMap" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt pe-2"></i>Visualiser sur une carte</a></div>
+        <div class="divChoixVille col-12 col-md-4 d-flex justify-content-end">
             <select class="form-select me-1" style="max-width:75%;" id="choixVille">
             </select>
         </div>

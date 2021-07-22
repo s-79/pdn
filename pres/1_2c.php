@@ -14,7 +14,7 @@
         • Respecter la dignité de la personne</p>
         <div class="col-12 col-lg-6 text-center">
             <!-- <video id="video" class="d-block mx-auto" width="427" height="240" src="pres/Promeneurs Du Net - Une présence éducative sur Internet.webm"></video> -->
-            <video width="427" height="240" controls poster="pres/pdn.png">
+            <video width="427" height="240" controls poster="pres/pdn.png" class="img-fluid">
                 <source src="pres/pdn.webm" type=video/webm>
             </video>
         </div>

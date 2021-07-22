@@ -4,12 +4,12 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title fw-bold" id="exampleModalLabel">Nom de l'application</h5>
+                <h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Nom de l'application</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="form_autre_rs">
-                    <div class="form-floating mx-3 mt-3">
+                    <div class="form-floating mx-3 mt-2 mb-3">
                         <select class="form-select" id="select_nom_rs" aria-label="Nom de l'application">
                             <option selected value="">Nom de l'application</option>
                             <option value="TikTok">TikTok</option>
@@ -22,7 +22,7 @@
                         </select>
                         <label for="select_nom_rs">Nom de l'application</label>
                     </div>
-                    <div id="div_nom_rs" class="form-floating mx-3 mt-3 mb-3 d-none">
+                    <div id="div_nom_rs" class="form-floating mx-3 my-3 d-none">
                         <input type="text" class="form-control" id="get_nom_rs" placeholder="Précisez...">
                         <label for="get_nom_rs">Précisez...</label>
                     </div>
@@ -41,14 +41,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Sur l'application <span id="nom_rs"></span> ... </h5>
+            <h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Sur l'application <span id="nom_rs"></span> ... </h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <form id="form_rs">
                 <div class="form-floating mx-3 mt-3">
                     <select class="form-select" id="satisfaction" aria-label="Niveau de satisfaction par rapport à l'utilisation de cet outil">
-                        <option selected value="">Niveau de satisfaction et de maîtrise du PDN</option>
+                        <option selected value="">Niveau de maîtrise du PDN</option>
                         <option value="Pauvre">Pauvre</option>
                         <option value="Moyen">Moyen</option>
                         <option value="Bon">Bon</option>
@@ -136,7 +136,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title fw-bold" id="exampleModalLabel">Initiatives du mois passé...</h5>
+                <h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives du mois passé...</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

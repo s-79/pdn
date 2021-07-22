@@ -74,7 +74,7 @@ const clicked_pdn = (id) => {
 			// ----------------------------------------------------------------- Remplissage du modal
 			$("#modalPdnHeader").html(`<h2 class='modal-title orange text-uppercase pt-2'>${prenom} ${nom} - ${fonction}&nbsp;&nbsp;&nbsp;<i class='fa fa-circle' style='color:${actif}</h2><h3 class='bleu fw-bold text-uppercase' style='margin-top:0.2em;font-weight:0.8em;'>${str_nom}&nbsp;-&nbsp${ville_nom}&nbsp;&nbsp;<a><i id='btnInfosStr' class='bleu fa fa-info-circle' data-bs-toggle='tooltip' data-bs-placement='top' title="Cliquer pour + d'infos ..."></i></a></h3>`);
 			$("#modalPdnHeader").append(`<h5 class='infosStr d-none bleu'><span>${str_adresse}</br>${ville_cp} ${ville_nom}</br>${str_tel}</br><a href='${str_site}' class='bleu liens' target='_blank'>${str_site}</a></br></div></span></h5>`);
-			$("#modalPdnContentLeft").html(`<img src='img/logo_promeneurs_du_net.png' height='100' class='mt-3'><br><img id='modalImg' src='${image}' height='120' class='my-3' alt='${prenom} ${fonction} ${ville_nom}' title='${prenom} ${fonction} ${ville_nom}' />`);
+			$("#modalPdnContentLeft").html(`<img src='img/logo_promeneurs_du_net.png' height='100' class='mt-3 img-fluid'><br><img src='${image}' height='120' class='my-3 img-fluid' alt='${prenom} ${fonction} ${ville_nom}' title='${prenom} ${fonction} ${ville_nom}' />`);
 			$("#modalPdnContentRight").html(`<h5 class='bleu fst-italic'><blockquote><i class='fas fa-quote-left pe-2 mt-2'></i>${presentation}<i class='fas fa-quote-right ps-2'></blockquote></i></h5></div>`);
 
 			// ----------------------------------------------------------------- Création du footer
@@ -107,7 +107,7 @@ const pdn = (response, len) => {
         const image = response[i].image;
 		const ville = response[i].ville_nom;
         // --------------------------------------------------------------------- Création des vignettes
-		res +=`<div id='${id}' class='col-6 col-md-4 col-lg-3 col-xl-2 mb-4 text-center divfigure'>`;
+		res +=`<div id='${id}' class='col-6 col-md-4 col-lg-3 col-xxl-2 mb-4 text-center divfigure'>`;
 		res +=	`<figure class='bg-white pt-3 pl-1 pr-1 pointeur' style="padding-bottom:0.05em;">`;
 		res +=		`<img style='border-radius: 15%;' src='${image}'height='120' alt='${prenom} ${nom}' title='${prenom} ${nom}'/>`;
 		res +=		`<figcaption class='pt-2'><h6 class='text-uppercase fw-bold bleu'>${prenom} ${nom}</br><span class='orange'>${fonction}</span></br>${ville}</h6></figcaption>`;

@@ -10,7 +10,7 @@
         Chaque année, les pilotes du dispositif (CAF 93, Conseil départemental 93, DDCS 93) relancent conjointement l'appel à projet "Promeneur du Net" afin de permettre au réseau de s'élargir et de couvrir l'ensemble des communes du département.</br></br>
         La Ligue de l'enseignement- FOL 93 par le biais de la Coordinatrice du réseau accompagne également les structures et les professionnel-les souhaitant rejoindre la démarche hors appel à projet.</p>
         <div class="text-center">
-            <img src="img/pres/ligneOrange.png">
+            <img class="img-fluid" src="img/pres/ligneOrange.png">
         </div>
     </div>
 </div>
