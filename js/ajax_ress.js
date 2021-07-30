@@ -94,7 +94,7 @@ const ress_Get_Infos = (id_Ress, divInfosOutil) => {
 	});
 }
 
-// ---------------------------------------------------------------------------- FONCTIONS DÉFINIES
+// ----------------------------------------------------------------------------  FONCTIONS DÉFINIES
 const get_Ress = response => {
     let ress = "";
     let cpt = 0;
@@ -114,9 +114,5 @@ const get_Ress = response => {
         ress += `<i id='chevron${id}' class='col-2 col-sm-1 fas fa-chevron-circle-down fa-lg my-auto text-center'></i></div>`;
         ress += `<div id='infos${id}' class='row borderOutInfos d-none'></div>`;
     }
-
-    // if(cpt<10) $("footer").addClass('footer_absolute');
-    // else {$("footer").removeClass('footer_absolute');};
-
     $("#divRessOut").html(ress);
 }

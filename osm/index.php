@@ -81,7 +81,7 @@
         </div>
         <div class="divVisuMap col-12 col-sm-6 col-md-4 text-center"><a href="../str.php" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Visualiser par structure</a></div>
     </div>
-    <div id="map" class='my-3'>
+    <div id="map" class='my-5'>
     </div>
     <!-- <div id="str" class="row mt-5"></div> -->
 </section>

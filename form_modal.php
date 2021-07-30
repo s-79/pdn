@@ -130,14 +130,12 @@
     </div>
 </div>
 
-<!--                                                                             ! ! ! - - M O D A L   I N I T I A T I V E S - - ! ! ! -->
+<!--                                                                             ! ! ! - - M O D A L   I N I T I A T I V E S  P A S S É E S- - ! ! ! -->
 
 <div class="modal fade" id="modal_init" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives du mois passé...</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div id="modal_init_header" class="modal-header">
             </div>
             <div class="modal-body">
                 <div id="modal_init_btn">
@@ -146,7 +144,28 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="btn_modal_facebook" type="button" class="btn btn-primary">Valider</button>
+                <button id="btn_modal_init" type="button" class="btn btn-primary">Valider</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--                                                                             ! ! ! - - M O D A L   N E X T  I N I T I A T I V E S  P A S S É E S- - ! ! ! -->
+
+<div class="modal fade" id="modal_next_init" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="modal_next_init_header" class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="modal_next_init_btn">
+                </div>
+                <div id="modal_next_init_div">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btn_modal_next_init" type="button" class="btn btn-primary">Valider</button>
             </div>
         </div>
     </div>
