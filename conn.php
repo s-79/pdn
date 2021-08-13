@@ -40,7 +40,10 @@ if (isset($_POST['login']) && isset($_POST['mdp'])){
 include("header.php"); ?>
 
 <section class="mx-auto">
-    <h1 class="bleu">CONNEXION PDN</h1>
+	<div class="divTitre">
+		<h1 class="bleu">CONNEXION PDN</h1>
+	</div>
+
     <div class="orange-divider"> </div>
 
 	<div class="d-flex justify-content-center pt-3 mt-4">

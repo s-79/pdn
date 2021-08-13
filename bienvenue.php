@@ -16,7 +16,7 @@ include("header.php");
 </div>
 
 <h3 class="text-center mt-5">Que souhaites-tu faire ?</h3>
-<div class="d-grid gap-2 col-2 mx-auto">
+<div class="d-grid gap-2 col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-auto">
   <button class="btn btn-outline-primary mt-4" type="button" onclick="document.location='form.php'">Remplir le formulaire</button>
   <button class="btn btn-outline-primary mt-4" type="button" onclick="alert(`Cette fonctionnalité n'est pas disponible pour le moment.`)">Consulter les statistiques</button>
   <button class="btn btn-outline-primary mt-4" type="button" onclick="alert(`Cette fonctionnalité n'est pas disponible pour le moment.`)">Partager une ressource</button>

@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-xl navbar fixed-top">
+<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php"><strong class="titre text-white">COORDINATION PDN</strong></a>&nbsp;
-        <a id="nav_img" class="navbar-brand" href="index.php"><img src="../img/logo_header.png" class="rounded rounded-3 d-flex justify-content-start" alt="Promeneurs du Net"></a>
+        <a class="navbar-brand pt-1 pb-1" href="index.php"><strong class="titre text-white">COORDINATION PDN</strong></a>&nbsp;
+        <img src="../img/logo_header.png" class="rounded rounded-3" style="padding-bottom:.1em;padding-top:.2em;" alt="Promeneurs du Net"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

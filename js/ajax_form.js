@@ -146,15 +146,13 @@ const form_Get_Id = (uuid) => {
                 if(v) {
                     const next_num = v[0];
                     const next_date = v[1];
-                    const next_intitule = v[2];
-                    const next_them = v[3];
-                    const next_age = v[4];
-                    const next_nb_jeunes = v[5];
+                    const next_them = v[2];
+                    const next_acc = v[3];
 
                     $.ajax({
                         url: 'php/form.php',
                         dataType: 'JSON',
-                        data : {next_num:next_num, next_date:next_date, next_intitule:next_intitule, next_them:next_them, next_nb_jeunes:next_nb_jeunes, next_age_init:next_age, next_id_Form_Create_Init:id_form}
+                        data : {next_num:next_num, next_date:next_date, next_them:next_them, next_acc:next_acc, next_id_Form_Create_Init:id_form}
                     });
                 }
             }

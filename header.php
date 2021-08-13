@@ -3,8 +3,7 @@
 <head>
     <title>Promeneurs du Net 93</title>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <meta name="description" content="Promeneurs du Net 93">
+    <meta name="description" content="Promeneurs du Net 93 - Retrouvez les structures, les promeneurs et la coordination du réseau ainsi que des dizaines de ressources classées par thématiques.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">

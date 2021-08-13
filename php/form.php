@@ -83,23 +83,30 @@ $age_init = mysqli_real_escape_string($conn, $_GET['age_init']);
 $next_id_Form_Create_Init = mysqli_real_escape_string($conn, $_GET['next_id_Form_Create_Init']);
 $next_num = mysqli_real_escape_string($conn, $_GET['next_num']);
 $next_date = mysqli_real_escape_string($conn, $_GET['next_date']);
-$next_intitule = mysqli_real_escape_string($conn, $_GET['next_intitule']);
 $next_them = mysqli_real_escape_string($conn, $_GET['next_them']);
-$next_nb_jeunes = mysqli_real_escape_string($conn, $_GET['next_nb_jeunes']);
-$next_age_init = mysqli_real_escape_string($conn, $_GET['next_age_init']);
+$next_acc = mysqli_real_escape_string($conn, $_GET['next_acc']);
 
-// $next_id_Form_Create_Init = 47;
+// $next_id_Form_Create_Init = 1;
 // $next_num = 1;
 // $next_date = "date";
-// $next_intitule = "intitule";
 // $next_them = "them";
-// $next_nb_jeunes = 13;
-// $next_age_init = "age_init";
+// $next_acc = "Oui";
 
 if($uuid){$query = "CALL form_Create ('$uuid', '$mois', '$annee', '$nb_h', '$smart', '$ordi', '$tablette', '$consol', '$lien', '$loisirs', '$socio_pro', '$parentalite', '$sante', '$addiction', '$sexualite', '$violence', '$logement', '$autre_them', '$formation', '$commentaires', '$pdn_id')";}
 elseif($id_Form_Create_Rs){$query = "CALL form_Create_Rs ('$nom', '$maitrise', '$age', '$followers', '$messages', '$acc', '$new_acc', '$id_Form_Create_Rs')";}
 elseif($id_Form_Create_Init){$query = "CALL form_Create_Init ('$num', '$date', '$intitule', '$them', '$nb_jeunes', '$age_init', '$id_Form_Create_Init')";}
-elseif($next_id_Form_Create_Init){$query = "CALL form_Create_Next_Init ('$next_num', '$next_date', '$next_intitule', '$next_them', '$next_nb_jeunes', '$next_age_init', '$next_id_Form_Create_Init')";}
+elseif($next_id_Form_Create_Init) {
+    $query = "CALL form_Create_Next_Init ('$next_num', '$next_date', '$next_them', '$next_acc', '$next_id_Form_Create_Init')";
+    if($next_acc != "Non") {
+        session_start();
+        $headers ='From: "Promeneurs du Net 93"<no-reply@pdn.ligue93.org>'."\n";
+        $headers .='Content-Type: text/html; charset="utf-8"'."\n";
+        $headers .='Content-Transfer-Encoding: 8bit';
+        $message = '<html><body> a besoin d\'un accompagnement ou de ressources pour une initiative numérique.</br></br><a href="http://pdn.ligue93.org/admin">Se connecter à l\'interface d\'administration</a></body></html>';
+        mail('sebastien.trouve@mailo.com', 'Besoin d\'accompagnement ou de ressources sur le site Promeneurs du Net 93', $_SESSION["prenom"].' '.$message, $headers);
+    }
+}
+
 
 $result = $conn->prepare($query);
 

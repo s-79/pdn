@@ -26,7 +26,7 @@ $("#select_nom_rs").change(function() {
 $("#initiatives").change(function() {
 	const nb_init = $("#initiatives").val();
 	// ------------------------------------------------------------------------- Chargement du header "Initiatives passées"
-	$("#modal_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives du mois passé...</h2><button id="btn_close_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+	$("#modal_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives numériques du mois précédent...</h2><button id="btn_close_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 	$("#modal_init_btn").html("");
 	if(nb_init !== "0") {
 		let res = "";
@@ -39,11 +39,11 @@ $("#initiatives").change(function() {
 							<label for="date_init${i}">Date de l'initiative *</label>
 						</div>
 						<div class="form-floating mx-3 mt-3 mb-3">
-							<input type="text" class="form-control" id="intitule_init${i}" placeholder="Intitulé">
-							<label for="intitule_init${i}">Intitulé</label>
+							<input type="text" class="form-control" id="intitule_init${i}" placeholder="Intitulé *">
+							<label for="intitule_init${i}">Intitulé *</label>
 						</div>
 						<div class="form-floating mx-3 mt-3">
-							<select class="form-select" id="them_init${i}" aria-label="Thématique">
+							<select class="form-select" id="them_init${i}" aria-label="Thématique *">
 								<option selected value="">Séléctionner la thématique</option>
 								<option value="Lien Social (informel)">Lien Social (informel)</option>
 								<option value="Vie quotidienne">Vie quotidienne</option>
@@ -58,20 +58,20 @@ $("#initiatives").change(function() {
 								<option value="Sexualité">Sexualité</option>
 								<option value="Autre">Autre</option>
 							</select>
-							<label for="them_init${i}">Thématique</label>
+							<label for="them_init${i}">Thématique *</label>
 						</div>
 						<div class="form-floating mx-3 mt-3">
-							<input type="number" class="form-control" id="nb_jeunes_init${i}" placeholder="Nombre de jeunes">
-							<label for="nb_jeunes_init${i}">Nombre de jeunes</label>
+							<input type="number" class="form-control" id="nb_jeunes_init${i}" placeholder="Nombre de jeunes *">
+							<label for="nb_jeunes_init${i}">Nombre de jeunes *</label>
 						</div>
 						<div class="form-floating mx-3 mt-3">
-							<select class="form-select" id="age_init${i}" aria-label="Âge des jeunes">
+							<select class="form-select" id="age_init${i}" aria-label="Âge des jeunes *">
 								<option selected value="">Âge des jeunes</option>
 								<option value="De 12 à 17 ans">De 12 à 17 ans</option>
 								<option value="De 18 à 25 ans">De 18 à 25 ans</option>
 								<option value="Plus de 25 ans">Plus de 25 ans</option>
 						</select>
-						<label for="age_init${i}">Âge des jeunes</label>
+						<label for="age_init${i}">Âge des jeunes *</label>
 						</div>
 					</div>`;
 			$(`#btn_init${i}`).click(function() {
@@ -94,7 +94,7 @@ $("#initiatives").change(function() {
 $("#next_initiatives").change(function() {
 	const nb_init = $("#next_initiatives").val();
 	// ------------------------------------------------------------------------- Chargement du header "Initiatives à venir"
-	$("#modal_next_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives du mois prochain...</h2><button id="btn_close_next_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+	$("#modal_next_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives numériques du mois prochain...</h2><button id="btn_close_next_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 	$("#modal_next_init_btn").html("");
 	if(nb_init !== "0") {
 		let res = "";
@@ -103,15 +103,11 @@ $("#next_initiatives").change(function() {
 			res += `<div id="div_next_init${i}" class="d-none init">
 						<h2 class="mt-2">Initiative n°${i}</h2>
 						<div class="form-floating mx-3 mt-3">
-							<input type="date" class="form-control" id="date_next_init${i}" placeholder="Date de l'initiative *">
-							<label for="date_next_init${i}">Date de l'initiative *</label>
-						</div>
-						<div class="form-floating mx-3 mt-3 mb-3">
-							<input type="text" class="form-control" id="intitule_next_init${i}" placeholder="Intitulé">
-							<label for="intitule_next_init${i}">Intitulé</label>
+							<input type="date" class="form-control" id="date_next_init${i}" placeholder="Date approximative de l'initiative *">
+							<label for="date_next_init${i}">Date approximative de l'initiative *</label>
 						</div>
 						<div class="form-floating mx-3 mt-3">
-							<select class="form-select" id="them_next_init${i}" aria-label="Thématique">
+							<select class="form-select" id="them_next_init${i}" aria-label="Thématique prévue *">
 								<option selected value="">Séléctionner la thématique</option>
 								<option value="Lien Social (informel)">Lien Social (informel)</option>
 								<option value="Vie quotidienne">Vie quotidienne</option>
@@ -126,20 +122,15 @@ $("#next_initiatives").change(function() {
 								<option value="Sexualité">Sexualité</option>
 								<option value="Autre">Autre</option>
 							</select>
-							<label for="them_next_init${i}">Thématique</label>
+							<label for="them_next_init${i}">Thématique prévue *</label>
 						</div>
 						<div class="form-floating mx-3 mt-3">
-							<input type="number" class="form-control" id="nb_jeunes_next_init${i}" placeholder="Nombre de jeunes">
-							<label for="nb_jeunes_next_init${i}">Nombre de jeunes</label>
-						</div>
-						<div class="form-floating mx-3 mt-3">
-							<select class="form-select" id="age_next_init${i}" aria-label="Âge des jeunes">
-								<option selected value="">Âge des jeunes</option>
-								<option value="De 12 à 17 ans">De 12 à 17 ans</option>
-								<option value="De 18 à 25 ans">De 18 à 25 ans</option>
-								<option value="Plus de 25 ans">Plus de 25 ans</option>
+							<select class="form-select" id="acc_next_init${i}" aria-label="Besoin d'accompagnement ou de ressources ? *">
+								<option selected value="Oui">Oui</option>
+								<option value="Non">Non</option>
+								<option value="Peut-être">Peut-être</option>
 						</select>
-						<label for="age_next_init${i}">Âge des jeunes</label>
+						<label for="acc_next_init${i}">Besoin d'accompagnement ou de ressources ? *</label>
 						</div>
 					</div>`;
 			$(`#btn_next_init${i}`).click(function() {
@@ -272,13 +263,140 @@ for (e of rs) {
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LES BOUTONS VALIDER DES INITIATIVES PASSÉES
 $("#btn_modal_init").click(function() {
 	const nb_init = $("#initiatives").val();
-	initiatives(nb_init);
+	let array1 = [];
+	let array2 = [];
+	let array3 = [];
+	let array4 = [];
+	let array5 = [];
+	let array6 = [];
+	let array_v_finished = [];
+	let array_v_unfinished = [];
+	let array_nb_jeunes = [];
+	// n : name / v : variable (tableau vide)
+	const arrayInit = [{"n":1,"v":array1}, {"n":2,"v":array2}, {"n":3,"v":array3}, {"n":4,"v":array4}, {"n":5,"v":array5}, {"n":6,"v":array6}];
+	for (let i = 0; i < nb_init; i++) {
+		const n = arrayInit[i].n;
+		const v = arrayInit[i].v;
+		let date = "";
+		let intitule = "";
+		let them = "";
+		let nb_jeunes = "";
+		let age = "";
+
+		date = $(`#date_init${n}`).val();
+		intitule = $(`#intitule_init${n}`).val();
+		them = $(`#them_init${n}`).val();
+		nb_jeunes = $(`#nb_jeunes_init${n}`).val();
+		age = $(`#age_init${n}`).val();
+
+		//---------------------------------------------------------------------- Remplissage du array avec les valeurs saisies
+		v.push(n);
+		if(date)v.push(date);
+		if(vLen("intitulé", intitule, 255))v.push(intitule);
+		if(them)v.push(them);
+		if(age)v.push(age);
+
+		//---------------------------------------------------------------------- Si le champs nombre de jeune contient autre chose qu'un nombre, il remonte vide.
+		//---------------------------------------------------------------------- Envoi du champ vide vers l'array v pour valider la lenght de 6 puis envoi du n° du tableau vers array_nb_jeunes pour afficher les formulaires qui ne contiennt pas de chiffres
+		if(nb_jeunes) v.push(nb_jeunes);
+		else {
+			v.push(nb_jeunes);
+			array_nb_jeunes.push(n);
+			}
+
+		const len_v = v.length;
+		if(len_v < 6) array_v_unfinished.push(n);
+		else {
+			array_v_finished.push(n);
+			const init = `init${n}`;
+			sessionStorage.setItem(init, JSON.stringify(v));
+		}
+	}
+
+	if(array_v_unfinished.length > 0) {
+		let al = "";
+		if(array_v_unfinished.length ===1) al = "Merci de remplir tous les champs de l'initiative n°";
+		else{al = "Merci de remplir tous les champs des initiatives n°";}
+		for(e of array_v_unfinished) {
+			al += ` ${e},`;
+		}
+		al += " ou de choisir un autre nombre d'initiatives."
+		alert(al);
+	}
+	else {
+		if(array_nb_jeunes.length > 0) {
+			let nb = "";
+			if(array_nb_jeunes.length ===1) nb = `Le champ "Nombre de jeunes" de l'initiative n°`;
+			else{nb = `Le champ "Nombre de jeunes" des initiatives n°`;}
+
+			for(e of array_nb_jeunes) {
+				nb += ` ${e},`;
+			}
+			nb += " doit être rempli et ne doit comporter que des chiffres."
+			alert(nb);
+		}
+		else {
+			const nb_array_finished = array_v_finished.length;
+			$("#modal_init").modal('hide');
+			alert(`${nb_array_finished} initiative(s) passée(s) ont été ajoutée(s) au formulaire.`)
+		}
+	}
 });
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LES BOUTONS VALIDER DES INITIATIVES À VENIR
 $("#btn_modal_next_init").click(function() {
 	const nb_init = $("#next_initiatives").val();
-	initiatives(nb_init, "next");
+	let array1 = [];
+	let array2 = [];
+	let array3 = [];
+	let array4 = [];
+	let array5 = [];
+	let array6 = [];
+	let array_v_finished = [];
+	let array_v_unfinished = [];
+	// n : name / v : variable (tableau vide)
+	const arrayInit = [{"n":1,"v":array1}, {"n":2,"v":array2}, {"n":3,"v":array3}, {"n":4,"v":array4}, {"n":5,"v":array5}, {"n":6,"v":array6}];
+	for (let i = 0; i < nb_init; i++) {
+		const n = arrayInit[i].n;
+		const v = arrayInit[i].v;
+		let date = "";
+		let them = "";
+		let acc = "";
+
+		date = $(`#date_next_init${n}`).val();
+		them = $(`#them_next_init${n}`).val();
+		acc = $(`#acc_next_init${n}`).val();
+
+		//---------------------------------------------------------------------- Remplissage du array avec les valeurs saisies
+		v.push(n);
+		if(date)v.push(date);
+		if(them)v.push(them);
+		if(acc)v.push(acc);
+
+		const len_v = v.length;
+		if(len_v < 4) array_v_unfinished.push(n);
+		else {
+			array_v_finished.push(n);
+			const init = `next_init${n}`;
+			sessionStorage.setItem(init, JSON.stringify(v));
+		}
+	}
+
+	if(array_v_unfinished.length > 0) {
+		let al = "";
+		if(array_v_unfinished.length ===1) al = "Merci de remplir tous les champs de l'initiative n°";
+		else{al = "Merci de remplir tous les champs des initiatives n°";}
+		for(e of array_v_unfinished) {
+			al += ` ${e},`;
+		}
+		al += " ou de choisir un autre nombre d'initiatives."
+		alert(al);
+	}
+	else {
+		const nb_array_finished = array_v_finished.length;
+		$("#modal_next_init").modal('hide');
+		alert(`${nb_array_finished} initiative(s) à venir ont été ajoutée(s) au formulaire.`)
+	}
 });
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON ENREGISTRER
@@ -336,95 +454,95 @@ $("#form_create").click(function() {
 // ----------------------------------------------------------------------------- F O N C T I O N S  D É F I N I E S
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LES BOUTONS VALIDER DES INITIATIVES PASSÉES ET À VENIR
-const initiatives = (nb_init, next) => {
-	let array1 = [];
-	let array2 = [];
-	let array3 = [];
-	let array4 = [];
-	let array5 = [];
-	let array6 = [];
-	let array_v_finished = [];
-	let array_v_unfinished = [];
-	let array_nb_jeunes = [];
-	// n : name / v : variable (tableau vide)
-	const arrayInit = [{"n":1,"v":array1}, {"n":2,"v":array2}, {"n":3,"v":array3}, {"n":4,"v":array4}, {"n":5,"v":array5}, {"n":6,"v":array6}];
-	for (let i = 0; i < nb_init; i++) {
-		const n = arrayInit[i].n;
-		const v = arrayInit[i].v;
-		let date = "";
-		let intitule = "";
-		let them = "";
-		let nb_jeunes = "";
-		let age = "";
-
-		if(next) {
-			date = $(`#date_next_init${n}`).val();
-			intitule = $(`#intitule_next_init${n}`).val();
-			them = $(`#them_next_init${n}`).val();
-			nb_jeunes = $(`#nb_jeunes_next_init${n}`).val();
-			age = $(`#age_next_init${n}`).val();
-		}
-		else {
-			date = $(`#date_init${n}`).val();
-			intitule = $(`#intitule_init${n}`).val();
-			them = $(`#them_init${n}`).val();
-			nb_jeunes = $(`#nb_jeunes_init${n}`).val();
-			age = $(`#age_init${n}`).val();
-		}
-
-		//---------------------------------------------------------------------- Remplissage du array avec les valeurs saisies
-		v.push(n);
-		if(date)v.push(date);
-		if(vLen("intitulé", intitule, 255))v.push(intitule);
-		if(them)v.push(them);
-		if(age)v.push(age);
-
-		//---------------------------------------------------------------------- Si le champs nombre de jeune contient autre chose qu'un nombre, il remonte vide.
-		//---------------------------------------------------------------------- Envoi du champ vide vers l'array v pour valider la lenght de 6 puis envoi du n° du tableau vers array_nb_jeunes pour afficher les formulaires qui ne contiennt pas de chiffres
-		if(nb_jeunes) v.push(nb_jeunes);
-		else {
-			v.push(nb_jeunes);
-			array_nb_jeunes.push(n);
-			}
-
-		const len_v = v.length;
-		if(len_v < 6) array_v_unfinished.push(n);
-		else {
-			array_v_finished.push(n);
-			let init = "";
-			if(next) init = `next_init${n}`;
-			else {init = `init${n}`;};
-			sessionStorage.setItem(init, JSON.stringify(v));
-		}
-	}
-
-	if(array_v_unfinished.length > 0) {
-		let al = "";
-		if(array_v_unfinished.length ===1) al = "Merci de remplir tous les champs de l'initiative n°";
-		else{al = "Merci de remplir tous les champs des initiatives n°";}
-		for(e of array_v_unfinished) {
-			al += ` ${e},`;
-		}
-		al += " ou de choisir un autre nombre d'initiatives."
-		alert(al);
-	}
-	else {
-		if(array_nb_jeunes.length > 0) {
-			let nb = "";
-			if(array_nb_jeunes.length ===1) nb = `Le champ "Nombre de jeunes" de l'initiative n°`;
-			else{nb = `Le champ "Nombre de jeunes" des initiatives n°`;}
-
-			for(e of array_nb_jeunes) {
-				nb += ` ${e},`;
-			}
-			nb += " doit être rempli et ne doit comporter que des chiffres."
-			alert(nb);
-		}
-		else {
-			const nb_array_finished = array_v_finished.length;
-			if(next) $("#modal_next_init").modal('hide');
-			else {$("#modal_init").modal('hide');}
-			alert(`${nb_array_finished} initiative(s) ajouté(s) au formulaire.`)
-		}
-	}
-}
+// const initiatives = (nb_init, next) => {
+// 	let array1 = [];
+// 	let array2 = [];
+// 	let array3 = [];
+// 	let array4 = [];
+// 	let array5 = [];
+// 	let array6 = [];
+// 	let array_v_finished = [];
+// 	let array_v_unfinished = [];
+// 	let array_nb_jeunes = [];
+// 	// n : name / v : variable (tableau vide)
+// 	const arrayInit = [{"n":1,"v":array1}, {"n":2,"v":array2}, {"n":3,"v":array3}, {"n":4,"v":array4}, {"n":5,"v":array5}, {"n":6,"v":array6}];
+// 	for (let i = 0; i < nb_init; i++) {
+// 		const n = arrayInit[i].n;
+// 		const v = arrayInit[i].v;
+// 		let date = "";
+// 		let intitule = "";
+// 		let them = "";
+// 		let nb_jeunes = "";
+// 		let age = "";
+//
+// 		if(next) {
+// 			date = $(`#date_next_init${n}`).val();
+// 			intitule = $(`#intitule_next_init${n}`).val();
+// 			them = $(`#them_next_init${n}`).val();
+// 			nb_jeunes = $(`#nb_jeunes_next_init${n}`).val();
+// 			age = $(`#age_next_init${n}`).val();
+// 		}
+// 		else {
+// 			date = $(`#date_init${n}`).val();
+// 			intitule = $(`#intitule_init${n}`).val();
+// 			them = $(`#them_init${n}`).val();
+// 			nb_jeunes = $(`#nb_jeunes_init${n}`).val();
+// 			age = $(`#age_init${n}`).val();
+// 		}
+//
+// 		//---------------------------------------------------------------------- Remplissage du array avec les valeurs saisies
+// 		v.push(n);
+// 		if(date)v.push(date);
+// 		if(vLen("intitulé", intitule, 255))v.push(intitule);
+// 		if(them)v.push(them);
+// 		if(age)v.push(age);
+//
+// 		//---------------------------------------------------------------------- Si le champs nombre de jeune contient autre chose qu'un nombre, il remonte vide.
+// 		//---------------------------------------------------------------------- Envoi du champ vide vers l'array v pour valider la lenght de 6 puis envoi du n° du tableau vers array_nb_jeunes pour afficher les formulaires qui ne contiennt pas de chiffres
+// 		if(nb_jeunes) v.push(nb_jeunes);
+// 		else {
+// 			v.push(nb_jeunes);
+// 			array_nb_jeunes.push(n);
+// 			}
+//
+// 		const len_v = v.length;
+// 		if(len_v < 6) array_v_unfinished.push(n);
+// 		else {
+// 			array_v_finished.push(n);
+// 			let init = "";
+// 			if(next) init = `next_init${n}`;
+// 			else {init = `init${n}`;};
+// 			sessionStorage.setItem(init, JSON.stringify(v));
+// 		}
+// 	}
+//
+// 	if(array_v_unfinished.length > 0) {
+// 		let al = "";
+// 		if(array_v_unfinished.length ===1) al = "Merci de remplir tous les champs de l'initiative n°";
+// 		else{al = "Merci de remplir tous les champs des initiatives n°";}
+// 		for(e of array_v_unfinished) {
+// 			al += ` ${e},`;
+// 		}
+// 		al += " ou de choisir un autre nombre d'initiatives."
+// 		alert(al);
+// 	}
+// 	else {
+// 		if(array_nb_jeunes.length > 0) {
+// 			let nb = "";
+// 			if(array_nb_jeunes.length ===1) nb = `Le champ "Nombre de jeunes" de l'initiative n°`;
+// 			else{nb = `Le champ "Nombre de jeunes" des initiatives n°`;}
+//
+// 			for(e of array_nb_jeunes) {
+// 				nb += ` ${e},`;
+// 			}
+// 			nb += " doit être rempli et ne doit comporter que des chiffres."
+// 			alert(nb);
+// 		}
+// 		else {
+// 			const nb_array_finished = array_v_finished.length;
+// 			if(next) $("#modal_next_init").modal('hide');
+// 			else {$("#modal_init").modal('hide');}
+// 			alert(`${nb_array_finished} initiative(s) ajouté(s) au formulaire.`)
+// 		}
+// 	}
+// }

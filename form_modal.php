@@ -44,7 +44,7 @@
                 <div class="form-floating mx-3 mt-3">
                     <select class="form-select" id="maitrise" aria-label="Niveau de maîtrise du PDN par rapport à l'application">
                         <option selected value="">Niveau de maîtrise du PDN</option>
-                        <option value="Pauvre">Pauvre</option>
+                        <option value="Faible">Faible (besoin de formation)</option>
                         <option value="Moyen">Moyen</option>
                         <option value="Bon">Bon</option>
                         <option value="Excellent">Excellent</option>
