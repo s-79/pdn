@@ -360,7 +360,7 @@ const act_Create = (dat, type, organise, intitule, uuid, lieu, ville, pj, suppor
             //------------------------------------------------------------------ Puis récupération des intervenants et association avec l'évenemnt dans la table intervenir
             act_Get_Id(uuid);
 
-            alert("L'action a bien été ajouté à la base de données.");
+            alert("L'action a bien été ajoutée à la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des événements
             act_Reset();
         }

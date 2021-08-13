@@ -107,31 +107,31 @@ include("header.php");
 						<h1 class="pt-3 mt-4">Réseaux sociaux utilisés</h1>
 						<div class="row mt-3 ms-3">
 							<div class="col-12 col-sm-5">
-								<input class="form-check-input" type="checkbox" value="Facebook" id="facebook">
+								<input class="form-check-input" type="checkbox" value="facebook" id="facebook">
 								<label class="form-check-label text-white" for="facebook">Facebook</label>
 							</div>
 							<div class="col-12 col-sm-6">
-								<input class="form-check-input" type="checkbox" value="Snapchat" id="snapchat">
+								<input class="form-check-input" type="checkbox" value="snapchat" id="snapchat">
 								<label class="form-check-label text-white" for="snapchat">Snapchat</label>
 							</div>
 						</div>
 						<div class="row mt-2 ms-3">
 							<div class="col-12 col-sm-5">
-								<input class="form-check-input" type="checkbox" value="Instagram" id="instagram">
+								<input class="form-check-input" type="checkbox" value="instagram" id="instagram">
 								<label class="form-check-label text-white" for="insta">Instagram</label>
 							</div>
 							<div class="col-12 col-sm-6">
-								<input class="form-check-input" type="checkbox" value="WhatsApp" id="whatsapp">
+								<input class="form-check-input" type="checkbox" value="whatsapp" id="whatsapp">
 								<label class="form-check-label text-white" for="whatsapp">WhatsApp</label>
 							</div>
 						</div>
 						<div class="row mt-2 mb-4 ms-3">
 							<div class="col-12 col-sm-5">
-								<input class="form-check-input" type="checkbox" value="Autre 1" id="autre1">
+								<input class="form-check-input" type="checkbox" value="autre1" id="autre1">
 								<label class="form-check-label text-white" for="autre1">Autre 1</label>
 							</div>
 							<div class="col-12 col-sm-6">
-								<input class="form-check-input" type="checkbox" value="Autre 2" id="autre2">
+								<input class="form-check-input" type="checkbox" value="autre2" id="autre2">
 								<label class="form-check-label text-white" for="autre2">Autre 2</label>
 							</div>
 						</div>
