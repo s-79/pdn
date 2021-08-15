@@ -15,45 +15,7 @@ include("header.php");
 		<h1 class="mb-0 bleu text-uppercase">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
-    <div id="form_coordo" class="d-flex justify-content-center mt-3">
-		<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
-			<!--                                                                Coordonnées-->
-			<h1 class="pt-3">Coordonnées</h1>
-			<div class="form-floating mx-3 mt-3 mb-3">
-				<input type="text" class="form-control" id="prenom" placeholder="Prénom" disabled>
-				<label for="prenom">Prénom</label>
-			</div>
-			<div class="form-floating mx-3 mt-3 mb-3">
-				<input type="text" class="form-control" id="nom" placeholder="Nom" disabled>
-				<label for="nom">Nom</label>
-			</div>
-			<div class="form-floating mx-3 mt-3 mb-3">
-				<input type="text" class="form-control" id="fonction" placeholder="Fonction" disabled>
-				<label for="fonction">Fonction</label>
-			</div>
-			<div class="form-floating mx-3 mt-3 mb-3">
-				<input type="text" class="form-control" id="tel" placeholder="Téléphone" disabled>
-				<label for="telœ">Téléphone</label>
-			</div>
-			<div class="form-floating mx-3 mt-3 mb-3">
-				<input type="text" class="form-control" id="mail" placeholder="Adresse mail" disabled>
-				<label for="mail">Adresse mail</label>
-			</div>
-			<div class="form-floating mx-3 mt-3 mb-3">
-				<input type="text" class="form-control" id="structure" placeholder="Structure" disabled>
-				<label for="structure">Structure</label>
-			</div>
-			<div class="form-floating mx-3 mt-3 mb-3">
-				<input type="text" class="form-control" id="ville" placeholder="Ville" disabled>
-				<label for="ville">Ville</label>
-			</div>
-			<div class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
-				<button type="button" id="pdn_modif" class="btn btn-warning m-3 px-3" onclick="alert(`Cette fonctionnalité n'est pas disponible pour le moment.`)">Modifier</button>
-				<button type="button" id="pdn_valide" class="btn btn-danger m-3">Confirmer</button>
-			</div>
-		</div>
-	</div>
-	<form id="form_form" class="d-none mt-4">
+	<form id="form_form" class="mt-4">
 		<div class="d-flex justify-content-center formDate">
 			<div class="d-inline pt-2 me-3 fw-bold bleu" style="font-size:1.1em;">
 				Formulaire du mois de

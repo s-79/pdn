@@ -11,6 +11,8 @@ $idStr = mysqli_real_escape_string($conn, $_GET['idStr']);
 $idStr_Pdn = mysqli_real_escape_string($conn, $_GET['idStr_Pdn']);
 $idStr_Type = mysqli_real_escape_string($conn, $_GET['idStr_Type']);
 
+$osm = mysqli_real_escape_string($conn, $_GET['osm']);
+
 if($v_ville) {
     $query = "CALL ville_List ()";
 
@@ -135,22 +137,24 @@ if($v_ville) {
             "actif" => $actif
         );
     }
-} elseif($idStr_Type) {
-    $query = "CALL str_Get_Type('$idStr_Type')";
+} elseif($osm) {
+    $query = "CALL osm_Get_Str()";
 
     $result = mysqli_query($conn,$query);
 
     while($row = mysqli_fetch_array($result)){
-        $type_id = $row['type_id'];
-        $type_nom = $row['type_nom'];
-        $str_id = $row['str_id'];
-        $str_nom = $row['str_nom'];
+        $id = $row['id'];
+        $nom = $row['nom'];
+        $ville = $row['ville'];
+        $lat = $row['lat'];
+        $lon = $row['lon'];
 
         $return_arr[] = array(
-            "type_id" => $type_id,
-            "type_nom" => $type_nom,
-            "str_id" => $str_id,
-            "str_nom" => $str_nom
+            "id" => $id,
+            "nom" => $nom,
+            "ville" => $ville,
+            "lat" => $lat,
+            "lon" => $lon
         );
     }
 }

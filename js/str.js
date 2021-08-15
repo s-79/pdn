@@ -34,5 +34,4 @@ $("body").delegate( ".card", "click", function() {
 	const idStr = $(this).attr('id');
 	str_Get_Infos(idStr);
 	str_Get_Pdn(idStr);
-	// str_Get_Type(idStr);
 });
