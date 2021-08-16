@@ -20,7 +20,8 @@ include("header.php");
   <button class="btn btn-outline-primary mt-4" type="button" onclick="document.location='form.php'">Remplir le formulaire mensuel</button>
   <button class="btn btn-outline-primary mt-4" type="button" onclick="alert(`Cette fonctionnalité n'est pas disponible pour le moment.`)">Consulter les statistiques</button>
   <button class="btn btn-outline-primary mt-4" type="button" onclick="alert(`Cette fonctionnalité n'est pas disponible pour le moment.`)">Proposer une ressource</button>
-  <button class="btn btn-outline-primary mt-4" type="button" onclick="document.location='pdn_infos.php'")">Modifier mes informations</button>
+  <button class="btn btn-outline-primary mt-4" type="button" onclick="document.location='pdn_infos.php'">Modifier mes informations</button>
+  <button class="btn btn-outline-primary mt-4" type="button" onclick="document.location='pdn_pwd.php'">Modifier mon mot de passe</button>
 </div>
 
 </body>

@@ -26,6 +26,7 @@ if (isset($_POST['login']) && isset($_POST['mdp'])){
 				// ------------------------------------------------------------ Création des jetons de session
 				$_SESSION['id'] = $user['id'];
 				$_SESSION['prenom'] = $user['prenom'];
+				$_SESSION['nom'] = $user['nom'];
 				header('location: bienvenue.php');
 
 		}	else {

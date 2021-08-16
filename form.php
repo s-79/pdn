@@ -210,7 +210,7 @@ include("header.php");
 							<textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:177px;"></textarea>
 							<label for="commentaires">Commentaires et difficultés rencontrées</label>
 						</div>
-						<div id="btn_form_create" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
+						<div class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
 							<button type="button" id="form_create" class="btn btn-warning m-3 px-3">Enregistrer</button>
 						</div>
 					</div>
