@@ -8,7 +8,6 @@ $selectedVille = mysqli_real_escape_string($conn, $_GET['selectedVille']);
 $allVille = mysqli_real_escape_string($conn, $_GET['allVille']);
 $idPdn = mysqli_real_escape_string($conn, $_GET['idPdn']);
 $mail = mysqli_real_escape_string($conn, $_GET['mail']);
-// $mail = "a@a";
 
 if($selectedVille) {
     $query = "CALL pdn_Get('$selectedVille')";
@@ -85,6 +84,7 @@ if($selectedVille) {
         $str_tel = $row['str_tel'];
         $str_site = $row['str_site'];
         $str_adresse = $row['str_adresse'];
+        $str_pres = $row['str_pres'];
         $ville_cp = $row['ville_cp'];
         $ville_nom = $row['ville_nom'];
 
@@ -112,6 +112,7 @@ if($selectedVille) {
             "str_tel" => $str_tel,
             "str_site" => $str_site,
             "str_adresse" => $str_adresse,
+            "str_pres" => $str_pres,
             "ville_cp" => $ville_cp,
             "ville_nom" => $ville_nom
         );

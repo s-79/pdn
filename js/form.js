@@ -22,7 +22,7 @@ $("#select_nom_rs").change(function() {
 $("#initiatives").change(function() {
 	const nb_init = $("#initiatives").val();
 	// ------------------------------------------------------------------------- Chargement du header "Initiatives passées"
-	$("#modal_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives numériques du mois précédent...</h2><button id="btn_close_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+	$("#modal_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Initiatives numériques du mois précédent...</h2><button id="btn_close_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 	$("#modal_init_btn").html("");
 	if(nb_init !== "0") {
 		let res = "";
@@ -90,7 +90,7 @@ $("#initiatives").change(function() {
 $("#next_initiatives").change(function() {
 	const nb_init = $("#next_initiatives").val();
 	// ------------------------------------------------------------------------- Chargement du header "Initiatives à venir"
-	$("#modal_next_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Initiatives numériques du mois prochain...</h2><button id="btn_close_next_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+	$("#modal_next_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Initiatives numériques du mois prochain...</h2><button id="btn_close_next_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 	$("#modal_next_init_btn").html("");
 	if(nb_init !== "0") {
 		let res = "";
@@ -165,8 +165,8 @@ for (e of rs) {
 		if($(checkbox).is(':checked')){
 			const rs = $(checkbox).val();
 			//------------------------------------------------------------------ Création des en-têtes avec id spécifique
-			$("#div_header_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Sur l'application <span id="nom_rs${rs}"></span> ... </h2><button id="btn_close_modal_rs" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
-			$("#div_header_nom_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1" id="exampleModalLabel">Nom de l'application</h2><button id="btn_close_modal_nom_rs${rs}" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+			$("#div_header_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Sur l'application <span id="nom_rs${rs}"></span> ... </h2><button id="btn_close_modal_rs" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+			$("#div_header_nom_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Nom de l'application</h2><button id="btn_close_modal_nom_rs${rs}" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 			$("#div_footer_nom_rs").html(`<button id="btn_modal_nom_rs${rs}" type="button" class="btn btn-primary">Valider</button>`);
 			//------------------------------------------------------------------ Décochage de la checkbox si on cic sur la croix dans le modal rs
 			$("#btn_close_modal_rs").click(function() {$(checkbox).prop("checked", false);});
@@ -192,7 +192,10 @@ for (e of rs) {
 						$(`#nom_rs${rs}`).html(get_nom_rs);
 						$("#modal_rs").modal('show');
 					}
-					else{alert("Merci de choisir ou de saisir un nom d'application avant de valider.")}
+					else {
+						$("#infosMess").html("Merci de choisir ou de saisir un nom d'application avant de valider.");
+						$("#modalFormInfos").modal('show');
+					}
 				});
 			}
 			else {
@@ -231,7 +234,10 @@ for (e of rs) {
 
 					// ---------------------------------------------------------  Remplissage et stockage des tableaux de chaque RS utilisé avec les valeurs saisies
 					if(rs === n) {
-						if (!maitrise || !age || !followers || !messages || !acc || !new_acc) alert("Merci de remplir tous les champs du formulaire.");
+						if (!maitrise || !age || !followers || !messages || !acc || !new_acc) {
+							$("#infosMess").html("Merci de remplir tous les champs du formulaire avant de valider.");
+							$("#modalFormInfos").modal('show');
+						}
 						else {
 							v.push(nom);
 							v.push(maitrise);
@@ -288,7 +294,7 @@ $("#btn_modal_init").click(function() {
 		//---------------------------------------------------------------------- Remplissage du array avec les valeurs saisies
 		v.push(n);
 		if(date)v.push(date);
-		if(vLen("intitulé", intitule, 255))v.push(intitule);
+		if(intitule)v.push(intitule);
 		if(them)v.push(them);
 		if(age)v.push(age);
 
@@ -317,7 +323,9 @@ $("#btn_modal_init").click(function() {
 			al += ` ${e},`;
 		}
 		al += " ou de choisir un autre nombre d'initiatives."
-		alert(al);
+		$("#infosMess").html(al);
+		$("#modalFormInfos").modal('show');
+
 	}
 	else {
 		if(array_nb_jeunes.length > 0) {
@@ -329,12 +337,14 @@ $("#btn_modal_init").click(function() {
 				nb += ` ${e},`;
 			}
 			nb += " doit être rempli et ne doit comporter que des chiffres."
-			alert(nb);
+			$("#infosMess").html(nb);
+			$("#modalFormInfos").modal('show');
 		}
 		else {
 			const nb_array_finished = array_v_finished.length;
 			$("#modal_init").modal('hide');
-			alert(`${nb_array_finished} initiative(s) passée(s) ont été ajoutée(s) au formulaire.`)
+			$("#infosMess").html(`${nb_array_finished} initiative(s) passée(s) ont été ajoutée(s) au formulaire.`);
+			$("#modalFormInfos").modal('show');
 		}
 	}
 });
@@ -386,12 +396,14 @@ $("#btn_modal_next_init").click(function() {
 			al += ` ${e},`;
 		}
 		al += " ou de choisir un autre nombre d'initiatives."
-		alert(al);
+		$("#infosMess").html(al);
+		$("#modalFormInfos").modal('show');
 	}
 	else {
 		const nb_array_finished = array_v_finished.length;
 		$("#modal_next_init").modal('hide');
-		alert(`${nb_array_finished} initiative(s) à venir ont été ajoutée(s) au formulaire.`)
+		$("#infosMess").html(`${nb_array_finished} initiative(s) à venir ont été ajoutée(s) au formulaire.`);
+		$("#modalFormInfos").modal('show');
 	}
 });
 
@@ -434,12 +446,11 @@ $("#form_create").click(function() {
 	const pdn_id = $("#pdn_id").text();
 
 	// --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
-	// if((!smart && !ordi && !tablette && !consol) || nb_h || (!lien && !loisirs && !socio_pro && !parentalite && !sante && !addiction && !sexualite && !violence && !logement &&!autre_them)) {
 	if((!smart && !ordi && !tablette && !consol) || !nb_h || (!lien && !loisirs && !socio_pro && !parentalite && !sante && !addiction && !sexualite && !violence && !logement &&!autre_them)) {
-		alert(`Les rubriques "Types de matériel utilisés", "Présence en ligne" et "Thématiques abordées" sont obligatoires.`);
+		$("#infosMess").html(`Les rubriques "Types de matériel utilisés", "Présence en ligne" et "Thématiques abordées" sont obligatoires.`);
 	} else {
 		// ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-		if(vLen("Souhaits de formation,",formation,255) && vLen("Commentaires",commentaires,255)) {
+		if(vLen("Souhaits de formation,",formation,255,"#infosMess") && vLen("Commentaires",commentaires,255,"#infosMess")) {
 
 			//-------------------------------------------------------------- Envoie des infos vers la BDD
 			form_Create(uuid, mois, annee, nb_h, smart, ordi, tablette, consol, lien, loisirs, socio_pro, parentalite, sante, addiction, sexualite, violence, logement, autre_them, formation, commentaires, pdn_id);

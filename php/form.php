@@ -47,18 +47,10 @@ $next_date = mysqli_real_escape_string($conn, $_GET['next_date']);
 $next_them = mysqli_real_escape_string($conn, $_GET['next_them']);
 $next_acc = mysqli_real_escape_string($conn, $_GET['next_acc']);
 
-$prenom_m  = mysqli_real_escape_string($conn, $_GET['prenom_m']);
-$nom_m  = mysqli_real_escape_string($conn, $_GET['nom_m']);
-$fonction_m  = mysqli_real_escape_string($conn, $_GET['fonction_m']);
-$tel_m  = mysqli_real_escape_string($conn, $_GET['tel_m']);
-$mail_m  = mysqli_real_escape_string($conn, $_GET['mail_m']);
-$structure_m  = mysqli_real_escape_string($conn, $_GET['structure_m']);
-$ville_m  = mysqli_real_escape_string($conn, $_GET['ville_m']);
-
 $mdp_new = mysqli_real_escape_string($conn, $_GET['mdp_new']);
 $resp = mysqli_real_escape_string($conn, $_GET['resp']);
 
-// ----------------------------------------------------------------------------- Besoin d'accompagnement ou de ressources + mail
+//----------------------------------------------------------------------------- Besoin d'accompagnement ou de ressources + mail
 if($uuid){$query = "CALL form_Create ('$uuid', '$mois', '$annee', '$nb_h', '$smart', '$ordi', '$tablette', '$consol', '$lien', '$loisirs', '$socio_pro', '$parentalite', '$sante', '$addiction', '$sexualite', '$violence', '$logement', '$autre_them', '$formation', '$commentaires', '$pdn_id')";}
 elseif($id_Form_Create_Rs){$query = "CALL form_Create_Rs ('$nom', '$maitrise', '$age', '$followers', '$messages', '$acc', '$new_acc', '$id_Form_Create_Rs')";}
 elseif($id_Form_Create_Init){$query = "CALL form_Create_Init ('$num', '$date', '$intitule', '$them', '$nb_jeunes', '$age_init', '$id_Form_Create_Init')";}
@@ -72,24 +64,8 @@ elseif($next_id_Form_Create_Init) {
         $message = '<html><body> a besoin d\'un accompagnement ou de ressources pour une initiative numérique.</br></br><a href="http://pdn.ligue93.org/admin">Se connecter à l\'interface d\'administration</a></body></html>';
         mail('sebastien.trouve@mailo.com', '[pdn.ligue93.org] Besoin d\'accompagnement ou de ressources', $_SESSION["prenom"].' '.$_SESSION["nom"].' '.$message, $headers);
     }
-// ----------------------------------------------------------------------------- Mail demande de modification de coordonnées PDN
-} elseif($prenom_m) {
-    $headers ='From: "Promeneurs du Net 93"<no-reply@pdn.ligue93.org>'."\n";
-    $headers .='Content-Type: text/html; charset="utf-8"'."\n";
-    $headers .='Content-Transfer-Encoding: 8bit';
-    $message = '<html><body> propose des modifications de ses coordonnées.</br></br>';
-    $message .= 'Prénom : '.$prenom_m.'</br>';
-    $message .= 'Nom : '.$nom_m.'</br>';
-    $message .= 'Fonction : '.$fonction_m.'</br>';
-    $message .= 'Téléphone : '.$tel_m.'</br>';
-    $message .= 'Mail : '.$mail_m.'</br>';
-    $message .= 'Structure : '.$structure_m.'</br>';
-    $message .= 'Ville : '.$ville_m.'</br>'.'</br>';
-    $message .= '<a href="http://pdn.ligue93.org/admin">Se connecter à l\'interface d\'administration</a></body></html>';
-    mail('sebastien.trouve@mailo.com', '[pdn.ligue93.org] Modification de coordonnées', $prenom_m.' '.$nom_m.' '.$message, $headers);
 
 } elseif($mdp_new) {
-
     session_start();
     $id_mdp = $_SESSION["id"];
     $mdp_new = password_hash($mdp_new, PASSWORD_DEFAULT);

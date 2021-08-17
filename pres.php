@@ -20,11 +20,11 @@ include("header.php"); ?>
     </div>
 
 <!--                                                                            MODAL DÉTAILS -->
-<div class="modal fade" id="modalPres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalPres" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title fw-bold orange text-uppercase" id="exampleModalLabel">Actions et projets dévéloppés</h3>
+                <h3 class="modal-title fw-bold orange text-uppercase">Actions et projets dévéloppés</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center mb-2">

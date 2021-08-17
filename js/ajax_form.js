@@ -12,7 +12,7 @@ const form_Create = (uuid, mois, annee, nb_h, smart, ordi, tablette, consol, lie
             //------------------------------------------------------------------ Récupération de l'id de l'événement créé et envoies des RS et Initiatives vers la BDD
             form_Get_Id(uuid);
 
-            alert("Le formulaire a bien été ajouté à la base de données.");
+            $("#infosMess").html("Le formulaire a bien été ajouté à la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des événements
             document.getElementById("form_form").reset();
             // ----------------------------------------------------------------- Récupération du mois précédent et de l'année en cours (sauf en janvier) - fonction dans functions

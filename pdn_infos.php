@@ -17,56 +17,125 @@
 	</div>
 	<form id="form_pdn_infos">
 		<div class="d-flex justify-content-center mt-3">
-			<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
-				<h1 class="pt-3">Modifier mes informations</h1>
-				<div class="form-floating mx-3 mt-3 mb-3">
-					<input type="text" class="form-control" id="prenom" placeholder="Prénom">
-					<label for="prenom">Prénom</label>
+			<div class="row formulaires">
+				<div class="col-12 col-lg-6 col-xl-4">
+					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
+						<h1 class="pt-3">Coordonnées</h1>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="prenom" placeholder="Prénom">
+							<label for="prenom">Prénom</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="nom" placeholder="Nom">
+							<label for="nom">Nom</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="fonction" placeholder="Fonction">
+							<label for="fonction">Fonction</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="structure" placeholder="Nom de la structure">
+							<label for="structure">Nom de la structure</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="ville" placeholder="Ville">
+							<label for="ville">Ville</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="mail" placeholder="Adresse mail">
+							<label for="mail">Adresse mail</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-2">
+							<input type="text" class="form-control" id="tel" placeholder="Téléphone">
+							<label for="tel">Téléphone Pro</label>
+						</div>
+						<div class="mx-3 mt-3 py-1 ps-1 mb-4 pb-3 pt-2">
+							<div class="form-check">
+								<label class="form-check-label text-white" for="whatsapp">WhatsApp sur le téléphone pro</label>
+								<input class="form-check-input" type="checkbox" value="" id="whatsapp">
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="form-floating mx-3 mt-3 mb-3">
-					<input type="text" class="form-control" id="nom" placeholder="Nom">
-					<label for="nom">Nom</label>
+
+				<div class="col-12 col-lg-6 col-xl-4">
+					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
+						<h1 class="pt-3">Réseaux sociaux</h1>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="facebook" placeholder="Facebook">
+							<label for="facebook">Facebook</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="instagram" placeholder="Instagram">
+							<label for="instagram">Instagram</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="snapchat" placeholder="Snapchat">
+							<label for="snapchat">Snapchat</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="youtube" placeholder="Youtube">
+							<label for="youtube">Youtube</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="twitter" placeholder="Twitter">
+							<label for="twitter">Twitter</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="discord" placeholder="Discord">
+							<label for="discord">Discord</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="twitch" placeholder="Twitch">
+							<label for="twitch">Twitch</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="tiktok" placeholder="Tiktok">
+							<label for="tiktok">Tiktok</label>
+						</div>
+					</div>
 				</div>
-				<div class="form-floating mx-3 mt-3 mb-3">
-					<input type="text" class="form-control" id="fonction" placeholder="Fonction">
-					<label for="fonction">Fonction</label>
+
+				<div class="col-12 col-lg-6 col-xl-4">
+					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
+						<h1 class="pt-3">Images et présentations</h1>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="photo_pdn" placeholder="Lien vers une nouvelle photo du PDN">
+							<label for="photo_pdn">Lien vers une nouvelle photo du PDN</label>
+						</div>
+						<div class="form-floating mx-3 mt-3">
+							<textarea class="form-control" placeholder="Texte de présentation du PDN" id="pres_pdn" style="height:176px;"></textarea>
+							<label for="pres_pdn">Présentation du PDN (700 car. max.)</label>
+						</div>
+						<div class="form-floating mx-3 mt-3 mb-3">
+							<input type="text" class="form-control" id="image_str" placeholder="Lien vers une autre image de la structure">
+							<label for="image_str">Lien vers une autre image de la structure</label>
+						</div>
+						<div class="form-floating mx-3 mt-3">
+							<textarea class="form-control" placeholder="Texte de présentation de la structure" id="pres_str" style="height:176px;"></textarea>
+							<label for="pres_str">Présentation de la structure (700 max.)</label>
+						</div>
+						<div class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
+							<button type="button" id="pdn_modif_valide" class="btn btn-warning m-3 px-3" data-bs-toggle="modal" data-bs-target="#modalModifInfos">Modifier</button>
+						</div>
+					</div>
 				</div>
-				<div class="form-floating mx-3 mt-3 mb-3">
-					<input type="text" class="form-control" id="tel" placeholder="Téléphone">
-					<label for="tel">Téléphone</label>
-				</div>
-				<div class="form-floating mx-3 mt-3 mb-3">
-					<input type="text" class="form-control" id="mail" placeholder="Adresse mail">
-					<label for="mail">Adresse mail</label>
-				</div>
-				<div class="form-floating mx-3 mt-3 mb-3">
-					<input type="text" class="form-control" id="structure" placeholder="Structure">
-					<label for="structure">Structure</label>
-				</div>
-				<div class="form-floating mx-3 mt-3 mb-3">
-					<input type="text" class="form-control" id="ville" placeholder="Ville">
-					<label for="ville">Ville</label>
-				</div>
-				<div class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
-					<button type="button" id="pdn_modif_valide" class="btn btn-warning m-3 px-3" data-bs-toggle="modal" data-bs-target="#modalModifInfos">Modifier</button>
-				</div>
+
 			</div>
 		</div>
 	</form>
 
 	<!--                                                                            MODAL MODIF INFOS -->
-	<div class="modal fade" id="modalModifInfos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal fade" id="modalModifInfos" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-title orange" id="staticBackdropLabel">MODIFICATION DES INFOS PDN</h2>
+					<h2 class="modal-title orange">MODIFICATION DES INFOS PDN</h2>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<div class="modal-body py-3 bleu">
-					Modifications transmises à la coordination du réseau PDN93 pour validation. Merci
-				</div>
+				<div id="modifMess" class="modal-body py-3 bleu"></div>
 				<div class="modal-footer">
-					<button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" onclick="document.location='bienvenue.php'">OK</button>
+					<button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
 				</div>
 			</div>
 		</div>
@@ -74,6 +143,7 @@
 
 </body>
 
+<script src="js/functions.js" type="text/javascript"></script>
 <script src="js/pdn_infos.js" type="text/javascript"></script>
 
 </html>

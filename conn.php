@@ -83,11 +83,11 @@ include("header.php"); ?>
 </section>
 
 <!--                                                                            MODAL OUBLIE -->
-<div class="modal fade" id="modalOublie" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="modalOublie" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-title orange" id="staticBackdropLabel">IDENTIFIANT OU MOT DE PASSE OUBLIÉ</h2>
+				<h2 class="modal-title orange">IDENTIFIANT OU MOT DE PASSE OUBLIÉ</h2>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
@@ -104,11 +104,11 @@ include("header.php"); ?>
 </div>
 
 <!--                                                                            MODAL OUBLIE INFOS -->
-<div class="modal fade" id="modalOublieInfos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+<div class="modal fade" id="modalOublieInfos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-title orange" id="staticBackdropLabel2">IDENTIFIANT OU MOT DE PASSE OUBLIÉ</h2>
+				<h2 class="modal-title orange">IDENTIFIANT OU MOT DE PASSE OUBLIÉ</h2>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div id="messageModal" class="modal-body py-3 bleu">

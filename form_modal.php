@@ -1,6 +1,6 @@
 <!--                                                                             ! ! ! - - M O D A L   A U T R E  R S - - ! ! ! -->
 
-<div class="modal fade" id="modal_nom_rs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="modal_nom_rs" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div id="div_header_nom_rs" class="modal-header">
@@ -34,7 +34,7 @@
 
 <!--                                                                             ! ! ! - - M O D A L   R S - - ! ! ! -->
 
-<div class="modal fade" id="modal_rs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="modal_rs" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
         <div id="div_header_rs" class="modal-header">
@@ -110,7 +110,7 @@
 
 <!--                                                                             ! ! ! - - M O D A L   I N I T I A T I V E S  P A S S É E S- - ! ! ! -->
 
-<div class="modal fade" id="modal_init" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="modal_init" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div id="modal_init_header" class="modal-header">
@@ -130,7 +130,7 @@
 
 <!--                                                                             ! ! ! - - M O D A L   N E X T  I N I T I A T I V E S - - ! ! ! -->
 
-<div class="modal fade" id="modal_next_init" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="modal_next_init" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div id="modal_next_init_header" class="modal-header">
@@ -143,6 +143,22 @@
             </div>
             <div class="modal-footer">
                 <button id="btn_modal_next_init" type="button" class="btn btn-primary">Valider</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--                                                                             ! ! ! - - M O D A L   M E S S A G E S  D ' I N F O S - - ! ! ! -->
+<div class="modal fade" id="modalFormInfos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title orange">FORMULAIRE MENSUEL</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="infosMess" class="modal-body py-3 bleu"></div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
             </div>
         </div>
     </div>

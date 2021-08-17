@@ -18,7 +18,7 @@ include("header.php"); ?>
 
 <!--                                                                            MODAL PDN -->
 
-<div class="modal fade" id="modalPdn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalPdn" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -36,11 +36,11 @@ include("header.php"); ?>
 </div>
 
 <!--                                                                            MODAL PAS DE PDN DANS LA VILLE -->
-<div class="modal fade" id="modalNoPdn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalNoPdn" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title orange" id="exampleModalLabel">INFORMATIONS</h2>
+                <h2 class="modal-title orange">INFORMATIONS</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div id="info-modal" class="modal-body text-center py-2">

@@ -46,10 +46,10 @@ const uuid_gen = () => {
 }
 
 // ----------------------------------------------------------------------------- Fonction de vérification de la longueur du champ présentation
-const vLen = (nom, champ, nbCar) => {
+const vLen = (nom, champ, nbCar, divMessageModal) => {
 	if(champ.length <= nbCar) etat=true;
     else {
-        alert(`La taille du champ ${nom} ne doit pas dépasser les ${nbCar} caractères.`);
+        $(divMessageModal).html(`La taille du champ <b>${nom}</b> ne doit pas dépasser les ${nbCar} caractères.`);
         etat=false;
     }
 return etat;

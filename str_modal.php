@@ -1,6 +1,6 @@
 <!--                                                                            MODAL STR -->
 
-<div class="modal fade" id="modalStr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalStr" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -22,11 +22,11 @@
 
 <!--                                                                            MODAL PAS DE PDN DANS LA VILLE -->
 
-<div class="modal fade" id="modalNoStr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalNoStr" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title orange my-2" id="exampleModalLabel">INFORMATIONS</h2>
+                <h2 class="modal-title orange my-2">INFORMATIONS</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div id="info-modal" class="modal-body text-center py-2">

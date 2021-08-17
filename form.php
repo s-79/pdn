@@ -211,7 +211,7 @@ include("header.php");
 							<label for="commentaires">Commentaires et difficultés rencontrées</label>
 						</div>
 						<div class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
-							<button type="button" id="form_create" class="btn btn-warning m-3 px-3">Enregistrer</button>
+							<button type="button" id="form_create" class="btn btn-warning m-3 px-3" data-bs-toggle="modal" data-bs-target="#modalFormInfos">Enregistrer</button>
 						</div>
 					</div>
 				</div>
