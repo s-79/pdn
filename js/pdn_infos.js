@@ -83,14 +83,13 @@ $("#pdn_modif_valide").click(function() {
 
 	if(vLen("Prénom", prenom, 100, "#modifMess") && vLen("Nom", nom, 100, "#modifMess") && vLen("Fonction", fonction, 100, "#modifMess") && vLen("Structure", structure, 100, "#modifMess") && vLen("Ville", ville, 100, "#modifMess") && vLen("Mail", mail, 100, "#modifMess") && vLen("Téléphone", tel, 50, "#modifMess") && vLen("Facebook", facebook, 255, "#modifMess") && vLen("Instagram", instagram, 255, "#modifMess") && vLen("Snapchat", snapchat, 255, "#modifMess") && vLen("Youtube", youtube, 255, "#modifMess") && vLen("Twitter", twitter, 255, "#modifMess") && vLen("Discord", discord, 255, "#modifMess") && vLen("Twitch", twitch, 255, "#modifMess") && vLen("TikTok", tiktok, 255, "#modifMess") && vLen("Présentation PDN", pres_pdn, 700, "#modifMess") && vLen("Présentation de la structure", pres_str, 700, "#modifMess")) {
 		$.ajax({
-			url: "php/pdn_Infos.php",
+			url: "php/pdn_Infos_Ress.php",
 			dataType: 'JSON',
 			data: {prenom_m:prenom, nom_m:nom, fonction_m:fonction, structure_m:structure, ville_m:ville, mail_m:mail, tel_m:tel, whatsapp_m:whatsapp, facebook_m:facebook, instagram_m:instagram, snapchat_m:snapchat, youtube_m:youtube, twitter_m:twitter, discord_m:discord, twitch_m:twitch, tiktok_m:tiktok, photo_pdn_m:photo_pdn, pres_pdn_m:pres_pdn, image_str_m:image_str, pres_str_m:pres_str},
-			complete: function(response){
+			complete: function(){
 				$('#modifMess').html(`Modifications transmises à la coordination du réseau PDN93 pour validation. Elles apparaitront sur le site dans les prochains jours.`);
+				$('#footer_modif_infos').html(`<button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" onclick="document.location='bienvenue.php'">OK</button>`);
 			}
 		});
 	}
-
-
 });

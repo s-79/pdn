@@ -12,7 +12,7 @@ include("header.php");
 	<div class="text-center mt-3">
 		<!--                                                                Récupération de l'id dans un input invisible -->
 		<div id="pdn_id" class="d-none"><?php echo $_SESSION['id']; ?></div>
-		<h1 class="mb-0 bleu text-uppercase">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
+		<h1 class="mb-0 bleu text-uppercase pointeur" onclick="document.location='bienvenue.php'">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
 	<form id="form_form" class="mt-4">
@@ -227,6 +227,7 @@ include("header.php");
 <script src="js/functions.js"></script>
 <script src="js/ajax_form.js"></script>
 <script src="js/form.js"></script>
+<script src="js/sessionStorage.js"></script>
 
 
 </html>

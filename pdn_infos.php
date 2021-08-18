@@ -12,7 +12,7 @@
 	<div class="text-center mt-3">
 		<!--                                                                     Récupération de l'id dans un input invisible -->
 		<div id="pdn_id" class="d-none"><?php echo $_SESSION['id']; ?></div>
-		<h1 class="mb-0 bleu text-uppercase">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
+		<h1 class="mb-0 bleu text-uppercase pointeur" onclick="document.location='bienvenue.php'">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
 	<form id="form_pdn_infos">
@@ -20,7 +20,7 @@
 			<div class="row formulaires">
 				<div class="col-12 col-lg-6 col-xl-4">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
-						<h1 class="pt-3">Coordonnées</h1>
+						<h1 class="pt-3">Modifier mes infos</h1>
 						<div class="form-floating mx-3 mt-3 mb-3">
 							<input type="text" class="form-control" id="prenom" placeholder="Prénom">
 							<label for="prenom">Prénom</label>
@@ -134,7 +134,7 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div id="modifMess" class="modal-body py-3 bleu"></div>
-				<div class="modal-footer">
+				<div id="footer_modif_infos" class="modal-footer">
 					<button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
 				</div>
 			</div>
@@ -145,5 +145,6 @@
 
 <script src="js/functions.js" type="text/javascript"></script>
 <script src="js/pdn_infos.js" type="text/javascript"></script>
+<script src="js/sessionStorage.js"></script>
 
 </html>

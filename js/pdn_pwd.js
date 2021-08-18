@@ -32,7 +32,7 @@ $('#pdn_pwd_valide').click(function(){
 								url: "php/form.php",
 								dataType: 'JSON',
 								data : {mdp_new:mdp_new, resp:resp},
-								complete : function(res){
+								complete : function(){
 									$('#message_modif_pwd').html("Le nouveau mot de passe a été correctement enregistré dans la base de données.");
 									$('#footer_modif_pwd').html(`<button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" onclick="document.location='bienvenue.php'">OK</button>`);
 								}

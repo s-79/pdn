@@ -16,12 +16,12 @@ $("#choixVille").change(function(){
 	const selectedVille = $("#choixVille").val();
 	// ------------------------------------------------------------------------- Chargement de toutes les structures
 	if (selectedVille === "0") {
-		$("footer").removeClass('footer_absolute');
+		// $("footer").removeClass('footer_absolute');
 		all_Str();
 	}
 	// ------------------------------------------------------------------------- Chargement des structures de la ville séléctionnée
 	else {
-		$("footer").addClass('footer_absolute');
+		// $("footer").addClass('footer_absolute');
 		selected_Str(selectedVille);
 	}
 });
