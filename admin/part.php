@@ -30,23 +30,23 @@ include("header.php"); ?>
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
                             <h1>Dénomination</h1>
-                            <i id="new_part" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Créer un nouvel événement"></i>
+                            <i id="new_part" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Créer un nouveau partenaire"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
                         <input type="text" class="form-control d-none" id="id_part">
-                        <div class="form-floating mx-3 mt-3 mb-3">
-                            <input type="text" class="form-control" id="nom" placeholder="Nom">
-                            <label for="nom">Nom</label>
+                        <div class="form-floating m-3">
+                            <input type="text" class="form-control" id="nom" placeholder="Nom de la structure">
+                            <label for="nom">Nom de la structure</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3 mb-3">
+                        <div class="form-floating m-3">
                             <input type="text" class="form-control" id="adresse" placeholder="Adresse">
                             <label for="adresse">Adresse</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3 mb-4">
+                        <div class="form-floating m-3">
                             <input type="text" class="form-control" id="cp" placeholder="Code Postal">
                             <label for="cp">Code Postal</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3 mb-4">
+                        <div class="form-floating m-3">
                             <input type="text" class="form-control" id="ville" placeholder="Ville">
                             <label for="ville">Ville</label>
                         </div>
@@ -59,22 +59,20 @@ include("header.php"); ?>
                 <!--                                                                                                              Contact -->
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3">Référent.e</h1>
-                        <!--                                                                                                        Récupération de l'id dans un input invisible -->
-                        <input type="text" class="form-control d-none" id="id_part">
-                        <div class="form-floating mx-3 mt-3 mb-3">
-                            <input type="text" class="form-control" id="prenom_ref" placeholder="Prénom">
-                            <label for="prenom_ref">Prénom</label>
+                        <h1 class="pt-3">Référent·e</h1>
+                        <div class="form-floating mx-3 mt-4 mb-3">
+                            <input type="text" class="form-control" id="prenom_ref" placeholder="Prénom référent·e">
+                            <label for="prenom_ref">Prénom référent·e</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3 mb-3">
-                            <input type="text" class="form-control" id="nom_ref" placeholder="Nom">
-                            <label for="nom_ref">Nom</label>
+                        <div class="form-floating m-3">
+                            <input type="text" class="form-control" id="nom_ref" placeholder="Nom référent·e">
+                            <label for="nom_ref">Nom référent·e</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3 mb-4">
+                        <div class="form-floating m-3">
                             <input type="text" class="form-control" id="fonction" placeholder="Fonction">
                             <label for="fonction">Fonction</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3 mb-4">
+                        <div class="form-floating m-3">
                             <input type="text" class="form-control" id="tel" placeholder="Téléphone">
                             <label for="tel">Téléphone</label>
                         </div>
@@ -88,20 +86,20 @@ include("header.php"); ?>
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <h1 class="pt-3">PJ & Commentaires</h1>
-                        <div class="form-floating mx-3 mt-4 mb-4">
+                        <div class="form-floating mx-3 mt-4 mb-3">
                             <input type="file" class="form-control" id="pj" placeholder="Pièce Jointe">
                             <label for="pj">Pièce Jointe</label>
                         </div>
-                        <div class="form-floating mx-3 mt-3">
+                        <div class="form-floating m-3 mb-4">
                             <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:200px;"></textarea>
                             <label for="commentaires">Commentaires</label>
                         </div>
-                        <div id="btn_part_create" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
-                            <button type="button" id="part_create" class="btn btn-warning m-3 px-3">Enregistrer<br>la fiche</button>
+                        <div id="btn_part_create" class="form-group d-flex justify-content-center mx-3">
+                            <button type="button" id="part_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2">Enregistrer<br>la fiche</button>
                         </div>
-                        <div id="btn_part_update" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1 d-none">
-                            <button type="button" id="part_update" class="btn btn-warning m-3 px-3">Modifier<br>la fiche</button>
-                            <button type="button" id="part_delete" class="btn btn-danger m-3">Supprimer <br>la fiche</button>
+                        <div id="btn_part_update" class="form-group d-flex justify-content-center mx-3 d-none">
+                            <button type="button" id="part_update" class="btn btn-warning m-3 px-4 pb-2">Modifier<br>la fiche</button>
+                            <button type="button" id="part_delete" class="btn btn-danger m-3 pb-2">Supprimer <br>la fiche</button>
                         </div>
                     </div>
                 </div>
@@ -111,7 +109,7 @@ include("header.php"); ?>
 </div>
 
 <!--                                                                             Tableau EVT-->
-<div id="div_tableau_evt" class="container">
+<div id="div_tableau_act" class="container">
 <div class="row justify-content-center mt-4">
     <table class="table table-striped">
         <thead>
@@ -122,7 +120,7 @@ include("header.php"); ?>
                 <th scope="col" style="width:130px">Intitulé</th>
             </tr>
         </thead>
-        <tbody id="tableau_evt">
+        <tbody id="tableau_act">
         </tbody>
     </table>
 </div>
@@ -130,8 +128,8 @@ include("header.php"); ?>
 
 <!--                                                                                                               Scripts -->
 <script src="../js/functions.js"></script>
-<!-- <script src="js/part.js"></script>
-<script src="js/ajax_part.js"></script> -->
+<script src="js/part.js"></script>
+<script src="js/ajax_part.js"></script>
 
 </body>
 </html>

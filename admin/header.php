@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleDefault">
             <ul class="navbar-nav nav-pills mb-2 mb-md-0">
                 <li class="nav-item mx-1">
-                    <a id="menu_pdn" class="nav-link px-3" href="jeune.php"><i class="fas fa-child fa-lg pe-2"></i>PROMENEURS</a>
+                    <a id="menu_pdn" class="nav-link px-3" href="pdn.php"><i class="fas fa-child fa-lg pe-2"></i>PROMENEURS</a>
                 </li>
                 <li class="nav-item mx-1">
                     <a id="menu_str" class="nav-link px-3" href="str.php"><i class="fas fa-store-alt fa-lg pe-2"></i>STRUCTURES</a>

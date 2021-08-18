@@ -17,7 +17,7 @@ if($selectedVille) {
         while($row = mysqli_fetch_array($result)){
             $id = $row['id'];
             $prenom = $row['prenom'];
-            $nom = $row['nom'];
+            $nom = $row['pdn_nom'];
             $fonction = $row['fonction'];
             $image = $row['image'];
             $ville_nom = $row['ville_nom'];
@@ -40,7 +40,7 @@ if($selectedVille) {
     while($row = mysqli_fetch_array($result)){
         $id = $row['id'];
         $prenom = $row['prenom'];
-        $nom = $row['nom'];
+        $nom = $row['pdn_nom'];
         $fonction = $row['fonction'];
         $image = $row['image'];
         $ville_nom = $row['ville_nom'];
@@ -63,7 +63,7 @@ if($selectedVille) {
     while($row = mysqli_fetch_array($result)){
         $id = $row['id'];
         $prenom = $row['prenom'];
-        $nom = $row['nom'];
+        $nom = $row['pdn_nom'];
         $fonction = $row['fonction'];
         $mail_nom = $row['mail_nom'];
         $mail_domaine = $row['mail_domaine'];
