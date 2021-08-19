@@ -42,33 +42,42 @@ $(function(){
     // ------------------------------------------------------------------------- ! ! ! - - C R E A T E -- !!!
 
 
-    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON (+) AJOUTER UN PDN
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON CREER UN MOT DE PASSE
     $("#new_pdn").click(function(){
         // --------------------------------------------------------------------- Réinitialisation du formulaire
         pdn_Reset();
+    });
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON (+) AJOUTER UN PDN
+    $("#pwd_create").click(function(){
+        // --------------------------------------------------------------------- Réinitialisation du formulaire
+        $("#mdp").val(Math.random().toString(36).substr(2, 10));
+        $('#message_admin_pdn').html(`Pensez à noter le mot de passe avant d'enregistrer la fiche car il sera ensuite crypté pour être stocké dans la BDD.<br><br>Si vous ne souhaitez pas le modifier, merci de vider le champ "Nouveau mot de passe".`);
     });
 
     //------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON "ENREGISTRER LA FICHE" DANS LA PAGE PDN
     $('#pdn_create').click(function(){
         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
         const date_entree = $("#date_entree").val();
-        const prenom = $("#prenom").val();
-        const nom = $("#nom").val();
-        const fonction = $("#fonction").val();
+        const prenom = strUpFirst($("#prenom").val());
+        const nom = $("#nom").val().toUpperCase();
+        let image = $("#image").val();
+        if(!image) image = "img/pdn/0.jpg";
+        const fonction = strUpFirst($("#fonction").val());
         const structure = $("#structure").val();
-        const mail = $("#mail").val();
+        const mail = $("#mail").val().toLowerCase();
         let mail_nom = mail.split("@");
         const mail_domaine = mail_nom[1];
         mail_nom = mail_nom[0];
         const tel = $("#tel").val();
-        const facebook = $("#facebook").val();
-        const instagram = $("#instagram").val();
-        const snapchat = $("#snapchat").val();
-        const youtube = $("#youtube").val();
-        const twitter = $("#twitter").val();
-        const discord = $("#discord").val();
-        const twitch = $("#twitch").val();
-        const tiktok = $("#tiktok").val();
+        const facebook = $("#facebook").val().toLowerCase();
+        const snapchat = $("#snapchat").val().toLowerCase();
+        const instagram = $("#instagram").val().toLowerCase();
+        const youtube = $("#youtube").val().toLowerCase();
+        const twitter = $("#twitter").val().toLowerCase();
+        const discord = $("#discord").val().toLowerCase();
+        const twitch = $("#twitch").val().toLowerCase();
+        const tiktok = $("#tiktok").val().toLowerCase();
         const presentation = $("#presentation").val();
         let whatsapp =  $("#whatsapp").is(':checked');
         if(whatsapp)whatsapp=1;else{whatsapp=0};
@@ -78,68 +87,78 @@ $(function(){
         if(fiche_rens)fiche_rens=1;else{fiche_rens=0};
         let actif =  $("#actif").is(':checked');
         if(actif)actif=1;else{actif=0};
+        const mdp = $("#mdp").val();
         const date_sortie = $("#date_sortie").val();
 
         // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
-        if(!prenom || !nom || !fonction || !structure || !mail) {
-            $('#message_admin_pdn').html("Merci de remplir au minimum les champs <b>Prénom, Nom, Fonction, Structure et Mail</b>");
-            $('#modalPdnAdmin').modal('show');
+        if(!prenom || !nom || !fonction || !structure || !mail_nom || !mail_domaine) {
+            $('#message_admin_pdn').html("Merci de remplir au minimum les champs <b>Prénom, Nom, Fonction et Structure</b> et d'indiquer une <b>adresse Mail</b> correcte.");
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-            if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Lieu",lieu,100)&& vLen("Ville",ville,100)) {
-
+            if(vLen("Prénom",prenom,10,"#message_admin_pdn") && vLen("Nom",nom,100,"#message_admin_pdn") && vLen("Fonction",fonction,100,"#message_admin_pdn") && vLen("Mail avant @",mail_nom,50,"#message_admin_pdn") && vLen("Mail après @",mail_domaine,50,"#message_admin_pdn") && vLen("Téléphone",tel,50,"#message_admin_pdn") && vLen("Facebook",facebook,255,"#message_admin_pdn") && vLen("Instagram",instagram,255,"#message_admin_pdn") && vLen("Snapchat",snapchat,255,"#message_admin_pdn") && vLen("Youtube",youtube,255,"#message_admin_pdn") && vLen("Twitter",twitter,255,"#message_admin_pdn") && vLen("Discord",discord,255,"#message_admin_pdn") && vLen("Twitch",twitch,255,"#message_admin_pdn") && vLen("TikTok",tiktok,255,"#message_admin_pdn") && vLen("Mot de passe",mdp,25,"#message_admin_pdn") && vLen("Image",image,255,"#message_admin_pdn") && vLen("Présentation",presentation,700,"#message_admin_pdn")) {
                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-                act_Create(dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires);
+                pdn_Create(prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure);
             }
         }
     })
 
-//     // ------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
-//
-//     //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON MODIFIER UNE ACTION
-//     $('#act_update').click(function(){
-//         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
-//         const id = $("#id_act").val();
-//         const dat = $("#date").val();
-//         const type = $("#type").val();
-//         const organise = $("#organise").val();
-//         const intitule = $("#intitule").val();
-//         const uuid = uuid_gen();
-//         const lieu = $("#lieu").val();
-//         const ville = $("#ville").val();
-//         const pj = $("#pj").val();
-//         const support = $("#support").val();
-//         let facebook =  $("#facebook").is(':checked');
-//         if(facebook)facebook=1;else{facebook=0};
-//         let whatsapp =  $("#whatsapp").is(':checked');
-//         if(whatsapp)whatsapp=1;else{whatsapp=0};
-//         let twitter =  $("#twitter").is(':checked');
-//         if(twitter)twitter=1;else{twitter=0};
-//         let site =  $("#site").is(':checked');
-//         if(site)site=1;else{site=0};
-//         let nb_ress = $("#nb_ress").val();
-//         if (!nb_ress) nb_ress = 0;
-//         const duree = $("#duree").val();
-//         let nb_pdn = $("#nb_pdn").val();
-//         if (!nb_pdn) nb_pdn = 0;
-//         let nb_part = $("#nb_part").val();
-//         if (!nb_part) nb_part = 0;
-//         let nb_pers = $("#nb_pers").val();
-//         if (!nb_pers) nb_pers = 0;
-//         const commentaires = $("#commentaires").val();
-//
-//         if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Lieu",lieu,100)&& vLen("Ville",ville,100)) {
-//             act_Update(id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires);
-//         }
-//     })
-//
-//     // ------------------------------------------------------------------------- ! ! ! - - D E L E T E- - ! ! !
-//
-//     //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON SUPPRIMER UNE ACTION
-//     $('#act_delete').click(function(){
-//         const id = $('#id_act').val();
-//         act_Delete(id);
-//     })
+    // ------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON MODIFIER UN·E PDN
+    $('#pdn_update').click(function(){
+        // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
+        const id = $("#id_pdn").val();
+        const date_entree = $("#date_entree").val();
+        const prenom = strUpFirst($("#prenom").val());
+        const nom = $("#nom").val().toUpperCase();
+        let image = $("#image").val();
+        if(!image) image = "img/pdn/0.jpg";
+        const fonction = strUpFirst($("#fonction").val());
+        const structure = $("#structure").val();
+        const mail = $("#mail").val().toLowerCase();
+        let mail_nom = mail.split("@");
+        const mail_domaine = mail_nom[1];
+        mail_nom = mail_nom[0];
+        const tel = $("#tel").val();
+        const facebook = $("#facebook").val().toLowerCase();
+        const snapchat = $("#snapchat").val().toLowerCase();
+        const instagram = $("#instagram").val().toLowerCase();
+        const youtube = $("#youtube").val().toLowerCase();
+        const twitter = $("#twitter").val().toLowerCase();
+        const discord = $("#discord").val().toLowerCase();
+        const twitch = $("#twitch").val().toLowerCase();
+        const tiktok = $("#tiktok").val().toLowerCase();
+        const presentation = $("#presentation").val();
+        let whatsapp =  $("#whatsapp").is(':checked');
+        if(whatsapp)whatsapp=1;else{whatsapp=0};
+        let charte =  $("#charte").is(':checked');
+        if(charte)charte=1;else{charte=0};
+        let fiche_rens =  $("#fiche_rens").is(':checked');
+        if(fiche_rens)fiche_rens=1;else{fiche_rens=0};
+        let actif =  $("#actif").is(':checked');
+        if(actif)actif=1;else{actif=0};
+        const mdp = $("#mdp").val();
+        const date_sortie = $("#date_sortie").val();
+
+        // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
+        if(!prenom || !nom || !fonction || !structure || !mail_nom || !mail_domaine) {
+            $('#message_admin_pdn').html("Merci de remplir au minimum les champs <b>Prénom, Nom, Fonction et Structure</b> et d'indiquer une <b>adresse Mail</b> correcte.");
+        } else {
+            // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
+            if(vLen("Prénom",prenom,10,"#message_admin_pdn") && vLen("Nom",nom,100,"#message_admin_pdn") && vLen("Fonction",fonction,100,"#message_admin_pdn") && vLen("Mail avant @",mail_nom,50,"#message_admin_pdn") && vLen("Mail après @",mail_domaine,50,"#message_admin_pdn") && vLen("Téléphone",tel,50,"#message_admin_pdn") && vLen("Facebook",facebook,255,"#message_admin_pdn") && vLen("Instagram",instagram,255,"#message_admin_pdn") && vLen("Snapchat",snapchat,255,"#message_admin_pdn") && vLen("Youtube",youtube,255,"#message_admin_pdn") && vLen("Twitter",twitter,255,"#message_admin_pdn") && vLen("Discord",discord,255,"#message_admin_pdn") && vLen("Twitch",twitch,255,"#message_admin_pdn") && vLen("TikTok",tiktok,255,"#message_admin_pdn") && vLen("Mot de passe",mdp,25,"#message_admin_pdn") && vLen("Image",image,255,"#message_admin_pdn") && vLen("Présentation",presentation,700,"#message_admin_pdn")) {
+                //-------------------------------------------------------------- Envoie des infos vers la BDD
+                pdn_Update(id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure);
+            }
+        }
+    })
+
+    // ------------------------------------------------------------------------- ! ! ! - - D E L E T E- - ! ! !
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON SUPPRIMER UN·E PDN
+    $('#pdn_delete').click(function(){
+        const id = $('#id_pdn').val();
+        pdn_Delete(id);
+    })
 });
 
 // ----------------------------------------------------------------------------- ! ! ! - - F U N C T I O N S - - ! ! !
@@ -169,12 +188,17 @@ const pdn_Get = (id_pdn) => {
 
 //------------------------------------------------------------------------------ Fonction de réinitialisation de la page événement
 const pdn_Reset = () => {
-    //-------------------------------------------------------------------------- Réinitialisation du formulaire
-    document.getElementById("form_pdn").reset();
+    //-------------------------------------------------------------------------- Réinitialisation des formulaires
+    document.getElementById("form_pdn1").reset();
+    document.getElementById("form_pdn2").reset();
+    document.getElementById("form_pdn3").reset();
+    document.getElementById("form_pdn4").reset();
+    document.getElementById("form_pdn5").reset();
     //-------------------------------------------------------------------------- Remplissage de la liste des structures
     ajaxGetStr("#structure");
     //-------------------------------------------------------------------------- Remplissage du champs de recherche des PDN pour afficher les nouveaux
     ajaxListPdn("#pdn_res");
+    $("#pdn_search").val("");
     //-------------------------------------------------------------------------- Réinitialisation du tableau action
     $("#tableau_act").html("");
     //-------------------------------------------------------------------------- Inversement des boutons en bas de page

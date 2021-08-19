@@ -1,3 +1,32 @@
+// ----------------------------------------------------------------------------- ! ! ! - - I M G - - ! ! !
+
+/* ---------------------------------------------------------------------------- Évenement click sur le bouton OK pour redimmensionner et enregistrer la photo */
+// e c'est l'evenement - preventDefault annule celui-ci, ce qui signifie que chaque action par défaut se produisant normalement ne se produira pas.
+$(document).ready(function (e) {
+    $("#form_pdn2").on('submit',(function(e) {
+        $("#message_admin_pdn").html("");
+		e.preventDefault();
+        $.ajax({
+	        url: "../img/pdn/file.php",
+	        type: "POST",
+	        data:  new FormData(this),
+	        contentType: false,
+	        cache: false,
+	        processData:false,
+	        success: function(data) {
+                const regex = new RegExp("img/pdn/");
+                if(regex.test(data)) {
+                    $("#image").val(data);
+                    const imgAff = "<div class='text-center'><img src='../"+data+"' height='120'></br></br>Photo ajoutée au formulaire</div>";
+                    $("#message_admin_pdn").html(imgAff);
+                } else { $("#message_admin_pdn").html(data); }
+
+                $("#modalPdnAdmin").modal('show');
+	        }
+        });
+    }));
+});
+
 // ----------------------------------------------------------------------------- ! ! ! - - P O P U L A T E - - ! ! !
 
 /* ---------------------------------------------------------------------------- Remplissage de la liste Action pour l'outil de recherche de la page act */
@@ -62,6 +91,7 @@ const ajaxGetPdn = (id_pdn) => {
             $("#date_entree").val(date_entree);
             $("#prenom").val(prenom);
             $("#nom").val(nom);
+            $("#photo").val("");
             $("#fonction").val(fonction);
             $("#structure").val(str_id);
             const mail = `${mail_nom}@${mail_domaine}`;
@@ -81,8 +111,8 @@ const ajaxGetPdn = (id_pdn) => {
             if (charte === "1") $("#charte").prop('checked', true);
             if (fiche_rens === "1") $("#fiche_rens").prop('checked', true);
             if (actif === "1") $("#actif").prop('checked', true);
+            $("#mdp").val("");
             $("#date_sortie").val(date_sortie);
-
         }
     });
 }
@@ -100,70 +130,7 @@ const ajaxGetStr = (liste) => {
     });
 }
 
-// //----------------------------------------------------------------------------- Récupération des ressources par l'id de l'action
-// const ajaxGetRess = (id_act) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {id_act_ress:id_act},
-//         success: function(response){
-//             let arraySelectedRess = [];
-//             const len = response.length;
-//             for (let i = 0; i < len; i++) {
-//                 let id = "#ress"
-//                 id += response[i].id;
-//                 arraySelectedRess.push(id);
-//             }
-//             //----------------------------------------------------------------- Stockage du tableau Selected
-//             const jsonSelectedRess = JSON.stringify(arraySelectedRess);
-//             sessionStorage.setItem('jsonSelectedRess', jsonSelectedRess);
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Récupération des PDN par l'id de l'action
-// const ajaxGetPdn = (id_act) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {id_act_pdn:id_act},
-//         success: function(response){
-//             let arraySelectedPdn = [];
-//             const len = response.length;
-//             for (let i = 0; i < len; i++) {
-//                 let id = "#pdn"
-//                 id += response[i].id;
-//                 arraySelectedPdn.push(id);
-//             }
-//             //----------------------------------------------------------------- Stockage du tableau Selected
-//             const jsonSelectedPdn = JSON.stringify(arraySelectedPdn);
-//             sessionStorage.setItem('jsonSelectedPdn', jsonSelectedPdn);
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Récupération des Partenaires par l'id de l'action
-// const ajaxGetPart = (id_act) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {id_act_part:id_act},
-//         success: function(response){
-//             let arraySelectedPart = [];
-//             const len = response.length;
-//             for (let i = 0; i < len; i++) {
-//                 let id = "#part"
-//                 id += response[i].id;
-//                 arraySelectedPart.push(id);
-//             }
-//             //----------------------------------------------------------------- Stockage du tableau Selected
-//             const jsonSelectedPart = JSON.stringify(arraySelectedPart);
-//             sessionStorage.setItem('jsonSelectedPart', jsonSelectedPart);
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Remplissage du tableau des partenaires en fonction de l'id de l'événement
+// //----------------------------------------------------------------------------- Remplissage du tableau des action en fonction de l'id du PDN
 // const ajaxActPart = (id_act, liste) => {
 //     $.ajax({
 //         url: "php/act_Get.php",
@@ -185,189 +152,52 @@ const ajaxGetStr = (liste) => {
 //     });
 // }
 //
-// //----------------------------------------------------------------------------- Remplissage du tableau des PDN en fonction de l'id de l'action
-// const ajaxActPdn = (id_act, liste) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {id_act_table_pdn:id_act},
-//         success: function(response){
-//             const len = response.length;
-//             let res = "";
-//             for (let i = 0; i < len; i++) {
-//                 const id = response[i].id;
-//                 const structure = response[i].structure;
-//                 const ville = response[i].ville;
-//                 const prenom = response[i].prenom;
-//                 const nom = response[i].nom;
-//                 res += `<tr style="cursor: pointer" onclick="id_jeune_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${structure}</td><td>${ville}</td><td>${prenom}</td><td>${nom}</td></tr>`;
-//             }
-//             $(liste).append(res);
-//         }
-//     });
-// }
+// ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
+
+const pdn_Create = (prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure) => {
+    $.ajax({
+        url: "php/pdn.php",
+        dataType: 'JSON',
+        data : {prenom:prenom, nom:nom, fonction:fonction, mail_nom:mail_nom, mail_domaine:mail_domaine, tel:tel, facebook:facebook, snapchat:snapchat, instagram:instagram, whatsapp:whatsapp, youtube:youtube, twitter:twitter, discord:discord, twitch:twitch, tiktok:tiktok, mdp:mdp, image:image, presentation:presentation, charte:charte, fiche_rens:fiche_rens, actif:actif, date_entree:date_entree, date_sortie:date_sortie, structure:structure},
+        complete: function(){
+            $('#message_admin_pdn').html("PDN ajouté·e à la base de données.");
+            //------------------------------------------------------------------ Réinitialisation de la pages des PDN
+            pdn_Reset();
+        }
+    });
+}
+
+// ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
+
+const pdn_Update = (id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure) => {
+    $.ajax({
+        url: 'php/pdn.php',
+        dataType: 'JSON',
+        data : {id:id, prenom:prenom, nom:nom, fonction:fonction, mail_nom:mail_nom, mail_domaine:mail_domaine, tel:tel, facebook:facebook, snapchat:snapchat, instagram:instagram, whatsapp:whatsapp, youtube:youtube, twitter:twitter, discord:discord, twitch:twitch, tiktok:tiktok, mdp:mdp, image:image, presentation:presentation, charte:charte, fiche_rens:fiche_rens, actif:actif, date_entree:date_entree, date_sortie:date_sortie, structure:structure},
+        complete: function(){
+            $('#message_admin_pdn').html("PDN modifié·e dans la base de données.");
+            //------------------------------------------------------------------ Réinitialisation de la pages des PDN
+            pdn_Reset();
+        }
+    });
+}
+
+// ----------------------------------------------------------------------------- ! ! ! - - D E L E T E - - ! ! !
+const pdn_Delete = (id) => {
+    //------------------------------------------------------------------------- Envoie de l'id vers la BDD pour suppression des associations
+    $.ajax({
+        url: "php/pdn.php",
+        dataType: 'JSON',
+        data : {id_del:id},
+        complete: function(){
+            $('#message_admin_pdn').html("PDN supprimé·e de la base de données.");
+            //------------------------------------------------------------------ Réinitialisation de la pages des PDN
+            pdn_Reset();
+        }
+    });
+
+}
 //
-// // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
-//
-// const act_Create = (dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires) => {
-//     $.ajax({
-//         url: "php/act.php",
-//         dataType: 'JSON',
-//         data : {dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_pers:nb_pers, commentaires:commentaires},
-//         complete: function(){
-//             //------------------------------------------------------------------ Récupération de l'id de l'événement créé
-//             //------------------------------------------------------------------ Puis récupération des intervenants et association avec l'évenemnt dans la table intervenir
-//             act_Get_Id(uuid);
-//
-//             alert("L'action a bien été ajoutée à la base de données.");
-//             //------------------------------------------------------------------ Réinitialisation de la pages des événements
-//             act_Reset();
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Récupération de l'id de l'événement créé
-// const act_Get_Id = (uuid) => {
-//     $.ajax({
-//         url: "php/act_Get.php",
-//         dataType: 'JSON',
-//         data : {uuid:uuid},
-//         success: function(response){
-//             const id_act = response[0].id;
-//             // ----------------------------------------------------------------- Envoie vers la BDD
-//             act_Get_Coordo(id_act);
-//             act_Get_Ress(id_act);
-//             act_Get_Pdn(id_act);
-//             act_Get_Part(id_act);
-//         }
-//     });
-// }
-//
-// //------------------------------------------------------------------------------ Récupération des coordos et association avec l'évenemnt dans la table coordonner
-// const act_Get_Coordo = (id_act) => {
-//     let arraySelectedCoordo = [];
-//     const jsonIdCoordo = sessionStorage.getItem('jsonIdCoordo');
-//     const arrayIdCoordo = JSON.parse(jsonIdCoordo);
-//     for(coordoId of arrayIdCoordo) {
-//         let check = $(coordoId).is(':checked');
-//         if(check) arraySelectedCoordo.push(coordoId);
-//     }
-//     for(id_coordo of arraySelectedCoordo) {
-//         const idCoordoSplit = id_coordo.split("#coordo");
-//         id_coordo = idCoordoSplit[1];
-//         $.ajax({
-//             url: 'php/act.php',
-//             dataType: 'JSON',
-//             data : {id_act:id_act, id_coordo:id_coordo}
-//         });
-//     }
-// }
-//
-// //------------------------------------------------------------------------------ Récupération des ressources et association avec l'évenemnt dans la table coordonner
-// const act_Get_Ress = (id_act) => {
-//     let arraySelectedRess = [];
-//     const jsonSelectedRess = sessionStorage.getItem('jsonSelectedRess');
-//     if(jsonSelectedRess) arraySelectedRess = JSON.parse(jsonSelectedRess);
-//     for(id_ress of arraySelectedRess) {
-//         const idRessSplit = id_ress.split("#ress");
-//         id_ress = idRessSplit[1];
-//         $.ajax({
-//             url: 'php/act.php',
-//             dataType: 'JSON',
-//             data : {id_act:id_act, id_ress:id_ress}
-//         });
-//     }
-// }
-//
-// //------------------------------------------------------------------------------ Récupération des PDN et association avec l'évenemnt dans la table coordonner
-// const act_Get_Pdn = (id_act) => {
-//     let arraySelectedPdn = [];
-//     const jsonSelectedPdn = sessionStorage.getItem('jsonSelectedPdn');
-//     if(jsonSelectedPdn) arraySelectedPdn = JSON.parse(jsonSelectedPdn);
-//     for(id_pdn of arraySelectedPdn) {
-//         const idPdnSplit = id_pdn.split("#pdn");
-//         id_pdn = idPdnSplit[1];
-//         $.ajax({
-//             url: 'php/act.php',
-//             dataType: 'JSON',
-//             data : {id_act:id_act, id_pdn:id_pdn}
-//         });
-//     }
-// }
-//
-// //------------------------------------------------------------------------------ Récupération des partenaires et association avec l'évenemnt dans la table coordonner
-// const act_Get_Part = (id_act) => {
-//     let arraySelectedPart = [];
-//     const jsonSelectedPart = sessionStorage.getItem('jsonSelectedPart');
-//     if(jsonSelectedPart) arraySelectedPart = JSON.parse(jsonSelectedPart);
-//     for(id_part of arraySelectedPart) {
-//         const idPartSplit = id_part.split("#part");
-//         id_part = idPartSplit[1];
-//         $.ajax({
-//             url: 'php/act.php',
-//             dataType: 'JSON',
-//             data : {id_act:id_act, id_part:id_part}
-//         });
-//     }
-// }
-//
-// // ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
-//
-// const act_Update = (id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires) => {
-//     $.ajax({
-//         url: 'php/act.php',
-//         dataType: 'JSON',
-//         data : {id:id, dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_pers:nb_pers, commentaires:commentaires},
-//         complete: function(){
-//             //------------------------------------------------------------------ Suppression des associations avec les autres tables puis mis à jours des données
-//             act_Maj_Asso(id);
-//
-//             alert("L'action a bien été modifiée.");
-//             //----------------------------------------------------------------- Réinitialisation de la pages des événements
-//             act_Reset();
-//         }
-//     });
-// }
-//
-// //----------------------------------------------------------------------------- Suppression des associations entre coordos et cette action dans la table coordonner
-// const act_Maj_Asso = (id_act) => {
-//     $.ajax({
-//         url: "php/act.php",
-//         dataType: 'JSON',
-//         data : {id_act_del_asso:id_act},
-//         complete: function(){
-//             act_Get_Coordo(id_act);
-//             act_Get_Ress(id_act);
-//             act_Get_Pdn(id_act);
-//             act_Get_Part(id_act);
-//         }
-//     });
-// }
-//
-// // ----------------------------------------------------------------------------- ! ! ! - - D E L E T E - - ! ! !
-// const act_Delete = (id) => {
-//     //------------------------------------------------------------------------- Envoie de l'id vers la BDD pour suppression des associations
-//     $.ajax({
-//         url: "php/act.php",
-//         dataType: 'JSON',
-//         data : {id_act_del_asso:id},
-//         complete: function(){
-//             //------------------------------------------------------------------ Envoie de l'id vers la BDD pour suppression de l'action
-//             $.ajax({
-//                 url: "php/act.php",
-//                 dataType: 'JSON',
-//                 data : {id_del:id},
-//                 complete: function() {
-//                     alert("L'action a bien été supprimée de la base de données.");
-//                     //----------------------------------------------------------------- Réinitialisation de la liste des types et noms d'organisme sur la page jeune (fonction dans orga.js)
-//                     act_Reset();
-//                 }
-//             });
-//         }
-//     });
-//
-// }
-// //
 // // // ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !
 // //
 // // // ----------------------------------------------------------------------------- Stockage de l'id du jeune et envoie vers la page jeune (acc)
