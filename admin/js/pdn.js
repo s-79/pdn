@@ -51,7 +51,7 @@ $(function(){
     //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON (+) AJOUTER UN PDN
     $("#pwd_create").click(function(){
         // --------------------------------------------------------------------- Réinitialisation du formulaire
-        $("#mdp").val(Math.random().toString(36).substr(2, 10));
+        $("#mdp").val(pwd(10));
         $('#message_admin_pdn').html(`Pensez à noter le mot de passe avant d'enregistrer la fiche car il sera ensuite crypté pour être stocké dans la BDD.<br><br>Si vous ne souhaitez pas le modifier, merci de vider le champ "Nouveau mot de passe".`);
     });
 
@@ -165,8 +165,11 @@ $(function(){
 
 // ----------------------------------------------------------------------------- FONCTION GET
 const pdn_Get = (id_pdn) => {
-    if(!id_pdn) alert("Aucun·e PDN n'a été séléctionné·e")
-    else {
+    if(!id_pdn) {
+        $('#message_admin_pdn').html("Aucun·e PDN n'a été séléctionné·e");
+        $('#modalPdnAdmin').modal('show');
+
+    } else {
         // //---------------------------------------------------------------------- Affichage de l'action séléctionné lorsqu'on à vient des pages pdn ou part
         // ajaxListAct("#act_res", id_act);
         //---------------------------------------------------------------------- Récupération des données du PDN
@@ -204,4 +207,30 @@ const pdn_Reset = () => {
     //-------------------------------------------------------------------------- Inversement des boutons en bas de page
     $("#btn_pdn_update").addClass("d-none");
     $("#btn_pdn_create").removeClass("d-none");
+}
+
+// ----------------------------------------------------------------------------- FONCTION PASSWORD
+const pwd = len => {
+    const length = (len)?(len):(10);
+    const string = "abcdefghijklmnopqrstuvwxyz";
+    const numeric = '0123456789';
+    const punctuation = '@#$%?';
+    let password = "";
+    let character = "";
+    // ------------------------------------------------------------------------- Pour gérénérer 8 lettres
+    while( character.length<8 ) {
+        entity1 = Math.ceil(string.length * Math.random()*Math.random());
+        hold = string.charAt( entity1 );
+        hold = (character.length%2==0)?(hold.toUpperCase()):(hold);
+        character += hold;
+    }
+    // ------------------------------------------------------------------------- Pour gérénérer 1 chiffre et 1 caractère spécial
+    entity2 = Math.ceil(numeric.length * Math.random()*Math.random());
+    entity3 = Math.ceil(punctuation.length * Math.random()*Math.random());
+    character += numeric.charAt( entity2 );
+    character += punctuation.charAt( entity3 );
+    password = character;
+    // ------------------------------------------------------------------------- Mélanger le tout
+    password=password.split('').sort(function(){return 0.5-Math.random()}).join('');
+    return password.substr(0,len);
 }
