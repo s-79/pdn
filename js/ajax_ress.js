@@ -78,15 +78,13 @@ const ress_Get_Infos = (id_Ress, divInfosOutil) => {
 				const nom = response[i].nom;
                 const description = response[i].description;
                 const image = response[i].image;
-                const fichier = response[i].fichier;
-                const site_editeur = response[i].site_editeur;
+                const lien = response[i].lien;
 
             	infos += `<div id='detail${id}' class='row mx-auto borderOutDetails'>`;
             	infos += `<div class='col-12 col-sm-3 d-block text-center'>`;
             	infos += `<img src='${image}' height='150px' class='img-fluid'>`;
-            	if(fichier) {infos += `<h4 class='text-center initial mt-3'><a href='${fichier}' class='bleu liens fw-bold' target='_blank'><i class='fas fa-globe bleu'></i></br>Télécharger</br>la ressource</a></h4>`};
             	infos += `</div><div class='col-12 col-sm-9'><p class='textDescription mt-3'>${description}`;
-            	if(site_editeur) {infos += `</br></br><a href='${site_editeur}' class='bleu liens fw-bold' target='_blank'>${site_editeur}</a>`};
+            	if(lien) {infos += `</br></br><a href='${lien}' class='bleu liens fw-bold' target='_blank'>${lien}</a>`};
             	infos += `</p></div>`;
 			}
 			$(divInfosOutil).html(infos);
@@ -102,13 +100,13 @@ const get_Ress = response => {
     for (let i = 0; i < len; i++) {
         const id = response[i].id;
         const nom = response[i].nom;
-        const nom_editeur = response[i].nom_editeur;
+        const editeur = response[i].editeur;
         const age = response[i].age;
         cpt ++;
         if (cpt%2===0) {ress += `<div id='outil${id}' class='row borderOut mt-1 pointeur' style='background-color:#fff;'>`;}
         else {ress += `<div id='outil${id}' class='row borderOut mt-1 pointeur' style='background-color:#ccdee4;'>`;};
         ress += `<h3 class='col-10 col-sm-11 mb-1 mt-1'><span class='fw-bold'>${nom}</span>`;
-        if (nom_editeur) ress += `&nbsp;-&nbsp;${nom_editeur}`;
+        if (editeur) ress += `&nbsp;-&nbsp;${editeur}`;
         if (age) ress += `&nbsp;-&nbsp;${age}`;
         ress += `</h3>`;
         ress += `<i id='chevron${id}' class='col-2 col-sm-1 fas fa-chevron-circle-down fa-lg my-auto text-center'></i></div>`;

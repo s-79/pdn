@@ -36,15 +36,16 @@
                             <div class="form-floating mx-3 mb-3 mt-4">
                                 <select class="form-select" id="aap" aria-label="Appel à projets *">
                                     <option selected value="">Séléctionner un appel à projets *</option>
-                                    <option value=2017>2017</option>
-                                    <option value=2018>2018</option>
-                                    <option value=2019>2019</option>
-                                    <option value=2020>2020</option>
-                                    <option value=2021>2021</option>
-                                    <option value=2022>2022</option>
-                                    <option value=2023>2023</option>
-                                    <option value=2024>2024</option>
-                                    <option value=2025>2025</option>
+                                    <option value="Hors AAP">Hors AAP</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
                                 </select>
                                 <label for="aap">Appel à projets *</label>
                             </div>
@@ -160,16 +161,22 @@
                                 <textarea class="form-control" placeholder="Présentation (700 car.max.)" id="presentation" style="height:210px;"></textarea>
                                 <label for="presentation">Présentation (700 car.max.)</label>
                             </div>
-                            <div class="form-floating m-3">
-                                <input type="number" class="form-control" id="nb_pdn_lab" placeholder="Nombre de PDN labellisé">
-                                <label for="nb_pdn_lab">Nombre de PDN labellisé</label>
+                            <div class="row my-3 mx-1">
+                                <div class="form-floating col-9">
+                                    <input type="number" class="form-control" id="nb_pdn_lab" placeholder="Nombre de PDN labellisé">
+                                    <label for="nb_pdn_lab" class="ps-3">Nb de PDN labellisé(s)</label>
+                                </div>
+                                <div class="form-floating col-3">
+                                    <input type="text" class="form-control" id="nb_pdn_act" placeholder="Actif(s)" disabled>
+                                    <label for="nb_pdn_act" class="ps-3">Actif(s)</label>
+                                </div>
                             </div>
                             <div id="btn_str_create" class="form-group d-flex justify-content-center mx-3">
-                                <button type="button" id="str_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalStrAdmin">Enregistrer<br>la fiche</button>
+                                <button type="button" id="str_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalStrAdmin">Enregistrer<br>la structure</button>
                             </div>
                             <div id="btn_str_update" class="form-group d-flex justify-content-center mx-3 d-none">
-                                <button type="button" id="str_update" class="btn btn-warning mx-3 mb-3 px-4" data-bs-toggle="modal" data-bs-target="#modalStrAdmin">Modifier<br>la fiche</button>
-                                <button type="button" id="str_delete" class="btn btn-danger mx-3 mb-3" data-bs-toggle="modal" data-bs-target="#modalStrAdmin">Supprimer <br>la fiche</button>
+                                <button type="button" id="str_update" class="btn btn-warning mx-3 mb-3 px-4" data-bs-toggle="modal" data-bs-target="#modalStrAdmin">Modifier<br>la structure</button>
+                                <button type="button" id="str_delete" class="btn btn-danger mx-3 mb-3" data-bs-toggle="modal" data-bs-target="#modalStrAdmin">Supprimer <br>la structure</button>
                             </div>
                         </form>
                     </div>

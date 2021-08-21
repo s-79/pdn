@@ -169,11 +169,11 @@
                                 <label for="date_sortie">Date de sortie</label>
                             </div>
                             <div id="btn_pdn_create" class="form-group d-flex justify-content-center mx-3">
-                                <button type="button" id="pdn_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalPdnAdmin">Enregistrer<br>la fiche</button>
+                                <button type="button" id="pdn_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalPdnAdmin">Enregistrer<br>PDN</button>
                             </div>
                             <div id="btn_pdn_update" class="form-group d-flex justify-content-center mx-3 d-none">
-                                <button type="button" id="pdn_update" class="btn btn-warning mx-3 mb-3 px-4" data-bs-toggle="modal" data-bs-target="#modalPdnAdmin">Modifier<br>la fiche</button>
-                                <button type="button" id="pdn_delete" class="btn btn-danger mx-3 mb-3" data-bs-toggle="modal" data-bs-target="#modalPdnAdmin">Supprimer <br>la fiche</button>
+                                <button type="button" id="pdn_update" class="btn btn-warning mx-3 mb-3 px-4" data-bs-toggle="modal" data-bs-target="#modalPdnAdmin">Modifier<br>PDN</button>
+                                <button type="button" id="pdn_delete" class="btn btn-danger mx-3 mb-3" data-bs-toggle="modal" data-bs-target="#modalPdnAdmin">Supprimer <br>PDN</button>
                             </div>
                         </form>
                     </div>

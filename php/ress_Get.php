@@ -9,6 +9,8 @@ $cat_Get_Them = mysqli_real_escape_string($conn, $_GET['cat_Get_Them']);
 $cat_Get_Ress = mysqli_real_escape_string($conn, $_GET['cat_Get_Ress']);
 $id_them = mysqli_real_escape_string($conn, $_GET['id_them']);
 $id_ress = mysqli_real_escape_string($conn, $_GET['id_ress']);
+$id_ress_them = mysqli_real_escape_string($conn, $_GET['id_ress_them']);
+$uuid = mysqli_real_escape_string($conn, $_GET['uuid']);
 
 if($cat) {
     $query = "CALL cat_Get()";
@@ -51,14 +53,14 @@ if($cat) {
         $id = $row['id'];
         $nom = $row['nom'];
         $them_id = $row['them_id'];
-        $nom_editeur = $row['nom_editeur'];
+        $editeur = $row['editeur'];
         $age = $row['age'];
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
             "them_id" => $them_id,
-            "nom_editeur" => $nom_editeur,
+            "editeur" => $editeur,
             "age" => $age
         );
     }
@@ -72,14 +74,14 @@ if($cat) {
         $id = $row['id'];
         $nom = $row['nom'];
         $them_id = $row['them_id'];
-        $nom_editeur = $row['nom_editeur'];
+        $editeur = $row['editeur'];
         $age = $row['age'];
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
             "them_id" => $them_id,
-            "nom_editeur" => $nom_editeur,
+            "editeur" => $editeur,
             "age" => $age
         );
     }
@@ -94,17 +96,41 @@ if($cat) {
         $nom = $row['nom'];
         $description = $row['description'];
         $image = $row['image'];
-        $fichier = $row['fichier'];
-        $site_editeur = $row['site_editeur'];
+        $lien = $row['lien'];
+        $age = $row['age'];
+        $editeur= $row['editeur'];
+        $valide= $row['valide'];
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
             "description" => $description,
             "image" => $image,
-            "fichier" => $fichier,
-            "site_editeur" => $site_editeur
+            "lien" => $lien,
+            "age" => $age,
+            "editeur" => $editeur,
+            "valide" => $valide
         );
+    }
+// ----------------------------------------------------------------------------- Récupération de la liste des thématiques assiciées à la ressource
+} elseif($id_ress_them) {
+        $query = "CALL ress_Get_Them('$id_ress_them')";
+
+        $result = mysqli_query($conn,$query);
+
+        while($row = mysqli_fetch_array($result)){
+            $id = $row['them_id'];
+            $return_arr[] = array("them_id" => $id);
+        }
+// ----------------------------------------------------------------------------- Récupération de l'id de la thématique nouvellement créée
+} elseif($uuid) {
+    $query = "CALL ress_Get_Id('$uuid')";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $return_arr[] = array("id" => $id);
     }
 }
 

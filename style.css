@@ -138,6 +138,10 @@ a.dropdown-item {
 .bg_bleu {
     background-color: rgb(0, 90, 119);
 }
+.bg_white {
+    background-color: white !important;
+    color: rgb(232, 80, 23) !important;
+}
 
 /* ----------------------------------------------------------------------------- ACCUEIL / INDEX */
 #menuPres {
@@ -284,6 +288,19 @@ figure:hover {
 
 .borderCat:hover {
     background-color: #e85017 !important;
+}
+
+.borderCatAdm {
+	padding: .1em .1em;
+	text-align: center;
+	border-radius: .80em;
+    color : #fff;
+    background-color: #005a77;
+}
+
+.borderCatAdm:hover {
+    background-color: #fff !important;
+    color: rgb(0, 90, 119) !important;
 }
 
 .borderThem {

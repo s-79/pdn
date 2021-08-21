@@ -81,6 +81,7 @@ const ajaxGetStr = (id_str) => {
             const resp_tel = response[0].resp_tel;
             const resp_mail_nom = response[0].resp_mail_nom;
             const resp_mail_domaine = response[0].resp_mail_domaine;
+            let nb_pdn_act = response[0].nb_pdn_act;
             const nb_pdn_lab = response[0].nb_pdn_lab;
 
             $("#id_str").val(id_str);
@@ -104,6 +105,8 @@ const ajaxGetStr = (id_str) => {
             let resp_mail = "";
             if(resp_mail_domaine) resp_mail = `${resp_mail_nom}@${resp_mail_domaine}`;
             $("#resp_mail").val(resp_mail);
+            if (!nb_pdn_act) nb_pdn_act = 0;
+            $("#nb_pdn_act").val(nb_pdn_act);
             $("#nb_pdn_lab").val(nb_pdn_lab);
         }
     });

@@ -30,6 +30,7 @@ if($id) {
         $resp_tel = $row['resp_tel'];
         $resp_mail_nom = $row['resp_mail_nom'];
         $resp_mail_domaine = $row['resp_mail_domaine'];
+        $nb_pdn_act = $row['nb_pdn_act'];
         $nb_pdn_lab = $row['nb_pdn_lab'];
 
         $return_arr[] = array(
@@ -51,6 +52,7 @@ if($id) {
             "resp_tel" => $resp_tel,
             "resp_mail_nom" => $resp_mail_nom,
             "resp_mail_domaine" => $resp_mail_domaine,
+            "nb_pdn_act" => $nb_pdn_act,
             "nb_pdn_lab" => $nb_pdn_lab
         );
     }
