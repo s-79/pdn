@@ -34,8 +34,15 @@
                 <li class="nav-item mx-1">
                     <a id="menu_str" class="nav-link px-3" href="str.php"><i class="fas fa-store-alt fa-lg pe-2"></i>STRUCTURES</a>
                 </li>
-                <li class="nav-item mx-1">
-                    <a id="menu_ress" class="nav-link px-3" href="ress.php"><i class="fas fa-toolbox fa-lg pe-2"></i>RESSOURCES</a>
+                <li class="nav-item dropdown">
+                    <a id="menu_ress" class="nav-link px-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-toolbox fa-lg pe-2"></i>RESSOURCES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="menuderoulantPres">
+                        <li><a class="dropdown-item" href="ress.php">RESSOURCES</a></li>
+                        <li><a class="dropdown-item" href="them.php">THÉMATIQUES</a></li>
+                        <li><a class="dropdown-item" href="cat.php">CATÉGORIES</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item mx-1">
                     <a id="menu_part" class="nav-link px-3" href="part.php"><i class="fas fa-handshake fa-lg pe-2"></i>PARTENAIRES</a>

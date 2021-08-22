@@ -5,6 +5,8 @@ include "../../php/base.php";
 $return_arr = array();
 
 $id = mysqli_real_escape_string($conn, $_GET['id']);
+$id_pdn_tab_act = mysqli_real_escape_string($conn, $_GET['id_pdn_tab_act']);
+
 
 if($id) {
     $query = "SELECT * FROM `v_str_pdn` WHERE `id` = '$id';";
@@ -60,6 +62,28 @@ if($id) {
             "fiche_rens" => $fiche_rens,
             "actif" => $actif,
             "date_sortie" => $date_sortie
+        );
+    }
+
+// ----------------------------------------------------------------------------- Tableau : Récupération des données des actions liées au PDN
+} elseif($id_pdn_tab_act) {
+    $query = "SELECT * FROM `v_pdn_act` WHERE `pdn_id` = '$id_pdn_tab_act';";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $dat = $row['dat'];
+        $type = $row['type'];
+        $intitule = $row['intitule'];
+        $commentaires = $row['commentaires'];
+
+        $return_arr[] = array(
+            "id" => $id,
+            "dat" => $dat,
+            "type" => $type,
+            "intitule" => $intitule,
+            "commentaires" => $commentaires
         );
     }
 }

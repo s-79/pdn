@@ -90,7 +90,7 @@
                                     <input class="form-check-input" type="checkbox" value="" id="prij">
                                 </div>
                                 <div class="col-4 d-flex justify-content-end">
-                                    <a class="text-white" href="https://sig.ville.gouv.fr/" target="_blank">Site du SIG</a>
+                                    <a class="text-white liens_adm" href="https://sig.ville.gouv.fr/" target="_blank">Site du SIG</a>
                                 </div>
                             </div>
                         </form>
@@ -184,6 +184,24 @@
             </div>
         </div>
     </div>
+</div>
+
+<!--                                                                             Tableau ACT -->
+<div id="div_tableau_act" class="container">
+<div class="row justify-content-center mt-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="d-none" scope="col" style="width:130px">#</th>
+                <th scope="col" style="width:130px">Date</th>
+                <th scope="col" style="width:130px">Type</th>
+                <th scope="col" style="width:130px">Intitulé</th>
+            </tr>
+        </thead>
+        <tbody id="tableau_act">
+        </tbody>
+    </table>
+</div>
 </div>
 
 <!--                                                                            MODAL MODIF INFOS -->

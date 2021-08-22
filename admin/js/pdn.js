@@ -4,11 +4,11 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_pdn").toggleClass("nav-link-toggle");
 
-    //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id d'action stocké
-    // let id_act_storage = sessionStorage.getItem("id_act");
-    // sessionStorage.removeItem('id_act');
+    //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id de session stocké
+    let id_pdn_storage = sessionStorage.getItem("id_pdn");
+    sessionStorage.removeItem('id_pdn');
     //-------------------------------------------------------------------------- (fonction à la fin) Si il y un id, on lance la fonction Get
-    // if(id_act_storage) act_Get(id_act_storage);
+    if(id_pdn_storage) pdn_Get(id_pdn_storage);
 
     //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
     ajaxListPdn("#pdn_res");
@@ -170,16 +170,16 @@ const pdn_Get = (id_pdn) => {
         $('#modalPdnAdmin').modal('show');
 
     } else {
-        // //---------------------------------------------------------------------- Affichage de l'action séléctionné lorsqu'on à vient des pages pdn ou part
-        // ajaxListAct("#act_res", id_act);
+        //---------------------------------------------------------------------- Affichage de l'action séléctionné dans l'outil de recherche lorsqu'on à vient d'une autre page'
+        ajaxListPdn("#pdn_res", id_pdn);
         //---------------------------------------------------------------------- Récupération des données du PDN
         ajaxGetPdn(id_pdn);
 
-        // //---------------------------------------------------------------------- Réinitialisation du tableau action
-        // $("#tableau_act").html("");
-        //
-        // //---------------------------------------------------------------------- Remplissage du tableau
-        // ajaxActPart(id_pdn, "#tableau_act");
+        //---------------------------------------------------------------------- Réinitialisation du tableau action
+        $("#tableau_act").html("");
+
+        //---------------------------------------------------------------------- Remplissage du tableau
+        ajaxPdnAct(id_pdn, "#tableau_act");
 
         //---------------------------------------------------------------------- Inversement des boutons en bas de page
         $("#btn_pdn_create").addClass("d-none");

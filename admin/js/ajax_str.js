@@ -43,7 +43,7 @@ const ajaxListStr = (liste, id_str) => {
     });
 }
 
-/* ---------------------------------------------------------------------------- Outil de recherche d'événement */
+/* ---------------------------------------------------------------------------- Outil de recherche de structure */
 const str_Search = (search) => {
     $.ajax({
     url: 'php/populate.php',
@@ -125,6 +125,28 @@ const ajaxGetVille = (liste) => {
     });
 }
 
+//----------------------------------------------------------------------------- Remplissage du tableau des actions en fonction de l'id du PDN
+const ajaxStrAct = (id_str, liste) => {
+    $.ajax({
+        url: "php/str_Get.php",
+        dataType: 'JSON',
+        data : {id_str_tab_act:id_str},
+        success: function(response){
+            const len = response.length;
+            let res = "";
+            for (let i = 0; i < len; i++) {
+                const id = response[i].id;
+                const dat = response[i].dat;
+                const type = response[i].type;
+                const intitule = response[i].intitule;
+                const commentaires = response[i].commentaires;
+                res += `<tr style="cursor: pointer" onclick="id_act_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${dat}</td><td>${type}</td><td>${intitule}</td></tr>`;
+            }
+            $(liste).append(res);
+        }
+    });
+}
+
 // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
 
 const str_Create = (aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab) => {
@@ -169,4 +191,12 @@ const str_Delete = (id) => {
         }
     });
 
+}
+
+// ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !
+
+// ----------------------------------------------------------------------------- Stockage de l'id de l'action et envoie vers la page act
+const id_act_storage = (id) => {
+    sessionStorage.setItem('id_act', id);
+    document.location='act.php';
 }

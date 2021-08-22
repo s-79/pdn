@@ -9,8 +9,6 @@ $cat_Get_Them = mysqli_real_escape_string($conn, $_GET['cat_Get_Them']);
 $cat_Get_Ress = mysqli_real_escape_string($conn, $_GET['cat_Get_Ress']);
 $id_them = mysqli_real_escape_string($conn, $_GET['id_them']);
 $id_ress = mysqli_real_escape_string($conn, $_GET['id_ress']);
-$id_ress_them = mysqli_real_escape_string($conn, $_GET['id_ress_them']);
-$uuid = mysqli_real_escape_string($conn, $_GET['uuid']);
 
 if($cat) {
     $query = "CALL cat_Get()";
@@ -111,26 +109,6 @@ if($cat) {
             "editeur" => $editeur,
             "valide" => $valide
         );
-    }
-// ----------------------------------------------------------------------------- Récupération de la liste des thématiques assiciées à la ressource
-} elseif($id_ress_them) {
-        $query = "CALL ress_Get_Them('$id_ress_them')";
-
-        $result = mysqli_query($conn,$query);
-
-        while($row = mysqli_fetch_array($result)){
-            $id = $row['them_id'];
-            $return_arr[] = array("them_id" => $id);
-        }
-// ----------------------------------------------------------------------------- Récupération de l'id de la thématique nouvellement créée
-} elseif($uuid) {
-    $query = "CALL ress_Get_Id('$uuid')";
-
-    $result = mysqli_query($conn,$query);
-
-    while($row = mysqli_fetch_array($result)){
-        $id = $row['id'];
-        $return_arr[] = array("id" => $id);
     }
 }
 

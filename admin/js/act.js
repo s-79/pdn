@@ -4,11 +4,11 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_act").toggleClass("nav-link-toggle");
 
-    //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id d'action stocké
-    // let id_act_storage = sessionStorage.getItem("id_act");
-    // sessionStorage.removeItem('id_act');
+    //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id de session stocké
+    let id_act_storage = sessionStorage.getItem("id_act");
+    sessionStorage.removeItem('id_act');
     //-------------------------------------------------------------------------- (fonction à la fin) Si il y un id, on lance la fonction Get
-    // if(id_act_storage) act_Get(id_act_storage);
+    if(id_act_storage) act_Get(id_act_storage);
 
     //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
     ajaxListAct("#act_res");
@@ -263,9 +263,11 @@ const act_Get = (id_act) => {
         //---------------------------------------------------------------------- Réinitialisation des tableaux Partenaires et PDN
         $("#tableau_part").html("");
         $("#tableau_pdn").html("");
+        $("#tableau_str").html("");
         //---------------------------------------------------------------------- Remplissage des tableaux
         ajaxActPart(id_act, "#tableau_part");
         ajaxActPdn(id_act, "#tableau_pdn");
+        ajaxActStr(id_act, "#tableau_str");
 
         //---------------------------------------------------------------------- Inversement des boutons en bas de page
         $("#btn_act_create").addClass("d-none");

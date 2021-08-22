@@ -77,29 +77,25 @@ include("header.php"); ?>
                             <label for="tel">Téléphone</label>
                         </div>
                         <div class="form-floating mx-3 mt-3 mb-4">
-                            <input type="text" class="form-control" id="email" placeholder="E-mail">
-                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="mail" placeholder="E-mail">
+                            <label for="mail">E-mail</label>
                         </div>
                     </div>
                 </div>
                 <!--                                                                                                              Coordonnées -->
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3">PJ & Commentaires</h1>
-                        <div class="form-floating mx-3 mt-4 mb-3">
-                            <input type="file" class="form-control" id="pj" placeholder="Pièce Jointe">
-                            <label for="pj">Pièce Jointe</label>
-                        </div>
+                        <h1 class="pt-3">Commentaires</h1>
                         <div class="form-floating m-3 mb-4">
-                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:200px;"></textarea>
+                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:285px;"></textarea>
                             <label for="commentaires">Commentaires</label>
                         </div>
                         <div id="btn_part_create" class="form-group d-flex justify-content-center mx-3">
                             <button type="button" id="part_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2">Enregistrer<br>la fiche</button>
                         </div>
                         <div id="btn_part_update" class="form-group d-flex justify-content-center mx-3 d-none">
-                            <button type="button" id="part_update" class="btn btn-warning m-3 px-4 pb-2">Modifier<br>la fiche</button>
-                            <button type="button" id="part_delete" class="btn btn-danger m-3 pb-2">Supprimer <br>la fiche</button>
+                            <button type="button" id="part_update" class="btn btn-warning mx-3 mb-3 px-4 pb-2">Modifier<br>la fiche</button>
+                            <button type="button" id="part_delete" class="btn btn-danger mx-3 mb-3 pb-2">Supprimer <br>la fiche</button>
                         </div>
                     </div>
                 </div>
@@ -108,7 +104,7 @@ include("header.php"); ?>
     </form>
 </div>
 
-<!--                                                                             Tableau EVT-->
+<!--                                                                             Tableau ACT -->
 <div id="div_tableau_act" class="container">
 <div class="row justify-content-center mt-4">
     <table class="table table-striped">
@@ -116,7 +112,7 @@ include("header.php"); ?>
             <tr>
                 <th class="d-none" scope="col" style="width:130px">#</th>
                 <th scope="col" style="width:130px">Date</th>
-                <th scope="col" style="width:130px">Lieu</th>
+                <th scope="col" style="width:130px">Type</th>
                 <th scope="col" style="width:130px">Intitulé</th>
             </tr>
         </thead>
@@ -124,6 +120,23 @@ include("header.php"); ?>
         </tbody>
     </table>
 </div>
+</div>
+
+<!--                                                                            MODAL MODIF INFOS -->
+<div class="modal fade" id="modalPartAdmin" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title orange">ADMINISTRATION PDN</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="message_admin_part" class="modal-body py-3 bleu">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--                                                                                                               Scripts -->

@@ -69,6 +69,14 @@ a i:hover, a:hover {
     color: #e85017 !important;
 }
 
+.liens_adm {
+    text-decoration:none;
+}
+
+.liens_adm:hover {
+    text-decoration:underline;
+}
+
 a.dropdown-item {
     font-size: 0.8em;
 }

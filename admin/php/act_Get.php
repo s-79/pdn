@@ -9,10 +9,12 @@ $id_act_coordo = mysqli_real_escape_string($conn, $_GET['id_act_coordo']);
 $id_act_ress = mysqli_real_escape_string($conn, $_GET['id_act_ress']);
 $id_act_pdn = mysqli_real_escape_string($conn, $_GET['id_act_pdn']);
 $id_act_part = mysqli_real_escape_string($conn, $_GET['id_act_part']);
+$id_act_str = mysqli_real_escape_string($conn, $_GET['id_act_str']);
 $uuid = mysqli_real_escape_string($conn, $_GET['uuid']);
 
 $id_act_table_part = mysqli_real_escape_string($conn, $_GET['id_act_table_part']);
 $id_act_table_pdn = mysqli_real_escape_string($conn, $_GET['id_act_table_pdn']);
+$id_act_table_str = mysqli_real_escape_string($conn, $_GET['id_act_table_str']);
 
 if($id) {
     $query = "SELECT * FROM `v_act` WHERE `id` = '$id';";
@@ -158,6 +160,26 @@ if($id) {
             "ville" => $ville,
             "prenom" => $prenom,
             "nom" => $nom
+        );
+    }
+
+// ----------------------------------------------------------------------------- Récupération des données des pdn liés à l'action pour tableau
+} elseif($id_act_table_str) {
+    $query = "SELECT `id`, `nom`, `resp_prenom`, `resp_nom` FROM `v_act_str` WHERE `act_id` = '$id_act_table_str';";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $nom = $row['nom'];
+        $resp_prenom= $row['resp_prenom'];
+        $resp_nom = $row['resp_nom'];
+
+        $return_arr[] = array(
+            "id" => $id,
+            "nom" => $nom,
+            "resp_prenom" => $resp_prenom,
+            "resp_nom" => $resp_nom
         );
     }
 }

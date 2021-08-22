@@ -341,7 +341,29 @@ const ajaxActPdn = (id_act, liste) => {
                 const ville = response[i].ville;
                 const prenom = response[i].prenom;
                 const nom = response[i].nom;
-                res += `<tr style="cursor: pointer" onclick="id_jeune_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${structure}</td><td>${ville}</td><td>${prenom}</td><td>${nom}</td></tr>`;
+                res += `<tr style="cursor: pointer" onclick="id_pdn_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${prenom}</td><td>${nom}</td><td>${structure}</td><td>${ville}</td></tr>`;
+            }
+            $(liste).append(res);
+        }
+    });
+}
+
+//----------------------------------------------------------------------------- Remplissage du tableau des PDN en fonction de l'id de l'action
+const ajaxActStr = (id_act, liste) => {
+    $.ajax({
+        url: "php/act_Get.php",
+        dataType: 'JSON',
+        data : {id_act_table_str:id_act},
+        success: function(response){
+            const len = response.length;
+            let res = "";
+            for (let i = 0; i < len; i++) {
+                const id = response[i].id;
+                const nom = response[i].nom;
+                const ville = response[i].ville;
+                const resp_prenom = response[i].resp_prenom;
+                const resp_nom = response[i].resp_nom;
+                res += `<tr style="cursor: pointer" onclick="id_str_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${nom}</td><td>${ville}</td><td>${resp_prenom}</td><td>${resp_nom}</td></tr>`;
             }
             $(liste).append(res);
         }
@@ -508,17 +530,23 @@ const act_Delete = (id) => {
     });
 
 }
-//
-// // ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !
-//
-// // ----------------------------------------------------------------------------- Stockage de l'id du jeune et envoie vers la page jeune (acc)
-// const id_jeune_storage = (id) => {
-//     sessionStorage.setItem('id_jeune', id);
-//     document.location='jeune.php';
-// }
-//
-// // ----------------------------------------------------------------------------- Stockage de l'id du pro et envoie vers la page pro
-// const id_pro_storage = (id) => {
-//     sessionStorage.setItem('id_pro', id);
-//     document.location='pro.php';
-// }
+
+// ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !
+
+// ----------------------------------------------------------------------------- Stockage de l'id du PDN et envoie vers la page PDN
+const id_pdn_storage = (id) => {
+    sessionStorage.setItem('id_pdn', id);
+    document.location='pdn.php';
+}
+
+// ----------------------------------------------------------------------------- Stockage de l'id du partenaire et envoie vers la page part
+const id_part_storage = (id) => {
+    sessionStorage.setItem('id_part', id);
+    document.location='part.php';
+}
+
+// ----------------------------------------------------------------------------- Stockage de l'id de la structure et envoie vers la page str
+const id_str_storage = (id) => {
+    sessionStorage.setItem('id_str', id);
+    document.location='str.php';
+}

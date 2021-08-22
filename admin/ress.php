@@ -5,7 +5,7 @@
         <div class="row search_bar">
             <!--                                                                                                              Zone de recherche -->
             <div class="col-12 col-sm-4 py-4 pr-1 pl-3 text-center">
-                <input type="text" class="form-control" id="ress_search" placeholder="Saisir le prénom ou le nom">
+                <input type="text" class="form-control" id="ress_search" placeholder="Saisir le nom de la ressource">
                 <label for="part_search" class="d-none">Saisir le nom de la ressource</label>
             </div>
             <!--                                                                                                              Résultat de recherche -->

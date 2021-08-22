@@ -191,7 +191,7 @@
             <tr>
                 <th class="d-none" scope="col" style="width:130px">#</th>
                 <th scope="col" style="width:130px">Date</th>
-                <th scope="col" style="width:130px">Lieu</th>
+                <th scope="col" style="width:130px">Type</th>
                 <th scope="col" style="width:130px">Intitulé</th>
             </tr>
         </thead>

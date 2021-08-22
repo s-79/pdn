@@ -43,7 +43,7 @@ const ajaxListRess = (liste, id_ress) => {
     });
 }
 
-/* ---------------------------------------------------------------------------- Outil de recherche d'événement */
+/* ---------------------------------------------------------------------------- Outil de recherche de ressource */
 const ress_Search = (search) => {
     $.ajax({
     url: 'php/populate.php',
@@ -58,9 +58,9 @@ const ress_Search = (search) => {
 // ----------------------------------------------------------------------------- Récupération et affichage des catégories
 const cat_Get = () => {
     $.ajax({
-		url: "../php/ress_Get.php",
+		url: "php/ress_Get.php",
 		dataType: 'JSON',
-		data : {cat:"cat"},
+		data : {ress_Get_Cat:"cat"},
 		success: function(response){
 			let cat = "";
             let them = "";
@@ -72,7 +72,7 @@ const cat_Get = () => {
                 cat += `<div id='${id_cat}' class='borderCatAdm pointeur pt-2'><h5 class='text-uppercase'>${nom_cat}</h5></div>`;
                 // ------------------------------------------------------------------------  Remplissage des thématiques
                 $.ajax({
-                    url: "../php/ress_Get.php",
+                    url: "php/ress_Get.php",
                     dataType: 'JSON',
                     data : {cat_Get_Them:id_cat},
                     success: function(response){
@@ -123,6 +123,7 @@ const ajaxGetRess = (id_ress) => {
             const description = response[0].description;
             const valide = response[0].valide;
 
+            $("#id_ress").val(id_ress);
             $("#nom").val(nom);
             $("#lien").val(lien);
             $("#image").val(image);
@@ -138,7 +139,7 @@ const ajaxGetRess = (id_ress) => {
 //----------------------------------------------------------------------------- Récupération des coordos par l'id de l'action
 const ressGetThem = (id_ress) => {
     $.ajax({
-        url: '../php/ress_Get.php',
+        url: 'php/ress_Get.php',
         dataType: 'JSON',
         data : {id_ress_them:id_ress},
         success: function(response){
@@ -168,7 +169,7 @@ const ress_Create = (uuid, nom, lien, image, age, editeur, description, valide) 
 
 const ress_Get_Id = (uuid) => {
     $.ajax({
-        url: "../php/ress_Get.php",
+        url: "php/ress_Get.php",
         dataType: 'JSON',
         data : {uuid:uuid},
         success: function(response){
@@ -205,13 +206,28 @@ const ress_Get_Them = (id_ress) => {
 }
 
 // ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
-
-const ress_Update = (id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure) => {
+const ress_Update = (id, nom, lien, image, age, editeur, description, valide) => {
     $.ajax({
         url: 'php/ress.php',
         dataType: 'JSON',
-        data : {id:id, prenom:prenom, nom:nom, fonction:fonction, mail_nom:mail_nom, mail_domaine:mail_domaine, tel:tel, facebook:facebook, snapchat:snapchat, instagram:instagram, whatsapp:whatsapp, youtube:youtube, twitter:twitter, discord:discord, twitch:twitch, tiktok:tiktok, mdp:mdp, image:image, presentation:presentation, charte:charte, fiche_rens:fiche_rens, actif:actif, date_entree:date_entree, date_sortie:date_sortie, structure:structure},
+        data : {id:id, nom:nom, lien:lien, image:image, age:age, editeur:editeur, description:description, valide:valide},
         complete: function(){
+            //------------------------------------------------------------------ Suppression des associations entre coordos et cette action dans la table classer
+            ress_Del_Them(id);
+        }
+    });
+}
+
+//----------------------------------------------------------------------------- Suppression des associations entre coordos et cette action dans la table classer
+const ress_Del_Them = (id_ress) => {
+    $.ajax({
+        url: "php/ress.php",
+        dataType: 'JSON',
+        data : {id_Ress_Del_Them:id_ress},
+        complete: function(){
+            //------------------------------------------------------------------- Récupération des coordos et association avec l'évenemnt dans la table coordonner
+            ress_Get_Them(id_ress);
+
             $('#message_admin_ress').html("Ressource modifiée dans la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des ressources
             ress_Reset();

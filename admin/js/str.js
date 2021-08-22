@@ -4,6 +4,12 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_str").toggleClass("nav-link-toggle");
 
+    //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id de session stocké
+    let id_str_storage = sessionStorage.getItem("id_str");
+    sessionStorage.removeItem('id_str');
+    //-------------------------------------------------------------------------- (fonction à la fin) Si il y un id, on lance la fonction Get
+    if(id_str_storage) str_Get(id_str_storage);
+
     //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
     ajaxListStr("#str_res");
 
@@ -148,8 +154,18 @@ const str_Get = (id_str) => {
         $('#modalStrAdmin').modal('show');
 
     } else {
+        //---------------------------------------------------------------------- Affichage de l'action séléctionné dans l'outil de recherche lorsqu'on à vient d'une autre page'
+        ajaxListStr("#str_res", id_str);
         //---------------------------------------------------------------------- Récupération des données du str
         ajaxGetStr(id_str);
+
+        //---------------------------------------------------------------------- Réinitialisation du tableau action
+        $("#tableau_act").html("");
+
+        //---------------------------------------------------------------------- Remplissage du tableau
+        ajaxStrAct(id_str, "#tableau_act");
+
+
 
         //---------------------------------------------------------------------- Inversement des boutons en bas de page
         $("#btn_str_create").addClass("d-none");

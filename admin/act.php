@@ -224,13 +224,32 @@ include("header.php"); ?>
         <thead>
             <tr>
                 <th class="d-none" scope="col" style="width:130px">#</th>
-                <th scope="col" style="width:130px">Structure</th>
-                <th scope="col" style="width:130px">Ville</th>
                 <th scope="col" style="width:130px">Prénom Pdn</th>
                 <th scope="col" style="width:130px">Nom Pdn</th>
+                <th scope="col" style="width:130px">Structure</th>
+                <th scope="col" style="width:130px">Ville</th>
             </tr>
         </thead>
         <tbody id="tableau_pdn">
+        </tbody>
+    </table>
+</div>
+</div>
+
+<!--                                                                            Tableau STR-->
+<div id="div_tableau_str" class="container">
+<div class="row justify-content-center mt-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="d-none" scope="col" style="width:130px">#</th>
+                <th scope="col" style="width:130px">Structure</th>
+                <th scope="col" style="width:130px">Ville</th>
+                <th scope="col" style="width:130px">Prénom Resp</th>
+                <th scope="col" style="width:130px">Nom Resp</th>
+            </tr>
+        </thead>
+        <tbody id="tableau_str">
         </tbody>
     </table>
 </div>

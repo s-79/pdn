@@ -56,7 +56,7 @@ $(function(){
         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
         const uuid = uuid_gen();
         const nom = $("#nom").val();
-        const lien = $("#nom").val().toLowerCase();
+        const lien = $("#lien").val().toLowerCase();
         let image = $("#image").val();
         if(!image) image = "img/outil/0.jpg";
         const age = $("#age").val();
@@ -77,65 +77,44 @@ $(function(){
         }
     })
 
-//     // ------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
-//
-//     //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON MODIFIER UNE RESOURCE
-//     $('#ress_update').click(function(){
-//         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
-//         const id = $("#id_ress").val();
-//         const date_entree = $("#date_entree").val();
-//         const prenom = strUpFirst($("#prenom").val());
-//         const nom = $("#nom").val().toUpperCase();
-//         let image = $("#image").val();
-//         if(!image) image = "img/outil/0.jpg";
-//         const fonction = strUpFirst($("#fonction").val());
-//         const structure = $("#structure").val();
-//         const mail = $("#mail").val().toLowerCase();
-//         let mail_nom = mail.split("@");
-//         const mail_domaine = mail_nom[1];
-//         mail_nom = mail_nom[0];
-//         const tel = $("#tel").val();
-//         const facebook = $("#facebook").val().toLowerCase();
-//         const snapchat = $("#snapchat").val().toLowerCase();
-//         const instagram = $("#instagram").val().toLowerCase();
-//         const youtube = $("#youtube").val().toLowerCase();
-//         const twitter = $("#twitter").val().toLowerCase();
-//         const discord = $("#discord").val().toLowerCase();
-//         const twitch = $("#twitch").val().toLowerCase();
-//         const tiktok = $("#tiktok").val().toLowerCase();
-//         const presentation = $("#presentation").val();
-//         let whatsapp =  $("#whatsapp").is(':checked');
-//         if(whatsapp)whatsapp=1;else{whatsapp=0};
-//         let charte =  $("#charte").is(':checked');
-//         if(charte)charte=1;else{charte=0};
-//         let fiche_rens =  $("#fiche_rens").is(':checked');
-//         if(fiche_rens)fiche_rens=1;else{fiche_rens=0};
-//         let actif =  $("#actif").is(':checked');
-//         if(actif)actif=1;else{actif=0};
-//         const mdp = $("#mdp").val();
-//         const date_sortie = $("#date_sortie").val();
-//
-//         // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
-//         if(!prenom || !nom || !fonction || !structure || !mail_nom || !mail_domaine) {
-//             $('#message_admin_ress').html("Merci de remplir au minimum les champs <b>Prénom, Nom, Fonction et Structure</b> et d'indiquer une <b>adresse Mail</b> correcte.");
-//         } else {
-//             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-//             if(vLen("Prénom",prenom,10,"#message_admin_ress") && vLen("Nom",nom,100,"#message_admin_ress") && vLen("Fonction",fonction,100,"#message_admin_ress") && vLen("Mail avant @",mail_nom,50,"#message_admin_ress") && vLen("Mail après @",mail_domaine,50,"#message_admin_ress") && vLen("Téléphone",tel,50,"#message_admin_ress") && vLen("Facebook",facebook,255,"#message_admin_ress") && vLen("Instagram",instagram,255,"#message_admin_ress") && vLen("Snapchat",snapchat,255,"#message_admin_ress") && vLen("Youtube",youtube,255,"#message_admin_ress") && vLen("Twitter",twitter,255,"#message_admin_ress") && vLen("Discord",discord,255,"#message_admin_ress") && vLen("Twitch",twitch,255,"#message_admin_ress") && vLen("TikTok",tiktok,255,"#message_admin_ress") && vLen("Mot de passe",mdp,25,"#message_admin_ress") && vLen("Image",image,255,"#message_admin_ress") && vLen("Présentation",presentation,700,"#message_admin_ress")) {
-//                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-//                 ress_Update(id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure);
-//             }
-//         }
-//     })
-//
-//     // ------------------------------------------------------------------------- ! ! ! - - D E L E T E- - ! ! !
-//
-//     //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON SUPPRIMER UNE RESSOURCE
-//     $('#ress_delete').click(function(){
-//         const id = $('#id_ress').val();
-//         ress_Delete(id);
-//     })
+    // ------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON MODIFIER UNE RESSOURCE
+    $('#ress_update').click(function(){
+        // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
+        const id = $("#id_ress").val();
+        const uuid = uuid_gen();
+        const nom = $("#nom").val();
+        const lien = $("#nom").val().toLowerCase();
+        let image = $("#image").val();
+        if(!image) image = "img/outil/0.jpg";
+        const age = $("#age").val();
+        const editeur = $("#editeur").val();
+        const description = $("#description").val();
+        let valide =  $("#valide").is(':checked');
+        if(valide)valide=1;else{valide=0};
+
+        // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
+        if(!nom || !lien) {
+            $('#message_admin_ress').html(`Merci de remplir au minimum les champs <b>Nom et Lien</b>`);
+        } else {
+            // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
+            if(vLen("Nom",nom,100,"#message_admin_ress") && vLen("Lien",lien,500,"#message_admin_ress") && vLen("Age",age,30,"#message_admin_ress") && vLen("Editeur",editeur,50,"#message_admin_ress") && vLen("Description",description,700,"#message_admin_ress")) {
+                //-------------------------------------------------------------- Envoie des infos vers la BDD
+                ress_Update(id, nom, lien, image, age, editeur, description, valide);
+            }
+        }
+    })
+
+    // ------------------------------------------------------------------------- ! ! ! - - D E L E T E- - ! ! !
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON SUPPRIMER UNE RESSOURCE
+    $('#ress_delete').click(function(){
+        const id = $('#id_ress').val();
+        ress_Delete(id);
+    })
 });
-//
+
 // ----------------------------------------------------------------------------- ! ! ! - - F U N C T I O N S - - ! ! !
 
 // ----------------------------------------------------------------------------- FONCTION GET
