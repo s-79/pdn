@@ -62,7 +62,8 @@ $(function(){
 
         const nom = $("#nom").val().toUpperCase();
         const adresse = $("#adresse").val();
-        const cp = $("#cp").val();
+        let cp = $("#cp").val();
+        if(!cp || isNaN(cp)) cp = 0;
         const ville = $("#ville").val().toUpperCase();
         const site = $("#site").val().toLowerCase();
         const prenom_ref = strUpFirst($("#prenom_ref").val());

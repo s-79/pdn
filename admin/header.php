@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../scripts/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body style="background-image:none !important;">
 <nav class="navbar navbar-expand-xl navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand pt-1 pb-1" href="index.php"><strong class="titre text-white">COORDINATION PDN</strong></a>&nbsp;

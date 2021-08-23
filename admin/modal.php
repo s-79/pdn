@@ -4,7 +4,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter des PDN à l'action</h5>
+        <h3 class="modal-title" id="exampleModalLabel">Ajouter des PDN à l'action</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-start">
@@ -27,7 +27,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'action</h5>
+        <h3 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'action</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-start">
@@ -50,7 +50,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter les partenaires de l'action</h5>
+        <h3 class="modal-title" id="exampleModalLabel">Ajouter les partenaires de l'action</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-start">
@@ -66,6 +66,30 @@
     </div>
   </div>
 </div>
+
+<!--                                                                             ! ! ! - - S T R U C T U R E S - - ! ! ! -->
+
+<div class="modal fade" id="modal_select_str" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Ajouter des structures à l'action</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex justify-content-start">
+          <button id="btn_select_Allstr" type="button" class="btn btn-outline-secondary m-2">Toutes</button>
+          <button id="btn_select_Nostr" type="button" class="btn btn-outline-secondary m-2">Aucune</button>
+      </div>
+
+      <div id="modal_list_str" class="modal-body py-0" style="overflow-y:scroll; overflow-x:hidden; height:500px;">
+      </div>
+      <div class="modal-footer">
+          <button id="btn_select_str" type="button" class="btn btn-primary">Séléctionner</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--                                                                             ! ! ! - - C O O R D O - - ! ! ! -->
 
 <!--                                                                                                               Modal pour choisir ajouter / modifier un coordo -->

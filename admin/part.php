@@ -91,11 +91,11 @@ include("header.php"); ?>
                             <label for="commentaires">Commentaires</label>
                         </div>
                         <div id="btn_part_create" class="form-group d-flex justify-content-center mx-3">
-                            <button type="button" id="part_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2">Enregistrer<br>la fiche</button>
+                            <button type="button" id="part_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Enregistrer<br>la fiche</button>
                         </div>
                         <div id="btn_part_update" class="form-group d-flex justify-content-center mx-3 d-none">
-                            <button type="button" id="part_update" class="btn btn-warning mx-3 mb-3 px-4 pb-2">Modifier<br>la fiche</button>
-                            <button type="button" id="part_delete" class="btn btn-danger mx-3 mb-3 pb-2">Supprimer <br>la fiche</button>
+                            <button type="button" id="part_update" class="btn btn-warning mx-3 mb-3 px-4 pb-2" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Modifier<br>la fiche</button>
+                            <button type="button" id="part_delete" class="btn btn-danger mx-3 mb-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Supprimer <br>la fiche</button>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ include("header.php"); ?>
 </div>
 
 <!--                                                                                                               Scripts -->
-<script src="../js/functions.js"></script>
+<script src="js/functions.js"></script>
 <script src="js/part.js"></script>
 <script src="js/ajax_part.js"></script>
 

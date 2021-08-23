@@ -39,6 +39,7 @@ if($id) {
         $duree = $row['duree'];
         $nb_pdn = $row['nb_pdn'];
         $nb_part = $row['nb_part'];
+        $nb_str = $row['nb_str'];
         $nb_pers = $row['nb_pers'];
         $commentaires = $row['commentaires'];
 
@@ -60,6 +61,7 @@ if($id) {
             "duree" => $duree,
             "nb_pdn" => $nb_pdn,
             "nb_part" => $nb_part,
+            "nb_str" => $nb_str,
             "nb_pers" => $nb_pers,
             "commentaires" => $commentaire
         );
@@ -107,6 +109,17 @@ if($id) {
         $id = $row['id'];
         $return_arr[] = array("id" => $id);
     }
+
+    // ----------------------------------------------------------------------------- Récupération de la liste des structures qui ont stricié à l'action en fonction de l'id de l'action
+    } elseif($id_act_str) {
+        $query = "SELECT `id` FROM `v_act_str` WHERE `act_id` = '$id_act_str';";
+
+        $result = mysqli_query($conn,$query);
+
+        while($row = mysqli_fetch_array($result)){
+            $id = $row['id'];
+            $return_arr[] = array("id" => $id);
+        }
 
 // ----------------------------------------------------------------------------- Récupération de l'id de l'action nouvellement créé
 } elseif($uuid) {
@@ -165,19 +178,21 @@ if($id) {
 
 // ----------------------------------------------------------------------------- Récupération des données des pdn liés à l'action pour tableau
 } elseif($id_act_table_str) {
-    $query = "SELECT `id`, `nom`, `resp_prenom`, `resp_nom` FROM `v_act_str` WHERE `act_id` = '$id_act_table_str';";
+    $query = "SELECT `id`, `nom`, `ville`, `resp_prenom`, `resp_nom` FROM `v_act_str` WHERE `act_id` = '$id_act_table_str';";
 
     $result = mysqli_query($conn,$query);
 
     while($row = mysqli_fetch_array($result)){
         $id = $row['id'];
         $nom = $row['nom'];
+        $ville= $row['ville'];
         $resp_prenom= $row['resp_prenom'];
         $resp_nom = $row['resp_nom'];
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
+            "ville" => $ville,
             "resp_prenom" => $resp_prenom,
             "resp_nom" => $resp_nom
         );

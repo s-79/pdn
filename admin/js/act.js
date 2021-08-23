@@ -4,14 +4,14 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_act").toggleClass("nav-link-toggle");
 
+    //-------------------------------------------------------------------------- Réinitialisation (si on vient d'une autre page et qu'on avait ouvert ou commencé à remplir une action auparavant)
+    act_Reset();
+
     //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id de session stocké
     let id_act_storage = sessionStorage.getItem("id_act");
     sessionStorage.removeItem('id_act');
     //-------------------------------------------------------------------------- (fonction à la fin) Si il y un id, on lance la fonction Get
     if(id_act_storage) act_Get(id_act_storage);
-
-    //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
-    ajaxListAct("#act_res");
 
 
     //-------------------------------------------------------------------------- Outil de recherche d'évenements
@@ -28,7 +28,6 @@ $(function(){
 
     //-------------------------------------------------------------------------- Remplissage de la liste des Coordos
     ajaxListCoordo("#coordo");
-
 
     // ------------------------------------------------------------------------- ! ! ! - - C H A N G E - - ! ! !
 
@@ -54,6 +53,14 @@ $(function(){
         ajaxListPart("#modal_list_part");
         $("#btn_select_Allpart").click(function() {ajaxListPart("#modal_list_part", "checked");});
         $("#btn_select_Nopart").click(function() {ajaxListPart("#modal_list_part", "unchecked");});
+    });
+
+    // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON + SELECT RESSOURCES
+    $("#select_str").click(function() {
+        //-------------------------------------------------------------------------- Remplissage de la liste des Strenaires et evt click sur les boutons "tous" et "aucun"
+        ajaxListStr("#modal_list_str");
+        $("#btn_select_Allstr").click(function() {ajaxListStr("#modal_list_str", "checked");});
+        $("#btn_select_Nostr").click(function() {ajaxListStr("#modal_list_str", "unchecked");});
     });
 
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON "SELECTIONNER" DANS LE MODAL RESS
@@ -128,6 +135,30 @@ $(function(){
         $("#modal_select_part").modal('hide');
     });
 
+    // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON "SELECTIONNER" DANS LE MODAL PART
+    $("#btn_select_str").click(function() {
+        //---------------------------------------------------------------------- Récupérarion et suppression du contenu de la variable de session créé lors du click sur le (+) et qui contient le tableau de tous les ID au fomat Json
+        const jsonIdStr = sessionStorage.getItem('jsonIdStr');
+        sessionStorage.removeItem('jsonIdStr');
+        if(jsonIdStr) {
+            //------------------------------------------------------------------ Conversion du JSON stockée dans la variable de session en tableau
+            const arrayIdStr = JSON.parse(jsonIdStr);
+            let arraySelectedStr = [];
+            //------------------------------------------------------------------ Itération sur chaque ID contenu dans le tableau
+            for(strId of arrayIdStr) {
+                //---------------------------------------------------------- --- Si la case est cochée, on ajoute son ID dans le tableau Selected
+                let check = $(strId).is(':checked');
+                if(check) arraySelectedStr.push(strId);
+            }
+            let lenSelectedStr = arraySelectedStr.length;
+            $("#nb_str").val(lenSelectedStr);
+            //------------------------------------------------------------------ Stockage du tableau Selected
+            const jsonSelectedStr = JSON.stringify(arraySelectedStr);
+            sessionStorage.setItem('jsonSelectedStr', jsonSelectedStr);
+        }
+        $("#modal_select_str").modal('hide');
+    });
+
     // ------------------------------------------------------------------------- ! ! ! - - G E T - - ! ! !
 
     //-------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTONS AFFICHER LES INFORMATIONS
@@ -174,6 +205,8 @@ $(function(){
         if (!nb_pdn) nb_pdn = 0;
         let nb_part = $("#nb_part").val();
         if (!nb_part) nb_part = 0;
+        let nb_str = $("#nb_str").val();
+        if (!nb_str) nb_str = 0;
         let nb_pers = $("#nb_pers").val();
         if (!nb_pers) nb_pers = 0;
         const commentaires = $("#commentaires").val();
@@ -186,7 +219,7 @@ $(function(){
             if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Lieu",lieu,100)&& vLen("Ville",ville,100)) {
 
                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-                act_Create(dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires);
+                act_Create(dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_str, nb_pers, commentaires);
             }
         }
     })
@@ -221,12 +254,14 @@ $(function(){
         if (!nb_pdn) nb_pdn = 0;
         let nb_part = $("#nb_part").val();
         if (!nb_part) nb_part = 0;
+        let nb_str = $("#nb_str").val();
+        if (!nb_str) nb_str = 0;
         let nb_pers = $("#nb_pers").val();
         if (!nb_pers) nb_pers = 0;
         const commentaires = $("#commentaires").val();
 
         if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Lieu",lieu,100)&& vLen("Ville",ville,100)) {
-            act_Update(id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires);
+            act_Update(id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_str, nb_pers, commentaires);
         }
     })
 
@@ -249,16 +284,20 @@ const act_Get = (id_act) => {
         ajaxListAct("#act_res", id_act);
         //---------------------------------------------------------------------- Récupération des données de l'action
         ajaxGetAct(id_act);
+
         //---------------------------------------------------------------------- Réinitialisation de la liste de tous coordos et décochage des cases
         ajaxListCoordo("#coordo");
         //---------------------------------------------------------------------- Récupération des Coordos liés à cet événement
         ajaxGetCoordo(id_act);
+
         //---------------------------------------------------------------------- Récupération des Ressources liées à cet événement
         ajaxGetRess(id_act);
         //---------------------------------------------------------------------- Récupération des PDN liées à cet événement
         ajaxGetPdn(id_act);
         //---------------------------------------------------------------------- Récupération des Partenaires liées à cet événement
         ajaxGetPart(id_act);
+        //---------------------------------------------------------------------- Récupération des Structures liées à cet événement
+        ajaxGetStr(id_act);
 
         //---------------------------------------------------------------------- Réinitialisation des tableaux Partenaires et PDN
         $("#tableau_part").html("");
@@ -290,9 +329,11 @@ const act_Reset = () => {
     sessionStorage.removeItem('jsonSelectedRess');
     sessionStorage.removeItem('jsonSelectedPdn');
     sessionStorage.removeItem('jsonSelectedPart');
+    sessionStorage.removeItem('jsonSelectedStr');
     //-------------------------------------------------------------------------- Réinitialisation des tableaux Partenaires et PDN
     $("#tableau_part").html("");
     $("#tableau_pdn").html("");
+    $("#tableau_str").html("");
     //-------------------------------------------------------------------------- Inversement des boutons en bas de page
     $("#btn_act_update").addClass("d-none");
     $("#btn_act_create").removeClass("d-none");

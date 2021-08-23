@@ -69,7 +69,7 @@ include("header.php"); ?>
                         </div>
                         <div class="form-floating mx-3 mt-3 mb-3">
                             <input type="text" class="form-control" id="intitule" placeholder="Intitulé">
-                            <label for="intitule">Intitulé</label>
+                            <label for="intitule">Intitulé *</label>
                         </div>
                         <div class="form-floating mx-3 mt-3 mb-3">
                             <input type="text" class="form-control" id="lieu" placeholder="Lieu">
@@ -175,22 +175,32 @@ include("header.php"); ?>
                             </div>
                         </div>
 
-                        <div class="form-floating mx-3 mt-3 mb-3">
+                        <div class="row mt-3 me-1">
+                            <div class="form-floating mx-3 col-8">
+                                <input type="text" class="form-control" id="nb_str" placeholder="Nombre de structures">
+                                <label for="nb_str" class="ps-4">Nombre de structures</label>
+                            </div>
+                            <div class="pt-2 col-2">
+                                <i id="select_str" class="fas fa-plus-circle fa-2x text-white pointeur" data-bs-toggle="modal" data-bs-target="#modal_select_str" data-toggle="tooltip" data-placement="top" title="Ajouter des structures"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-floating m-3">
                             <input type="text" class="form-control" id="nb_pers" placeholder="ombre d'autres participants">
                             <label for="nb_pers">Nombre d'autres participants</label>
                         </div>
 
-                        <div class="form-floating mx-3 mt-3 pt-1">
-                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:130px;"></textarea>
+                        <div class="form-floating m-3 mb-4">
+                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:60px;"></textarea>
                             <label for="commentaires">Commentaires</label>
                         </div>
-                        <div id="btn_act_create" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">
-                            <button type="button" id="act_create" class="btn btn-warning m-3 px-3">Enregistrer<br>la fiche</button>
+                        <div id="btn_act_create" class="form-group d-flex justify-content-center m-3">
+                            <button type="button" id="act_create" class="btn btn-warning mx-3 px-3">Enregistrer<br>la fiche</button>
                         </div>
-                        <div id="btn_act_update" class="form-group d-flex justify-content-center mx-3 mt-1 pt-1 d-none">
-                            <button type="button" id="act_update" class="btn btn-warning m-3 px-4">Modifier<br>la fiche</button>
-                            <button type="button" id="act_delete" class="btn btn-danger m-3">Supprimer <br>la fiche</button>
-                        </div>
+                        <div id="btn_act_update" class="form-group d-flex justify-content-center d-none m-3">
+                            <button type="button" id="act_update" class="btn btn-warning mx-3 px-4">Modifier<br>la fiche</button>
+                            <button type="button" id="act_delete" class="btn btn-danger mx-3">Supprimer <br>la fiche</button>
+                        </div>                        
                     </div>
                 </div>
             </div>

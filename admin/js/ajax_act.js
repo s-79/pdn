@@ -145,6 +145,45 @@ const ajaxListPart = (liste, checked) => {
     });
 }
 
+/* ---------------------------------------------------------------------------- Remplissage de la liste des Structures lorsqu'on clique sur le bouton (+)  */
+const ajaxListStr = (liste, checked) => {
+    $.ajax({
+        url: "php/populate.php",
+        dataType: 'JSON',
+        data : {v_str:"v_str"},
+        success: function(response){
+            const len = response.length;
+            let arrayIdStr = [];
+            let res = "";
+            for (let i = 0; i < len; i++) {
+                const id = response[i].id;
+                const nom = response[i].nom;
+                res += `<div class="form-check">`;
+                if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="str${id}" checked>`
+                else { res += `<input class="form-check-input" type="checkbox" value="" id="str${id}">`}
+                res += `<label class="form-check-label text-dark" for="str${id}">${nom}</label></div>`;
+                const strId = `#str${id}`;
+                $(strId).prop('checked', false);
+                // -------------------------------------------------------------  Remplissage du tableau, conversion en string Json et stockage dans la variable de session
+                arrayIdStr.push(strId);
+                const jsonIdStr = JSON.stringify(arrayIdStr);
+                sessionStorage.setItem('jsonIdStr', jsonIdStr);
+            }
+            $(liste).html(res);
+
+            if(!checked) {
+                //------------------------------------------------------------------ Récupération et suppression d'un éventuel tableau précédemment stockée
+                const jsonSelectedStr = sessionStorage.getItem('jsonSelectedStr');
+                //------------------------------------------------------------------ Si des cases ont déja été cochées, on les recoche
+                if(jsonSelectedStr) {
+                    const arraySelectedStr = JSON.parse(jsonSelectedStr);
+                    for(strId of arraySelectedStr) $(strId).prop('checked', true);
+                }
+            }
+        }
+    });
+}
+
 /* ---------------------------------------------------------------------------- Remplissage de la liste des Coordo */
 const ajaxListCoordo = (liste) => {
     $.ajax({
@@ -198,6 +237,7 @@ const ajaxGetAct = (id_act) => {
             const duree = response[0].duree;
             const nb_pdn = response[0].nb_pdn;
             const nb_part = response[0].nb_part;
+            const nb_str = response[0].nb_str;
             const nb_pers = response[0].nb_pers;
             const commentaires = response[0].commentaires;
 
@@ -218,6 +258,7 @@ const ajaxGetAct = (id_act) => {
             $("#duree").val(duree);
             $("#nb_pdn").val(nb_pdn);
             $("#nb_part").val(nb_part);
+            $("#nb_str").val(nb_str);
             $("#nb_pers").val(nb_pers);
             $("#commentaires").val(commentaires);
         }
@@ -304,6 +345,27 @@ const ajaxGetPart = (id_act) => {
     });
 }
 
+//----------------------------------------------------------------------------- Récupération des Structures par l'id de l'action
+const ajaxGetStr = (id_act) => {
+    $.ajax({
+        url: "php/act_Get.php",
+        dataType: 'JSON',
+        data : {id_act_str:id_act},
+        success: function(response){
+            let arraySelectedStr = [];
+            const len = response.length;
+            for (let i = 0; i < len; i++) {
+                let id = "#str"
+                id += response[i].id;
+                arraySelectedStr.push(id);
+            }
+            //----------------------------------------------------------------- Stockage du tableau Selected
+            const jsonSelectedStr = JSON.stringify(arraySelectedStr);
+            sessionStorage.setItem('jsonSelectedStr', jsonSelectedStr);
+        }
+    });
+}
+
 //----------------------------------------------------------------------------- Remplissage du tableau des partenaires en fonction de l'id de l'événement
 const ajaxActPart = (id_act, liste) => {
     $.ajax({
@@ -372,11 +434,11 @@ const ajaxActStr = (id_act, liste) => {
 
 // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
 
-const act_Create = (dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires) => {
+const act_Create = (dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_str, nb_pers, commentaires) => {
     $.ajax({
         url: "php/act.php",
         dataType: 'JSON',
-        data : {dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_pers:nb_pers, commentaires:commentaires},
+        data : {dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_str:nb_str, nb_pers:nb_pers, commentaires:commentaires},
         complete: function(){
             //------------------------------------------------------------------ Récupération de l'id de l'événement créé
             //------------------------------------------------------------------ Puis récupération des intervenants et association avec l'évenemnt dans la table intervenir
@@ -402,6 +464,7 @@ const act_Get_Id = (uuid) => {
             act_Get_Ress(id_act);
             act_Get_Pdn(id_act);
             act_Get_Part(id_act);
+            act_Get_Str(id_act);
         }
     });
 }
@@ -474,13 +537,29 @@ const act_Get_Part = (id_act) => {
     }
 }
 
+//------------------------------------------------------------------------------ Récupération des structures et association avec l'évenemnt dans la table coordonner
+const act_Get_Str = (id_act) => {
+    let arraySelectedStr = [];
+    const jsonSelectedStr = sessionStorage.getItem('jsonSelectedStr');
+    if(jsonSelectedStr) arraySelectedStr = JSON.parse(jsonSelectedStr);
+    for(id_str of arraySelectedStr) {
+        const idStrSplit = id_str.split("#str");
+        id_str = idStrSplit[1];
+        $.ajax({
+            url: 'php/act.php',
+            dataType: 'JSON',
+            data : {id_act:id_act, id_str:id_str}
+        });
+    }
+}
+
 // ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
 
-const act_Update = (id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_pers, commentaires) => {
+const act_Update = (id, dat, type, organise, intitule, uuid, lieu, ville, pj, support, facebook, whatsapp, twitter, site, nb_ress, duree, nb_pdn, nb_part, nb_str, nb_pers, commentaires) => {
     $.ajax({
         url: 'php/act.php',
         dataType: 'JSON',
-        data : {id:id, dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_pers:nb_pers, commentaires:commentaires},
+        data : {id:id, dat:dat, type:type, organise:organise, intitule:intitule, uuid:uuid, lieu:lieu, ville:ville, pj:pj, support:support, facebook:facebook, whatsapp:whatsapp, twitter:twitter, site:site, nb_ress:nb_ress, duree:duree, nb_pdn:nb_pdn, nb_part:nb_part, nb_str:nb_str, nb_pers:nb_pers, commentaires:commentaires},
         complete: function(){
             //------------------------------------------------------------------ Suppression des associations avec les autres tables puis mis à jours des données
             act_Maj_Asso(id);
@@ -503,6 +582,7 @@ const act_Maj_Asso = (id_act) => {
             act_Get_Ress(id_act);
             act_Get_Pdn(id_act);
             act_Get_Part(id_act);
+            act_Get_Str(id_act);
         }
     });
 }
