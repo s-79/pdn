@@ -185,12 +185,24 @@ const str_Delete = (id) => {
         dataType: 'JSON',
         data : {id_del:id},
         complete: function(){
-            $('#message_admin_str').html("Structure supprimée de la base de données.");
-            //------------------------------------------------------------------ Réinitialisation de la pages des structures
-            str_Reset();
+            //----------------------------------------------------------------  L'id de la structure apparait-elle encore dans la BDD ?
+            $.ajax({
+                url: "php/str_Get.php",
+                dataType: 'JSON',
+                data : {id_str_exist:id},
+                success: function(response){
+                    const res = response[0].res;
+                    if(parseInt(res) === 1) $("#message_admin_str").html(`Suppression impossible : la structure séléctionnée doit être encore attachée à une action ou contenir au moins un·e PDN.`);
+                    //---------------------------------------------------------- Envoie des infos vers la BDD
+                    else {
+                        $('#message_admin_str').html("Structure supprimée de la base de données.");
+                        //------------------------------------------------------ Réinitialisation de la pages des structures
+                        str_Reset();
+                    }
+                }
+            });
         }
     });
-
 }
 
 // ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !

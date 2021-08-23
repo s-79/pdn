@@ -155,15 +155,19 @@ const structure = (response, len) => {
         const nom = response[i].nom;
         const ville = response[i].ville;
         const image = response[i].image;
-        // -------------------------------------------------------------------- Création des vignettes
-        res += `<div class='strCard col-12 col-md-6 col-lg-4 col-xl-3 mb-4'>`;
-        res += `<div id='${id}' class='card pointeur border_none bg_bleu'>`;
-        res += `<div class='card-body text-uppercase text-center'>`;
-        res += 		`<h2 class='card-title text-white'>${nom}</h2>`;
-        res += 		`<h3 class='card-text text-white'>${ville}</h3></div>`;
-        res += 		`<a data-toggle='modal' data-target='#Modal${id}'>`;
-        res += 			`<img class='card-img cardHeight' src='${image}' height='180' alt='${nom} - ${ville}' title='${nom} - ${ville}'></a>`;
-        res += `</div></div>`;
+        const nb_pdn_act = response[i].nb_pdn_act;
+        // --------------------------------------------------------------------- Est-ce qu'il y a des PDN actifs sur la structure
+        if(nb_pdn_act || nb_pdn_act > 1) {
+            // -------------------------------------------------------------------- Création des vignettes
+            res += `<div class='strCard col-12 col-md-6 col-lg-4 col-xl-3 mb-4'>`;
+            res += `<div id='${id}' class='card pointeur border_none bg_bleu'>`;
+            res += `<div class='card-body text-uppercase text-center'>`;
+            res += 		`<h2 class='card-title text-white'>${nom}</h2>`;
+            res += 		`<h3 class='card-text text-white'>${ville}</h3></div>`;
+            res += 		`<a data-toggle='modal' data-target='#Modal${id}'>`;
+            res += 			`<img class='card-img cardHeight' src='${image}' height='180' alt='${nom} - ${ville}' title='${nom} - ${ville}'></a>`;
+            res += `</div></div>`;
+        }
     }
     $("#structures").html(res);
 }

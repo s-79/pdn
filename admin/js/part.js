@@ -60,7 +60,7 @@ $(function(){
         $("#mail").val();
         $("#commentaires").val();
 
-        const nom = $("#nom").val().toUpperCase();
+        const nom = $("#nom").val();
         const adresse = $("#adresse").val();
         let cp = $("#cp").val();
         if(!cp || isNaN(cp)) cp = 0;
@@ -79,8 +79,18 @@ $(function(){
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
             if(vLen("Nom de la structure",nom,100,"#message_admin_part") && vLen("Adresse",adresse,100,"#message_admin_part") && vLen("Ville",ville,100,"#message_admin_part") && vLen("Site",site,100,"#message_admin_part") && vLen("Prénom référent·e",prenom_ref,100,"#message_admin_part") && vLen("Nom référent·e",nom_ref,100,"#message_admin_part") && vLen("Fonction",fonction,100,"#message_admin_part") && vLen("Téléphone",tel,100,"#message_admin_part") && vLen("Email",mail,100,"#message_admin_part") && vLen("Commentaires",commentaires,700,"#message_admin_part")) {
-                //-------------------------------------------------------------- Envoie des infos vers la BDD
-                part_Create(nom, adresse, cp, ville, site, prenom_ref, nom_ref, fonction, tel, mail, commentaires);
+                //-------------------------------------------------------------  L'adresse mail est-elle utilisée par un·e autre PDN
+                $.ajax({
+                    url: "php/part_Get.php",
+                    dataType: 'JSON',
+                    data : {nom_part_exist:nom},
+                    success: function(response){
+                        const res = response[0].res;
+                        if(parseInt(res) === 1) $("#message_admin_part").html(`Le nom <b>${nom}</b> est déjà utilisé pour un autre partenaire.`);
+                        //------------------------------------------------------ Envoie des infos vers la BDD
+                        else { part_Create(nom, adresse, cp, ville, site, prenom_ref, nom_ref, fonction, tel, mail, commentaires);}
+                    }
+                });
             }
         }
     })
@@ -91,7 +101,7 @@ $(function(){
     $('#part_update').click(function(){
         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
         const id = $("#id_part").val()
-        const nom = $("#nom").val().toUpperCase();
+        const nom = $("#nom").val();
         const adresse = $("#adresse").val();
         const cp = $("#cp").val();
         const ville = $("#ville").val().toUpperCase();

@@ -37,12 +37,15 @@ if($v_ville) {
         $nom = $row['str_nom'];
         $ville = $row['ville'];
         $image = $row['image'];
+        $nb_pdn_act = $row['nb_pdn_act'];
+
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
             "ville" => $ville,
-            "image" => $image
+            "image" => $image,
+            "nb_pdn_act" => $nb_pdn_act
         );
     }
 } elseif($allVille) {
@@ -55,12 +58,14 @@ if($v_ville) {
         $nom = $row['str_nom'];
         $ville = $row['ville'];
         $image = $row['image'];
+        $nb_pdn_act = $row['nb_pdn_act'];
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
             "ville" => $ville,
-            "image" => $image
+            "image" => $image,
+            "nb_pdn_act" => $nb_pdn_act
         );
     }
 } elseif($idStr) {

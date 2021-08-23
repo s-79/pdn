@@ -6,6 +6,7 @@ $return_arr = array();
 
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 $id_str_tab_act = mysqli_real_escape_string($conn, $_GET['id_str_tab_act']);
+$id_str_exist = mysqli_real_escape_string($conn, $_GET['id_str_exist']);
 
 if($id) {
     $query = "SELECT * FROM `v_str` WHERE `id` = '$id';";
@@ -76,6 +77,18 @@ if($id) {
             "type" => $type,
             "intitule" => $intitule,
             "commentaires" => $commentaires
+        );
+    }
+
+} elseif($id_str_exist) {
+    $query = "SELECT strExist('$id_str_exist')";
+
+    $result = mysqli_query($conn,$query);
+    while($row = mysqli_fetch_array($result)){
+        $res = $row[0];
+
+        $return_arr[] = array(
+            "res" => $res
         );
     }
 }

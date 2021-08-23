@@ -54,8 +54,18 @@ $(function(){
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
             if(vLen("Nom",nom,50,"#message_admin_them")) {
-                //-------------------------------------------------------------- Envoie des infos vers la BDD
-                them_Create(nom, cat);
+                //-------------------------------------------------------------  Le nom est-il déjà utilisé pour une autre ressource ?
+                $.ajax({
+                    url: "php/ress_Get.php",
+                    dataType: 'JSON',
+                    data : {nom_them_exist:nom},
+                    success: function(response){
+                        const res = response[0].res;
+                        if(parseInt(res) === 1) $("#message_admin_them").html(`Le nom <b>${nom}</b> est déjà utilisé pour une autre thématique.`);
+                        //------------------------------------------------------ Envoie des infos vers la BDD
+                        else { them_Create(nom, cat);}
+                    }
+                });
             }
         }
     })

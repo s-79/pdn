@@ -121,9 +121,22 @@ const part_Delete = (id) => {
         dataType: 'JSON',
         data : {id_del:id},
         complete: function(){
-            $('#message_admin_part').html("Partenaire supprimé·e de la base de données.");
-            //------------------------------------------------------------------ Réinitialisation de la pages des partenaires
-            part_Reset();
+            //----------------------------------------------------------------  L'id du de la PDN apparait-elle encore dans la BDD ?
+            $.ajax({
+                url: "php/part_Get.php",
+                dataType: 'JSON',
+                data : {id_part_exist:id},
+                success: function(response){
+                    const res = response[0].res;
+                    if(parseInt(res) === 1) $("#message_admin_part").html(`Suppression impossible : le / la partenaire séléctionné·e doit être encore attaché·e à une action`);
+                    //---------------------------------------------------------- Envoie des infos vers la BDD
+                    else {
+                        $('#message_admin_part').html("Partenaire supprimé·e de la base de données.");
+                        //------------------------------------------------------------------ Réinitialisation de la pages des partenaires
+                        part_Reset();
+                    }
+                }
+            });
         }
     });
 

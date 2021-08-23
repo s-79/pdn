@@ -20,6 +20,7 @@ if($selectedVille) {
             $nom = $row['pdn_nom'];
             $fonction = $row['fonction'];
             $image = $row['image'];
+            $actif = $row['actif'];
             $ville_nom = $row['ville_nom'];
 
             $return_arr[] = array(
@@ -28,6 +29,7 @@ if($selectedVille) {
                 "nom" => $nom,
                 "fonction" => $fonction,
                 "image" => $image,
+                "actif" => $actif,
                 "ville_nom" => $ville_nom
             );
     }
@@ -43,6 +45,7 @@ if($selectedVille) {
         $nom = $row['pdn_nom'];
         $fonction = $row['fonction'];
         $image = $row['image'];
+        $actif = $row['actif'];
         $ville_nom = $row['ville_nom'];
 
         $return_arr[] = array(
@@ -51,6 +54,7 @@ if($selectedVille) {
             "nom" => $nom,
             "fonction" => $fonction,
             "image" => $image,
+            "actif" => $actif,
             "ville_nom" => $ville_nom
         );
     }

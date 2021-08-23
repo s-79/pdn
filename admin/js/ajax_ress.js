@@ -243,9 +243,22 @@ const ress_Delete = (id) => {
         dataType: 'JSON',
         data : {id_del:id},
         complete: function(){
-            $('#message_admin_ress').html("Ressources supprimée de la base de données.");
-            //------------------------------------------------------------------ Réinitialisation de la pages des ressources
-            ress_Reset();
+            //----------------------------------------------------------------  L'id de la ressource apparait-elle encore dans la BDD ?
+            $.ajax({
+                url: "php/ress_Get.php",
+                dataType: 'JSON',
+                data : {id_ress_exist:id},
+                success: function(response){
+                    const res = response[0].res;
+                    if(parseInt(res) === 1) $("#message_admin_ress").html(`Suppression impossible : la ressource séléctionnée doit être encore attaché à une action`);
+                    //---------------------------------------------------------- Envoie des infos vers la BDD
+                    else {
+                        $('#message_admin_ress').html("Ressources supprimée de la base de données.");
+                        //------------------------------------------------------ Réinitialisation de la pages des ressources
+                        ress_Reset();
+                    }
+                }
+            });
         }
     });
 

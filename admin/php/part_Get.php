@@ -6,7 +6,8 @@ $return_arr = array();
 
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 $id_part_tab_act = mysqli_real_escape_string($conn, $_GET['id_part_tab_act']);
-
+$nom_part_exist = mysqli_real_escape_string($conn, $_GET['nom_part_exist']);
+$id_part_exist = mysqli_real_escape_string($conn, $_GET['id_part_exist']);
 
 if($id) {
     $query = "SELECT * FROM `v_part` WHERE `id` = '$id';";
@@ -61,6 +62,32 @@ if($id) {
             "commentaires" => $commentaires
         );
     }
+
+// ----------------------------------------------------------------------------- Est-ce que le nom du / de la partenaire existe déjà ?
+} elseif($nom_part_exist) {
+    $query = "SELECT partExistNom('$nom_part_exist')";
+
+    $result = mysqli_query($conn,$query);
+    while($row = mysqli_fetch_array($result)){
+        $res = $row[0];
+
+        $return_arr[] = array(
+            "res" => $res
+        );
+    }
+// ----------------------------------------------------------------------------- Le / la partenaire a-t-elle bien été supprimée de la BDD ?
+} elseif($id_part_exist) {
+    $query = "SELECT partExist('$id_part_exist')";
+
+    $result = mysqli_query($conn,$query);
+    while($row = mysqli_fetch_array($result)){
+        $res = $row[0];
+
+        $return_arr[] = array(
+            "res" => $res
+        );
+    }
+
 }
 
 if($return_arr){echo json_encode($return_arr);}

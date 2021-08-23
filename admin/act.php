@@ -88,9 +88,9 @@ include("header.php"); ?>
                             <div class="col-10">
                                 <h1>Modalités</h1>
                             </div>
-                            <div class="col-2">
+                            <!-- <div class="col-2">
                                 <i id="pj" class="fas fa-paperclip fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter une pièce jointe"></i>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="form-floating mx-3 mt-4">
                             <select class="form-select type_m" id="support" aria-label="Support de communication *">
@@ -200,7 +200,7 @@ include("header.php"); ?>
                         <div id="btn_act_update" class="form-group d-flex justify-content-center d-none m-3">
                             <button type="button" id="act_update" class="btn btn-warning mx-3 px-4">Modifier<br>la fiche</button>
                             <button type="button" id="act_delete" class="btn btn-danger mx-3">Supprimer <br>la fiche</button>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>

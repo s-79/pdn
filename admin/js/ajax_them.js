@@ -89,15 +89,28 @@ const them_Update = (id, nom, cat) => {
 
 // ----------------------------------------------------------------------------- ! ! ! - - D E L E T E - - ! ! !
 const them_Delete = (id) => {
-    //------------------------------------------------------------------------- Envoie de l'id vers la BDD pour suppression des associations
+    //------------------------------------------------------------------------- Envoie de l'id vers la BDD pour suppression
     $.ajax({
         url: "php/ress.php",
         dataType: 'JSON',
         data : {id_them_del:id},
         complete: function(){
-            $('#message_admin_them').html("Thématique supprimée de la base de données.");
-            //------------------------------------------------------------------ Réinitialisation de la pages des thématiques
-            them_Reset();
+            //----------------------------------------------------------------  L'id de la thématique apparait-elle encore dans la BDD ?
+            $.ajax({
+                url: "php/ress_Get.php",
+                dataType: 'JSON',
+                data : {id_them_exist:id},
+                success: function(response){
+                    const res = response[0].res;
+                    if(parseInt(res) === 1) $("#message_admin_them").html(`Suppression impossible : la thématique séléctionnée doit encore contenir des ressources.`);
+                    //---------------------------------------------------------- Envoie des infos vers la BDD
+                    else {
+                        $('#message_admin_them').html("Thématique supprimée de la base de données.");
+                        //------------------------------------------------------ Réinitialisation de la pages des thématiques
+                        them_Reset();
+                    }
+                }
+            });
         }
     });
 

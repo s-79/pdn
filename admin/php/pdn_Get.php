@@ -6,6 +6,7 @@ $return_arr = array();
 
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 $id_pdn_tab_act = mysqli_real_escape_string($conn, $_GET['id_pdn_tab_act']);
+$id_pdn_exist = mysqli_real_escape_string($conn, $_GET['id_pdn_exist']);
 
 
 if($id) {
@@ -84,6 +85,18 @@ if($id) {
             "type" => $type,
             "intitule" => $intitule,
             "commentaires" => $commentaires
+        );
+    }
+
+} elseif($id_pdn_exist) {
+    $query = "SELECT pdnExist('$id_pdn_exist')";
+
+    $result = mysqli_query($conn,$query);
+    while($row = mysqli_fetch_array($result)){
+        $res = $row[0];
+
+        $return_arr[] = array(
+            "res" => $res
         );
     }
 }

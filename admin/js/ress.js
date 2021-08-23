@@ -71,8 +71,19 @@ $(function(){
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
             if(vLen("Nom",nom,100,"#message_admin_ress") && vLen("Lien",lien,500,"#message_admin_ress") && vLen("Age",age,30,"#message_admin_ress") && vLen("Editeur",editeur,50,"#message_admin_ress") && vLen("Description",description,700,"#message_admin_ress")) {
-                //-------------------------------------------------------------- Envoie des infos vers la BDD
-                ress_Create(uuid, nom, lien, image, age, editeur, description, valide);
+
+                //-------------------------------------------------------------  Le nom est-il déjà utilisé pour une autre ressource ?
+                $.ajax({
+                    url: "php/ress_Get.php",
+                    dataType: 'JSON',
+                    data : {nom_ress_exist:nom},
+                    success: function(response){
+                        const res = response[0].res;
+                        if(parseInt(res) === 1) $("#message_admin_ress").html(`Le nom <b>${nom}</b> est déjà utilisé pour une autre ressource.`);
+                        //------------------------------------------------------ Envoie des infos vers la BDD
+                        else { ress_Create(uuid, nom, lien, image, age, editeur, description, valide);}
+                    }
+                });
             }
         }
     })

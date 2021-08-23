@@ -80,9 +80,22 @@ const cat_Delete = (id) => {
         dataType: 'JSON',
         data : {id_cat_del:id},
         complete: function(){
-            $('#message_admin_cat').html("Catégorie supprimée de la base de données.");
-            //------------------------------------------------------------------ Réinitialisation de la pages des catégories
-            cat_Reset();
+            //----------------------------------------------------------------  L'id de la catégorie apparait-elle encore dans la BDD ?
+            $.ajax({
+                url: "php/ress_Get.php",
+                dataType: 'JSON',
+                data : {id_cat_exist:id},
+                success: function(response){
+                    const res = response[0].res;
+                    if(parseInt(res) === 1) $("#message_admin_cat").html(`Suppression impossible : la catégorie séléctionnée doit encore contenir des thématiques.`);
+                    //---------------------------------------------------------- Envoie des infos vers la BDD
+                    else {
+                        $('#message_admin_cat').html("Catégorie supprimée de la base de données.");
+                        //------------------------------------------------------------------ Réinitialisation de la pages des catégories
+                        cat_Reset();
+                    }
+                }
+            });
         }
     });
 

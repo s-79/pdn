@@ -51,7 +51,7 @@ $(function(){
     $('#str_create').click(function(){
         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
         const aap = $("#aap").val();
-        const nom = $("#nom").val().toUpperCase();
+        const nom = $("#nom").val();
         const type = $("#type").val();
         const adresse = $("#adresse").val();
         const ville_id = $("#ville").val();
@@ -97,7 +97,7 @@ $(function(){
         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
         const id = $("#id_str").val();
         const aap = $("#aap").val();
-        const nom = $("#nom").val().toUpperCase();
+        const nom = $("#nom").val();
         const type = $("#type").val();
         const adresse = $("#adresse").val();
         const ville_id = $("#ville").val();
