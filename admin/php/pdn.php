@@ -31,6 +31,7 @@ $structure = mysqli_real_escape_string($conn, $_GET['structure']);
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 $id_del = mysqli_real_escape_string($conn, $_GET['id_del']);
 
+// $id = 70;
 // $prenom = 'prenom';
 // $nom= 'nom';
 // $fonction ='fonction';
@@ -58,8 +59,8 @@ $id_del = mysqli_real_escape_string($conn, $_GET['id_del']);
 
 
 if($id) {
-    $query = "CALL pdn_Update ('$id', '$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')";
-    if($mdp) { $query = "CALL mdp_Update ('$id', '$mdp')"; }
+    if($mdp) { $query = "CALL pdn_mdp_Update ('$id', '$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$mdp', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')";}
+    else {$query = "CALL pdn_Update ('$id', '$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')";}
 }
 elseif($id_del) { $query = "CALL pdn_Delete ('$id_del')"; }
 else { $query = "CALL pdn_Create ('$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$mdp', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')"; }

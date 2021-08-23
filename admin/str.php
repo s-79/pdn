@@ -163,8 +163,8 @@
                             </div>
                             <div class="row my-3 mx-1">
                                 <div class="form-floating col-9">
-                                    <input type="number" class="form-control" id="nb_pdn_lab" placeholder="Nombre de PDN labellisé">
-                                    <label for="nb_pdn_lab" class="ps-3">Nb de PDN labellisé(s)</label>
+                                    <input type="number" class="form-control" id="nb_pdn_lab" placeholder="Nombre de PDN labellisé(s) *">
+                                    <label for="nb_pdn_lab" class="ps-3">Nb de PDN labellisé(s) *</label>
                                 </div>
                                 <div class="form-floating col-3">
                                     <input type="text" class="form-control" id="nb_pdn_act" placeholder="Actif(s)" disabled>

@@ -35,8 +35,8 @@ include("header.php"); ?>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
                         <input type="text" class="form-control d-none" id="id_part">
                         <div class="form-floating m-3">
-                            <input type="text" class="form-control" id="nom" placeholder="Nom de la structure">
-                            <label for="nom">Nom de la structure</label>
+                            <input type="text" class="form-control" id="nom" placeholder="Nom de la structure *">
+                            <label for="nom">Nom de la structure *</label>
                         </div>
                         <div class="form-floating m-3">
                             <input type="text" class="form-control" id="adresse" placeholder="Adresse">
