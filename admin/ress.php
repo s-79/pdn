@@ -114,6 +114,24 @@
     </div>
 </div>
 
+<!--                                                                             Tableau ACT -->
+<div id="div_tableau_act" class="container">
+<div class="row justify-content-center mt-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="d-none" scope="col" style="width:10px">#</th>
+                <th scope="col" style="width:40px">Date</th>
+                <th scope="col" style="width:90px">Type</th>
+                <th scope="col" style="width:270px">Intitulé</th>
+            </tr>
+        </thead>
+        <tbody id="tableau_act">
+        </tbody>
+    </table>
+</div>
+</div>
+
 <!--                                                                            MODAL MODIF INFOS -->
 <div class="modal fade" id="modalRessAdmin" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">

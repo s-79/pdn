@@ -156,8 +156,9 @@ const structure = (response, len) => {
         const ville = response[i].ville;
         const image = response[i].image;
         const nb_pdn_act = response[i].nb_pdn_act;
+        
         // --------------------------------------------------------------------- Est-ce qu'il y a des PDN actifs sur la structure
-        if(nb_pdn_act || nb_pdn_act > 1) {
+        if(parseInt(nb_pdn_act) >= 1) {
             // -------------------------------------------------------------------- Création des vignettes
             res += `<div class='strCard col-12 col-md-6 col-lg-4 col-xl-3 mb-4'>`;
             res += `<div id='${id}' class='card pointeur border_none bg_bleu'>`;

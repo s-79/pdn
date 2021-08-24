@@ -47,7 +47,7 @@ include("header.php"); ?>
     <div class="orange-divider"> </div>
 
 	<div class="d-flex justify-content-center pt-3 mt-4">
-		<div id="ident" class="bg_bleu py-1 px-3 rounded rounded-3" style="min-width:25em;">
+		<div id="ident" class="bg_bleu py-1 px-3 rounded rounded-3" style="min-width:20em;">
 			<form action="" method="post">
 				<div class="form-floating mx-3 mt-4 mb-2">
 					<input type="text" name="login" class="form-control" placeholder="Identifiant">

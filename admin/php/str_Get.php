@@ -60,7 +60,7 @@ if($id) {
     }
 // ----------------------------------------------------------------------------- Tableau : Récupération des données des actions liées au PDN
 } elseif($id_str_tab_act) {
-    $query = "SELECT * FROM `v_str_act` WHERE `str_id` = '$id_str_tab_act';";
+    $query = "SELECT * FROM `v_str_act` WHERE `str_id` = '$id_str_tab_act' ORDER BY `dat` DESC;";
 
     $result = mysqli_query($conn,$query);
 

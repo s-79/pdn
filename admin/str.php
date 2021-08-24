@@ -192,10 +192,10 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th class="d-none" scope="col" style="width:130px">#</th>
-                <th scope="col" style="width:130px">Date</th>
-                <th scope="col" style="width:130px">Type</th>
-                <th scope="col" style="width:130px">Intitulé</th>
+                <th class="d-none" scope="col" style="width:10px">#</th>
+                <th scope="col" style="width:40px">Date</th>
+                <th scope="col" style="width:90px">Type</th>
+                <th scope="col" style="width:270px">Intitulé</th>
             </tr>
         </thead>
         <tbody id="tableau_act">

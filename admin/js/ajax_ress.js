@@ -153,6 +153,28 @@ const ressGetThem = (id_ress) => {
     });
 }
 
+//----------------------------------------------------------------------------- Remplissage du tableau des actions en fonction de l'id du PDN
+const ajaxRessAct = (id_ress, liste) => {
+    $.ajax({
+        url: "php/ress_Get.php",
+        dataType: 'JSON',
+        data : {id_ress_tab_act:id_ress},
+        success: function(response){
+            const len = response.length;
+            let res = "";
+            for (let i = 0; i < len; i++) {
+                const id = response[i].id;
+                const dat = response[i].dat;
+                const type = response[i].type;
+                const intitule = response[i].intitule;
+                const commentaires = response[i].commentaires;
+                res += `<tr style="cursor: pointer" onclick="id_act_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${dat}</td><td>${type}</td><td>${intitule}</td></tr>`;
+            }
+            $(liste).append(res);
+        }
+    });
+}
+
 // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
 
 const ress_Create = (uuid, nom, lien, image, age, editeur, description, valide) => {
@@ -262,4 +284,12 @@ const ress_Delete = (id) => {
         }
     });
 
+}
+
+// ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !
+
+// ----------------------------------------------------------------------------- Stockage de l'id de l'action et envoie vers la page act
+const id_act_storage = (id) => {
+    sessionStorage.setItem('id_act', id);
+    document.location='act.php';
 }

@@ -60,7 +60,7 @@ $(function(){
         $("#mail").val();
         $("#commentaires").val();
 
-        const nom = $("#nom").val();
+        const nom = strUpFirst($("#nom").val());
         const adresse = $("#adresse").val();
         let cp = $("#cp").val();
         if(!cp || isNaN(cp)) cp = 0;
@@ -101,7 +101,7 @@ $(function(){
     $('#part_update').click(function(){
         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
         const id = $("#id_part").val()
-        const nom = $("#nom").val();
+        const nom = strUpFirst($("#nom").val());
         const adresse = $("#adresse").val();
         const cp = $("#cp").val();
         const ville = $("#ville").val().toUpperCase();
@@ -170,6 +170,7 @@ const part_Reset = () => {
     //-------------------------------------------------------------------------- Remplissage du champs de recherche des partenaires pour afficher les nouveaux
     ajaxListPart("#part_res");
     $("#part_search").val("");
+
     //-------------------------------------------------------------------------- Réinitialisation du tableau action
     $("#tableau_act").html("");
     //-------------------------------------------------------------------------- Inversement des boutons en bas de page

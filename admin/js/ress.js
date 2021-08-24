@@ -140,6 +140,12 @@ const ress_Get = (id_ress) => {
         //---------------------------------------------------------------------- Récupération des thématiques de le ressource
         ressGetThem(id_ress);
 
+        //---------------------------------------------------------------------- Réinitialisation du tableau action
+        $("#tableau_act").html("");
+
+        //---------------------------------------------------------------------- Remplissage du tableau
+        ajaxRessAct(id_ress, "#tableau_act");
+
         //---------------------------------------------------------------------- Inversement des boutons en bas de page
         $("#btn_ress_create").addClass("d-none");
         $("#btn_ress_update").removeClass("d-none");

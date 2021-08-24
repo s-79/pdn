@@ -134,8 +134,7 @@ if($id) {
 
 // ----------------------------------------------------------------------------- Récupération des données des partenaires liés à l'action pour tableau
 } elseif($id_act_table_part) {
-    $query = "SELECT `id`, `nom`, `ville`, `prenom_ref`, `nom_ref` FROM `v_act_part` WHERE `act_id` = '$id_act_table_part';";
-
+    $query = "SELECT `id`, `nom`, `ville`, `prenom_ref`, `nom_ref` FROM `v_act_part` WHERE `act_id` = '$id_act_table_part' ORDER BY `nom`;";
     $result = mysqli_query($conn,$query);
 
     while($row = mysqli_fetch_array($result)){
@@ -156,7 +155,7 @@ if($id) {
 
 // ----------------------------------------------------------------------------- Récupération des données des pdn liés à l'action pour tableau
 } elseif($id_act_table_pdn) {
-    $query = "SELECT `id`, `structure`, `ville`, `prenom`, `nom` FROM `v_act_pdn` WHERE `act_id` = '$id_act_table_pdn';";
+    $query = "SELECT `id`, `structure`, `ville`, `prenom`, `nom` FROM `v_act_pdn` WHERE `act_id` = '$id_act_table_pdn' ORDER BY `prenom`;";
 
     $result = mysqli_query($conn,$query);
 
@@ -178,7 +177,7 @@ if($id) {
 
 // ----------------------------------------------------------------------------- Récupération des données des pdn liés à l'action pour tableau
 } elseif($id_act_table_str) {
-    $query = "SELECT `id`, `nom`, `ville`, `resp_prenom`, `resp_nom` FROM `v_act_str` WHERE `act_id` = '$id_act_table_str';";
+    $query = "SELECT `id`, `nom`, `ville`, `resp_prenom`, `resp_nom` FROM `v_act_str` WHERE `act_id` = '$id_act_table_str' ORDER BY `nom`;";
 
     $result = mysqli_query($conn,$query);
 

@@ -12,7 +12,7 @@ include("header.php"); ?>
             <!--                                                                                                              Résultat de recherche -->
             <div class="col-12 col-sm-4 py-4 pr-3 pl-1 text-center">
                 <select class="form-select" aria-label="Default select example" id="part_res">
-                    <option selected value='0'>Séléctionner un partenaire</option>
+                    <option selected value='0'>Séléctionner un·e partenaire</option>
                 </select>
             </div>
             <!--                                                                                                              Bouton afficher les infos-->
@@ -110,10 +110,10 @@ include("header.php"); ?>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th class="d-none" scope="col" style="width:130px">#</th>
-                <th scope="col" style="width:130px">Date</th>
-                <th scope="col" style="width:130px">Type</th>
-                <th scope="col" style="width:130px">Intitulé</th>
+                <th class="d-none" scope="col" style="width:10px">#</th>
+                <th scope="col" style="width:40px">Date</th>
+                <th scope="col" style="width:90px">Type</th>
+                <th scope="col" style="width:270px">Intitulé</th>
             </tr>
         </thead>
         <tbody id="tableau_act">

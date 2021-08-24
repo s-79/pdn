@@ -15,7 +15,7 @@
 	</div>
 	<form id="form_pwd">
 		<div class="d-flex justify-content-center mt-3">
-			<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
+			<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:20em;">
 				<h1 class="pt-3">Modifier mon mot de passe</h1>
 				<div class="form-floating mx-3 mt-3 mb-3">
 					<input type="text" class="form-control" id="id_act" placeholder="Identifiant actuel">

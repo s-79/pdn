@@ -11,6 +11,7 @@ $uuid = mysqli_real_escape_string($conn, $_GET['uuid']);
 $them_Get_Infos = mysqli_real_escape_string($conn, $_GET['them_Get_Infos']);
 $cat_Get_Infos = mysqli_real_escape_string($conn, $_GET['cat_Get_Infos']);
 $id_ress_them = mysqli_real_escape_string($conn, $_GET['id_ress_them']);
+$id_ress_tab_act = mysqli_real_escape_string($conn, $_GET['id_ress_tab_act']);
 $nom_ress_exist = mysqli_real_escape_string($conn, $_GET['nom_ress_exist']);
 $id_ress_exist = mysqli_real_escape_string($conn, $_GET['id_ress_exist']);
 $nom_them_exist = mysqli_real_escape_string($conn, $_GET['nom_them_exist']);
@@ -108,6 +109,28 @@ if($ress_Get_Cat) {
 
         $return_arr[] = array(
             "res" => $res
+        );
+    }
+
+// ----------------------------------------------------------------------------- Tableau : Récupération des données des actions liées à la ressource
+} elseif($id_ress_tab_act) {
+    $query = "SELECT * FROM `v_ress_act` WHERE `ress_id` = '$id_ress_tab_act' ORDER BY `dat` DESC;";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $dat = $row['dat'];
+        $type = $row['type'];
+        $intitule = $row['intitule'];
+        $commentaires = $row['commentaires'];
+
+        $return_arr[] = array(
+            "id" => $id,
+            "dat" => $dat,
+            "type" => $type,
+            "intitule" => $intitule,
+            "commentaires" => $commentaires
         );
     }
 // ----------------------------------------------------------------------------- La ressource a-t-elle bien été supprimée de la BDD ?
