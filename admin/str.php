@@ -58,11 +58,15 @@
                                     <option selected value="">Type de structure *</option>
                                     <option value="Point d'accueil et d’écoute">Point d'accueil et d’écoute</option>
                                     <option value="Service Jeunesse">Service Jeunesse</option>
+                                    <option value="Information Jeunesse">Information Jeunesse</option>
                                     <option value="BIJ / PIJ">BIJ / PIJ</option>
                                     <option value="Association">Association</option>
                                     <option value="Centre Socioculturel">Centre Socioculturel</option>
                                     <option value="Prévention Specialisée">Prévention Specialisée</option>
                                     <option value="Association sportive">Association sportive</option>
+                                    <option value="Espace Santé">Espace Santé</option>
+                                    <option value="Service Municipal">Service Municipal</option>
+                                    <option value="ALJT">ALJT</option>
                                 </select>
                                 <label for="type">Type de structure *</label>
                             </div>

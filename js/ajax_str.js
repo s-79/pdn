@@ -66,7 +66,7 @@ const str_Get_Infos = idStr => {
         	// ----------------------------------------------------------------- Création du modal de la structure cliquée
             $("#modalStrHeader").html(`<h2 class='modal-title orange text-uppercase fw-bold'>${nom}</h2><h5 class='bleu mb-0'>${adresse}</br>${cp} ${ville}</br>${tel}</h5>`);
             $("#modalStrContentLeft").html(`<img class='img-fluid' src='${image}' width='100%' height='120' alt='${nom} - ${ville}' title='${nom} - ${ville}' /></br></br><h4><a href='${site}' class='liens bleu' target='_blank'><i class='fas fa-globe bleu'></i></br>Site Internet</br>de la structure</a></h4>`);
-            $("#modalStrContentRight").html(`<h5 class='bleu'><i class='fas fa-arrow-right pe-2'></i>${presentation}</h5>`);
+            $("#modalStrContentRight").html(`<h5 class='bleu'><p style="white-space:pre-wrap;"><i class='fas fa-arrow-right pe-2'></i>${presentation}</p></h5>`);
         }
 	});
 }
@@ -101,15 +101,16 @@ const str_Get_Pdn = idStr => {
                 const tiktok = response[i].tiktok;
                 const image = response[i].image;
                 let actif = response[i].actif;
-                if (actif==="1") actif = "green;' data-bs-toggle='tooltip' data-bs-placement='top' title='Actif' ></i>";
-                else actif = "#e85017;' data-bs-toggle='tooltip' data-bs-placement='top' title='Inactif'></i>";
+                // if (actif==="1") actif = "green;' data-bs-toggle='tooltip' data-bs-placement='top' title='Actif' ></i>";
+                // else actif = "#e85017;' data-bs-toggle='tooltip' data-bs-placement='top' title='Inactif'></i>";
+                if (parseInt(actif)===1) {
+                    // ------------------------------------------------------------- Affichage de la photo des PDN
+                    footerImg += `<img id='${id}' class='py-1 px-2 pointeur photo' src='${image}' height='100' alt='${prenom} ${nom}' title='${prenom} ${nom}' />`;
 
-                // ------------------------------------------------------------- Affichage de la photo des PDN
-                footerImg += `<img id='${id}' class='py-1 px-2 pointeur photo' src='${image}' height='100' alt='${prenom} ${nom}' title='${prenom} ${nom}' />`;
-
-                // ------------------------------------------------------------- Affichage des réseaux sociaux des PDN dans div invisible
-        		footer += `<div id='infosRS${id}' class='footerRS d-none mt-0'><h6 class='mb-0 bleu interligne text-uppercase fw-bold'>${prenom} ${nom} - ${fonction}&nbsp;&nbsp;&nbsp;<i class='fa fa-circle' style='color:${actif}</br>`;
-                footer += footer_rs(id, facebook, snapchat, instagram, youtube, twitter, discord, twitch, tiktok, portablePro, whatsApp, mail_nom, mail_domaine);
+                    // ------------------------------------------------------------- Affichage des réseaux sociaux des PDN dans div invisible
+            		footer += `<div id='infosRS${id}' class='footerRS d-none mt-0'><h6 class='mb-0 bleu interligne text-uppercase fw-bold'>${prenom} ${nom} - ${fonction}</br>`;
+                    footer += footer_rs(id, facebook, snapchat, instagram, youtube, twitter, discord, twitch, tiktok, portablePro, whatsApp, mail_nom, mail_domaine);
+                }
             }
 
             $("#modalStrFooter").html(footerImg);
@@ -156,7 +157,7 @@ const structure = (response, len) => {
         const ville = response[i].ville;
         const image = response[i].image;
         const nb_pdn_act = response[i].nb_pdn_act;
-        
+
         // --------------------------------------------------------------------- Est-ce qu'il y a des PDN actifs sur la structure
         if(parseInt(nb_pdn_act) >= 1) {
             // -------------------------------------------------------------------- Création des vignettes

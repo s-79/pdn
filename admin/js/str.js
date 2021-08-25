@@ -112,7 +112,7 @@ $(function(){
         const tel = $("#tel").val();
         const site = $("#site").val().toLowerCase();
         let image = $("#image").val();
-        if(!image) image = "img/structure/str.jpg";
+        if(!image) image = "img/str/str.jpg";
         const presentation = $("#presentation").val();
         const resp_prenom = strUpFirst($("#resp_prenom").val());
         const resp_nom = $("#resp_nom").val().toUpperCase();
