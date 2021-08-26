@@ -74,6 +74,7 @@ const ajaxGetStr = (id_str) => {
             const prij = response[0].prij;
             const tel = response[0].tel;
             const site = response[0].site;
+            const postit = response[0].postit;
             const image = response[0].image;
             const presentation = response[0].presentation;
             const resp_prenom = response[0].resp_prenom;
@@ -97,7 +98,16 @@ const ajaxGetStr = (id_str) => {
             if (prij === "1") $("#prij").prop('checked', true);
             $("#tel").val(tel);
             $("#site").val(site);
-            $("#image").val(image);
+            if(postit) {
+                $("#postItIcon").removeClass("text-white");
+                $("#postItIcon").addClass("text-warning");
+            }
+            else {
+                $("#postItIcon").removeClass("text-warning");
+                $("#postItIcon").addClass("text-white");
+            }
+            $("#postit").val(postit);
+            $("#image").html(image);
             $("#presentation").val(presentation);
             $("#resp_prenom").val(resp_prenom);
             $("#resp_nom").val(resp_nom);
@@ -149,11 +159,11 @@ const ajaxStrAct = (id_str, liste) => {
 
 // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
 
-const str_Create = (aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab) => {
+const str_Create = (aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab) => {
     $.ajax({
         url: "php/str.php",
         dataType: 'JSON',
-        data : {aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, nb_pdn_lab:nb_pdn_lab},
+        data : {aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, postit:postit, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, nb_pdn_lab:nb_pdn_lab},
         complete: function(){
             $('#message_admin_str').html("Structure ajoutée à la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des structures
@@ -164,11 +174,11 @@ const str_Create = (aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel,
 
 // ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
 
-const str_Update = (id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab) => {
+const str_Update = (id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab) => {
     $.ajax({
         url: 'php/str.php',
         dataType: 'JSON',
-        data : {id:id, aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, nb_pdn_lab:nb_pdn_lab},
+        data : {id:id, aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, postit:postit, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, nb_pdn_lab:nb_pdn_lab},
         complete: function(){
             $('#message_admin_str').html("Structure modifiée dans la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des structures

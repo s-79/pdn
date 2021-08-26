@@ -25,6 +25,7 @@ if($id) {
         $prij = $row['prij'];
         $tel = $row['tel'];
         $site = $row['site'];
+        $postit = $row['postit'];
         $image = $row['image'];
         $presentation = $row['presentation'];
         $resp_prenom = $row['resp_prenom'];
@@ -47,6 +48,7 @@ if($id) {
             "prij" => $prij,
             "tel" => $tel,
             "site" => $site,
+            "postit" => $postit,
             "image" => $image,
             "presentation" => $presentation,
             "resp_prenom" => $resp_prenom,

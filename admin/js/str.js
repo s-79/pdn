@@ -4,6 +4,25 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_str").toggleClass("nav-link-toggle");
 
+    // ------------------------------------------------------------------------- Évenement click sur le Post-it
+    $("#postItIcon").click(function(){
+        $("#modalStrPostIt").modal('show');
+    });
+
+    // ------------------------------------------------------------------------- Lorsqu'on referme le post-it, l'icone devient jaune s'il y a du contenu
+    // $('#modalStrPostIt').on('shown.bs.modal', function () {                  => Pour faire l'inverse
+    $('#modalStrPostIt').on('hidden.bs.modal', function () {
+        const postit = $("#postit").val();
+        if(postit) {
+            $("#postItIcon").removeClass("text-white");
+            $("#postItIcon").addClass("text-warning");
+        }
+        else {
+            $("#postItIcon").removeClass("text-warning");
+            $("#postItIcon").addClass("text-white");
+        }
+    });
+
     //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id de session stocké
     let id_str_storage = sessionStorage.getItem("id_str");
     sessionStorage.removeItem('id_str');
@@ -65,6 +84,7 @@ $(function(){
         if(prij)prij=1;else{prij=0};
         const tel = $("#tel").val();
         const site = $("#site").val().toLowerCase();
+        const postit = $("#postit").val();
         let image = $("#image").val();
         if(!image) image = "img/str/str.jpg";
         const presentation = $("#presentation").val();
@@ -83,9 +103,9 @@ $(function(){
             $('#message_admin_str').html("Merci de remplir au minimum les champs <b>Appel à projets, Nom, Type, Adresse, Ville</b> et d'indiquer <b>en chiffre</b> le nombre de PDN labellisé·es sur la structure.");
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
+            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Post-It",postit,700,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-                str_Create(aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab);
+                str_Create(aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab);
             }
         }
     })
@@ -111,6 +131,7 @@ $(function(){
         if(prij)prij=1;else{prij=0};
         const tel = $("#tel").val();
         const site = $("#site").val().toLowerCase();
+        const postit = $("#postit").val();
         let image = $("#image").val();
         if(!image) image = "img/str/str.jpg";
         const presentation = $("#presentation").val();
@@ -129,9 +150,9 @@ $(function(){
             $('#message_admin_str').html("Merci de remplir au minimum les champs <b>Appel à projets, Nom, Type, Adresse, Ville</b> et d'indiquer <b>en chiffre</b> le nombre de PDN labellisé·es sur la structure.");
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
+            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Post-It",postit,700,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-                str_Update(id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab);
+                str_Update(id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab);
             }
         }
     })
@@ -150,7 +171,7 @@ $(function(){
 // ----------------------------------------------------------------------------- FONCTION GET
 const str_Get = (id_str) => {
     if(!id_str) {
-        $('#message_admin_str').html("Aucune sructure n'a été séléctionnée");
+        $('#message_admin_str').html("Aucune structure n'a été séléctionnée");
         $('#modalStrAdmin').modal('show');
 
     } else {
@@ -184,6 +205,10 @@ const str_Reset = () => {
     document.getElementById("form_str4").reset();
     //-------------------------------------------------------------------------- Remplissage de la liste des structures
     ajaxGetStr("#structure");
+    //-------------------------------------------------------------------------- Réinitialisation du post-it
+    $("#postItIcon").removeClass("text-warning");
+    $("#postItIcon").addClass("text-white");
+    $("#postit").val("");
     //-------------------------------------------------------------------------- Remplissage du champs de recherche des str pour afficher les nouveaux
     ajaxListStr("#str_res");
     $("#str_search").val("");

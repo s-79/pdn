@@ -129,7 +129,10 @@
                 <!--                                                                                                              Coordonnées -->
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3">Présentation</h1>
+                        <div class="d-flex justify-content-between pt-3 pe-3">
+                            <h1>Présentation</h1>
+                            <i id="postItIcon" class="ps-3 ms-1 fas fa-clipboard fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un post-it"></i>
+                        </div>
                         <form id="form_pdn5">
                             <div class="form-floating m-3 mt-4">
                                 <textarea class="form-control" placeholder="Présentation (700 car.max.)" id="presentation" style="height:258px;"></textarea>
@@ -199,6 +202,16 @@
         </tbody>
     </table>
 </div>
+</div>
+
+<!--                                                                            MODAL POST-IT -->
+<div class="modal fade" id="modalPdnPostIt" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="bg-warning p-3 fw-bold text-center fs-5">POST-IT</div>
+            <textarea id="postit" class="bg-warning fs-5" rows="8"></textarea>
+        </div>
+    </div>
 </div>
 
 <!--                                                                            MODAL MODIF INFOS -->

@@ -4,6 +4,25 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_pdn").toggleClass("nav-link-toggle");
 
+    // ------------------------------------------------------------------------- Évenement click sur le Post-it
+    $("#postItIcon").click(function(){
+        $("#modalPdnPostIt").modal('show');
+    });
+
+    // ------------------------------------------------------------------------- Lorsqu'on referme le post-it, l'icone devient jaune s'il y a du contenu
+    // $('#modalStrPostIt').on('shown.bs.modal', function () {                  => Pour faire l'inverse
+    $('#modalPdnPostIt').on('hidden.bs.modal', function () {
+        const postit = $("#postit").val();
+        if(postit) {
+            $("#postItIcon").removeClass("text-white");
+            $("#postItIcon").addClass("text-warning");
+        }
+        else {
+            $("#postItIcon").removeClass("text-warning");
+            $("#postItIcon").addClass("text-white");
+        }
+    });
+
     //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id de session stocké
     let id_pdn_storage = sessionStorage.getItem("id_pdn");
     sessionStorage.removeItem('id_pdn');
@@ -78,6 +97,7 @@ $(function(){
         const discord = $("#discord").val().toLowerCase();
         const twitch = $("#twitch").val().toLowerCase();
         const tiktok = $("#tiktok").val().toLowerCase();
+        const postit = $("#postit").val();
         const presentation = $("#presentation").val();
         let whatsapp =  $("#whatsapp").is(':checked');
         if(whatsapp)whatsapp=1;else{whatsapp=0};
@@ -95,7 +115,7 @@ $(function(){
             $('#message_admin_pdn').html("Merci de remplir au minimum les champs <b>Prénom, Nom, Fonction et Structure</b> et d'indiquer une <b>adresse Mail</b> correcte.");
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-            if(vLen("Prénom",prenom,100,"#message_admin_pdn") && vLen("Nom",nom,100,"#message_admin_pdn") && vLen("Fonction",fonction,100,"#message_admin_pdn") && vLen("Mail avant @",mail_nom,50,"#message_admin_pdn") && vLen("Mail après @",mail_domaine,50,"#message_admin_pdn") && vLen("Téléphone",tel,50,"#message_admin_pdn") && vLen("Facebook",facebook,255,"#message_admin_pdn") && vLen("Instagram",instagram,255,"#message_admin_pdn") && vLen("Snapchat",snapchat,255,"#message_admin_pdn") && vLen("Youtube",youtube,255,"#message_admin_pdn") && vLen("Twitter",twitter,255,"#message_admin_pdn") && vLen("Discord",discord,255,"#message_admin_pdn") && vLen("Twitch",twitch,255,"#message_admin_pdn") && vLen("TikTok",tiktok,255,"#message_admin_pdn") && vLen("Mot de passe",mdp,25,"#message_admin_pdn") && vLen("Image",image,255,"#message_admin_pdn") && vLen("Présentation",presentation,700,"#message_admin_pdn")) {
+            if(vLen("Prénom",prenom,100,"#message_admin_pdn") && vLen("Nom",nom,100,"#message_admin_pdn") && vLen("Fonction",fonction,100,"#message_admin_pdn") && vLen("Mail avant @",mail_nom,50,"#message_admin_pdn") && vLen("Mail après @",mail_domaine,50,"#message_admin_pdn") && vLen("Téléphone",tel,50,"#message_admin_pdn") && vLen("Facebook",facebook,255,"#message_admin_pdn") && vLen("Instagram",instagram,255,"#message_admin_pdn") && vLen("Snapchat",snapchat,255,"#message_admin_pdn") && vLen("Youtube",youtube,255,"#message_admin_pdn") && vLen("Twitter",twitter,255,"#message_admin_pdn") && vLen("Discord",discord,255,"#message_admin_pdn") && vLen("Twitch",twitch,255,"#message_admin_pdn") && vLen("TikTok",tiktok,255,"#message_admin_pdn") && vLen("Mot de passe",mdp,25,"#message_admin_pdn") && vLen("Post-It",postit,700,"#message_admin_pdn") && vLen("Image",image,255,"#message_admin_pdn") && vLen("Présentation",presentation,700,"#message_admin_pdn")) {
 
                 //-------------------------------------------------------------  L'adresse mail est-elle utilisée par un·e autre PDN
                 $.ajax({
@@ -106,7 +126,7 @@ $(function(){
                         const res = response[0].res;
                         if(parseInt(res) === 1) $("#message_admin_pdn").html(`L'adresse mail <b>${mail}</b> est déjà utilisée par un·e autre PDN.`);
                         //------------------------------------------------------ Envoie des infos vers la BDD
-                        else { pdn_Create(prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure);}
+                        else { pdn_Create(prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, postit, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure);}
                     }
                 });
             }
@@ -139,6 +159,7 @@ $(function(){
         const discord = $("#discord").val().toLowerCase();
         const twitch = $("#twitch").val().toLowerCase();
         const tiktok = $("#tiktok").val().toLowerCase();
+        const postit = $("#postit").val();
         const presentation = $("#presentation").val();
         let whatsapp =  $("#whatsapp").is(':checked');
         if(whatsapp)whatsapp=1;else{whatsapp=0};
@@ -156,10 +177,10 @@ $(function(){
             $('#message_admin_pdn').html("Merci de remplir au minimum les champs <b>Prénom, Nom, Fonction et Structure</b> et d'indiquer une <b>adresse Mail</b> correcte.");
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-            if(vLen("Prénom",prenom,100,"#message_admin_pdn") && vLen("Nom",nom,100,"#message_admin_pdn") && vLen("Fonction",fonction,100,"#message_admin_pdn") && vLen("Mail avant @",mail_nom,50,"#message_admin_pdn") && vLen("Mail après @",mail_domaine,50,"#message_admin_pdn") && vLen("Téléphone",tel,50,"#message_admin_pdn") && vLen("Facebook",facebook,255,"#message_admin_pdn") && vLen("Instagram",instagram,255,"#message_admin_pdn") && vLen("Snapchat",snapchat,255,"#message_admin_pdn") && vLen("Youtube",youtube,255,"#message_admin_pdn") && vLen("Twitter",twitter,255,"#message_admin_pdn") && vLen("Discord",discord,255,"#message_admin_pdn") && vLen("Twitch",twitch,255,"#message_admin_pdn") && vLen("TikTok",tiktok,255,"#message_admin_pdn") && vLen("Mot de passe",mdp,25,"#message_admin_pdn") && vLen("Image",image,255,"#message_admin_pdn") && vLen("Présentation",presentation,700,"#message_admin_pdn")) {
+            if(vLen("Prénom",prenom,100,"#message_admin_pdn") && vLen("Nom",nom,100,"#message_admin_pdn") && vLen("Fonction",fonction,100,"#message_admin_pdn") && vLen("Mail avant @",mail_nom,50,"#message_admin_pdn") && vLen("Mail après @",mail_domaine,50,"#message_admin_pdn") && vLen("Téléphone",tel,50,"#message_admin_pdn") && vLen("Facebook",facebook,255,"#message_admin_pdn") && vLen("Instagram",instagram,255,"#message_admin_pdn") && vLen("Snapchat",snapchat,255,"#message_admin_pdn") && vLen("Youtube",youtube,255,"#message_admin_pdn") && vLen("Twitter",twitter,255,"#message_admin_pdn") && vLen("Discord",discord,255,"#message_admin_pdn") && vLen("Twitch",twitch,255,"#message_admin_pdn") && vLen("TikTok",tiktok,255,"#message_admin_pdn") && vLen("Mot de passe",mdp,25,"#message_admin_pdn") && vLen("Post-it",postit,700,"#message_admin_pdn") && vLen("Image",image,255,"#message_admin_pdn") && vLen("Présentation",presentation,700,"#message_admin_pdn")) {
 
                 //------------------------------------------------------ Envoie des infos vers la BDD
-                pdn_Update(id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure);
+                pdn_Update(id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, postit, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure);
             }
         }
     })
@@ -211,6 +232,10 @@ const pdn_Reset = () => {
     document.getElementById("form_pdn5").reset();
     //-------------------------------------------------------------------------- Remplissage de la liste des structures
     ajaxGetStr("#structure");
+    //-------------------------------------------------------------------------- Réinitialisation du post-it
+    $("#postItIcon").removeClass("text-warning");
+    $("#postItIcon").addClass("text-white");
+    $("#postit").val("");
     //-------------------------------------------------------------------------- Remplissage du champs de recherche des PDN pour afficher les nouveaux
     ajaxListPdn("#pdn_res");
     $("#pdn_search").val("");

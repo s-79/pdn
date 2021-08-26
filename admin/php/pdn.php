@@ -19,6 +19,7 @@ $twitch = mysqli_real_escape_string($conn, $_GET['twitch']);
 $tiktok = mysqli_real_escape_string($conn, $_GET['tiktok']);
 $mdp = mysqli_real_escape_string($conn, $_GET['mdp']);
 if($mdp) { $mdp = password_hash($mdp, PASSWORD_DEFAULT); }
+$postit = mysqli_real_escape_string($conn, $_GET['postit']);
 $image = mysqli_real_escape_string($conn, $_GET['image']);
 $presentation = mysqli_real_escape_string($conn, $_GET['presentation']);
 $charte = mysqli_real_escape_string($conn, $_GET['charte']);
@@ -59,11 +60,11 @@ $id_del = mysqli_real_escape_string($conn, $_GET['id_del']);
 
 
 if($id) {
-    if($mdp) { $query = "CALL pdn_mdp_Update ('$id', '$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$mdp', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')";}
-    else {$query = "CALL pdn_Update ('$id', '$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')";}
+    if($mdp) { $query = "CALL pdn_mdp_Update ('$id', '$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$mdp', '$postit', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')";}
+    else {$query = "CALL pdn_Update ('$id', '$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$postit', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')";}
 }
 elseif($id_del) { $query = "CALL pdn_Delete ('$id_del')"; }
-else { $query = "CALL pdn_Create ('$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$mdp', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')"; }
+else { $query = "CALL pdn_Create ('$prenom', '$nom', '$fonction', '$mail_nom', '$mail_domaine', '$tel', '$facebook', '$snapchat', '$instagram', '$whatsapp', '$youtube', '$twitter', '$discord', '$twitch', '$tiktok', '$mdp', '$postit', '$image', '$presentation', '$charte', '$fiche_rens', '$actif', '$date_entree', '$date_sortie', '$structure')"; }
 
 $result = $conn->prepare($query);
 

@@ -80,6 +80,7 @@ const ajaxGetPdn = (id_pdn) => {
             const discord = response[0].discord;
             const twitch = response[0].twitch;
             const tiktok = response[0].tiktok;
+            const postit = response[0].postit;
             const whatsapp = response[0].whatsapp;
             const presentation = response[0].presentation;
             const charte = response[0].charte;
@@ -105,6 +106,15 @@ const ajaxGetPdn = (id_pdn) => {
             $("#discord").val(discord);
             $("#twitch").val(twitch);
             $("#tiktok").val(tiktok);
+            if(postit) {
+                $("#postItIcon").removeClass("text-white");
+                $("#postItIcon").addClass("text-warning");
+            }
+            else {
+                $("#postItIcon").removeClass("text-warning");
+                $("#postItIcon").addClass("text-white");
+            }
+            $("#postit").val(postit);
             $("#presentation").val(presentation);
             $("#whatsapp,#charte,#fiche_rens,#actif").prop('checked', false);
             if (whatsapp === "1") $("#whatsapp").prop('checked', true);
@@ -154,11 +164,11 @@ const ajaxPdnAct = (id_pdn, liste) => {
 
 // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
 
-const pdn_Create = (prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure) => {
+const pdn_Create = (prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, postit, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure) => {
     $.ajax({
         url: "php/pdn.php",
         dataType: 'JSON',
-        data : {prenom:prenom, nom:nom, fonction:fonction, mail_nom:mail_nom, mail_domaine:mail_domaine, tel:tel, facebook:facebook, snapchat:snapchat, instagram:instagram, whatsapp:whatsapp, youtube:youtube, twitter:twitter, discord:discord, twitch:twitch, tiktok:tiktok, mdp:mdp, image:image, presentation:presentation, charte:charte, fiche_rens:fiche_rens, actif:actif, date_entree:date_entree, date_sortie:date_sortie, structure:structure},
+        data : {prenom:prenom, nom:nom, fonction:fonction, mail_nom:mail_nom, mail_domaine:mail_domaine, tel:tel, facebook:facebook, snapchat:snapchat, instagram:instagram, whatsapp:whatsapp, youtube:youtube, twitter:twitter, discord:discord, twitch:twitch, tiktok:tiktok, mdp:mdp, postit:postit, image:image, presentation:presentation, charte:charte, fiche_rens:fiche_rens, actif:actif, date_entree:date_entree, date_sortie:date_sortie, structure:structure},
         complete: function(){
             $('#message_admin_pdn').html("PDN ajouté·e à la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des PDN
@@ -169,11 +179,11 @@ const pdn_Create = (prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook
 
 // ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
 
-const pdn_Update = (id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure) => {
+const pdn_Update = (id, prenom, nom, fonction, mail_nom, mail_domaine, tel, facebook, snapchat, instagram, whatsapp, youtube, twitter, discord, twitch, tiktok, mdp, postit, image, presentation, charte, fiche_rens, actif, date_entree, date_sortie, structure) => {
     $.ajax({
         url: 'php/pdn.php',
         dataType: 'JSON',
-        data : {id:id, prenom:prenom, nom:nom, fonction:fonction, mail_nom:mail_nom, mail_domaine:mail_domaine, tel:tel, facebook:facebook, snapchat:snapchat, instagram:instagram, whatsapp:whatsapp, youtube:youtube, twitter:twitter, discord:discord, twitch:twitch, tiktok:tiktok, mdp:mdp, image:image, presentation:presentation, charte:charte, fiche_rens:fiche_rens, actif:actif, date_entree:date_entree, date_sortie:date_sortie, structure:structure},
+        data : {id:id, prenom:prenom, nom:nom, fonction:fonction, mail_nom:mail_nom, mail_domaine:mail_domaine, tel:tel, facebook:facebook, snapchat:snapchat, instagram:instagram, whatsapp:whatsapp, youtube:youtube, twitter:twitter, discord:discord, twitch:twitch, tiktok:tiktok, mdp:mdp, postit:postit, image:image, presentation:presentation, charte:charte, fiche_rens:fiche_rens, actif:actif, date_entree:date_entree, date_sortie:date_sortie, structure:structure},
         complete: function(){
             $('#message_admin_pdn').html("PDN modifié·e dans la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des PDN

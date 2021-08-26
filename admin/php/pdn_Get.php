@@ -33,6 +33,7 @@ if($id) {
         $twitch = $row['twitch'];
         $tiktok = $row['tiktok'];
         $whatsapp = $row['whatsApp'];
+        $postit = $row['postit'];
         $presentation = $row['presentation'];
         $charte = $row['charte'];
         $fiche_rens = $row['fiche_rens'];
@@ -58,6 +59,7 @@ if($id) {
             "twitch" => $twitch,
             "tiktok" => $tiktok,
             "whatsapp" => $whatsapp,
+            "postit" => $postit,
             "presentation" => $presentation,
             "charte" => $charte,
             "fiche_rens" => $fiche_rens,

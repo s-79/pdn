@@ -56,13 +56,13 @@
                             <div class="form-floating m-3">
                                 <select class="form-select" id="type" aria-label="Type de structure *">
                                     <option selected value="">Type de structure *</option>
-                                    <option value="Point d'accueil et d’écoute">Point d'accueil et d’écoute</option>
+                                    <option value="Lieu d'accueil et d’écoute">Lieu d'accueil et d’écoute</option>
                                     <option value="Service Jeunesse">Service Jeunesse</option>
                                     <option value="Information Jeunesse">Information Jeunesse</option>
                                     <option value="BIJ / PIJ">BIJ / PIJ</option>
                                     <option value="Association">Association</option>
                                     <option value="Centre Socioculturel">Centre Socioculturel</option>
-                                    <option value="Prévention Specialisée">Prévention Specialisée</option>
+                                    <option value="Prévention Spécialisée">Prévention Spécialisée</option>
                                     <option value="Association sportive">Association sportive</option>
                                     <option value="Espace Santé">Espace Santé</option>
                                     <option value="Service Municipal">Service Municipal</option>
@@ -139,7 +139,10 @@
                 <!--                                                                                                              Coordonnées -->
                 <div class="col-12 col-lg-6 col-xl-4">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3">Présentation</h1>
+                        <div class="d-flex justify-content-between pt-3 pe-3">
+                            <h1>Présentation</h1>
+                            <i id="postItIcon" class="ps-3 ms-1 fas fa-clipboard fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un post-it"></i>
+                        </div>
                         <form id="form_str3" action="../img/str/file.php" method="post" enctype="multipart/form-data">
                             <div class="row m-3">
                                 <div class="form-floating col-10 ps-0">
@@ -206,6 +209,16 @@
         </tbody>
     </table>
 </div>
+</div>
+
+<!--                                                                            MODAL POST-IT -->
+<div class="modal fade" id="modalStrPostIt" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="bg-warning p-3 fw-bold text-center fs-5">POST-IT</div>
+            <textarea id="postit" class="bg-warning fs-5 pl-3" rows="8"></textarea>
+        </div>
+    </div>
 </div>
 
 <!--                                                                            MODAL MODIF INFOS -->
