@@ -4,6 +4,13 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_ress").toggleClass("nav-link-toggle");
 
+    // ---------------------------------------------------------------------------- Activation de la touche Entrée dans le champ "search"
+    $("#them_search").on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            $('#infos').click();
+        }
+    });
+
     //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
     ajaxListThem("#them_res");
 

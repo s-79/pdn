@@ -4,6 +4,13 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_str").toggleClass("nav-link-toggle");
 
+    // ---------------------------------------------------------------------------- Activation de la touche Entrée dans le champ "search"
+    $("#str_search").on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            $('#infos').click();
+        }
+    });
+
     // ------------------------------------------------------------------------- Évenement click sur le Post-it
     $("#postItIcon").click(function(){
         $("#modalStrPostIt").modal('show');

@@ -4,6 +4,13 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_ress").toggleClass("nav-link-toggle");
 
+    // ---------------------------------------------------------------------------- Activation de la touche Entrée dans le champ "search"
+    $("#ress_search").on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            $('#infos').click();
+        }
+    });
+
     //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
     ajaxListRess("#ress_res");
 
@@ -96,7 +103,7 @@ $(function(){
         const id = $("#id_ress").val();
         const uuid = uuid_gen();
         const nom = $("#nom").val();
-        const lien = $("#nom").val().toLowerCase();
+        const lien = $("#lien").val().toLowerCase();
         let image = $("#image").val();
         if(!image) image = "img/outil/0.jpg";
         const age = $("#age").val();

@@ -81,10 +81,12 @@ const ress_Get_Infos = (id_Ress, divInfosOutil) => {
                 const lien = response[i].lien;
 
             	infos += `<div id='detail${id}' class='row mx-auto borderOutDetails'>`;
-            	infos += `<div class='col-12 col-sm-3 d-block text-center'>`;
+            	infos += `<div class='col-12 col-sm-3 text-center'>`;
+                // Ajout d'un helper pour l'alignement vertical
+                infos += `<span class="helperVerticalAlign"></span>`;
             	infos += `<img src='${image}' height='150px' class='img-fluid'>`;
             	infos += `</div><div class='col-12 col-sm-9'><p class='textDescription mt-3'>${description}`;
-            	if(lien) {infos += `</br></br><a href='${lien}' class='bleu liens fw-bold' target='_blank'>${lien}</a>`};
+            	if(lien) {infos += `</br></br><a href='${lien}' class='bleu liens fw-bold' target='_blank'>Lien vers la ressource <i class="fas fa-globe ps-1"></i></a>`};
             	infos += `</p></div>`;
 			}
 			$(divInfosOutil).html(infos);

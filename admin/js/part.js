@@ -4,6 +4,13 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_part").toggleClass("nav-link-toggle");
 
+    // ---------------------------------------------------------------------------- Activation de la touche Entrée dans le champ "search"
+    $("#part_search").on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            $('#infos').click();
+        }
+    });
+
     //-------------------------------------------------------------------------- Récupérarion et suppression d'un éventuel id de session stocké
     let id_part_storage = sessionStorage.getItem("id_part");
     sessionStorage.removeItem('id_part');

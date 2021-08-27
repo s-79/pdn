@@ -208,8 +208,8 @@
 <div class="modal fade" id="modalPdnPostIt" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="bg-warning p-3 fw-bold text-center fs-5">POST-IT</div>
-            <textarea id="postit" class="bg-warning fs-5" rows="8"></textarea>
+            <div class="bg-warning py-2 fw-bold text-center fs-6">• POST-IT •</div>
+            <textarea id="postit" class="bg-warning fs-6 pl-3" rows="8"></textarea>
         </div>
     </div>
 </div>

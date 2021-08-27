@@ -380,6 +380,12 @@ figure:hover {
   font-size: 0.9em !important;
 }
 
+.helperVerticalAlign {
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+}
+
 /* ----------------------------------------------------------------------------- CONNEXION */
 
 #oublie:hover {

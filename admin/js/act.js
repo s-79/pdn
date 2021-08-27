@@ -4,6 +4,13 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_act").toggleClass("nav-link-toggle");
 
+    // ---------------------------------------------------------------------------- Activation de la touche Entrée dans le champ "search"
+    $("#act_search").on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            $('#infos').click();
+        }
+    });
+
     //-------------------------------------------------------------------------- Réinitialisation (si on vient d'une autre page et qu'on avait ouvert ou commencé à remplir une action auparavant)
     act_Reset();
 

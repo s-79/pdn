@@ -198,6 +198,7 @@ const ress_Get_Id = (uuid) => {
             const id_ress = response[0].id;
             // ----------------------------------------------------------------- Envoie vers la BDD
             ress_Get_Them(id_ress);
+            $('#message_admin_ress').html("La ressource a bien été ajoutée à la base de données.");
         }
     });
 }
@@ -219,7 +220,6 @@ const ress_Get_Them = (id_ress) => {
             dataType: 'JSON',
             data : {id_ress:id_ress, id_them:id_them},
             complete: function(){
-                $('#message_admin_ress').html("La ressource a bien été ajoutée à la base de données.");
                 //-------------------------------------------------------------- Réinitialisation de la pages des ressources
                 ress_Reset();
             }
