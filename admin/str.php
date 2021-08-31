@@ -5,7 +5,7 @@
         <div class="row search_bar">
             <!--                                                                                                              Zone de recherche -->
             <div class="col-12 col-sm-4 py-4 pr-1 pl-3 text-center">
-                <input type="text" class="form-control" id="str_search" placeholder="Saisir le prénom ou le nom">
+                <input type="text" class="form-control" id="str_search" placeholder="Saisir le nom ou la ville">
                 <label for="part_search" class="d-none">Saisir le nom ou la ville</label>
             </div>
             <!--                                                                                                              Résultat de recherche -->
@@ -84,14 +84,16 @@
                                 </select>
                                 <label for="ville">Ville</label>
                             </div>
+                            <div class="form-floating m-3">
+                                <select class="form-select type_m" id="qpv" aria-label="Quartier QPV *">
+                                    <option selected value="">Séléctionner le quartier QPV *</option>
+                                </select>
+                                <label for="qpv">Quartier QPV *</label>
+                            </div>
                             <div class="form-group row mx-0 pt-1 pb-3 mt-4 mb-3 ms-2">
-                                <label class="form-check-label col-2 text-white ms-2" for="qpv">QPV</label>
-                                <div class="col-1 ps-0">
-                                    <input class="form-check-input" type="checkbox" value="" id="qpv">
-                                </div>
                                 <label class="form-check-label col-2 text-white ms-2" for="prij">PRIJ</label>
                                 <div class="col-1 ps-0">
-                                    <input class="form-check-input" type="checkbox" value="" id="prij">
+                                    <input class="form-check-input" type="checkbox" value="" id="prij" disabled>
                                 </div>
                                 <div class="col-4 d-flex justify-content-end">
                                     <a class="text-white liens_adm" href="https://sig.ville.gouv.fr/" target="_blank">Site du SIG</a>
@@ -133,6 +135,10 @@
                                 <input type="email" class="form-control" id="resp_mail" placeholder="Mail">
                                 <label for="resp_mail">Mail</label>
                             </div>
+                            <div class="form-floating m-3">
+                                <input type="text" class="form-control" id="autre_contact" placeholder="Autre contact">
+                                <label for="autre_contact">Autre contact</label>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -165,7 +171,7 @@
                                 <label for="site">Site Internet</label>
                             </div>
                             <div class="form-floating m-3">
-                                <textarea class="form-control" placeholder="Présentation (700 car.max.)" id="presentation" style="height:210px;"></textarea>
+                                <textarea class="form-control" placeholder="Présentation (700 car.max.)" id="presentation" style="height:205px;"></textarea>
                                 <label for="presentation">Présentation (700 car.max.)</label>
                             </div>
                             <div class="row my-3 mx-1">
@@ -177,6 +183,15 @@
                                     <input type="text" class="form-control" id="nb_pdn_act" placeholder="Actif(s)" disabled>
                                     <label for="nb_pdn_act" class="ps-3">Actif(s)</label>
                                 </div>
+                            </div>
+                            <div class="form-floating m-3">
+                                <select class="form-select" id="statut" aria-label="Statut *">
+                                    <option selected value="">Statut *</option>
+                                    <option value="Intéressée">Intéressée</option>
+                                    <option value="Dans le réseau">Dans le réseau</option>
+                                    <option value="Sortie du réseau">Sortie du réseau</option>
+                                </select>
+                                <label for="statut">Statut *</label>
                             </div>
                             <div id="btn_str_create" class="form-group d-flex justify-content-center mx-3">
                                 <button type="button" id="str_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalStrAdmin">Enregistrer<br>la structure</button>
@@ -191,6 +206,24 @@
             </div>
         </div>
     </div>
+</div>
+
+<!--                                                                             Tableau PDN -->
+<div id="div_tableau_pdn" class="container">
+<div class="row justify-content-center mt-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="d-none" scope="col" style="width:10px">#</th>
+                <th scope="col" style="width:100px">Date d'entrée</th>
+                <th scope="col" style="width:100px">Prénom</th>
+                <th scope="col" style="width:100px">Nom</th>
+            </tr>
+        </thead>
+        <tbody id="tableau_pdn">
+        </tbody>
+    </table>
+</div>
 </div>
 
 <!--                                                                             Tableau ACT -->

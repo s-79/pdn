@@ -55,6 +55,45 @@ const str_Search = (search) => {
     });
 }
 
+//----------------------------------------------------------------------------- Récupération de la liste des villes
+const ajaxGetVille = (liste) => {
+    $.ajax({
+        url: "php/populate.php",
+        dataType: 'JSON',
+        data : {v_ville:"v_ville"},
+        success: function(response){
+            $(liste).html("<option selected value=''>Séléctionner la ville *</option>");
+            $(liste).append(displayList(response));
+        }
+    });
+}
+
+//----------------------------------------------------------------------------- Récupération de la liste des QPV
+const villeGetQpv = (liste, ville) => {
+    $.ajax({
+        url: "php/populate.php",
+        dataType: 'JSON',
+        data : {v_ville_qpv:ville},
+        success: function(response){
+            $(liste).html("<option selected value=''>Séléctionner le quartier QPV *</option>");
+            $(liste).append(displayList(response));
+        }
+    });
+}
+
+//----------------------------------------------------------------------------- Récupération de la liste des QPV
+const qpvGetPRIJ = (qpv) => {
+    $.ajax({
+        url: "php/str_Get.php",
+        dataType: 'JSON',
+        data : {id_qpv:qpv},
+        success: function(response){
+            const prij = response[0].prij;
+            if (prij === "1") $("#prij").prop('checked', true);
+        }
+    });
+}
+
 // ----------------------------------------------------------------------------- ! ! ! - - G E T - - ! ! !
 
 const ajaxGetStr = (id_str) => {
@@ -82,19 +121,24 @@ const ajaxGetStr = (id_str) => {
             const resp_tel = response[0].resp_tel;
             const resp_mail_nom = response[0].resp_mail_nom;
             const resp_mail_domaine = response[0].resp_mail_domaine;
+            const autre_contact = response[0].autre_contact;
             let nb_pdn_act = response[0].nb_pdn_act;
             const nb_pdn_lab = response[0].nb_pdn_lab;
+            const statut = response[0].statut;
 
             $("#id_str").val(id_str);
             $("#aap").val(aap);
             $("#nom").val(nom);
             $("#type").val(type);
             $("#adresse").val(adresse);
-            $("#ville").val(ville_id);
+            sleep(200).then(() => {
+                $("#ville").val(ville_id);
+                villeGetQpv("#qpv", ville_id);
+                sleep(100).then(() => {$("#qpv").val(qpv);});
+            });
             $("#lat").val(lat);
             $("#lon").val(lon);
-            $("#qpv,#prij").prop('checked', false);
-            if (qpv === "1") $("#qpv").prop('checked', true);
+            $("#prij").prop('checked', false);
             if (prij === "1") $("#prij").prop('checked', true);
             $("#tel").val(tel);
             $("#site").val(site);
@@ -107,7 +151,7 @@ const ajaxGetStr = (id_str) => {
                 $("#postItIcon").addClass("text-white");
             }
             $("#postit").val(postit);
-            $("#image").html(image);
+            $("#image").val(image);
             $("#presentation").val(presentation);
             $("#resp_prenom").val(resp_prenom);
             $("#resp_nom").val(resp_nom);
@@ -116,21 +160,35 @@ const ajaxGetStr = (id_str) => {
             if(resp_mail_domaine) resp_mail = `${resp_mail_nom}@${resp_mail_domaine}`;
             $("#resp_mail").val(resp_mail);
             if (!nb_pdn_act) nb_pdn_act = 0;
+            $("#autre_contact").val(autre_contact);
             $("#nb_pdn_act").val(nb_pdn_act);
             $("#nb_pdn_lab").val(nb_pdn_lab);
+            $("#statut").val(statut);
         }
     });
 }
 
-//----------------------------------------------------------------------------- Récupération des coordos par l'id de l'action
-const ajaxGetVille = (liste) => {
+//----------------------------------------------------------------------------- Remplissage du tableau des PDN en fonction de l'id du PDN
+const ajaxStrPdn = (id_str, liste) => {
     $.ajax({
-        url: "php/populate.php",
+        url: "php/str_Get.php",
         dataType: 'JSON',
-        data : {v_ville:"v_ville"},
+        data : {id_str_tab_pdn:id_str},
         success: function(response){
-            $(liste).html("<option selected value=''>Séléctionner la ville *</option>");
-            $(liste).append(displayList(response));
+            const len = response.length;
+            let res = "";
+            for (let i = 0; i < len; i++) {
+                const id = response[i].id;
+                const prenom = response[i].prenom;
+                const nom = response[i].pdn_nom;
+                const actif = response[i].actif;
+                const date_entree = response[i].date_entree;
+                const date_sortie = response[i].date_sortie;
+                if(parseInt(actif)===1) res +=`<tr style="cursor: pointer;background-color: rgba(0, 255, 0, 0.5);" onclick="id_pdn_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${date_entree}</td><td>${prenom}</td><td>${nom}</td></tr>`;
+                if(date_sortie) res +=`<tr style="cursor: pointer;background-color: rgba(255, 0, 0, 0.3);" onclick="id_pdn_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${date_entree}</td><td>${prenom}</td><td>${nom}</td></tr>`;
+                if(parseInt(actif)===0 && !date_sortie) res +=`<tr style="cursor: pointer;background-color: rgba(240, 255, 0, 0.5);" onclick="id_pdn_storage(${id})"><th class="d-none" scope="row">${id}</th><td>${date_entree}</td><td>${prenom}</td><td>${nom}</td></tr>`;
+            }
+            $(liste).append(res);
         }
     });
 }
@@ -159,11 +217,11 @@ const ajaxStrAct = (id_str, liste) => {
 
 // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
 
-const str_Create = (aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab) => {
+const str_Create = (aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, autre_contact, nb_pdn_lab, statut) => {
     $.ajax({
         url: "php/str.php",
         dataType: 'JSON',
-        data : {aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, postit:postit, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, nb_pdn_lab:nb_pdn_lab},
+        data : {aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, postit:postit, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, autre_contact:autre_contact, nb_pdn_lab:nb_pdn_lab, statut:statut},
         complete: function(){
             $('#message_admin_str').html("Structure ajoutée à la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des structures
@@ -174,11 +232,11 @@ const str_Create = (aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel,
 
 // ---------------------------------------------------------------------------- ! ! ! - - U P D A T E - - ! ! !
 
-const str_Update = (id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab) => {
+const str_Update = (id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, autre_contact, nb_pdn_lab, statut) => {
     $.ajax({
         url: 'php/str.php',
         dataType: 'JSON',
-        data : {id:id, aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, postit:postit, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, nb_pdn_lab:nb_pdn_lab},
+        data : {id:id, aap:aap, nom:nom, type:type, adresse:adresse, ville_id:ville_id, lat:lat, lon:lon, qpv:qpv, prij:prij, tel:tel, site:site, postit:postit, image:image, presentation:presentation, resp_prenom:resp_prenom, resp_nom:resp_nom, resp_tel:resp_tel, resp_mail_nom:resp_mail_nom, resp_mail_domaine:resp_mail_domaine, autre_contact:autre_contact, nb_pdn_lab:nb_pdn_lab, statut:statut},
         complete: function(){
             $('#message_admin_str').html("Structure modifiée dans la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des structures
@@ -216,6 +274,12 @@ const str_Delete = (id) => {
 }
 
 // ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !
+
+// ----------------------------------------------------------------------------- Stockage de l'id du PDN et envoie vers la page act
+const id_pdn_storage = (id) => {
+    sessionStorage.setItem('id_pdn', id);
+    document.location='pdn.php';
+}
 
 // ----------------------------------------------------------------------------- Stockage de l'id de l'action et envoie vers la page act
 const id_act_storage = (id) => {

@@ -21,15 +21,17 @@ $resp_nom = mysqli_real_escape_string($conn, $_GET['resp_nom']);
 $resp_tel = mysqli_real_escape_string($conn, $_GET['resp_tel']);
 $resp_mail_nom = mysqli_real_escape_string($conn, $_GET['resp_mail_nom']);
 $resp_mail_domaine = mysqli_real_escape_string($conn, $_GET['resp_mail_domaine']);
+$autre_contact = mysqli_real_escape_string($conn, $_GET['autre_contact']);
 $nb_pdn_lab = mysqli_real_escape_string($conn, $_GET['nb_pdn_lab']);
+$statut = mysqli_real_escape_string($conn, $_GET['statut']);
 
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 $id_del = mysqli_real_escape_string($conn, $_GET['id_del']);
 
 
-if($id) { $query = "CALL str_Update ('$id', '$aap', '$nom', '$type', '$adresse', '$ville_id', '$lat', '$lon', '$qpv', '$prij', '$tel', '$site', '$postit', '$image', '$presentation', '$resp_prenom', '$resp_nom', '$resp_tel', '$resp_mail_nom', '$resp_mail_domaine', '$nb_pdn_lab')";}
+if($id) { $query = "CALL str_Update ('$id', '$aap', '$nom', '$type', '$adresse', '$ville_id', '$lat', '$lon', '$qpv', '$prij', '$tel', '$site', '$postit', '$image', '$presentation', '$resp_prenom', '$resp_nom', '$resp_tel', '$resp_mail_nom', '$resp_mail_domaine', '$autre_contact', '$nb_pdn_lab', '$statut')";}
 elseif($id_del) { $query = "CALL str_Delete ('$id_del')"; }
-else { $query = "CALL str_Create ('$aap', '$nom', '$type', '$adresse', '$ville_id', '$lat', '$lon', '$qpv', '$prij', '$tel', '$site', '$postit', '$image', '$presentation', '$resp_prenom', '$resp_nom', '$resp_tel', '$resp_mail_nom', '$resp_mail_domaine', '$nb_pdn_lab')"; }
+else { $query = "CALL str_Create ('$aap', '$nom', '$type', '$adresse', '$ville_id', '$lat', '$lon', '$qpv', '$prij', '$tel', '$site', '$postit', '$image', '$presentation', '$resp_prenom', '$resp_nom', '$resp_tel', '$resp_mail_nom', '$resp_mail_domaine', '$autre_contact', '$nb_pdn_lab', '$statut')"; }
 
 $result = $conn->prepare($query);
 

@@ -26,21 +26,21 @@ else { // $_FILES['nom_du_fichier']['error'] vaut 0 soit UPLOAD_ERR_OK // ce qui
             $layer = resize($image_id,$image_prop[0],$image_prop[1]);
             $name = basename($_FILES["nom_du_fichier"]["name"], ".jpg").rand(1000,1000000). ".jpg";
             imagejpeg($layer,$name);
-            echo "img/outil/".$name;
+            echo "img/pdn/".$name;
         }
         elseif( $image_type == IMAGETYPE_GIF ) {
             $image_id = imagecreatefromgif($tmp_name);
             $layer = resize($image_id,$image_prop[0],$image_prop[1]);
             $name = basename($_FILES["nom_du_fichier"]["name"], ".gif").rand(1000,1000000). ".gif";
             imagegif($layer,$name);
-            echo "img/outil/".$name;
+            echo "img/pdn/".$name;
         }
         elseif( $image_type == IMAGETYPE_PNG ) {
             $image_id = imagecreatefrompng($tmp_name);
             $layer = resize($image_id,$image_prop[0],$image_prop[1]);
             $name = basename($_FILES["nom_du_fichier"]["name"], ".png").rand(1000,1000000).".png";
             imagepng($layer,$name);
-            echo "img/outil/".$name;
+            echo "img/pdn/".$name;
         }
         else {
             echo "Merci d'envoyer un fichier jpg, gif ou png.";

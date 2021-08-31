@@ -92,9 +92,11 @@ const ajaxGetPdn = (id_pdn) => {
             $("#date_entree").val(date_entree);
             $("#prenom").val(prenom);
             $("#nom").val(nom);
-            $("#photo").val("");
+            $("#image").val(photo);
             $("#fonction").val(fonction);
-            $("#structure").val(str_id);
+            sleep(200).then(() => {$("#structure").val(str_id);});
+            $("#go_str").removeClass("text-muted");
+            $("#go_str").addClass("text-white");
             const mail = `${mail_nom}@${mail_domaine}`;
             $("#mail").val(mail);
             $("#tel").val(tel);

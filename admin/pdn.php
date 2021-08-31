@@ -29,7 +29,8 @@
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
                             <h1>Coordonnées</h1>
-                            <i id="new_pdn" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un·e PDN"></i>
+                            <i id="new_pdn" class="ps-3 me-5 pe-1 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un·e PDN"></i>
+                            <i id="go_str" class="ms-5 ps-3 fas fa-store-alt fa-2x text-muted pointeur" data-toggle="tooltip" data-placement="top" title="Aller vers la structure"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
                         <form  id="form_pdn1">

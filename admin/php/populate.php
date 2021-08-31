@@ -11,6 +11,7 @@ $v_part = mysqli_real_escape_string($conn, $_GET['v_part']);
 $v_coordo = mysqli_real_escape_string($conn, $_GET['v_coordo']);
 $v_act = mysqli_real_escape_string($conn, $_GET['v_act']);
 $v_ville = mysqli_real_escape_string($conn, $_GET['v_ville']);
+$v_ville_qpv = mysqli_real_escape_string($conn, $_GET['v_ville_qpv']);
 $v_them = mysqli_real_escape_string($conn, $_GET['v_them']);
 $v_cat = mysqli_real_escape_string($conn, $_GET['v_cat']);
 $search_act = mysqli_real_escape_string($conn, $_GET['search_act']);
@@ -28,6 +29,7 @@ elseif($v_part) {$query = "SELECT `id`, `nom` FROM `v_part` ORDER BY `nom`;";}
 elseif($v_coordo) {$query = "SELECT `id`, `nom` FROM `v_coordo` ORDER BY `id`;";}
 elseif($v_act) {$query = "SELECT `id`, `nom` FROM `v_act` ORDER BY `nom` DESC;";}
 elseif($v_ville) {$query = "SELECT `id`, `nom` FROM `v_ville` ORDER BY `nom`;";}
+elseif($v_ville_qpv) {$query = "SELECT `id`, `nom` FROM `v_qpv` WHERE `id_ville` = '$v_ville_qpv' ORDER BY `id`;";}
 elseif($v_them) {$query = "SELECT `id`, `nom` FROM `v_them` ORDER BY `nom`;";}
 elseif($v_cat) {$query = "SELECT `id`, `nom` FROM `v_cat` ORDER BY `nom`;";}
 elseif($search_act) {$query = "SELECT `id`, `nom` FROM `v_act` WHERE `nom` LIKE CONCAT('%','$search_act','%') ORDER BY `nom`;";}

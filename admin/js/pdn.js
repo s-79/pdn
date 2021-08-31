@@ -16,6 +16,32 @@ $(function(){
         $("#modalPdnPostIt").modal('show');
     });
 
+    // ------------------------------------------------------------------------- Évenement change sur la liste tructure
+    $("#structure").change(function(){
+        const id_str = $("#structure").val();
+        if(id_str) {
+            $("#go_str").removeClass("text-muted");
+            $("#go_str").addClass("text-white");
+        } else {
+            $("#go_str").removeClass("text-white");
+            $("#go_str").addClass("text-muted");
+        }
+    });
+
+    // ------------------------------------------------------------------------- Évenement clic sur l'icone structure
+    $("#go_str").click(function(){
+        const id_str = $("#structure").val();
+        if(id_str) {
+            // ----------------------------------------------------------------- STORAGE : Stockage de l'id de la structure et envoie vers la page str
+            sessionStorage.setItem('id_str', id_str);
+            document.location='str.php';
+        } else {
+            $('#message_admin_pdn').html(`Ce·tte PDN n'est pas encore attaché·e à une structure`);
+            $('#modalPdnAdmin').modal('show');
+
+        }
+    });
+
     // ------------------------------------------------------------------------- Lorsqu'on referme le post-it, l'icone devient jaune s'il y a du contenu
     // $('#modalStrPostIt').on('shown.bs.modal', function () {                  => Pour faire l'inverse
     $('#modalPdnPostIt').on('hidden.bs.modal', function () {
@@ -239,6 +265,9 @@ const pdn_Reset = () => {
     document.getElementById("form_pdn5").reset();
     //-------------------------------------------------------------------------- Remplissage de la liste des structures
     ajaxGetStr("#structure");
+    //-------------------------------------------------------------------------- Réinitialisation du logo str
+    $("#go_str").removeClass("text-white");
+    $("#go_str").addClass("text-muted");
     //-------------------------------------------------------------------------- Réinitialisation du post-it
     $("#postItIcon").removeClass("text-warning");
     $("#postItIcon").addClass("text-white");

@@ -39,9 +39,23 @@ $(function(){
     //-------------------------------------------------------------------------- Remplissage du champs de recherche d'événements
     ajaxListStr("#str_res");
 
-    //-------------------------------------------------------------------------- Remplissage de la liste des structures
+    //-------------------------------------------------------------------------- Remplissage de la liste des villes
     ajaxGetVille("#ville");
 
+    // ------------------------------------------------------------------------- Évenement change sur les villes
+    $("#ville").change(function(){
+        const ville = $("#ville").val();
+        //---------------------------------------------------------------------- Remplissage de la liste des QPV
+        villeGetQpv("#qpv", ville);
+    });
+
+    // ------------------------------------------------------------------------- Évenement change la liste QPV
+    $("#qpv").change(function(){
+        const qpv = $("#qpv").val();
+        $("#prij").prop('checked', false);
+        //---------------------------------------------------------------------- Remplissage de la liste des QPV
+        qpvGetPRIJ(qpv);
+    });
 
     //-------------------------------------------------------------------------- Outil de recherche d'évenements
     $("#str_search").keyup(function(){
@@ -85,8 +99,7 @@ $(function(){
         if(isNaN(lat) || lat%1 === 0) lat = 0;
         let lon = $("#lon").val();
         if(isNaN(lon) || lon%1 === 0) lon = 0;
-        let qpv =  $("#qpv").is(':checked');
-        if(qpv)qpv=1;else{qpv=0};
+        const qpv = $("#qpv").val();
         let prij =  $("#prij").is(':checked');
         if(prij)prij=1;else{prij=0};
         const tel = $("#tel").val();
@@ -103,16 +116,18 @@ $(function(){
         let resp_mail_nom = resp_mail.split("@");
         const resp_mail_domaine = resp_mail_nom[1];
         resp_mail_nom = resp_mail_nom[0];
+        const autre_contact = $("#autre_contact").val();
         const nb_pdn_lab = $("#nb_pdn_lab").val();
+        const statut = $("#statut").val();
 
         // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
-        if(!aap || !nom || !type || !adresse || !ville_id || !nb_pdn_lab) {
-            $('#message_admin_str').html("Merci de remplir au minimum les champs <b>Appel à projets, Nom, Type, Adresse, Ville</b> et d'indiquer <b>en chiffre</b> le nombre de PDN labellisé·es sur la structure.");
+        if(!aap || !nom || !type || !adresse || !ville_id || !nb_pdn_lab || !qpv || !statut) {
+            $('#message_admin_str').html("Les champs <b>Appel à projets, Nom, Type, Adresse, Ville, Quartier QPV et Statut</b> sont obligatoires.</br>Le nombre de PDN labellisé·es sur la structure doit être indiqué <b>en chiffres</b>.");
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Post-It",postit,700,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
+            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Autre Contact",autre_contact,255,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Post-It",postit,700,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-                str_Create(aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab);
+                str_Create(aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, autre_contact, nb_pdn_lab, statut);
             }
         }
     })
@@ -132,8 +147,7 @@ $(function(){
         if(isNaN(lat) || lat%1 === 0) lat = 0;
         let lon = $("#lon").val();
         if(isNaN(lon) || lon%1 === 0) lon = 0;
-        let qpv =  $("#qpv").is(':checked');
-        if(qpv)qpv=1;else{qpv=0};
+        const qpv = $("#qpv").val();
         let prij =  $("#prij").is(':checked');
         if(prij)prij=1;else{prij=0};
         const tel = $("#tel").val();
@@ -150,16 +164,18 @@ $(function(){
         let resp_mail_nom = resp_mail.split("@");
         const resp_mail_domaine = resp_mail_nom[1];
         resp_mail_nom = resp_mail_nom[0];
+        const autre_contact = $("#autre_contact").val();
         const nb_pdn_lab = $("#nb_pdn_lab").val();
+        const statut = $("#statut").val();
 
         // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
-        if(!aap || !nom || !type || !adresse || !ville_id || !nb_pdn_lab) {
-            $('#message_admin_str').html("Merci de remplir au minimum les champs <b>Appel à projets, Nom, Type, Adresse, Ville</b> et d'indiquer <b>en chiffre</b> le nombre de PDN labellisé·es sur la structure.");
+        if(!aap || !nom || !type || !adresse || !ville_id || !nb_pdn_lab || !qpv || !statut) {
+            $('#message_admin_str').html("Les champs <b>Appel à projets, Nom, Type, Adresse, Ville, Quartier QPV et Statut</b> sont obligatoires.</br>Le nombre de PDN labellisé·es sur la structure doit être indiqué <b>en chiffres</b>.");
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
-            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Post-It",postit,700,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
+            if(vLen("Nom",nom,100,"#message_admin_str") && vLen("Adresse",adresse,100,"#message_admin_str") && vLen("Nom responsable",resp_nom,100,"#message_admin_str") && vLen("Prénom responsable",resp_prenom,100,"#message_admin_str") && vLen("Mail avant @",resp_mail_nom,50,"#message_admin_str") && vLen("Autre Contact",autre_contact,255,"#message_admin_str") && vLen("Mail après @",resp_mail_domaine,50,"#message_admin_str") && vLen("Téléphone",tel,50,"#message_admin_str") && vLen("Site",site,500,"#message_admin_str") && vLen("Post-It",postit,700,"#message_admin_str") && vLen("Présentation",presentation,700,"#message_admin_str")) {
                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-                str_Update(id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, nb_pdn_lab);
+                str_Update(id, aap, nom, type, adresse, ville_id, lat, lon, qpv, prij, tel, site, postit, image, presentation, resp_prenom, resp_nom, resp_tel, resp_mail_nom, resp_mail_domaine, autre_contact, nb_pdn_lab, statut);
             }
         }
     })
@@ -187,13 +203,13 @@ const str_Get = (id_str) => {
         //---------------------------------------------------------------------- Récupération des données du str
         ajaxGetStr(id_str);
 
-        //---------------------------------------------------------------------- Réinitialisation du tableau action
+        //---------------------------------------------------------------------- Réinitialisation des tableaux PDN et  action
         $("#tableau_act").html("");
+        $("#tableau_pdn").html("");
 
-        //---------------------------------------------------------------------- Remplissage du tableau
+        //---------------------------------------------------------------------- Remplissage des tableaux
         ajaxStrAct(id_str, "#tableau_act");
-
-
+        ajaxStrPdn(id_str, "#tableau_pdn");
 
         //---------------------------------------------------------------------- Inversement des boutons en bas de page
         $("#btn_str_create").addClass("d-none");
@@ -210,6 +226,9 @@ const str_Reset = () => {
     document.getElementById("form_str2").reset();
     document.getElementById("form_str3").reset();
     document.getElementById("form_str4").reset();
+    //---------------------------------------------------------------------- Réinitialisation des tableaux PDN et action
+    $("#tableau_act").html("");
+    $("#tableau_pdn").html("");
     //-------------------------------------------------------------------------- Remplissage de la liste des structures
     ajaxGetStr("#structure");
     //-------------------------------------------------------------------------- Réinitialisation du post-it
