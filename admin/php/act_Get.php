@@ -63,7 +63,7 @@ if($id) {
             "nb_part" => $nb_part,
             "nb_str" => $nb_str,
             "nb_pers" => $nb_pers,
-            "commentaires" => $commentaire
+            "commentaires" => $commentaires
         );
     }
 // ----------------------------------------------------------------------------- Récupération de la liste des coordo qui ont participé à l'action en fonction de l'id de l'action
