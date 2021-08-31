@@ -97,10 +97,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter ou modifier/supprimer un.e coordo</h5>
+        <h3 class="modal-title" id="exampleModalLabel">Ajouter ou modifier/supprimer un.e coordo</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body text-center">
+      <div class="modal-body text-center my-3">
           Souhaitez-vous ajouter ou modifier/supprimer un.e coordo ?
       </div>
       <div class="modal-footer">
@@ -116,7 +116,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ajouter un.e coordo</h5>
+                <h3 class="modal-title" id="exampleModalLabel">Ajouter un.e coordo</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -128,6 +128,10 @@
                     <div class="form-floating mx-3 mt-3">
                         <input type="text" class="form-control" id="create_nom_coordo" placeholder="Nom *">
                         <label for="create_nom_coordo">Nom *</label>
+                    </div>
+                    <div class="my-4 mx-3">
+                        <label class="form-check-label ms-2 me-2" for="create_actif">Actif</label>
+                        <input class="form-check-input" type="checkbox" value="" id="create_actif">
                     </div>
                 </form>
             </div>
@@ -143,7 +147,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modifier ou supprimer un.e coordo</h5>
+                <h3 class="modal-title" id="exampleModalLabel">Modifier ou supprimer un.e coordo</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -160,6 +164,10 @@
                     <div class="form-floating mx-3 mt-3">
                         <input type="text" class="form-control" id="update_nom_coordo" placeholder="Nom du / de la coordo">
                         <label for="update_nom_coordo">Modifier le nom du / de la coordo</label>
+                    </div>
+                    <div class="my-4 mx-3">
+                        <label class="form-check-label ms-2 me-2" for="update_actif">Actif</label>
+                        <input class="form-check-input" type="checkbox" value="" id="update_actif">
                     </div>
                 </form>
             </div>
