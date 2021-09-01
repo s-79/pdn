@@ -325,6 +325,7 @@ const coordo_Create = (prenom, nom, actif) => {
         dataType: 'JSON',
         data : {prenom_create_coordo:prenom, nom_coordo:nom, actif_coordo:actif},
         complete: function(){
+            $("#modal_coordo").modal('hide');
             $("#modal_coordo_create").modal('hide');
             //------------------------------------------------------------------ Actualisation de la liste des Coordos
             ajaxListCoordo("#coordo");
@@ -339,6 +340,7 @@ const coordo_Update = (id, prenom, nom, actif) => {
         dataType: 'JSON',
         data : {id_up_coordo:id, prenom_coordo:prenom, nom_coordo:nom, actif_coordo:actif},
         complete: function(){
+            $("#modal_coordo").modal('hide');
             $("#modal_coordo_update").modal('hide');
             //------------------------------------------------------------------ Actualisation de la liste des Coordos
             ajaxListCoordo("#coordo");
@@ -354,6 +356,7 @@ const coordo_Delete = (id) => {
         dataType: 'JSON',
         data : {id_del_coordo:id},
         complete: function(){
+            $("#modal_coordo").modal('hide');
             $("#modal_coordo_update").modal('hide');
             //------------------------------------------------------------------ Actualisation de la liste des Coordos
             ajaxListCoordo("#coordo");

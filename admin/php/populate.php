@@ -26,7 +26,7 @@ if($v_pdn) {$query = "SELECT `id`, `nom` FROM `v_str_pdn` ORDER BY `nom`;";}
 elseif($v_str) {$query = "SELECT `id`, `nom` FROM `v_str` ORDER BY `nom`;";}
 elseif($v_ress) {$query = "SELECT `id`, `nom` FROM `v_ress` ORDER BY `nom`;";}
 elseif($v_part) {$query = "SELECT `id`, `nom` FROM `v_part` ORDER BY `nom`;";}
-elseif($v_coordo) {$query = "SELECT `id`, `nom` FROM `v_coordo` ORDER BY `id`;";}
+elseif($v_coordo) {$query = "SELECT `id`, `nom` FROM `v_coordo` ORDER BY `id` DESC;";}
 elseif($v_act) {$query = "SELECT `id`, `nom` FROM `v_act` ORDER BY `nom` DESC;";}
 elseif($v_ville) {$query = "SELECT `id`, `nom` FROM `v_ville` ORDER BY `nom`;";}
 elseif($v_ville_qpv) {$query = "SELECT `id`, `nom` FROM `v_qpv` WHERE `id_ville` = '$v_ville_qpv' ORDER BY `id`;";}
