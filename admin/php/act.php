@@ -45,6 +45,13 @@ $commentaires = mysqli_real_escape_string($conn, $_GET['commentaires']);
 // $nb_pers = 5;
 // $commentaires = "commentaires";
 
+$prenom_create_coordo = mysqli_real_escape_string($conn, $_GET['prenom_create_coordo']);
+$prenom_coordo = mysqli_real_escape_string($conn, $_GET['prenom_coordo']);
+$nom_coordo = mysqli_real_escape_string($conn, $_GET['nom_coordo']);
+$actif_coordo = mysqli_real_escape_string($conn, $_GET['actif_coordo']);
+$id_up_coordo = mysqli_real_escape_string($conn, $_GET['id_up_coordo']);
+$id_del_coordo = mysqli_real_escape_string($conn, $_GET['id_del_coordo']);
+
 $id = mysqli_real_escape_string($conn, $_GET['id']);
 $id_del = mysqli_real_escape_string($conn, $_GET['id_del']);
 
@@ -59,6 +66,10 @@ $id_act_del_asso = mysqli_real_escape_string($conn, $_GET['id_act_del_asso']);
 
 if($id) { $query = "CALL act_Update ('$id', '$dat', '$type', '$organise', '$intitule', '$uuid', '$lieu', '$ville', '$pj', '$support', '$facebook', '$whatsapp', '$twitter', '$site', '$nb_ress', '$duree', '$nb_pdn', '$nb_part', '$nb_str', '$nb_pers', '$commentaires')"; }
 elseif($id_del) { $query = "CALL act_Delete('$id_del')"; }
+
+elseif($prenom_create_coordo) { $query = "CALL coordo_Create ('$prenom_create_coordo', '$nom_coordo', '$actif_coordo')"; }
+elseif($id_up_coordo) { $query = "CALL coordo_Update ('$id_up_coordo', '$prenom_coordo', '$nom_coordo', '$actif_coordo')"; }
+elseif($id_del_coordo) { $query = "CALL coordo_Delete ('$id_del_coordo')"; }
 
 elseif($id_coordo) { $query = "CALL act_Create_Coordo ('$id_act', '$id_coordo')"; }
 elseif($id_ress) { $query = "CALL act_Create_Ress ('$id_act', '$id_ress')"; }

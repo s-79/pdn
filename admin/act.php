@@ -26,7 +26,7 @@ include("header.php"); ?>
         <div class="d-flex justify-content-center">
             <div class="row formulaires">
                 <!--                                                            État Civil-->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
                             <h1>Action</h1>
@@ -82,7 +82,7 @@ include("header.php"); ?>
                     </div>
                 </div>
                 <!--                                                            Modalités -->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="row pt-3">
                             <div class="col-10">
@@ -151,7 +151,7 @@ include("header.php"); ?>
                     </div>
                 </div>
                 <!--                                                            Participation -->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <h1 class="pt-3">Participation</h1>
 

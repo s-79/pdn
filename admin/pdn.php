@@ -21,16 +21,16 @@
         </div>
     </div>
 
-    <div id="form_pdn" class="mx-auto" style="max-width:80%;">
+    <div id="form_pdn" class="mx-auto">
         <div class="d-flex justify-content-center">
             <div class="row formulaires">
                 <!--                                                                                                              Coordonnées-->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
                             <h1>Coordonnées</h1>
                             <i id="new_pdn" class="ps-3 me-5 pe-1 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un·e PDN"></i>
-                            <i id="go_str" class="ms-5 ps-3 fas fa-store-alt fa-2x text-muted pointeur" data-toggle="tooltip" data-placement="top" title="Aller vers la structure"></i>
+                            <i id="go_str" class="ms-5 fas fa-store-alt fa-2x text-muted pointeur" data-toggle="tooltip" data-placement="top" title="Aller vers la structure"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
                         <form  id="form_pdn1">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <!--                                                                                                              Réseaux sociaux -->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <h1 class="pt-3">Réseaux sociaux</h1>
                         <form id="form_pdn4">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <!--                                                                                                              Coordonnées -->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex justify-content-between pt-3 pe-3">
                             <h1>Présentation</h1>

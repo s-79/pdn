@@ -101,7 +101,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center my-3">
-          Souhaitez-vous ajouter ou modifier/supprimer un.e coordo ?
+          Souhaitez-vous ajouter ou modifier/supprimer un·e coordo ?
       </div>
       <div class="modal-footer">
           <button id="btn_coordo_create" type="button" class="btn btn-primary close-modal" data-bs-toggle="modal" data-bs-target="#modal_coordo_create">Ajouter</button>
@@ -116,7 +116,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Ajouter un.e coordo</h3>
+                <h3 class="modal-title" id="exampleModalLabel">Ajouter un·e coordo</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -130,8 +130,8 @@
                         <label for="create_nom_coordo">Nom *</label>
                     </div>
                     <div class="my-4 mx-3">
-                        <label class="form-check-label ms-2 me-2" for="create_actif">Actif</label>
-                        <input class="form-check-input" type="checkbox" value="" id="create_actif">
+                        <label class="form-check-label ms-3 me-2" for="create_actif_coordo">Actif</label>
+                        <input class="form-check-input" type="checkbox" value="" id="create_actif_coordo">
                     </div>
                 </form>
             </div>
@@ -151,12 +151,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <div class="form-floating mx-3 mt-4">
+                    <select class="form-select" id="select_nom_coordo" aria-label="Nom du coordo">
+                    </select>
+                    <label for="select_nom_coordo">Séléctionner le nom du / de la coordo à modifier</label>
+                </div>
                 <form id="form_coordo_update">
-                    <div class="form-floating mx-3 mt-4">
-                        <select class="form-select" id="select_nom_coordo" aria-label="Nom du coordo">
-                        </select>
-                        <label for="select_nom_coordo">Séléctionner le nom du / de la coordo à modifier</label>
-                    </div>
+                    <!--                                                                                                        Récupération de l'id dans un input invisible -->
+                    <input type="text" class="form-control d-none" id="update_id_coordo">
                     <div class="form-floating mx-3 mt-3">
                         <input type="text" class="form-control" id="update_prenom_coordo" placeholder="Prénom du / de la coordo">
                         <label for="update_prenom_coordo">Modifier le prénom du / de la coordo</label>
@@ -166,8 +168,8 @@
                         <label for="update_nom_coordo">Modifier le nom du / de la coordo</label>
                     </div>
                     <div class="my-4 mx-3">
-                        <label class="form-check-label ms-2 me-2" for="update_actif">Actif</label>
-                        <input class="form-check-input" type="checkbox" value="" id="update_actif">
+                        <label class="form-check-label ms-3 me-2" for="update_actif_coordo">Actif</label>
+                        <input class="form-check-input" type="checkbox" value="" id="update_actif_coordo">
                     </div>
                 </form>
             </div>

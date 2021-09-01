@@ -21,11 +21,11 @@
         </div>
     </div>
 
-    <div id="form_ress" class="mx-auto" style="max-width:80%;">
+    <div id="form_ress" class="mx-auto">
         <div class="d-flex justify-content-center">
             <div class="row formulaires">
                 <!--                                                                                                              Ressources-->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
                             <h1>Ressources</h1>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <!--                                                                                                              Thématiques-->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:350px">
                         <div class="pt-3">
                             <h1>Thématiques</h1>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <!--                                                                                                              Présentation -->
-                <div class="col-12 col-lg-6 col-xl-4">
+                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="pt-3">
                             <h1>Présentation</h1>

@@ -5,6 +5,7 @@ include "../../php/base.php";
 $return_arr = array();
 
 $id = mysqli_real_escape_string($conn, $_GET['id']);
+$id_coordo = mysqli_real_escape_string($conn, $_GET['id_coordo']);
 $id_act_coordo = mysqli_real_escape_string($conn, $_GET['id_act_coordo']);
 $id_act_ress = mysqli_real_escape_string($conn, $_GET['id_act_ress']);
 $id_act_pdn = mysqli_real_escape_string($conn, $_GET['id_act_pdn']);
@@ -66,9 +67,10 @@ if($id) {
             "commentaires" => $commentaires
         );
     }
+
 // ----------------------------------------------------------------------------- Récupération de la liste des coordo qui ont participé à l'action en fonction de l'id de l'action
 } elseif($id_act_coordo) {
-    $query = "SELECT `id` FROM `v_act_coordo` WHERE `act_id` = '$id_act_coordo';";
+    $query = "SELECT `id` FROM `v_act_coordo` WHERE `id` = '$id_act_coordo';";
 
     $result = mysqli_query($conn,$query);
 
@@ -77,6 +79,25 @@ if($id) {
         $return_arr[] = array("id" => $id);
     }
 
+// ----------------------------------------------------------------------------- Récupération de la liste des coordo qui ont participé à l'action en fonction de l'id de l'action
+} elseif($id_coordo) {
+    $query = "SELECT * FROM `v_coordo` WHERE `id` = '$id_coordo';";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $prenom = $row['prenom'];
+        $nom = $row['nom_coordo'];
+        $actif = $row['actif'];
+
+        $return_arr[] = array(
+            "id" => $id,
+            "prenom" => $prenom,
+            "nom" => $nom,
+            "actif" => $actif
+        );
+    }
 // ----------------------------------------------------------------------------- Récupération de la liste des ressources qui ont été partagée via l'action en fonction de l'id de l'action
 } elseif($id_act_ress) {
     $query = "SELECT `id` FROM `v_act_ress` WHERE `act_id` = '$id_act_ress';";

@@ -212,6 +212,20 @@ const ajaxListCoordo = (liste) => {
     });
 }
 
+/* ---------------------------------------------------------------------------- Remplissage de la liste des Coordo */
+const ajaxNewCoordo = (liste) => {
+    $.ajax({
+        url: "php/populate.php",
+        dataType: 'JSON',
+        data : {v_coordo:"v_coordo"},
+        success: function(response){
+            const len = response.length;
+            $(liste).html("<option selected value=''>Séléctionner un·e coordo</option>");
+            $(liste).append(displayList(response));
+        }
+    });
+}
+
 // ----------------------------------------------------------------------------- ! ! ! - - G E T - - ! ! !
 
 const ajaxGetAct = (id_act) => {
@@ -265,6 +279,8 @@ const ajaxGetAct = (id_act) => {
     });
 }
 
+// ----------------------------------------------------------------------------- ! ! ! - - C O O R D O - - ! !
+
 //----------------------------------------------------------------------------- Récupération des coordos par l'id de l'action
 const ajaxGetCoordo = (id_act) => {
     $.ajax({
@@ -281,6 +297,71 @@ const ajaxGetCoordo = (id_act) => {
         }
     });
 }
+
+//----------------------------------------------------------------------------- Récupération des coordos par l'id de l'action
+const coordoGetInfos = (id_coordo) => {
+    $.ajax({
+        url: "php/act_Get.php",
+        dataType: 'JSON',
+        data : {id_coordo:id_coordo},
+        success: function(response){
+            const id = response[0].id;
+            const prenom = response[0].prenom;
+            const nom = response[0].nom;
+            const actif = response[0].actif;
+
+            $("#update_id_coordo").val(id);
+            $("#update_prenom_coordo").val(prenom);
+            $("#update_nom_coordo").val(nom);
+            $("#update_actif_coordo").prop('checked', false);
+            if (parseInt(actif) === 1) $("#update_actif_coordo").prop('checked', true);
+        }
+    });
+}
+
+const coordo_Create = (prenom, nom, actif) => {
+    $.ajax({
+        url: "php/act.php",
+        dataType: 'JSON',
+        data : {prenom_create_coordo:prenom, nom_coordo:nom, actif_coordo:actif},
+        complete: function(){
+            $("#modal_coordo_create").modal('hide');
+            //------------------------------------------------------------------ Actualisation de la liste des Coordos
+            ajaxListCoordo("#coordo");
+            alert("Coordo ajouté·e à la base de données.");
+        }
+    });
+}
+
+const coordo_Update = (id, prenom, nom, actif) => {
+    $.ajax({
+        url: "php/act.php",
+        dataType: 'JSON',
+        data : {id_up_coordo:id, prenom_coordo:prenom, nom_coordo:nom, actif_coordo:actif},
+        complete: function(){
+            $("#modal_coordo_update").modal('hide');
+            //------------------------------------------------------------------ Actualisation de la liste des Coordos
+            ajaxListCoordo("#coordo");
+            alert("Coordo modifié·e dans la base de données.");
+        }
+    });
+}
+
+const coordo_Delete = (id) => {
+    //------------------------------------------------------------------------- Envoie de l'id vers la BDD pour suppression des associations
+    $.ajax({
+        url: "php/act.php",
+        dataType: 'JSON',
+        data : {id_del_coordo:id},
+        complete: function(){
+            $("#modal_coordo_update").modal('hide');
+            //------------------------------------------------------------------ Actualisation de la liste des Coordos
+            ajaxListCoordo("#coordo");
+            alert('Coordo supprimé·e de la base de données.')
+        }
+    });
+}
+
 
 //----------------------------------------------------------------------------- Récupération des ressources par l'id de l'action
 const ajaxGetRess = (id_act) => {
@@ -608,7 +689,6 @@ const act_Delete = (id) => {
             });
         }
     });
-
 }
 
 // ----------------------------------------------------------------------------- ! ! ! - - F O N C T I O N S - - ! ! !

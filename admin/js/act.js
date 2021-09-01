@@ -4,7 +4,7 @@ $(function(){
     // ------------------------------------------------------------------------- Mise en valeur du menu actuel dans la Navbar
     $("#menu_act").toggleClass("nav-link-toggle");
 
-    // ---------------------------------------------------------------------------- Activation de la touche Entrée dans le champ "search"
+    // ------------------------------------------------------------------------- Activation de la touche Entrée dans le champ "search"
     $("#act_search").on('keyup', function (event) {
         if (event.keyCode === 13) {
             $('#infos').click();
@@ -33,10 +33,81 @@ $(function(){
         }
     });
 
+    // ------------------------------------------------------------------------- ! ! ! - -  C O O R D O - - ! ! !
+
     //-------------------------------------------------------------------------- Remplissage de la liste des Coordos
     ajaxListCoordo("#coordo");
 
+    // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON COORDO CREATE
+    $("#btn_coordo_create").click(function() {
+        //---------------------------------------------------------------------- Réinitialisation du formulaire
+        document.getElementById("form_coordo_create").reset();
+    });
+    // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON COORDO UPDATE
+    $("#btn_coordo_update").click(function() {
+        //---------------------------------------------------------------------- Réinitialisation du formulaire
+        document.getElementById("form_coordo_update").reset();
+        //------------------------------------------------------------------- -- Remplissage de la liste des Coordos
+        ajaxNewCoordo("#select_nom_coordo");
+    });
+
+    //------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON "AJOUTER" DANS LE MODAL COORDO
+    $('#coordo_create').click(function(){
+        // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
+        const prenom = $("#create_prenom_coordo").val();
+        const nom = $("#create_nom_coordo").val();
+        let actif =  $("#create_actif_coordo").is(':checked');
+        if(actif)actif=1;else{actif=0};
+
+        // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
+        if(!prenom || !nom) {
+            alert("Les champs Prénom et Nom sont obligatoires.");
+        } else {
+            // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
+            if(vLen("Prénom",prenom,100) && vLen("Nom",nom,100)) {
+
+                //-------------------------------------------------------------- Envoie des infos vers la BDD
+                coordo_Create(nom, prenom, actif);
+            }
+        }
+    })
+
+    //------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON "AJOUTER" DANS LE MODAL COORDO
+    $('#coordo_update').click(function(){
+        // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
+        const id = $("#update_id_coordo").val();
+        const prenom = $("#update_prenom_coordo").val();
+        const nom = $("#update_nom_coordo").val();
+        let actif =  $("#update_actif_coordo").is(':checked');
+        if(actif)actif=1;else{actif=0};
+
+        // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
+        if(!prenom || !nom) {
+            alert("Les champs Prénom et Nom sont obligatoires.");
+        } else {
+            // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
+            if(vLen("Prénom",prenom,100) && vLen("Nom",nom,100)) {
+
+                //-------------------------------------------------------------- Envoie des infos vers la BDD
+                coordo_Update(id, nom, prenom, actif);
+            }
+        }
+    })
+
+    //-------------------------------------------------------------------------- EVENEMENT CLICK SUR LE BOUTON SUPPRIMER UNE ACTION
+    $('#coordo_delete').click(function(){
+        const id = $("#update_id_coordo").val();
+        coordo_Delete(id);
+    })
+
     // ------------------------------------------------------------------------- ! ! ! - - C H A N G E - - ! ! !
+
+    // ------------------------------------------------------------------------- ÉVENEMENT CHANGE SUR LE MENU SELECT DES COORDOS
+    $("#select_nom_coordo").change(function() {
+        //------------------------------------------------------------------- -- Récupération des infos coordos
+        id_coordo = $("#select_nom_coordo").val();
+        coordoGetInfos(id_coordo);
+    });
 
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON + SELECT RESSOURCES
     $("#select_ress").click(function() {
