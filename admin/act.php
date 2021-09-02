@@ -29,13 +29,13 @@ include("header.php"); ?>
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
-                            <h1>Action</h1>
+                            <h1 style="padding-top:0.13em;">Action</h1>
                             <i id="new_act" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Créer une nouvelle action"></i>
                         </div>
                         <!--                                                    Récupération de l'id dans un input invisible -->
                         <input type="text" class="form-control d-none" id="id_act">
 
-                        <div class="form-floating mx-3 mt-3">
+                        <div class="form-floating mx-3 mt-4">
                             <input type="date" class="form-control" id="date" placeholder="Date de l'événement *">
                             <label for="date">Date de l'événement *</label>
                         </div>
@@ -84,14 +84,7 @@ include("header.php"); ?>
                 <!--                                                            Modalités -->
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <div class="row pt-3">
-                            <div class="col-10">
-                                <h1>Modalités</h1>
-                            </div>
-                            <!-- <div class="col-2">
-                                <i id="pj" class="fas fa-paperclip fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter une pièce jointe"></i>
-                            </div> -->
-                        </div>
+                        <h1 class= "pt-3 pb-2" style="padding-top:0.13em;">Modalités</h1>
                         <div class="form-floating mx-3 mt-4">
                             <select class="form-select type_m" id="support" aria-label="Support de communication *">
                                 <option selected value="">Séléctionner un support *</option>
@@ -153,7 +146,7 @@ include("header.php"); ?>
                 <!--                                                            Participation -->
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3">Participation</h1>
+                        <h1 class="pt-3 pb-2" style="padding-top:0.13em;">Participation</h1>
 
                         <div class="row mt-4 me-1">
                             <div class="form-floating mx-3 col-8">

@@ -28,7 +28,7 @@
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
-                            <h1>Ressources</h1>
+                            <h1 style="padding-top:0.12em;">Ressources</h1>
                             <i id="new_ress" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter une ressource"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
@@ -76,11 +76,11 @@
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:350px">
                         <div class="pt-3">
-                            <h1>Thématiques</h1>
+                            <h1 style="padding-top:0.12em;">Thématiques</h1>
                         </div>
                         <form  id="form_ress4">
-                            <div id="ressCat" class="mx-3 pt-2"></div>
-                            <div id="ressThem" class="mx-3 mt-3"  style="overflow-y:scroll; overflow-x:hidden; height:205px; scrollbar-color: rgb(232, 80, 23) white;"></div>
+                            <div id="ressCat" class="mx-3 mt-4"></div>
+                            <div id="ressThem" class="mx-3 mt-3"  style="overflow-y:scroll; overflow-x:hidden; height:198px; scrollbar-color: rgb(232, 80, 23) white;"></div>
                         </form>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="pt-3">
-                            <h1>Présentation</h1>
+                            <h1 style="padding-top:0.12em;">Présentation</h1>
                         </div>
                         <form  id="form_ress5">
                             <div class="form-floating m-3 mt-4">

@@ -23,10 +23,12 @@ section {
 
 /* ----------------------------------------------------------------------------- TEXTES */
 /* xx-small 0.6, x-small 0.75, small 8/9, medium 1, large 1.2, x-large 1.5, xx-large 2 */
-h1, .titre {
-    font-size: x-large;
+
+h1 {
+    font-size: 1.25em;
     font-weight: bold;
     color: white;
+    margin-bottom: 5px;
 }
 
 h2 {
@@ -94,7 +96,6 @@ a.dropdown-item {
 
 /* ----------------------------------------------------------------------------- DIVIDER */
 .orange-divider {
-    width: 235px;
     height: 2px;
     background: #e85017;
 }

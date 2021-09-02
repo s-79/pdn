@@ -6,7 +6,7 @@ include("header.php"); ?>
     <div class="row">
         <div class="divTitre col-12 col-sm-6 col-md-4">
             <h1 class="bleu">LES STRUCTURES</h1>
-            <div class="orange-divider"> </div>
+            <div class="orange-divider" style="width: 180px;"> </div>
         </div>
         <div class="divVisuMap col-12 col-sm-6 col-md-4 text-center"><a href="osm.php" id="visuMap" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt pe-2"></i>Visualiser sur une carte</a></div>
         <div class="divChoixVille col-12 col-md-4 d-flex justify-content-end">

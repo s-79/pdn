@@ -29,7 +29,7 @@ include("header.php"); ?>
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
-                            <h1>Dénomination</h1>
+                            <h1 style="padding-top:0.13em;">Dénomination</h1>
                             <i id="new_part" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Créer un nouveau partenaire"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
@@ -59,7 +59,7 @@ include("header.php"); ?>
                 <!--                                                                                                              Contact -->
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3">Référent·e</h1>
+                        <h1 class="pt-3" style="padding-top:0.13em;">Référent·e</h1>
                         <div class="form-floating mx-3 mt-4 mb-3">
                             <input type="text" class="form-control" id="prenom_ref" placeholder="Prénom référent·e">
                             <label for="prenom_ref">Prénom référent·e</label>
@@ -85,17 +85,17 @@ include("header.php"); ?>
                 <!--                                                                                                              Coordonnées -->
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3">Commentaires</h1>
-                        <div class="form-floating m-3 mb-4">
-                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:285px;"></textarea>
+                        <h1 class="pt-3" style="padding-top:0.13em;">Commentaires</h1>
+                        <div class="form-floating mx-3 my-4">
+                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:278px;"></textarea>
                             <label for="commentaires">Commentaires</label>
                         </div>
                         <div id="btn_part_create" class="form-group d-flex justify-content-center mx-3">
-                            <button type="button" id="part_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Enregistrer<br>la fiche</button>
+                            <button type="button" id="part_create" class="btn btn-warning mx-3 mb-3 px-3" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Enregistrer<br>la fiche</button>
                         </div>
                         <div id="btn_part_update" class="form-group d-flex justify-content-center mx-3 d-none">
-                            <button type="button" id="part_update" class="btn btn-warning mx-3 mb-3 px-4 pb-2" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Modifier<br>la fiche</button>
-                            <button type="button" id="part_delete" class="btn btn-danger mx-3 mb-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Supprimer <br>la fiche</button>
+                            <button type="button" id="part_update" class="btn btn-warning mx-3 mb-3 px-4" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Modifier<br>la fiche</button>
+                            <button type="button" id="part_delete" class="btn btn-danger mx-3 mb-3" data-bs-toggle="modal" data-bs-target="#modalPartAdmin">Supprimer <br>la fiche</button>
                         </div>
                     </div>
                 </div>
