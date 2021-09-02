@@ -180,3 +180,20 @@
         </div>
     </div>
 </div>
+
+<!--                                                                            MODAL MODIF INFOS -->
+<div class="modal fade" id="modalActAdmin" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title orange">ADMINISTRATION PDN</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="message_admin_act" class="modal-body py-3 bleu">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

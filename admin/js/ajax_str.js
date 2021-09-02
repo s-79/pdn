@@ -131,10 +131,10 @@ const ajaxGetStr = (id_str) => {
             $("#nom").val(nom);
             $("#type").val(type);
             $("#adresse").val(adresse);
-            sleep(300).then(() => {
+            sleep(200).then(() => {
                 $("#ville").val(ville_id);
                 villeGetQpv("#qpv", ville_id);
-                sleep(300).then(() => {$("#qpv").val(qpv);});
+                sleep(200).then(() => {$("#qpv").val(qpv);});
             });
             $("#lat").val(lat);
             $("#lon").val(lon);

@@ -41,11 +41,13 @@ $(function(){
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON COORDO CREATE
     $("#btn_coordo_create").click(function() {
         //---------------------------------------------------------------------- Réinitialisation du formulaire
+        $("#modal_coordo").modal('hide');
         document.getElementById("form_coordo_create").reset();
     });
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON COORDO UPDATE
     $("#btn_coordo_update").click(function() {
         //---------------------------------------------------------------------- Réinitialisation du formulaire
+        $("#modal_coordo").modal('hide');
         document.getElementById("form_coordo_update").reset();
         //------------------------------------------------------------------- -- Remplissage de la liste des Coordos
         ajaxNewCoordo("#select_nom_coordo");
@@ -61,7 +63,8 @@ $(function(){
 
         // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
         if(!prenom || !nom) {
-            alert("Les champs Prénom et Nom sont obligatoires.");
+            $('#message_admin_act').html(`Les champs Prénom et Nom sont obligatoires.`);
+            $('#modalActAdmin').modal('show');
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
             if(vLen("Prénom",prenom,100) && vLen("Nom",nom,100)) {
@@ -83,7 +86,8 @@ $(function(){
 
         // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
         if(!prenom || !nom) {
-            alert("Les champs Prénom et Nom sont obligatoires.");
+            $('#message_admin_act').html(`Les champs Prénom et Nom sont obligatoires.`);
+            $('#modalActAdmin').modal('show');
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
             if(vLen("Prénom",prenom,100) && vLen("Nom",nom,100)) {
@@ -291,7 +295,8 @@ $(function(){
 
         // --------------------------------------------------------------------- Les champs obligatoires sont-ils vides ?
         if(!dat || !type || !intitule || !support || !duree) {
-            alert("Les champs Date, Type, Intitulé, Support, Durée sont obligatoires.");
+            $('#message_admin_act').html(`Les champs Date, Type, Intitulé, Support, Durée sont obligatoires.`);
+            $('#modalActAdmin').modal('show');
         } else {
             // ----------------------------------------------------------------- La longueur des champs est-elles bien inférieur à celle attendue dans la BDD ?
             if(vLen("Intitulé",intitule,100) && vLen("Organisé par...",organise,100) && vLen("Lieu",lieu,100)&& vLen("Ville",ville,100)) {
@@ -356,8 +361,10 @@ $(function(){
 
 // ----------------------------------------------------------------------------- FONCTION GET
 const act_Get = (id_act) => {
-    if(!id_act) alert("Aucune action n'a été séléctionnée")
-    else {
+    if(!id_act) {
+        $('#message_admin_act').html(`Aucune action n'a été séléctionnée.`);
+        $('#modalActAdmin').modal('show');
+    } else {
         //---------------------------------------------------------------------- Affichage de l'action séléctionné lorsqu'on à vient des pages pdn ou part
         ajaxListAct("#act_res", id_act);
         //---------------------------------------------------------------------- Récupération des données de l'action

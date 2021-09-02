@@ -329,7 +329,8 @@ const coordo_Create = (prenom, nom, actif) => {
             $("#modal_coordo_create").modal('hide');
             //------------------------------------------------------------------ Actualisation de la liste des Coordos
             ajaxListCoordo("#coordo");
-            alert("Coordo ajouté·e à la base de données.");
+            $('#message_admin_act').html(`Coordo ajouté·e à la base de données.`);
+            $('#modalActAdmin').modal('show');
         }
     });
 }
@@ -344,7 +345,8 @@ const coordo_Update = (id, prenom, nom, actif) => {
             $("#modal_coordo_update").modal('hide');
             //------------------------------------------------------------------ Actualisation de la liste des Coordos
             ajaxListCoordo("#coordo");
-            alert("Coordo modifié·e dans la base de données.");
+            $('#message_admin_act').html(`Coordo modifié·e dans la base de données.`);
+            $('#modalActAdmin').modal('show');
         }
     });
 }
@@ -360,7 +362,8 @@ const coordo_Delete = (id) => {
             $("#modal_coordo_update").modal('hide');
             //------------------------------------------------------------------ Actualisation de la liste des Coordos
             ajaxListCoordo("#coordo");
-            alert('Coordo supprimé·e de la base de données.')
+            $('#message_admin_act').html(`Coordo supprimé·e de la base de données.`);
+            $('#modalActAdmin').modal('show');
         }
     });
 }
@@ -528,7 +531,8 @@ const act_Create = (dat, type, organise, intitule, uuid, lieu, ville, pj, suppor
             //------------------------------------------------------------------ Puis récupération des intervenants et association avec l'évenemnt dans la table intervenir
             act_Get_Id(uuid);
 
-            alert("L'action a bien été ajoutée à la base de données.");
+            $('#message_admin_act').html(`L'action a bien été ajoutée à la base de données.`);
+            $('#modalActAdmin').modal('show');
             //------------------------------------------------------------------ Réinitialisation de la pages des événements
             act_Reset();
         }
@@ -648,7 +652,8 @@ const act_Update = (id, dat, type, organise, intitule, uuid, lieu, ville, pj, su
             //------------------------------------------------------------------ Suppression des associations avec les autres tables puis mis à jours des données
             act_Maj_Asso(id);
 
-            alert("L'action a bien été modifiée.");
+            $('#message_admin_act').html(`L'action a bien été modifiée.`);
+            $('#modalActAdmin').modal('show');
             //----------------------------------------------------------------- Réinitialisation de la pages des événements
             act_Reset();
         }
@@ -685,7 +690,8 @@ const act_Delete = (id) => {
                 dataType: 'JSON',
                 data : {id_del:id},
                 complete: function() {
-                    alert("L'action a bien été supprimée de la base de données.");
+                    $('#message_admin_act').html(`L'action a bien été supprimée de la base de données.`);
+                    $('#modalActAdmin').modal('show');
                     //----------------------------------------------------------------- Réinitialisation de la liste des types et noms d'organisme sur la page jeune (fonction dans orga.js)
                     act_Reset();
                 }
