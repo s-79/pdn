@@ -107,10 +107,10 @@ const get_Ress = response => {
         cpt ++;
         if (cpt%2===0) {ress += `<div id='outil${id}' class='row borderOut mt-1 pointeur' style='background-color:#fff;'>`;}
         else {ress += `<div id='outil${id}' class='row borderOut mt-1 pointeur' style='background-color:#ccdee4;'>`;};
-        ress += `<h3 class='col-10 col-sm-11 mb-1 mt-1'><span class='fw-bold'>${nom}</span>`;
+        ress += `<h5 class='col-10 col-sm-11 mb-1 mt-1'>${nom}`;
         if (editeur) ress += `&nbsp;-&nbsp;${editeur}`;
         if (age) ress += `&nbsp;-&nbsp;${age}`;
-        ress += `</h3>`;
+        ress += `</h5>`;
         ress += `<i id='chevron${id}' class='col-2 col-sm-1 fas fa-chevron-circle-down fa-lg my-auto text-center'></i></div>`;
         ress += `<div id='infos${id}' class='row borderOutInfos d-none'></div>`;
     }
