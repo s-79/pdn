@@ -216,3 +216,9 @@ $("body").delegate( "#fg3_0", "click", function() {
 $("body").delegate( "#fd3_0", "click", function() {
     $("#contenuPres").load("pres/1_1a.php");
 });
+
+// ----------------------------------------------------------------------------- Ne pas charger la vidéo au chargelment de la page
+const video = () => {
+	const vid = document.getElementById("video");
+	vid.preload = "none";
+}

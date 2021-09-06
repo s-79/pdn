@@ -29,7 +29,7 @@ include("header.php"); ?>
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
-                            <h1 style="padding-top:0.13em;">Action</h1>
+                            <h1 style="padding-top:0.13em;">ACTION</h1>
                             <i id="new_act" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Créer une nouvelle action"></i>
                         </div>
                         <!--                                                    Récupération de l'id dans un input invisible -->
@@ -84,7 +84,7 @@ include("header.php"); ?>
                 <!--                                                            Modalités -->
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class= "pt-3 pb-2" style="padding-top:0.13em;">Modalités</h1>
+                        <h1 class= "pt-3 pb-2" style="padding-top:0.13em;">MODALITÉS</h1>
                         <div class="form-floating mx-3 mt-4">
                             <select class="form-select type_m" id="support" aria-label="Support de communication *">
                                 <option selected value="">Séléctionner un support *</option>
@@ -135,8 +135,8 @@ include("header.php"); ?>
                             </select>
                             <label for="duree">Durée *</label>
                         </div>
-                        <div class="d-flex pt-3">
-                            <h1 class="pt-1">Coordination</h1>
+                        <div class="d-flex py-2 mt-3 mb-2">
+                            <h1 class="py-1">COORDINATION</h1>
                             <i id="new_coordo" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-bs-toggle="modal" data-bs-target="#modal_coordo" data-toggle="tooltip" data-placement="top" title="Ajouter / Modifier un·e coordo"></i>
                         </div>
                         <div id="coordo" class="mx-3 mt-2 mb-4" style="overflow-y:scroll; overflow-x:hidden; height:69px; scrollbar-color: rgb(232, 80, 23) white;">
@@ -146,7 +146,7 @@ include("header.php"); ?>
                 <!--                                                            Participation -->
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3 pb-2" style="padding-top:0.13em;">Participation</h1>
+                        <h1 class="pt-3 pb-2" style="padding-top:0.13em;">PARTICIPATION</h1>
 
                         <div class="row mt-4 me-1">
                             <div class="form-floating mx-3 col-8">

@@ -21,7 +21,7 @@
 <nav class="navbar navbar-expand-xl navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand pt-1 pb-0" style="font-size:1.35em;" href="index.php"><strong id="pdn_title" class="titre text-white me-2">COORDO</strong><strong id="prom_title" class="titre text-white me-2">COORDINATION PDN</strong>
-        <img src="../img/logo_header.png" class="rounded rounded-3" style="padding-bottom:.1em;" alt="Promeneurs du Net"></a>
+        <img src="../img/logo_header.png" class="rounded rounded-3" style="padding-bottom:.1em; max-height:38px;" alt="Promeneurs du Net"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

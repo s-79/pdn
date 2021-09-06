@@ -18,8 +18,8 @@
 	<form id="form_pdn_infos">
 		<div class="d-flex justify-content-center mt-3">
 			<div class="row formulaires">
-				<div class="col-12 col-lg-6 col-xl-4">
-					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:20em;">
+				<div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
 						<h1 class="pt-3">Modifier mes infos</h1>
 						<div class="form-floating mx-3 mt-3 mb-3">
 							<input type="text" class="form-control" id="prenom" placeholder="Prénom">
@@ -58,8 +58,8 @@
 					</div>
 				</div>
 
-				<div class="col-12 col-lg-6 col-xl-4">
-					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:20em;">
+				<div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
 						<h1 class="pt-3">Réseaux sociaux</h1>
 						<div class="form-floating mx-3 mt-3 mb-3">
 							<input type="text" class="form-control" id="facebook" placeholder="Facebook">
@@ -96,8 +96,8 @@
 					</div>
 				</div>
 
-				<div class="col-12 col-lg-6 col-xl-4">
-					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:20em;">
+				<div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
 						<h1 class="pt-3">Images et présentations</h1>
 						<div class="form-floating mx-3 mt-3 mb-3">
 							<input type="text" class="form-control" id="photo_pdn" placeholder="Lien vers une nouvelle photo du PDN">

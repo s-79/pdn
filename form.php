@@ -12,11 +12,11 @@ include("header.php");
 	<div class="text-center mt-3">
 		<!--                                                                Récupération de l'id dans un input invisible -->
 		<div id="pdn_id" class="d-none"><?php echo $_SESSION['id']; ?></div>
-		<h1 class="mb-0 bleu text-uppercase pointeur" onclick="document.location='bienvenue.php'">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
+		<h1 class="mb-0 bleu pointeur" onclick="document.location='bienvenue.php'">BIENVENUE <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
 	<form id="form_form" class="mt-4">
-		<div class="d-flex justify-content-center formDate">
+		<div class="d-flex justify-content-center formDate mb-3">
 			<div class="d-inline pt-2 me-3 fw-bold bleu" style="font-size:1.1em;">
 				Formulaire du mois de
 			</div>
@@ -34,7 +34,7 @@ include("header.php");
 				<!--                                                            Outils numériques-->
 				<div class="col-12 col-lg-6 col-xxl-4 form_pad">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-						<h1 class="pt-3">Types de matériel utilisés</h1>
+						<h1 class="pt-3">TYPES DE MATÉRIEL UTILISÉ</h1>
 						<div class="row mt-3 ms-3">
 							<div class="col-12 col-sm-5">
 								<input class="form-check-input" type="checkbox" value="" id="smart">
@@ -55,7 +55,7 @@ include("header.php");
 								<label class="form-check-label text-white" for="console">Console de jeux</label>
 							</div>
 						</div>
-						<h1 class="pt-3 mt-4">Présence en ligne</h1>
+						<h1 class="pt-3 mt-4">PRÉSENCE EN LIGNE</h1>
 						<div class="form-floating mx-3 mt-3">
 							<select class="form-select" id="nb_h" aria-label="Par semaine">
 								<option selected value="">Séléctionner le nb d'heure par semaine</option>
@@ -66,7 +66,7 @@ include("header.php");
 							</select>
 							<label for="nb_h">Par semaine</label>
 						</div>
-						<h1 class="pt-3 mt-4">Réseaux sociaux utilisés</h1>
+						<h1 class="pt-3 mt-4">RÉSEAUX SOCIAUX UTILISÉS</h1>
 						<div class="row mt-3 ms-3">
 							<div class="col-12 col-sm-5">
 								<input class="form-check-input" type="checkbox" value="facebook" id="facebook">
@@ -87,7 +87,7 @@ include("header.php");
 								<label class="form-check-label text-white" for="whatsapp">WhatsApp</label>
 							</div>
 						</div>
-						<div class="row mt-2 mb-4 ms-3">
+						<div class="row mt-2 mb-3 ms-3">
 							<div class="col-12 col-sm-5">
 								<input class="form-check-input" type="checkbox" value="autre1" id="autre1">
 								<label class="form-check-label text-white" for="autre1">Autre 1</label>
@@ -102,7 +102,7 @@ include("header.php");
 				<!--                                                            Thématiques -->
 				<div class="col-12 col-lg-6 col-xxl-4 form_pad">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-						<h1 class="pt-3">Thématiques abordées</h1>
+						<h1 class="pt-3">THÉMATIQUES ABORDÉES</h1>
 						<!-- <div class="mb-3" style="overflow-y:scroll; overflow-x:hidden; height:157px; scrollbar-color: rgb(232, 80, 23) white;"> -->
 						<div class="mb-3">
 							<div class="row mt-3 ms-3">
@@ -158,7 +158,7 @@ include("header.php");
 						</div>
 
 						<!--                                                            Initiatives -->
-						<h1 class="pt-2 mt-4">Initiatives numériques</h1>
+						<h1 class="pt-2 mt-4">INITIATIVES NUMÉRIQUES</h1>
 						<span class="text-white fw-bold">Ateliers à distance, challenges, évènements...</span>
 
 						<div class="row mt-3 me-3">
@@ -200,14 +200,14 @@ include("header.php");
 
 				<div class="col-12 col-lg-6 col-xxl-4 form_pad">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-						<h1 class="pt-3">Souhaits de formation</h1>
+						<h1 class="pt-3">SOUHAITS DE FORMATION</h1>
 							<div class="form-floating mx-3 mt-3">
 								<input type="text" class="form-control" id="formation" placeholder="Souhait(s) de formation">
 								<label for="formation" class="ps-4">Souhait(s) de formation</label>
 							</div>
-						<h1 class="mb-3 pt-4 mt-3">Commentaires</h1>
+						<h1 class="mb-3 pt-3 mt-3">COMMENTAIRES</h1>
 						<div class="form-floating mx-3 mt-3">
-							<textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:177px;"></textarea>
+							<textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:161px;"></textarea>
 							<label for="commentaires">Commentaires et difficultés rencontrées</label>
 						</div>
 						<div class="form-group d-flex justify-content-center mx-3 mt-1 pt-1">

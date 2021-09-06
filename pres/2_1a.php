@@ -6,7 +6,7 @@
     </div>
     <div class="contenuDispositif mt-1">
         <p class="textPres text-justify pl-3 m-auto">
-            <span class="fw-bold">La Ligue de l'enseignement-FOL 93</span> s'inscrit au sein de la Ligue de l'enseignement, mouvement national Laïc, éducatif, culturel et sportif dont elle est la représentation départementale. De part son histoire et son présent, elle se définit comme une des composantes de l’Éducation Populaire.</br></p>
+            <span class="fw-bold">La Ligue de l'enseignement-FOL 93</span> s'inscrit au sein de la Ligue de l'enseignement, mouvement national Laïc, éducatif, culturel et sportif dont elle est la représentation départementale. De part son histoire et son présent, elle se définit comme une des composantes de l’Éducation Populaire.</br></br></p>
         <div class="d-block text-center">
             <img src="img/logo/fol93b.jpg" height="140">
         </div>

@@ -28,7 +28,7 @@
                 <div class="d-flex justify-content-center mt-3">
         			<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:25em;">
                         <div class="d-flex pt-3">
-                            <h1 style="padding-top:0.13em;">Catégories</h1>
+                            <h1 style="padding-top:0.13em;">CATÉGORIES</h1>
                             <i id="new_cat" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter une catégorie"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->

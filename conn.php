@@ -53,11 +53,11 @@ include("header.php"); ?>
 					<input type="text" name="login" class="form-control" placeholder="Identifiant">
 					<label for="login">Identifiant</label>
 				</div>
-				<div class="form-floating mx-3 mt-3 mb-2">
+				<div class="form-floating mx-3 mt-3 mb-3">
 					<input type="password" name="mdp" class="form-control" placeholder="Mot de passe">
 					<label for="mdp">Mot de passe</label>
 				</div>
-				<div id="oublie" class="text-white text-center pointeur mb-2" data-bs-toggle="modal" data-bs-target="#modalOublie">Identifiant ou mot de passe oublié ?</div>
+				<div id="oublie" class="text-white text-center pointeur my-2" style="font-size:0.8rem;" data-bs-toggle="modal" data-bs-target="#modalOublie">Identifiant ou mot de passe oublié ?</div>
 				<div id="connexion">
 					<?php if (! empty($message)) { ?>
 						<p class="text-center fw-bold text-warning mt-2"><?php echo $message; ?></p>
@@ -122,7 +122,7 @@ include("header.php"); ?>
 
 <footer id="footer_conn" class="text-center pt-4 pb-1 footer_absolute">
     <h5>Ligue de l'enseignement - FOL93 © <?php echo date('Y')?> / Tous droits réservés</h5>
-    <a class="bleu liens" href="https://www.facebook.com/sindykolodziejczyk.coordopdn"><i class="fab fa-facebook pe-2"></i></a>
+    <a class="bleu liens" href="https://www.facebook.com/sebastien.coordopdn"><i class="fab fa-facebook pe-2"></i></a>
     <a class="bleu liens" href="https://twitter.com/coordopdn93"><i class="fab fa-twitter pe-2"></i></a>
     <a class="bleu liens" href="mailto:fol93.coordopdn93@gmail.com"><i class="fas fa-envelope pe-2"></i></a>
 </footer>

@@ -28,7 +28,7 @@
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex bd-highlight pt-3">
-                            <div class="bd-highlight"><h1 style="padding-top:0.13em;">Coordonnées</h1></div>
+                            <div class="bd-highlight"><h1 style="padding-top:0.13em;">COORDONNÉES</h1></div>
                             <div class="bd-highlight"><i id="new_pdn" class="ps-3 pe-1 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un·e PDN"></i></div>
                             <div class="ms-auto bd-highlight pe-3"><i id="go_str" class="fas fa-store-alt fa-2x text-muted pointeur" data-toggle="tooltip" data-placement="top" title="Aller vers la structure"></i></div>
                         </div>
@@ -90,7 +90,7 @@
                 <!--                                                                                                              Réseaux sociaux -->
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3 mb-4 pb-2" style="padding-top:0.13em;">Réseaux sociaux</h1>
+                        <h1 class="pt-3 mb-4 pb-2" style="padding-top:0.13em;">RÉSEAUX SOCIAUX</h1>
                         <form id="form_pdn4">
                             <div class="form-floating m-3 mt-4">
                                 <input type="text" class="form-control" id="facebook" placeholder="Facebook">
@@ -131,12 +131,12 @@
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex justify-content-between pt-3 pe-3">
-                            <h1 style="padding-top:0.13em;">Présentation</h1>
+                            <h1 style="padding-top:0.13em;">PRÉSENTATION</h1>
                             <i id="postItIcon" class="ps-3 ms-1 fas fa-clipboard fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un post-it"></i>
                         </div>
                         <form id="form_pdn5">
                             <div class="form-floating m-3 mt-4">
-                                <textarea class="form-control" placeholder="Présentation (700 car.max.)" id="presentation" style="height:258px;"></textarea>
+                                <textarea class="form-control" placeholder="Présentation (700 car.max.)" id="presentation" style="height:272px;"></textarea>
                                 <label for="presentation">Présentation (700 car.max.)</label>
                             </div>
                             <div class="row mt-3 ms-3">

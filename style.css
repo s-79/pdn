@@ -14,7 +14,6 @@ section {
 }
 
 .footer_absolute {
-  height: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -24,6 +23,10 @@ section {
 /* ----------------------------------------------------------------------------- TEXTES */
 /* xx-small 0.6, x-small 0.75, small 8/9, medium 1, large 1.2, x-large 1.5, xx-large 2 */
 
+body, .form-control, .form-select, .btn, .form-floating > label {
+	font-size: 0.9rem;
+}
+
 h1 {
     font-size: 1.25em;
     font-weight: bold;
@@ -32,25 +35,25 @@ h1 {
 }
 
 h2 {
-    font-size: medium;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
 h3 {
-    font-size: medium;
+    font-size: 0.9em;
 }
 
 h4 {
-    font-size: small;
+    font-size: 0.85em;
     font-weight: bold;
 }
 
 h5 {
-    font-size: small;
+    font-size: 0.85em;
 }
 
 h6 {
-    font-size: .73em;
+    font-size: .75em;
 }
 
 /* ----------------------------------------------------------------------------- LIENS */
@@ -134,6 +137,10 @@ a.dropdown-item {
     display: none;
 }
 
+a.dropdown-item {
+	font-size: 0.7em;
+}
+
 /* ----------------------------------------------------------------------------- COULEURS PDN */
 .orange {
     color: rgb(232, 80, 23);
@@ -213,6 +220,10 @@ a.dropdown-item {
     margin-top: -9em;
 }
 
+.titreDispositif h2 {
+    font-size: 1em;
+}
+
 .contenuDispositif {
     position: relative;
     margin-top: -0.5em;
@@ -230,7 +241,7 @@ a.dropdown-item {
 }
 
 .textPres {
-    font-size: 0.85em;
+    font-size: 0.9em;
 	font-weight: 400;
     vertical-align: text-top;
     text-align: justify;
@@ -256,6 +267,10 @@ a.dropdown-item {
 
 .card-body {
     padding: 0.5em;
+}
+
+.card-body h2 {
+    font-size: 1em;
 }
 
 .interligne  {
@@ -327,12 +342,12 @@ figure:hover {
 }
 
 #divRessCat h3 {
-    font-size: .8em;
+    font-size: .9em;
     font-weight: 700;
 }
 
 #divRessThem h5, #divRessOut h5 {
-    font-size: .8em;
+    font-size: .9em;
     font-weight: 600;
 }
 
@@ -514,6 +529,15 @@ vertical-align: middle;
     }
     #menuPres {
         margin-top: 1.5em !important;
+    }
+    #footer_index {
+      position: relative;
+    }
+}
+
+@media screen and (max-height: 675px) {
+    #footer_index {
+      position: relative;
     }
 }
 

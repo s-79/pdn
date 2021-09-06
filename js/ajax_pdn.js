@@ -70,7 +70,7 @@ const clicked_pdn = (id) => {
 
 			// ----------------------------------------------------------------- Remplissage du modal
 			$("#modalPdnHeader").html(`<h2 class='modal-title orange text-uppercase pt-2'>${prenom} ${nom} - ${fonction}</h2><h3 class='bleu fw-bold text-uppercase' style='margin-top:0.2em;font-weight:0.8em;'>${str_nom}&nbsp;-&nbsp${ville_nom}&nbsp;&nbsp;<a><i id='btnInfosStr' class='bleu fa fa-info-circle' data-bs-toggle='tooltip' data-bs-placement='top' title="Cliquer pour + d'infos ..."></i></a></h3>`);
-			$("#modalPdnHeader").append(`<h5 class='infosStr d-none bleu'><span>${str_adresse}</br>${ville_cp} ${ville_nom}</br>${str_tel}</br><a href='${str_site}' class='bleu liens' target='_blank'>${str_site}</a></br></div></span></h5>`);
+			$("#modalPdnHeader").append(`<h5 class='infosStr d-none bleu'><span>${str_adresse}</br>${ville_cp} ${ville_nom}</br>Tel : ${str_tel}</br><a href='${str_site}' class='bleu fw-bold liens' target='_blank'>Site de la structure <i class="fas fa-globe ps-1"></i></a></br></div></span></h5>`);
 			$("#modalPdnContentLeft").html(`<img src='img/logo_promeneurs_du_net.png' height='100' class='mt-3 img-fluid'><br><img src='${image}' height='120' class='my-3 img-fluid' alt='${prenom} ${fonction} ${ville_nom}' title='${prenom} ${fonction} ${ville_nom}' />`);
 			$("#modalPdnContentRight").html(`<h5 class='bleu fst-italic'><blockquote><p style="white-space:pre-wrap;"><i class='fas fa-quote-left pe-2 mt-2'></i>${presentation}<i class='fas fa-quote-right ps-2'></blockquote></i></p></h5></div>`);
 

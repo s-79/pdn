@@ -27,7 +27,7 @@
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
-                            <h1 style="padding-top:0.13em;">Coordonnées</h1>
+                            <h1 style="padding-top:0.13em;">COORDONNÉES</h1>
                             <i id="new_str" class="ps-3 fas fa-plus-circle fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter une structure"></i>
                         </div>
                         <!--                                                                                                        Récupération de l'id dans un input invisible -->
@@ -107,7 +107,7 @@
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <form id="form_str2">
                             <div class="d-flex pt-3">
-                                <h1 style="padding-top:0.13em;">Open Street Map</h1>
+                                <h1 style="padding-top:0.13em;">OPEN STREET MAP</h1>
                                 <a href="https://www.openstreetmap.org/relation/7389#map=12/48.9148/2.5310" target="_blank"><i id="link_odm" class="ps-3 fas fa-globe fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Site Open Street Map"></i></a>
                             </div>
                             <div class="form-floating mx-3 mt-4 mb-3">
@@ -118,7 +118,7 @@
                                 <input type="text" class="form-control" id="lon" placeholder="Longitude">
                                 <label for="lon">Longitude (ex : 2.41911910)</label>
                             </div>
-                            <h1 class="pt-3">Responsable</h1>
+                            <h1 class="pt-3">RESPONSABLE</h1>
                             <div class="form-floating mx-3 mt-4 mb-3">
                                 <input type="text" class="form-control" id="resp_prenom" placeholder="Prénom">
                                 <label for="resp_prenom">Prénom</label>
@@ -146,7 +146,7 @@
                 <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex justify-content-between pt-3 pe-3">
-                            <h1 style="padding-top:0.13em;">Présentation</h1>
+                            <h1 style="padding-top:0.13em;">PRÉSENTATION</h1>
                             <i id="postItIcon" class="ps-3 ms-1 fas fa-clipboard fa-2x text-white pointeur" data-toggle="tooltip" data-placement="top" title="Ajouter un post-it"></i>
                         </div>
                         <form id="form_str3" action="../img/str/file.php" method="post" enctype="multipart/form-data">
