@@ -36,7 +36,7 @@
                 <h2 class="mt-2"><i id="CoordoFacebook" class="bleu liens pointeur fab fa-facebook fa-lg me-2"></i>
                 <i id="CoordoTwitter" class="bleu liens pointeur fab fa-twitter fa-lg me-2"></i>
                 <i id="CoordoMail" class="bleu liens pointeur fas fa-envelope fa-lg me-2"></i></h2>
-                <div id="CoordoFacebookDetails" class="mt-2 d-none infosRSCoordo"><h5><a class="bleu liens" href="https://www.facebook.com/sindykolodziejczyk.coordopdn" target="_blank">https://www.facebook.com/sindykolodziejczyk.coordopdn</a></h5></div>
+                <div id="CoordoFacebookDetails" class="mt-2 d-none infosRSCoordo"><h5><a class="bleu liens" href="https://www.facebook.com/sebastien.coordopdn" target="_blank">https://www.facebook.com/sebastien.coordopdn</a></h5></div>
                 <div id="CoordoTwitterDetails" class="mt-2 d-none infosRSCoordo"><h5><a class="bleu liens" href="https://twitter.com/coordopdn93" target="_blank">https://twitter.com/coordopdn93</a></h5></div>
                 <div id="CoordoMailDetails" class="mt-2 d-none infosRSCoordo"><h5><a class="bleu liens" href="mailto:fol93.coordopdn93@gmail.com" target="_blank">fol93.coordopdn93(at)gmail.com</a></h5></div>
             </div>
