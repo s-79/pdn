@@ -6,7 +6,7 @@ include("header.php"); ?>
     <div class="divTitre">
         <h1 class="bleu">LES RESSOURCES</h1>
     </div>
-    <div class="orange-divider" style="width: 180px;"> </div>
+    <div class="orange-divider" style="width: 170px;"> </div>
 
     <div id="divRessCat" class="d-flex flex-wrap mt-4 justify-content-center"></div>
 

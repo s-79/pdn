@@ -10,6 +10,7 @@
       <div class="modal-body d-flex justify-content-start">
           <button id="btn_select_AllPdn" type="button" class="btn btn-outline-secondary m-2">Tous</button>
           <button id="btn_select_NoPdn" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
+          <button id="btn_select_PdnActifs" type="button" class="btn btn-outline-secondary m-2">Actifs</button>
       </div>
 
       <div id="modal_list_pdn" class="modal-body py-0" style="overflow-y:scroll; overflow-x:hidden; height:500px;">
@@ -79,6 +80,7 @@
       <div class="modal-body d-flex justify-content-start">
           <button id="btn_select_Allstr" type="button" class="btn btn-outline-secondary m-2">Toutes</button>
           <button id="btn_select_Nostr" type="button" class="btn btn-outline-secondary m-2">Aucune</button>
+          <button id="btn_select_strActives" type="button" class="btn btn-outline-secondary m-2">Actives</button>
       </div>
 
       <div id="modal_list_str" class="modal-body py-0" style="overflow-y:scroll; overflow-x:hidden; height:500px;">

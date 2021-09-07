@@ -77,7 +77,7 @@
     <div class="row">
         <div class="divTitreStr col-12 col-sm-6 col-md-4">
             <h1 class="bleu">LES STRUCTURES</h1>
-            <div class="orange-divider" style="width: 180px;"> </div>
+            <div class="orange-divider" style="width: 170px;"> </div>
         </div>
         <div class="divVisuMap col-12 col-sm-6 col-md-4 text-center"><a href="str.php" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Visualiser par structure</a></div>
     </div>

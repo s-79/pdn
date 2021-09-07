@@ -70,9 +70,9 @@ const ajaxListRess = (liste, checked) => {
 /* ---------------------------------------------------------------------------- Remplissage de la liste des PDN lorsqu'on clique sur le bouton (+)  */
 const ajaxListPdn = (liste, checked) => {
     $.ajax({
-        url: "php/populate.php",
+        url: "php/act_Get.php",
         dataType: 'JSON',
-        data : {v_pdn:"v_pdn"},
+        data : {v_pdn_actifs:"v_pdn_actifs"},
         success: function(response){
             const len = response.length;
             let arrayIdPdn = [];
@@ -80,9 +80,14 @@ const ajaxListPdn = (liste, checked) => {
             for (let i = 0; i < len; i++) {
                 const id = response[i].id;
                 const nom = response[i].nom;
+                const actif = response[i].actif;
                 res += `<div class="form-check">`;
                 if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}" checked>`;
-                else { res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}">`}
+                else if(checked === "actifs") {
+                    if (parseInt(actif) === 1) res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}" checked>`;
+                    else {res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}">`;};
+                }
+                else {res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}">`;};
                 res += `<label class="form-check-label text-dark" for="pdn${id}">${nom}</label></div>`;
                 const pdnId = `#pdn${id}`;
                 $(pdnId).prop('checked', false);
@@ -148,9 +153,9 @@ const ajaxListPart = (liste, checked) => {
 /* ---------------------------------------------------------------------------- Remplissage de la liste des Structures lorsqu'on clique sur le bouton (+)  */
 const ajaxListStr = (liste, checked) => {
     $.ajax({
-        url: "php/populate.php",
+        url: "php/act_Get.php",
         dataType: 'JSON',
-        data : {v_str:"v_str"},
+        data : {v_str_actives:"v_str_actives"},
         success: function(response){
             const len = response.length;
             let arrayIdStr = [];
@@ -158,9 +163,14 @@ const ajaxListStr = (liste, checked) => {
             for (let i = 0; i < len; i++) {
                 const id = response[i].id;
                 const nom = response[i].nom;
+                const nb_pdn_act = response[i].nb_pdn_act;
                 res += `<div class="form-check">`;
-                if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="str${id}" checked>`
-                else { res += `<input class="form-check-input" type="checkbox" value="" id="str${id}">`}
+                if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="str${id}" checked>`;
+                else if(checked === "actives") {
+                    if(parseInt(nb_pdn_act) > 0) res += `<input class="form-check-input" type="checkbox" value="" id="str${id}" checked>`;
+                    else {res += `<input class="form-check-input" type="checkbox" value="" id="str${id}">`;}
+                }
+                else { res += `<input class="form-check-input" type="checkbox" value="" id="str${id}">`;}
                 res += `<label class="form-check-label text-dark" for="str${id}">${nom}</label></div>`;
                 const strId = `#str${id}`;
                 $(strId).prop('checked', false);

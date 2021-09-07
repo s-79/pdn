@@ -12,7 +12,7 @@
 	<div class="text-center mt-3">
 		<!--                                                                     Récupération de l'id dans un input invisible -->
 		<div id="pdn_id" class="d-none"><?php echo $_SESSION['id']; ?></div>
-		<h1 class="mb-0 bleu text-uppercase pointeur" onclick="document.location='bienvenue.php'">Bienvenue <?php echo $_SESSION['prenom']; ?> !</h1>
+		<h1 class="mb-0 bleu pointeur" onclick="document.location='bienvenue.php'">BIENVENUE <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
 	<form id="form_pdn_infos">
@@ -20,7 +20,7 @@
 			<div class="row formulaires">
 				<div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-						<h1 class="pt-3">Modifier mes infos</h1>
+						<h1 class="pt-3">MODIFIER MES INFOS</h1>
 						<div class="form-floating mx-3 mt-3 mb-3">
 							<input type="text" class="form-control" id="prenom" placeholder="Prénom">
 							<label for="prenom">Prénom</label>
@@ -60,7 +60,7 @@
 
 				<div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-						<h1 class="pt-3">Réseaux sociaux</h1>
+						<h1 class="pt-3">RÉSEAUX SOCIAUX</h1>
 						<div class="form-floating mx-3 mt-3 mb-3">
 							<input type="text" class="form-control" id="facebook" placeholder="Facebook">
 							<label for="facebook">Facebook</label>
@@ -98,7 +98,7 @@
 
 				<div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-						<h1 class="pt-3">Images et présentations</h1>
+						<h1 class="pt-3">IMAGES ET PRÉSENTATIONS</h1>
 						<div class="form-floating mx-3 mt-3 mb-3">
 							<input type="text" class="form-control" id="photo_pdn" placeholder="Lien vers une nouvelle photo du PDN">
 							<label for="photo_pdn">Lien vers une nouvelle photo du PDN</label>

@@ -44,7 +44,7 @@ include("header.php"); ?>
 		<h1 class="bleu">CONNEXION PDN</h1>
 	</div>
 
-    <div class="orange-divider" style="width: 195px;"> </div>
+    <div class="orange-divider" style="width: 180px;"> </div>
 
 	<div class="d-flex justify-content-center pt-3 mt-4">
 		<div id="ident" class="bg_bleu py-1 px-3 rounded rounded-3" style="min-width:20em;">

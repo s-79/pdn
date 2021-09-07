@@ -127,6 +127,7 @@ $(function(){
         ajaxListPdn("#modal_list_pdn");
         $("#btn_select_AllPdn").click(function() {ajaxListPdn("#modal_list_pdn", "checked");});
         $("#btn_select_NoPdn").click(function() {ajaxListPdn("#modal_list_pdn", "unchecked");});
+        $("#btn_select_PdnActifs").click(function() {ajaxListPdn("#modal_list_pdn", "actifs");});
     });
 
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON + SELECT RESSOURCES
@@ -143,6 +144,7 @@ $(function(){
         ajaxListStr("#modal_list_str");
         $("#btn_select_Allstr").click(function() {ajaxListStr("#modal_list_str", "checked");});
         $("#btn_select_Nostr").click(function() {ajaxListStr("#modal_list_str", "unchecked");});
+        $("#btn_select_strActives").click(function() {ajaxListStr("#modal_list_str", "actives");});
     });
 
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON "SELECTIONNER" DANS LE MODAL RESS
