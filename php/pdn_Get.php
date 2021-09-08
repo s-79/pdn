@@ -137,7 +137,7 @@ if($selectedVille) {
             $headers .='Content-Type: text/html; charset="utf-8"'."\n";
             $headers .='Content-Transfer-Encoding: 8bit';
             $message = '<html><body>souhaite faire réinitialiser son mot de passe.</br></br><a href="http://pdn.ligue93.org/admin">Se connecter à l\'interface d\'administration</a></body></html>';
-            mail('sebastien.trouve@mailo.com', '[pdn.ligue93.org] Réinitialisation de mot de passe', $mail.' '.$message, $headers);
+            mail('fol93.coordopdn93@gmail.com', '[pdn.ligue93.org] Réinitialisation de mot de passe', $mail.' '.$message, $headers);
         }
     }
 }

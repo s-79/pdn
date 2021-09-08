@@ -22,7 +22,7 @@ $("#select_nom_rs").change(function() {
 $("#initiatives").change(function() {
 	const nb_init = $("#initiatives").val();
 	// ------------------------------------------------------------------------- Chargement du header "Initiatives passées"
-	$("#modal_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Initiatives numériques du mois précédent...</h2><button id="btn_close_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+	$("#modal_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" style="font-size:1.1em;">Initiatives numériques du mois précédent...</h2><button id="btn_close_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 	$("#modal_init_btn").html("");
 	if(nb_init !== "0") {
 		let res = "";
@@ -90,7 +90,7 @@ $("#initiatives").change(function() {
 $("#next_initiatives").change(function() {
 	const nb_init = $("#next_initiatives").val();
 	// ------------------------------------------------------------------------- Chargement du header "Initiatives à venir"
-	$("#modal_next_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Initiatives numériques du mois prochain...</h2><button id="btn_close_next_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+	$("#modal_next_init_header").html(`<h2 class="modal-title fw-bold text-uppercase my-1" style="font-size:1.1em;">Initiatives numériques du mois prochain...</h2><button id="btn_close_next_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 	$("#modal_next_init_btn").html("");
 	if(nb_init !== "0") {
 		let res = "";
@@ -166,7 +166,7 @@ for (e of rs) {
 		if($(checkbox).is(':checked')){
 			const rs = $(checkbox).val();
 			//------------------------------------------------------------------ Création des en-têtes avec id spécifique
-			$("#div_header_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Sur l'application <span id="nom_rs${rs}"></span> ... </h2><button id="btn_close_modal_rs" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
+			$("#div_header_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1" style="font-size:1.1em;">Sur l'application <span id="nom_rs${rs}"></span> ... </h2><button id="btn_close_modal_rs" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 			$("#div_header_nom_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Nom de l'application</h2><button id="btn_close_modal_nom_rs${rs}" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 			$("#div_footer_nom_rs").html(`<button id="btn_modal_nom_rs${rs}" type="button" class="btn btn-primary">Valider</button>`);
 			//------------------------------------------------------------------ Décochage de la checkbox si on cic sur la croix dans le modal rs
