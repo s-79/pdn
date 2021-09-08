@@ -12,10 +12,10 @@ include("header.php");
 	<div class="text-center mt-3">
 		<!--                                                                Récupération de l'id dans un input invisible -->
 		<div id="pdn_id" class="d-none"><?php echo $_SESSION['id']; ?></div>
-		<h1 class="mb-0 bleu pointeur" onclick="document.location='bienvenue.php'">BIENVENUE <?php echo $_SESSION['prenom']; ?> !</h1>
+		<h1 class="mb-0 bleu text-uppercase pointeur" onclick="document.location='bienvenue.php'">BIENVENUE <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
-	<form id="form_form" class="mt-4">
+	<form id="form_form1" class="mt-4">
 		<div class="d-flex justify-content-center formDate mb-3">
 			<div class="d-inline pt-2 me-3 fw-bold bleu" style="font-size:1.1em;">
 				Formulaire du mois de
@@ -29,10 +29,12 @@ include("header.php");
 				</select>
 			</div>
 		</div>
+	</form>
+	<form id="form_form2" class="mt-4">
 		<div class="d-flex justify-content-center">
 			<div class="row formulaires">
 				<!--                                                            Outils numériques-->
-				<div class="col-12 col-lg-6 col-xxl-4 form_pad">
+				<div class="col-12 col-md-6 col-xl-4 divWidth">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
 						<h1 class="pt-3">TYPES DE MATÉRIEL UTILISÉ</h1>
 						<div class="row mt-3 ms-3">
@@ -100,7 +102,7 @@ include("header.php");
 					</div>
 				</div>
 				<!--                                                            Thématiques -->
-				<div class="col-12 col-lg-6 col-xxl-4 form_pad">
+				<div class="col-12 col-md-6 col-xl-4 divWidth">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
 						<h1 class="pt-3">THÉMATIQUES ABORDÉES</h1>
 						<!-- <div class="mb-3" style="overflow-y:scroll; overflow-x:hidden; height:157px; scrollbar-color: rgb(232, 80, 23) white;"> -->
@@ -159,13 +161,13 @@ include("header.php");
 
 						<!--                                                            Initiatives -->
 						<h1 class="pt-2 mt-4">INITIATIVES NUMÉRIQUES</h1>
-						<span class="text-white fw-bold">Ateliers à distance, challenges, évènements...</span>
+						<span class="text-white fw-bold">Ateliers, challenges, évènements...</span>
 
 						<div class="row mt-3 me-3">
 							<div class="col-9 text-white mt-1">
 								Combien en avez-vous organisées ce mois-ci ?
 							</div>
-							<div class="col-3">
+							<div class="col-3" style="padding-right:0em !important;">
 								<select class="form-select mt-2" id="initiatives">
 									<option value="0">0</option>
 									<option value="1">1</option>
@@ -182,7 +184,7 @@ include("header.php");
 							<div class="col-9 text-white mt-1">
 								Combien pensez-vous en organiser le mois prochain ?
 							</div>
-							<div class="col-3">
+							<div class="col-3" style="padding-right:0em !important;">
 								<select class="form-select mt-2" id="next_initiatives">
 									<option value="0">0</option>
 									<option value="1">1</option>
@@ -198,7 +200,7 @@ include("header.php");
 					</div>
 				</div>
 
-				<div class="col-12 col-lg-6 col-xxl-4 form_pad">
+				<div class="col-12 col-md-6 col-xl-4 divWidth">
 					<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
 						<h1 class="pt-3">SOUHAITS DE FORMATION</h1>
 							<div class="form-floating mx-3 mt-3">

@@ -26,7 +26,7 @@ include("header.php"); ?>
         <div class="d-flex justify-content-center">
             <div class="row formulaires">
                 <!--                                                                                                              État Civil-->
-                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+                <div class="col-12 col-md-6 col-xl-4 divWidth">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex pt-3">
                             <h1 style="padding-top:0.13em;">DÉNOMINATION</h1>
@@ -57,7 +57,7 @@ include("header.php"); ?>
                     </div>
                 </div>
                 <!--                                                                                                              Contact -->
-                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+                <div class="col-12 col-md-6 col-xl-4 divWidth">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <h1 class="pt-3" style="padding-top:0.13em;">RÉFÉRENT·E</h1>
                         <div class="form-floating mx-3 mt-4 mb-3">
@@ -83,7 +83,7 @@ include("header.php"); ?>
                     </div>
                 </div>
                 <!--                                                                                                              Coordonnées -->
-                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+                <div class="col-12 col-md-6 col-xl-4 divWidth">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <h1 class="pt-3" style="padding-top:0.13em;">COMMENTAIRES</h1>
                         <div class="form-floating mx-3 my-4">

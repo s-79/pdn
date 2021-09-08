@@ -485,6 +485,13 @@ vertical-align: middle;
     }
 }
 
+@media screen and (min-width: 1199px) and (max-width: 1440px) {
+    body {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
 @media screen and (max-width: 434px) {
     #pdn_title {
         display: inline;
@@ -872,8 +879,8 @@ vertical-align: middle;
 
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     #promeneurs {
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 
@@ -951,10 +958,13 @@ vertical-align: middle;
 
 /* ----------------------------------------------------------------------------- FORMULAIRE */
 
-@media screen and (min-width: 1400px) and (max-width: 1450px) {
-    .form_pad {
-        padding-left: 0em !important;
-        padding-right: 0em !important;
+.divWidth {
+    min-width: 440px;
+}
+
+@media screen and (max-width: 1359px) {
+    .divWidth {
+        min-width: 395px;
     }
 }
 

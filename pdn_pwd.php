@@ -10,12 +10,12 @@
 
 <div class="container-fluid" style="margin-top: 6em">
 	<div class="text-center mt-3">
-		<h1 class="mb-0 bleu pointeur" onclick="document.location='bienvenue.php'">BIENVENUE <?php echo $_SESSION['prenom']; ?> !</h1>
+		<h1 class="mb-0 bleu text-uppercase pointeur" onclick="document.location='bienvenue.php'">BIENVENUE <?php echo $_SESSION['prenom']; ?> !</h1>
 		<a href="deconn.php" class="orange">Se déconnecter</a>
 	</div>
 	<form id="form_pwd">
 		<div class="d-flex justify-content-center mt-3">
-			<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu" style="min-width:440px;">
+			<div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu divWidth">
 				<h1 class="pt-3">MODIFIER MON MOT DE PASSE</h1>
 				<div class="form-floating mx-3 mt-3 mb-3">
 					<input type="text" class="form-control" id="id_act" placeholder="Identifiant actuel">

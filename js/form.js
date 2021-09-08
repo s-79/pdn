@@ -151,7 +151,8 @@ $("#next_initiatives").change(function() {
 $("#pdn_valide").click(function() {
 	//-------------------------------------------------------------------------- Masquer la div coordo et afficher le formulaire
 	$("#form_coordo").addClass("d-none");
-	$("#form_form").removeClass("d-none");
+	$("#form_form1").removeClass("d-none");
+	$("#form_form2").removeClass("d-none");
 });
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LES CASES DES RESEAUX SOCIAUX

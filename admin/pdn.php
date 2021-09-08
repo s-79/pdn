@@ -25,7 +25,7 @@
         <div class="d-flex justify-content-center">
             <div class="row formulaires">
                 <!--                                                                                                              Coordonnées-->
-                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+                <div class="col-12 col-md-6 col-xl-4 divWidth">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex bd-highlight pt-3">
                             <div class="bd-highlight"><h1 style="padding-top:0.13em;">COORDONNÉES</h1></div>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <!--                                                                                                              Réseaux sociaux -->
-                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+                <div class="col-12 col-md-6 col-xl-4 divWidth">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <h1 class="pt-3 mb-4 pb-2" style="padding-top:0.13em;">RÉSEAUX SOCIAUX</h1>
                         <form id="form_pdn4">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <!--                                                                                                              Coordonnées -->
-                <div class="col-12 col-lg-6 col-xl-4" style="min-width:440px;">
+                <div class="col-12 col-md-6 col-xl-4 divWidth">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex justify-content-between pt-3 pe-3">
                             <h1 style="padding-top:0.13em;">PRÉSENTATION</h1>

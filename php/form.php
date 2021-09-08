@@ -62,7 +62,7 @@ elseif($next_id_Form_Create_Init) {
         $headers .='Content-Type: text/html; charset="utf-8"'."\n";
         $headers .='Content-Transfer-Encoding: 8bit';
         $message = '<html><body> a besoin d\'un accompagnement ou de ressources pour une initiative numérique.</br></br><a href="http://pdn.ligue93.org/admin">Se connecter à l\'interface d\'administration</a></body></html>';
-        mail('sebastien.trouve@mailo.com', '[pdn.ligue93.org] Besoin d\'accompagnement ou de ressources', $_SESSION["prenom"].' '.$_SESSION["nom"].' '.$message, $headers);
+        mail('fol93.coordopdn93@gmail.com', '[pdn.ligue93.org] Besoin d\'accompagnement ou de ressources', $_SESSION["prenom"].' '.$_SESSION["nom"].' '.$message, $headers);
     }
 
 } elseif($mdp_new) {

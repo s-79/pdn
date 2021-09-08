@@ -106,7 +106,7 @@ const pdn = (response, len) => {
 		const ville = response[i].ville_nom;
 		if(parseInt(actif)===1) {
 			// --------------------------------------------------------------------- Création des vignettes
-			res +=`<div id='${id}' class='col-6 col-md-4 col-lg-3 col-xxl-2 mb-4 text-center divfigure'>`;
+			res +=`<div id='${id}' class='col-6 col-sm-4 col-md-3 col-xl-2 mb-4 text-center divfigure'>`;
 			res +=	`<figure class='bg-white pt-3 pl-1 pr-1 pointeur' style="padding-bottom:0.05em;">`;
 			res +=		`<img style='border-radius: 15%;max-width: 150px;' src='${image}'height='120' alt='${prenom} ${nom}' title='${prenom} ${nom}'/>`;
 			res +=		`<figcaption class='pt-2'><h6 class='text-uppercase fw-bold bleu'>${prenom} ${nom}</br><span class='orange'>${fonction}</span></br>${ville}</h6></figcaption>`;

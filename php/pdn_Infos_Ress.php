@@ -57,7 +57,7 @@ if($prenom_m) {
     $message .= '<b>Image Structure</b> : '.$image_str_m.'</br>';
     $message .= '<b>Présentation Structure</b> : '.$pres_str_m.'</br>'.'</br>';
     $message .= '<a href="http://pdn.ligue93.org/admin">Se connecter à l\'interface d\'administration</a></body></html>';
-    mail('sebastien.trouve@mailo.com', '[pdn.ligue93.org] Modification de coordonnées', $prenom_m.' '.$nom_m.' '.$message, $headers);
+    mail('fol93.coordopdn93@gmail.com', '[pdn.ligue93.org] Modification de coordonnées', $prenom_m.' '.$nom_m.' '.$message, $headers);
 
 } elseif ($nom_r) {
     session_start();
@@ -69,5 +69,5 @@ if($prenom_m) {
     $message .= '<b>Éditeur</b> : '.$editeur_r.'</br>';
     $message .= '<b>Déscription</b> : '.$description_r.'</br>'.'</br>';
     $message .= '<a href="http://pdn.ligue93.org/admin">Se connecter à l\'interface d\'administration</a></body></html>';
-    mail('sebastien.trouve@mailo.com', '[pdn.ligue93.org] Proposition de ressource', $_SESSION["prenom"].' '.$_SESSION["nom"].' '.$message, $headers);
+    mail('fol93.coordopdn93@gmail.com', '[pdn.ligue93.org] Proposition de ressource', $_SESSION["prenom"].' '.$_SESSION["nom"].' '.$message, $headers);
 }

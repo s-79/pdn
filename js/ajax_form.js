@@ -14,7 +14,8 @@ const form_Create = (uuid, mois, annee, nb_h, smart, ordi, tablette, consol, lie
 
             $("#infosMess").html("Le formulaire a bien été ajouté à la base de données.");
             //------------------------------------------------------------------ Réinitialisation de la pages des événements
-            document.getElementById("form_form").reset();
+            document.getElementById("form_form1").reset();
+            document.getElementById("form_form2").reset();
             // ----------------------------------------------------------------- Récupération du mois précédent et de l'année en cours (sauf en janvier) - fonction dans functions
             datSelect();
         }

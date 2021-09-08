@@ -44,7 +44,7 @@
                 <div class="form-floating mx-3 mt-3">
                     <select class="form-select" id="maitrise" aria-label="Niveau de maîtrise du PDN par rapport à l'application">
                         <option selected value="">Niveau de maîtrise du PDN</option>
-                        <option value="Faible">Faible (besoin de formation)</option>
+                        <option value="Débutant">Débutant (besoin de formation)</option>
                         <option value="Moyen">Moyen</option>
                         <option value="Bon">Bon</option>
                         <option value="Excellent">Excellent</option>
@@ -54,6 +54,7 @@
                 <div class="form-floating mx-3 mt-3">
                     <select class="form-select" id="age" aria-label="Tranche d'âge principale">
                         <option selected value="">Tranche d'âge principale</option>
+                        <option value="Moins de 12 ans">Moins de 12 ans</option>
                         <option value="De 12 à 17 ans">De 12 à 17 ans</option>
                         <option value="De 18 à 25 ans">De 18 à 25 ans</option>
                         <option value="Plus de 25 ans">Plus de 25 ans</option>
