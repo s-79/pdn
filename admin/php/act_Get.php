@@ -222,7 +222,7 @@ if($id) {
     }
 // ----------------------------------------------------------------------------- Récupération des PDN actif pour la popup PDN
 } elseif($v_pdn_actifs) {
-    $query = "SELECT `id`, `nom`, `actif` FROM `v_str_pdn` ORDER BY `nom`;";
+    $query = "SELECT `id`, `nom`, `actif`, `date_sortie` FROM `v_str_pdn` ORDER BY `nom`;";
 
     $result = mysqli_query($conn,$query);
 
@@ -230,16 +230,18 @@ if($id) {
         $id = $row['id'];
         $nom = $row['nom'];
         $actif= $row['actif'];
+        $date_sortie = $row['date_sortie'];
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
-            "actif" => $actif
+            "actif" => $actif,
+            "date_sortie" => $date_sortie
         );
     }
 // ----------------------------------------------------------------------------- Récupération des STR avec PDN actifs dedans
 } elseif($v_str_actives) {
-    $query = "SELECT `id`, `nom`, `nb_pdn_act` FROM `v_str` ORDER BY `nom`;";
+    $query = "SELECT `id`, `nom`, `nb_pdn_act`, `statut` FROM `v_str` ORDER BY `nom`;";
 
     $result = mysqli_query($conn,$query);
 
@@ -247,11 +249,13 @@ if($id) {
         $id = $row['id'];
         $nom = $row['nom'];
         $nb_pdn_act = $row['nb_pdn_act'];
+        $statut = $row['statut'];
 
         $return_arr[] = array(
             "id" => $id,
             "nom" => $nom,
-            "nb_pdn_act" => $nb_pdn_act
+            "nb_pdn_act" => $nb_pdn_act,
+            "statut" => $statut
         );
     }
 }

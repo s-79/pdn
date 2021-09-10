@@ -4,12 +4,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Ajouter des PDN à l'action</h3>
+        <h3 class="modal-title" id="exampleModalLabel" style="font-size:1.1em;">Ajouter des PDN à l'action</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-start">
           <button id="btn_select_AllPdn" type="button" class="btn btn-outline-secondary m-2">Tous</button>
           <button id="btn_select_NoPdn" type="button" class="btn btn-outline-secondary m-2">Aucun</button>
+          <button id="btn_select_PdnReseau" type="button" class="btn btn-outline-secondary m-2">Réseau</button>
           <button id="btn_select_PdnActifs" type="button" class="btn btn-outline-secondary m-2">Actifs</button>
       </div>
 
@@ -28,7 +29,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Ajouter les outils partagés lors de l'action</h3>
+        <h3 class="modal-title" id="exampleModalLabel" style="font-size:1.1em;">Ajouter les outils partagés lors de l'action</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-start">
@@ -51,7 +52,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Ajouter les partenaires de l'action</h3>
+        <h3 class="modal-title" id="exampleModalLabel" style="font-size:1.1em;">Ajouter les partenaires de l'action</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-start">
@@ -74,12 +75,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Ajouter des structures à l'action</h3>
+        <h3 class="modal-title" id="exampleModalLabel" style="font-size:1.1em;">Ajouter des structures à l'action</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex justify-content-start">
           <button id="btn_select_Allstr" type="button" class="btn btn-outline-secondary m-2">Toutes</button>
           <button id="btn_select_Nostr" type="button" class="btn btn-outline-secondary m-2">Aucune</button>
+          <button id="btn_select_strReseau" type="button" class="btn btn-outline-secondary m-2">Réseau</button>
           <button id="btn_select_strActives" type="button" class="btn btn-outline-secondary m-2">Actives</button>
       </div>
 
@@ -99,7 +101,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Ajouter ou modifier/supprimer un.e coordo</h3>
+        <h3 class="modal-title" id="exampleModalLabel" style="font-size:1.1em;">Ajouter ou modifier/supprimer un.e coordo</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center my-3">
@@ -118,7 +120,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Ajouter un·e coordo</h3>
+                <h3 class="modal-title" id="exampleModalLabel" style="font-size:1.1em;">Ajouter un·e coordo</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -149,7 +151,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Modifier ou supprimer un.e coordo</h3>
+                <h3 class="modal-title" id="exampleModalLabel" style="font-size:1.1em;">Modifier ou supprimer un.e coordo</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

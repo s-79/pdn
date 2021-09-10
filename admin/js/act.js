@@ -127,6 +127,7 @@ $(function(){
         ajaxListPdn("#modal_list_pdn");
         $("#btn_select_AllPdn").click(function() {ajaxListPdn("#modal_list_pdn", "checked");});
         $("#btn_select_NoPdn").click(function() {ajaxListPdn("#modal_list_pdn", "unchecked");});
+        $("#btn_select_PdnReseau").click(function() {ajaxListPdn("#modal_list_pdn", "reseau");});
         $("#btn_select_PdnActifs").click(function() {ajaxListPdn("#modal_list_pdn", "actifs");});
     });
 
@@ -144,6 +145,7 @@ $(function(){
         ajaxListStr("#modal_list_str");
         $("#btn_select_Allstr").click(function() {ajaxListStr("#modal_list_str", "checked");});
         $("#btn_select_Nostr").click(function() {ajaxListStr("#modal_list_str", "unchecked");});
+        $("#btn_select_strReseau").click(function() {ajaxListStr("#modal_list_str", "reseau");});
         $("#btn_select_strActives").click(function() {ajaxListStr("#modal_list_str", "actives");});
     });
 

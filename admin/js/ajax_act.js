@@ -81,8 +81,13 @@ const ajaxListPdn = (liste, checked) => {
                 const id = response[i].id;
                 const nom = response[i].nom;
                 const actif = response[i].actif;
+                const date_sortie = response[i].date_sortie;
                 res += `<div class="form-check">`;
                 if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}" checked>`;
+                else if (checked === "reseau") {
+                    if (!date_sortie) res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}" checked>`;
+                    else {res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}">`;};
+                }
                 else if(checked === "actifs") {
                     if (parseInt(actif) === 1) res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}" checked>`;
                     else {res += `<input class="form-check-input" type="checkbox" value="" id="pdn${id}">`;};
@@ -164,8 +169,13 @@ const ajaxListStr = (liste, checked) => {
                 const id = response[i].id;
                 const nom = response[i].nom;
                 const nb_pdn_act = response[i].nb_pdn_act;
+                const statut = response[i].statut;
                 res += `<div class="form-check">`;
                 if(checked === "checked") res += `<input class="form-check-input" type="checkbox" value="" id="str${id}" checked>`;
+                else if (checked === "reseau") {
+                    if(statut === "Dans le réseau") res += `<input class="form-check-input" type="checkbox" value="" id="str${id}" checked>`;
+                    else {res += `<input class="form-check-input" type="checkbox" value="" id="str${id}">`;}
+                }
                 else if(checked === "actives") {
                     if(parseInt(nb_pdn_act) > 0) res += `<input class="form-check-input" type="checkbox" value="" id="str${id}" checked>`;
                     else {res += `<input class="form-check-input" type="checkbox" value="" id="str${id}">`;}
