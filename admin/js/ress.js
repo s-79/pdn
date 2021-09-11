@@ -63,7 +63,7 @@ $(function(){
         // --------------------------------------------------------------------- Récupération des valeus saisies par l'utilisateur
         const uuid = uuid_gen();
         const nom = $("#nom").val();
-        const lien = $("#lien").val().toLowerCase();
+        const lien = $("#lien").val();
         let image = $("#image").val();
         if(!image) image = "img/outil/0.jpg";
         const age = $("#age").val();
@@ -103,7 +103,7 @@ $(function(){
         const id = $("#id_ress").val();
         const uuid = uuid_gen();
         const nom = $("#nom").val();
-        const lien = $("#lien").val().toLowerCase();
+        const lien = $("#lien").val();
         let image = $("#image").val();
         if(!image) image = "img/outil/0.jpg";
         const age = $("#age").val();
