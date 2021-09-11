@@ -179,8 +179,8 @@ include("header.php");
 								</select>
 							</div>
 						</div>
-
-						<div class="row mt-3 me-3 mb-3">
+<!-- 																			Bloc à réécrire au plus tard en janvier 2022 -->
+						<div id="next_init_tmp" class="row mt-3 me-3 mb-3">
 							<div class="col-9 text-white mt-1">
 								Combien pensez-vous en organiser le mois prochain ?
 							</div>
@@ -195,6 +195,9 @@ include("header.php");
 									<option value="6">6</option>
 								</select>
 							</div>
+						</div>
+						<div id="next_init_tog" class="my-3 pt-1 me-3 text-white text-center d-none">
+							Les initiatives numériques des mois suivants <br> seront à remplir à partir du mois d'août 2021.
 						</div>
 
 					</div>

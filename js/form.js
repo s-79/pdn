@@ -5,6 +5,36 @@ datSelect();
 
 // ----------------------------------------------------------------------------- ! ! ! - - C H A N G E - - ! ! !
 
+// ---------------------------------------------------------------------------- A SUUPRIMER AVANT JANVIER 2022 - ÉVENEMENT CHANGE DANS LE NOM DU MOIS
+$("#mois").change(function() {
+	const mois = $("#mois").val();
+	if(parseInt(mois) === 0) {
+		$("#annee").val("2021");
+		$("#annee").prop("disabled", true)
+	}
+	else {
+		$("#annee").prop("disabled", false)
+	}
+});
+
+$("#mois,#annee").change(function() {
+	const mois = $("#mois").val();
+	const annee = $("#annee").val();
+	if (parseInt(annee) === 2021) {
+		$("#next_init_tmp").addClass("d-none");
+		$("#next_init_tog").removeClass("d-none");
+		if(parseInt(mois) === 8 || parseInt(mois) === 9 || parseInt(mois) === 10 || parseInt(mois) === 11 || parseInt(mois) === 12) {
+			$("#next_init_tog").addClass("d-none");
+			$("#next_init_tmp").removeClass("d-none");
+		}
+	}
+	else {
+		$("#next_init_tog").addClass("d-none");
+		$("#next_init_tmp").removeClass("d-none");
+	}
+
+});
+
 // ---------------------------------------------------------------------------- ÉVENEMENT CHANGE DANS LA LISTE DU NOM DE L'APPLICATION
 $("#select_nom_rs").change(function() {
 	const nom_rs = $("#select_nom_rs").val();
