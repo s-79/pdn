@@ -157,7 +157,7 @@ $("#next_initiatives").change(function() {
 								<option value="Non">Non</option>
 								<option value="Peut-être">Peut-être</option>
 						</select>
-						<label for="acc_next_init${i}">Besoin d'accompagnement ou de ressources ? *</label>
+						<label for="acc_next_init${i}">Besoin d'accompagnement ? *</label>
 						</div>
 					</div>`;
 			$(`#btn_next_init${i}`).click(function() {
