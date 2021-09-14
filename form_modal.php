@@ -48,7 +48,7 @@
                         <option value="Niveau moyen">Niveau moyen</option>
                         <option value="Bonne maîtrise">Bonne maîtrise</option>
                     </select>
-                    <label for="maitrise">Niveau de maîtrise du PDN par rapport à l'application</label>
+                    <label for="maitrise">Niveau de maîtrise de l'application</label>
                 </div>
                 <div class="form-floating mx-3 mt-3">
                     <select class="form-select" id="age" aria-label="Tranche d'âge principale">
@@ -78,7 +78,7 @@
                         <option value="De 25 à 50">De 25 à 50</option>
                         <option value="Plus de 50">Plus de 50</option>
                     </select>
-                    <label for="messages">Nb de messages courts et échanges informels</label>
+                    <label for="messages">Nb de messages courts</label>
                 </div>
                 <div class="form-floating mx-3 mt-3">
                     <select class="form-select" id="acc" aria-label="Nombre d'accompagnements et suivis">
@@ -88,7 +88,7 @@
                         <option value="De 5 à 10">De 5 à 10</option>
                         <option value="Plus de 10">Plus de 10</option>
                     </select>
-                    <label for="acc">Nombre d'accompagnements et suivis</label>
+                    <label for="acc">Nb d'accompagnements et suivis</label>
                 </div>
                 <div class="form-floating mx-3 mt-3">
                     <select class="form-select" id="new_acc" aria-label="Nombre de nouveaux accompagnements">
@@ -98,7 +98,7 @@
                         <option value="De 5 à 10">De 5 à 10</option>
                         <option value="Plus de 10">Plus de 10</option>
                     </select>
-                    <label for="new_acc">Nombre de nouveaux accompagnements</label>
+                    <label for="new_acc">Nb de nouveaux accompagnements</label>
                 </div>
             </form>
         </div>
