@@ -43,6 +43,8 @@ $(function(){
         //---------------------------------------------------------------------- Réinitialisation du formulaire
         $("#modal_coordo").modal('hide');
         document.getElementById("form_coordo_create").reset();
+        //------------------------------------------------------------------- -- Remplissage de la liste des Coordos
+        ajaxNewCoordo("#select_nom_coordo");
     });
     // ------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON COORDO UPDATE
     $("#btn_coordo_update").click(function() {

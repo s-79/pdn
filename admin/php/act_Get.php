@@ -73,7 +73,7 @@ if($id) {
 
 // ----------------------------------------------------------------------------- Récupération de la liste des coordo qui ont participé à l'action en fonction de l'id de l'action
 } elseif($id_act_coordo) {
-    $query = "SELECT `id` FROM `v_act_coordo` WHERE `id` = '$id_act_coordo';";
+    $query = "SELECT `id` FROM `v_act_coordo` WHERE `act_id` = '$id_act_coordo';";
 
     $result = mysqli_query($conn,$query);
 

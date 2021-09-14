@@ -553,8 +553,6 @@ const act_Create = (dat, type, organise, intitule, uuid, lieu, ville, pj, suppor
 
             $('#message_admin_act').html(`L'action a bien été ajoutée à la base de données.`);
             $('#modalActAdmin').modal('show');
-            //------------------------------------------------------------------ Réinitialisation de la pages des événements
-            act_Reset();
         }
     });
 }
@@ -573,6 +571,8 @@ const act_Get_Id = (uuid) => {
             act_Get_Pdn(id_act);
             act_Get_Part(id_act);
             act_Get_Str(id_act);
+            //------------------------------------------------------------------ Réinitialisation de la pages des événements
+            act_Reset();
         }
     });
 }
@@ -674,8 +674,6 @@ const act_Update = (id, dat, type, organise, intitule, uuid, lieu, ville, pj, su
 
             $('#message_admin_act').html(`L'action a bien été modifiée.`);
             $('#modalActAdmin').modal('show');
-            //----------------------------------------------------------------- Réinitialisation de la pages des événements
-            act_Reset();
         }
     });
 }
@@ -692,6 +690,8 @@ const act_Maj_Asso = (id_act) => {
             act_Get_Pdn(id_act);
             act_Get_Part(id_act);
             act_Get_Str(id_act);
+            //----------------------------------------------------------------- Réinitialisation de la pages des événements
+            act_Reset();
         }
     });
 }
