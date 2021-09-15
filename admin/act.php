@@ -146,8 +146,10 @@ include("header.php"); ?>
                 <!--                                                            Participation -->
                 <div class="col-12 col-md-6 col-xl-4 divWidth">
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
-                        <h1 class="pt-3 pb-2" style="padding-top:0.13em;">PARTICIPATION</h1>
-
+                        <div class="d-flex justify-content-between pt-3 pe-3">
+                            <h1 style="padding-top:0.13em;">PARTICIPATION</h1>
+                            <input type="text" class="form-control" style="max-width:100px;" id="nb_pers" placeholder="Nb autres">
+                        </div>
                         <div class="row mt-4 me-1">
                             <div class="form-floating mx-3 col-8">
                                 <input type="text" class="form-control" id="nb_pdn" placeholder="Nombre de promeneurs">
@@ -178,13 +180,8 @@ include("header.php"); ?>
                             </div>
                         </div>
 
-                        <div class="form-floating m-3">
-                            <input type="text" class="form-control" id="nb_pers" placeholder="ombre d'autres participants">
-                            <label for="nb_pers">Nombre d'autres participants</label>
-                        </div>
-
                         <div class="form-floating m-3 mb-4">
-                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:60px;"></textarea>
+                            <textarea class="form-control" placeholder="Commentaires" id="commentaires" style="height:128px;"></textarea>
                             <label for="commentaires">Commentaires</label>
                         </div>
                         <div id="btn_act_create" class="form-group d-flex justify-content-center m-3">
