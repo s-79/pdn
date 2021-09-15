@@ -148,7 +148,7 @@ include("header.php"); ?>
                     <div class="bg_bleu m-3 py-2 px-3 rounded rounded-3 div_bleu">
                         <div class="d-flex justify-content-between pt-3 pe-3">
                             <h1 style="padding-top:0.13em;">PARTICIPATION</h1>
-                            <input type="text" class="form-control" style="max-width:100px;" id="nb_pers" placeholder="Nb autres">
+                            <input type="text" class="form-control" style="max-width:92px;" id="nb_pers" placeholder="Nb autres">
                         </div>
                         <div class="row mt-4 me-1">
                             <div class="form-floating mx-3 col-8">
