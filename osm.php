@@ -4,7 +4,7 @@
     <title>Promeneurs du Net 93</title>
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
-        <meta name="description" content="Promeneurs du Net 93 - Retrouvez plus de 150 ressources en ligne classées par thématiques ainsi que la présentation des structures et des PDN de Seine-Saint-Denis et les promeneurs de Seine-Saint-Denis ainsi que des dizaines de ressources classées par thématiques.">
+    <meta name="description" content="Promeneurs du Net 93 - Retrouvez plus de 150 ressources en ligne classées par thématiques ainsi que la présentation des structures et des PDN de Seine-Saint-Denis.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
