@@ -42,18 +42,20 @@ include("header.php"); ?>
                         <div class="form-floating mx-3 mt-3">
                             <select class="form-select type_m" id="type" aria-label="Type d'événement *">
                                 <option selected value="">Séléctionner un type d'événement *</option>
-                                <option value="Rencontre partenaire">Rencontre partenaire</option>
+                                <option value="Publication">Publication</option>
+                                <option value="Accueil PDN">Accueil PDN</option>
                                 <option value="Accompagnement PDN">Accompagnement PDN</option>
+                                <option value="Suivi des structures et PDN">Suivi des structures et PDN</option>                                                        
+                                <option value="Rencontre partenaire">Rencontre partenaire</option>
                                 <option value="Organisation réunion ou formation PDN">Organisation réunion ou formation PDN</option>
                                 <option value="Journée de formation PDN">Journée de formation PDN</option>
                                 <option value="Réunion de réseau PDN">Réunion de réseau PDN</option>
                                 <option value="Rencontre départementale">Rencontre départementale</option>
-                                <option value="Publication">Publication</option>
                                 <option value="Réunion d’information AAP">Réunion d’information AAP</option>
                                 <option value="Temps de formation Coordo">Temps de formation Coordo</option>
                                 <option value="Comité de pilotage">Comité de pilotage</option>
                                 <option value="Comité technique">Comité technique</option>
-                                <option value="Accueil">Accueil</option>
+
                             </select>
                             <label for="type">Type *</label>
                         </div>
