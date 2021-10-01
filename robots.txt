@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /img/
+Disallow: /osm/
+Disallow: /php/
+Disallow: /js/
