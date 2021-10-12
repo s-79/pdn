@@ -1,5 +1,6 @@
 sql
 csv
+partage
 php/base.php
 admin/.htaccess
 admin/.htpasswd
