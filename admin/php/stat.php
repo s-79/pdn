@@ -66,16 +66,44 @@ if ($stmt = $conn->prepare($query)) {
         $stmt->close();
 }
 
-$datasets = array (
-    'data'=> $data,
-    'backgroundColor'=> [
-        'rgba(25, 30, 54, 1)',
-        'rgba(101, 178, 222, 1)',
-        'rgba(218, 51, 80, 1)',
-        'rgba(240, 173, 78, 1)',
-        'rgba(200, 184, 162, 1)'
-    ]
-);
+// Adaptation des couleurs
+if ($select == 'type') { $datasets = array ('data'=> $data, 'backgroundColor'=> [
+            'rgba(218, 51, 80, 1)', // Rose
+            'rgba(101, 178, 222, 1)', // Bleu clair
+            'rgba(221, 119, 106, 1)', // Saumon
+            'rgba(223, 186, 132, 1)', // Jaune-Marron
+            'rgba(240, 173, 78, 1)', // Jaune
+            'rgba(101, 178, 222, 1)',
+            'rgba(229, 112, 79, 1)', // Orange
+            'rgba(171, 176, 150, 1)', // Gris-bleu
+            'rgba(25, 30, 54, 1)', // Bleu foncé
+            'rgba(200, 184, 162, 1)' // Marron
+
+        ]
+    );
+
+} elseif ($select == 'support')  { $datasets = array ('data'=> $data, 'backgroundColor'=> [
+                'rgba(200, 184, 162, 1)', // Marron
+            'rgba(101, 178, 222, 1)', // Bleu clair
+            'rgba(218, 51, 80, 1)', // Rose
+            'rgba(240, 173, 78, 1)', // Jaune
+            'rgba(25, 30, 54, 1)' // Bleu foncé
+        ]
+    );
+
+} else { $datasets = array ('data'=> $data, 'backgroundColor'=> [
+            'rgba(25, 30, 54, 1)', // Bleu foncé
+                'rgba(218, 51, 80, 1)', // Rose
+            'rgba(101, 178, 222, 1)', // Bleu clair
+            'rgba(240, 173, 78, 1)', // Jaune
+            'rgba(223, 186, 132, 1)', // Jaune-Marron
+            'rgba(200, 184, 162, 1)' // Marron
+        ]
+    );
+
+}
+
+
 
 $data = array('labels'=>$labels, 'datasets'=> array($datasets));
 

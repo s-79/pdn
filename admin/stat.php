@@ -3,7 +3,7 @@ include("header.php"); ?>
 
 <div class="container-fluid" style="max-width:80%" >
     <div class="d-flex justify-content-center" style="margin-top: 5em !important;">
-        <div class="row search_bar">
+        <!-- <div class="row search_bar">
             <div class="col-12 col-sm-6 col-lg-3 py-4 pr-1 pl-3 text-center">
                 <select class="form-select type_m" id="type1" aria-label="Type d'événement *">
                     <option selected value="">Séléctionner un type d'événement *</option>
@@ -43,7 +43,7 @@ include("header.php"); ?>
             <div class="col-12 col-lg-3 py-4 px-1 text-center">
                 <button type="button" id="btn_stats" class="btn btn-primary btn-bleu">Afficher les statistiques</button>
             </div>
-        </div>
+        </div> -->
     </div>
 <!--                                                                            C H A R T S -->
     <div class="d-flex justify-content-center mt-4">
@@ -60,10 +60,10 @@ include("header.php"); ?>
                 <h2 class="text-dark mb-4">Durée</h2>
                 <canvas id="duree"></canvas>
             </div>
-            <div id="div_ress" class="col-12 col-xl-6 mb-5">
+            <!-- <div id="div_ress" class="col-12 col-xl-6 mb-5">
                 <h2 class="text-dark mb-4">Nombre de PDN</h2>
                 <canvas id="nb_pdn"></canvas>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
