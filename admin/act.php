@@ -53,6 +53,7 @@ include("header.php"); ?>
                                 <option value="Rencontre départementale">Rencontre départementale</option>
                                 <option value="Réunion d’information AAP">Réunion d’information AAP</option>
                                 <option value="Temps de formation Coordo">Temps de formation Coordo</option>
+                                <option value="Préparation bilans / COPIL / COTECH">Préparation bilans / COPIL / COTECH</option>
                                 <option value="COPIL / COTECH">COPIL / COTECH</option>
 
                             </select>
