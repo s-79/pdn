@@ -48,12 +48,12 @@ include("header.php"); ?>
                                 <option value="Accompagnement structure">Accompagnement structure</option>
                                 <option value="Partenariat">Partenariat</option>
                                 <option value="Organisation réunion ou formation PDN">Organisation réunion ou formation PDN</option>
-                                <option value="Réunion ou formation PDN">Réunion ou formation PDN</option>
-                                <option value="Prépa ou compte-rendu COPIL / COTECH">Prépa ou compte-rendu COPIL / COTECH</option>
-                                <option value="COPIL / COTECH">COPIL / COTECH</option>
-                                <option value="Bilan">Bilan</option>
-                                <option value="Information AAP">Information AAP</option>
+                                <option value="Réunion de réseau ou journée de formation PDN">Réunion de réseau ou journée de formation PDN</option>
+                                <option value="Préparation ou compte-rendu COPIL / COTECH">Préparation ou compte-rendu COPIL / COTECH</option>
+                                <option value="COPIL / COTECH / Réunion technique">COPIL / COTECH / Réunion technique</option>
                                 <option value="Formation Coordo">Formation Coordo</option>
+                                <option value="Information AAP">Information AAP</option>
+                                <option value="Bilan">Bilan</option>
                             </select>
                             <label for="type">Type *</label>
                         </div>
