@@ -22,6 +22,11 @@ $("#form_reset").click(function() {
 	for (e of rs) {
 		sessionStorage.removeItem(e);
 	}
+	//------------------------------------------------------------------------- Réinitialisation du formulaire
+	document.getElementById("form_form1").reset();
+	document.getElementById("form_form2").reset();
+	// ------------------------------------------------------------------------ Récupération du mois précédent et de l'année en cours (sauf en janvier) - fonction dans functions
+	datSelect();
 });
 
 

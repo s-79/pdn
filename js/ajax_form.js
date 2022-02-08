@@ -12,7 +12,7 @@ const form_Populate = pdn_id => {
                 $("#infosMess").html("Vous n'avez pas encore complété de formulaire de suivi de l'activité. Vous pourrez utilisez cette fonctionnalité après votre premier enregistrement");
                 $("#modalFormInfos").modal('show');
             } else {
-                //-------------------------------------------------------------- Récupération des données du dernier forumlaire créé
+                //-------------------------------------------------------------- Récupération des données du dernier formulaire créé
                 $.ajax({
                     url: 'php/form_Get.php',
                     dataType: 'JSON',
@@ -55,7 +55,7 @@ const form_Populate = pdn_id => {
                         $("#commentaires").val(commentaires);
                     }
                 });
-                //-------------------------------------------------------------- Récupération des données RS du dernier forumlaire créé
+                //-------------------------------------------------------------- Récupération des données des 4 principaux RS du dernier formulaire créé
                 $.ajax({
                     url: 'php/form_Get.php',
                     dataType: 'JSON',
@@ -75,7 +75,7 @@ const form_Populate = pdn_id => {
                             let instagram = [];
                             let whatsapp = [];
                             // n : name / v : variable (tableau vide)
-                            const arrayRS = [{"n":"facebook","v":facebook}, {"n":"snapchat","v":snapchat}, {"n":"instagram","v":instagram}, {"n":"whatsapp","v":whatsapp}, {"n":"autre1","v":autre1}, {"n":"autre2","v":autre2}];
+                            const arrayRS = [{"n":"facebook","v":facebook}, {"n":"snapchat","v":snapchat}, {"n":"instagram","v":instagram}, {"n":"whatsapp","v":whatsapp}];
                             const len_arrayRS = arrayRS.length;
                             for (let i = 0; i < len_arrayRS; i++) {
                                 const n = arrayRS[i].n;
@@ -113,7 +113,7 @@ const form_Create = (uuid, mois, annee, nb_h, smart, ordi, tablette, consol, lie
             form_Get_Id(uuid);
 
             $("#infosMess").html("Le formulaire a bien été ajouté à la base de données.");
-            //------------------------------------------------------------------ Réinitialisation de la pages des événements
+            //------------------------------------------------------------------ Réinitialisation du formulaire
             document.getElementById("form_form1").reset();
             document.getElementById("form_form2").reset();
             // ----------------------------------------------------------------- Récupération du mois précédent et de l'année en cours (sauf en janvier) - fonction dans functions
