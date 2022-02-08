@@ -1,5 +1,105 @@
 // ----------------------------------------------------------------------------- ! ! ! - - P O P U L A T E - - ! ! !
 
+const form_Populate = pdn_id => {
+    //------------------------------------------------------------------------- Récupération de l'id du dernier formulaire créé par ce PDN
+    $.ajax({
+        url: 'php/form_Get.php',
+        dataType: 'JSON',
+        data : {id_pdn:pdn_id},
+        success: function(response){
+            const id_form = response[0].id;
+            if(!id_form) {
+                $("#infosMess").html("Vous n'avez pas encore complété de formulaire de suivi de l'activité. Vous pourrez utilisez cette fonctionnalité après votre premier enregistrement");
+                $("#modalFormInfos").modal('show');
+            } else {
+                //-------------------------------------------------------------- Récupération des données du dernier forumlaire créé
+                $.ajax({
+                    url: 'php/form_Get.php',
+                    dataType: 'JSON',
+                    data : {id_form:id_form},
+                    success: function(response){
+                        const nb_h = response[0].nb_h;
+                        const smart = response[0].smart;
+                        const ordi = response[0].ordi;
+                        const tablette = response[0].tablette;
+                        const consol = response[0].console;
+                        const lien = response[0].lien;
+                        const loisirs = response[0].loisirs;
+                        const socio_pro = response[0].socio_pro;
+                        const parentalite = response[0].parentalite;
+                        const sante = response[0].sante;
+                        const addiction = response[0].addiction;
+                        const sexualite = response[0].sexualite;
+                        const violence = response[0].violence;
+                        const logement = response[0].logement;
+                        const autre_them = response[0].autre_them;
+                        const formation = response[0].formation;
+                        const commentaires = response[0].commentaires;
+
+                        $("#nb_h").val(nb_h);
+                        if (smart === "1") $("#smart").prop('checked', true);
+                        if (ordi === "1") $("#ordi").prop('checked', true);
+                        if (tablette === "1") $("#tablette").prop('checked', true);
+                        if (consol === "1") $("#console").prop('checked', true);
+                        if (lien === "1") $("#lien").prop('checked', true);
+                        if (loisirs === "1") $("#loisirs").prop('checked', true);
+                        if (socio_pro === "1") $("#socio_pro").prop('checked', true);
+                        if (parentalite === "1") $("#parentalite").prop('checked', true);
+                        if (sante === "1") $("#sante").prop('checked', true);
+                        if (addiction === "1") $("#addiction").prop('checked', true);
+                        if (sexualite === "1") $("#sexualite").prop('checked', true);
+                        if (violence === "1") $("#violence").prop('checked', true);
+                        if (logement === "1") $("#logement").prop('checked', true);
+                        if (autre_them === "1") $("#autre_them").prop('checked', true);
+                        $("#formation").val(formation);
+                        $("#commentaires").val(commentaires);
+                    }
+                });
+                //-------------------------------------------------------------- Récupération des données RS du dernier forumlaire créé
+                $.ajax({
+                    url: 'php/form_Get.php',
+                    dataType: 'JSON',
+                    data : {id_form_rs:id_form},
+                    success: function(response){
+            			const len = response.length;
+            			for (let i = 0; i < len; i++) {
+            				const nom = response[i].nom;
+            				const maitrise = response[i].maitrise;
+            				const age = response[i].age;
+                            const followers = response[i].nb_follow;
+            				const messages = response[i].nb_mess;
+            				const acc = response[i].nb_acc;
+
+                            let facebook = [];
+                            let snapchat = [];
+                            let instagram = [];
+                            let whatsapp = [];
+                            // n : name / v : variable (tableau vide)
+                            const arrayRS = [{"n":"facebook","v":facebook}, {"n":"snapchat","v":snapchat}, {"n":"instagram","v":instagram}, {"n":"whatsapp","v":whatsapp}, {"n":"autre1","v":autre1}, {"n":"autre2","v":autre2}];
+                            const len_arrayRS = arrayRS.length;
+                            for (let i = 0; i < len_arrayRS; i++) {
+                                const n = arrayRS[i].n;
+                                const v = arrayRS[i].v;
+
+                                if(n===nom.toLowerCase()) {
+                                    const checkbox = `#${n}`;
+                                     $(checkbox).prop('checked', true);
+                                     v.push(nom);
+                                     v.push(maitrise);
+                                     v.push(age);
+                                     v.push(followers);
+                                     v.push(messages);
+                                     v.push(acc);
+                                     sessionStorage.setItem(n, JSON.stringify(v));
+                                }
+                            }
+            			}
+            		}
+                });
+            }
+        }
+    });
+}
 
 // ----------------------------------------------------------------------------- ! ! ! - - C R E A T E - - ! ! !
 const form_Create = (uuid, mois, annee, nb_h, smart, ordi, tablette, consol, lien, loisirs, socio_pro, parentalite,
@@ -22,7 +122,7 @@ const form_Create = (uuid, mois, annee, nb_h, smart, ordi, tablette, consol, lie
     });
 }
 
-//------------------------------------------------------------------------------ Récupération de l'id de l'événement créé
+//------------------------------------------------------------------------------ Récupération de l'id du formulaire créé
 const form_Get_Id = (uuid) => {
     $.ajax({
         url: "php/form_Get.php",
@@ -31,7 +131,7 @@ const form_Get_Id = (uuid) => {
         success: function(response){
             const id_form = response[0].id;
 
-            //------------------------------------------------------------------ Récupérarion et suppression du contenu des variables de session RS crées lors du click sur valider dans un modal RS
+            //------------------------------------------------------------------ Récupération et suppression du contenu des variables de session RS crées lors du click sur valider dans un modal RS
             let facebook = "";
             let instagram = "";
             let snapchat = "";
@@ -56,12 +156,11 @@ const form_Get_Id = (uuid) => {
                     const followers = v[3];
                     const messages = v[4];
                     const acc = v[5];
-                    const new_acc = v[6];
 
                     $.ajax({
                         url: 'php/form.php',
                         dataType: 'JSON',
-                        data : {nom:nom, maitrise:maitrise, age:age, followers:followers, messages:messages, acc:acc, new_acc:new_acc, id_Form_Create_Rs:id_form}
+                        data : {nom:nom, maitrise:maitrise, age:age, followers:followers, messages:messages, acc:acc, id_Form_Create_Rs:id_form}
                     });
                 }
             }

@@ -71,26 +71,26 @@
                     <label for="followers">Nombre de followers</label>
                 </div>
                 <div class="form-floating mx-3 mt-3">
-                    <select class="form-select" id="messages" aria-label="Nb de messages courts et échanges informels">
-                        <option selected value="">Nombre de messages courts et échanges informels</option>
+                    <select class="form-select" id="messages" aria-label="Nombre de messages envoyés">
+                        <option selected value="">Nombre de messages envoyés</option>
                         <option value="Moins de 10">Moins de 10</option>
                         <option value="De 10 à 25">De 10 à 25</option>
                         <option value="De 25 à 50">De 25 à 50</option>
                         <option value="Plus de 50">Plus de 50</option>
                     </select>
-                    <label for="messages">Nb de messages courts</label>
+                    <label for="messages">Nb de messages envoyés</label>
                 </div>
                 <div class="form-floating mx-3 mt-3">
-                    <select class="form-select" id="acc" aria-label="Nombre d'accompagnements et suivis">
-                        <option selected value="">Nombre d'accompagnements et suivis</option>
+                    <select class="form-select" id="acc" aria-label="Nombre de discussions et accompagnements">
+                        <option selected value="">Nombre de discussions et accompagnements</option>
                         <option value="Aucun">Aucun</option>
                         <option value="Moins de 5">Moins de 5</option>
                         <option value="De 5 à 10">De 5 à 10</option>
                         <option value="Plus de 10">Plus de 10</option>
                     </select>
-                    <label for="acc">Nb d'accompagnements et suivis</label>
+                    <label for="acc">Nb discussions et accomp.</label>
                 </div>
-                <div class="form-floating mx-3 mt-3">
+                <div class="form-floating mx-3 mt-3 d-none">
                     <select class="form-select" id="new_acc" aria-label="Nombre de nouveaux accompagnements">
                         <option selected value="">Nombre de nouveaux accompagnements</option>
                         <option value="Aucun">Aucun</option>
@@ -153,12 +153,34 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title orange">FORMULAIRE MENSUEL</h2>
+                <h2 class="modal-title fw-bold text-uppercase my-1 orange" style="font-size:1.1em;">FORMULAIRE MENSUEL</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div id="infosMess" class="modal-body py-3 bleu"></div>
+            <div id="infosMess" class="modal-body py-3 bleu" style="font-size:1.1em;"></div>
             <div class="modal-footer">
                 <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--                                                                             ! ! ! - - M O D A L   R E S T A U R A T I O N - - ! ! ! -->
+<div class="modal fade" id="modalFormRestore" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fw-bold text-uppercase my-1 orange" style="font-size:1.1em;">Récupération des données</h2>
+                <button id="btn_close_next_init" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="m-3 bleu" style="font-size:1.1em;">
+                    Souhaitez-vous récupérer les données saisies lors du dernier enregistrement ou réinitialiser le formulaire ?
+                </div>
+
+            </div>
+            <div class="modal-footer my-2">
+                <button type="button" id="form_reset" class="btn btn-warning" data-bs-dismiss="modal" aria-label="Close">Réinitialiser</button>
+                <button type="button" id="form_restore" class="btn btn-primary"  data-bs-dismiss="modal" aria-label="Close">Récupérer</button>
             </div>
         </div>
     </div>

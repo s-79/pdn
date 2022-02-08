@@ -18,12 +18,12 @@ const datSelect = () => {
     let a = d.getFullYear();
 
     let years = "";
-    const arrayYears = [2021, 2022, 2023, 2024, 2025];
+    const arrayYears = [2022, 2023, 2024, 2025, 2026];
     for (y of arrayYears) years +=`<option value='${y}'>${y}</option>`;
     $("#annee").html(years);
 
     // c : chiffres / l : lettres --- Mois
-    const arrayMonth = [{"c":0,"l":"1er semestre"}, {"c":1,"l":"Janvier"}, {"c":2,"l":"Février"}, {"c":3,"l":"Mars"}, {"c":4,"l":"Avril"}, {"c":5,"l":"Mai"}, {"c":6,"l":"Juin"}, {"c":7,"l":"Juillet"}, {"c":8,"l":"Août"}, {"c":9,"l":"Septembre"}, {"c":10,"l":"Octobre"}, {"c":11,"l":"Novembre"}, {"c":12,"l":"Décembre"}];
+    const arrayMonth = [{"c":1,"l":"Janvier"}, {"c":2,"l":"Février"}, {"c":3,"l":"Mars"}, {"c":4,"l":"Avril"}, {"c":5,"l":"Mai"}, {"c":6,"l":"Juin"}, {"c":7,"l":"Juillet"}, {"c":8,"l":"Août"}, {"c":9,"l":"Septembre"}, {"c":10,"l":"Octobre"}, {"c":11,"l":"Novembre"}, {"c":12,"l":"Décembre"}];
     const len_am = arrayMonth.length;
     let month = "";
     for (let i = 0; i < len_am; i++) {

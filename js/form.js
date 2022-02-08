@@ -3,37 +3,30 @@
 // ----------------------------------------------------------------------------- Récupération du mois précédent et de l'année en cours (sauf en janvier) - fonction dans functions
 datSelect();
 
+$(function(){
+	// ------------------------------------------------------------------------- Proposition de récupération des dernières données saisies
+	$("#modalFormRestore").modal('show');
+});
+
+// ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON DE RECUPERATION DES DONNEES
+$("#form_restore").click(function() {
+	// ------------------------------------------------------------------------- Remplissage du formulaire avec les données du dernier formulaire créé par le PDN
+	const pdn_id = $("#pdn_id").text();
+	form_Populate(pdn_id);
+});
+
+// ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON DE RECUPERATION DES DONNEES
+$("#form_reset").click(function() {
+	// ------------------------------------------------------------------------- Réinitialisation des variables
+	const rs = ['facebook', 'snapchat', 'instagram', 'whatsapp', 'autre1', 'autre2'];
+	for (e of rs) {
+		sessionStorage.removeItem(e);
+	}
+});
+
+
+
 // ----------------------------------------------------------------------------- ! ! ! - - C H A N G E - - ! ! !
-
-// ---------------------------------------------------------------------------- A SUUPRIMER AVANT JANVIER 2022 - ÉVENEMENT CHANGE DANS LE NOM DU MOIS
-$("#mois").change(function() {
-	const mois = $("#mois").val();
-	if(parseInt(mois) === 0) {
-		$("#annee").val("2021");
-		$("#annee").prop("disabled", true)
-	}
-	else {
-		$("#annee").prop("disabled", false)
-	}
-});
-
-$("#mois,#annee").change(function() {
-	const mois = $("#mois").val();
-	const annee = $("#annee").val();
-	if (parseInt(annee) === 2021) {
-		$("#next_init_tmp").addClass("d-none");
-		$("#next_init_tog").removeClass("d-none");
-		if(parseInt(mois) === 8 || parseInt(mois) === 9 || parseInt(mois) === 10 || parseInt(mois) === 11 || parseInt(mois) === 12) {
-			$("#next_init_tog").addClass("d-none");
-			$("#next_init_tmp").removeClass("d-none");
-		}
-	}
-	else {
-		$("#next_init_tog").addClass("d-none");
-		$("#next_init_tmp").removeClass("d-none");
-	}
-
-});
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CHANGE DANS LA LISTE DU NOM DE L'APPLICATION
 $("#select_nom_rs").change(function() {
@@ -178,13 +171,6 @@ $("#next_initiatives").change(function() {
 
 // ----------------------------------------------------------------------------- ! ! ! - - C L I C K - - ! ! !
 
-// ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON CONFIRMER DANS LE FORMULAIRE DE COORDONNEES
-$("#pdn_valide").click(function() {
-	//-------------------------------------------------------------------------- Masquer la div coordo et afficher le formulaire
-	$("#form_coordo").addClass("d-none");
-	$("#form_form1").removeClass("d-none");
-	$("#form_form2").removeClass("d-none");
-});
 
 // ---------------------------------------------------------------------------- ÉVENEMENT CLICK SUR LES CASES DES RESEAUX SOCIAUX
 const rs = ['facebook', 'snapchat', 'instagram', 'whatsapp', 'autre1', 'autre2'];
@@ -200,23 +186,23 @@ for (e of rs) {
 			$("#div_header_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1" style="font-size:1.1em;">Sur l'application <span id="nom_rs${rs}"></span> ... </h2><button id="btn_close_modal_rs" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 			$("#div_header_nom_rs").html(`<h2 class="modal-title fw-bold text-uppercase my-1">Nom de l'application</h2><button id="btn_close_modal_nom_rs${rs}" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`);
 			$("#div_footer_nom_rs").html(`<button id="btn_modal_nom_rs${rs}" type="button" class="btn btn-primary">Valider</button>`);
-			//------------------------------------------------------------------ Décochage de la checkbox si on cic sur la croix dans le modal rs
-			$("#btn_close_modal_rs").click(function() {$(checkbox).prop("checked", false);});
+			//------------------------------------------------------------------ Décochage de la checkbox si on clic sur la croix dans le modal rs
+			// $("#btn_close_modal_rs").click(function() {$(checkbox).prop("checked", false);});
 
 			//------------------------------------------------------------------ Réinitialisation du formulaire
 	        document.getElementById("form_rs").reset();
 			if (rs === "autre1" || rs === "autre2" ) {
 				document.getElementById("form_autre_rs").reset();
 
-				//-------------------------------------------------------------- Décochage de la checkbox si on cic sur la croix dans le modal nom_rs
-				$(`#btn_close_modal_nom_rs${rs}`).click(function() {$(checkbox).prop("checked", false);});
+				//-------------------------------------------------------------- Décochage de la checkbox si on clic sur la croix dans le modal nom_rs
+				// $(`#btn_close_modal_nom_rs${rs}`).click(function() {$(checkbox).prop("checked", false);});
 
 				$("#get_nom_rs").val("");
 				$("#modal_nom_rs").modal('show');
 
 				// ------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON DE VALIDATION DU NOM DE L'APPLICATION
 				$(`#btn_modal_nom_rs${rs}`).click(function() {
-					//---------------------------------------------------------- Recochage si besoin de la checkbox si on cic sur la croix dans le modal nom_rs
+					//---------------------------------------------------------- Recochage si besoin de la checkbox si on clic sur la croix dans le modal nom_rs
 					$(checkbox).prop("checked", true);
 
 					const get_nom_rs = $("#get_nom_rs").val();
@@ -237,6 +223,26 @@ for (e of rs) {
 			//------------------------------------------------------------------ Attribution d'un id spécifique à chaque bouton valider
 			const modal_rs_footer = `<button id="btn_modal_${rs}" type="button" class="btn btn-primary">Valider</button>`;
 			$("#modal_rs_footer").html(modal_rs_footer);
+
+
+			// ----------------------------------------------------------------- Récup d'un éventuel contenu des variables
+			let v = [];
+			v = sessionStorage.getItem(rs);
+			v = JSON.parse(v);
+
+			if(v) {
+				const nom = v[0];
+				const maitrise = v[1];
+				const age = v[2];
+				const followers = v[3];
+				const messages = v[4];
+				const acc = v[5];
+				$("#maitrise").val(maitrise);
+				$("#age").val(age);
+				$("#followers").val(followers);
+				$("#messages").val(messages);
+				$("#acc").val(acc);
+			}
 
 			// ----------------------------------------------------------------- ÉVENEMENT CLICK SUR LE BOUTON DE VALIDATION
 			const btn_modal_rs = `#btn_modal_${rs}`;
@@ -262,11 +268,10 @@ for (e of rs) {
 					const followers = $("#followers").val();
 					const messages = $("#messages").val();
 					const acc = $("#acc").val();
-					const new_acc = $("#new_acc").val();
 
 					// ---------------------------------------------------------  Remplissage et stockage des tableaux de chaque RS utilisé avec les valeurs saisies
 					if(rs === n) {
-						if (!maitrise || !age || !followers || !messages || !acc || !new_acc) {
+						if (!maitrise || !age || !followers || !messages || !acc) {
 							$("#infosMess").html("Merci de remplir tous les champs du formulaire avant de valider.");
 							$("#modalFormInfos").modal('show');
 						}
@@ -277,7 +282,6 @@ for (e of rs) {
 							v.push(followers);
 							v.push(messages);
 							v.push(acc);
-							v.push(new_acc);
 
 							sessionStorage.setItem(n, JSON.stringify(v));
 							$("#modal_rs").modal('hide');
@@ -286,10 +290,6 @@ for (e of rs) {
 					}
 				}
 			});
-		}
-		else {
-			const rs = $(checkbox).val();
-			sessionStorage.removeItem(rs);
 		}
 	});
 };
