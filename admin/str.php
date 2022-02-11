@@ -59,11 +59,9 @@
                                     <option value="Lieu d'accueil et d’écoute">Lieu d'accueil et d’écoute</option>
                                     <option value="Service Jeunesse">Service Jeunesse</option>
                                     <option value="Information Jeunesse">Information Jeunesse</option>
-                                    <option value="BIJ / PIJ">BIJ / PIJ</option>
                                     <option value="Association">Association</option>
-                                    <option value="Centre Socioculturel">Centre Socioculturel</option>
+                                    <option value="Centre Socioculturel / EVS">Centre Socioculturel / EVS</option>
                                     <option value="Prévention Spécialisée">Prévention Spécialisée</option>
-                                    <option value="Association sportive">Association sportive</option>
                                     <option value="Espace Santé">Espace Santé</option>
                                     <option value="Service Municipal">Service Municipal</option>
                                     <option value="ALJT">ALJT</option>
