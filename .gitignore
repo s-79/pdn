@@ -1,6 +1,10 @@
 sql
 csv
-partage
+partage/addictions
+partage/panorama
+partage/addictions
+partage/image
+partage/violences
 php/base.php
 admin/.htaccess
 admin/.htpasswd

@@ -1,0 +1,1753 @@
+{
+  "aspectWidth": 16,
+  "aspectHeight": 9,
+  "enableKeyboardZoom": true,
+  "enableKeyboardRotation": true,
+  "enableKeyboardNavigation": true,
+  "enableMouseTranslation": true,
+  "enableMouseZoom": true,
+  "enableMouseRotation": true,
+  "enableMouseNavigation": true,
+  "updateURLOnFrameChange": true,
+  "exportType": "pdf",
+  "exportToPDFPageSize": "A4",
+  "exportToPDFPageOrientation": "landscape",
+  "exportToPDFInclude": "",
+  "exportToPDFExclude": "",
+  "exportToPPTXSlideSize": "screen4x3",
+  "exportToPPTXInclude": "",
+  "exportToPPTXExclude": "",
+  "exportToVideoFormat": "webm",
+  "exportToVideoWidth": 1280,
+  "exportToVideoHeight": 720,
+  "exportToVideoFrameRate": 50,
+  "exportToVideoBitRate": 2000000,
+  "frames": [
+    {
+      "frameId": "frame3467",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": -298.4406259139549,
+          "cy": 146.76927309523853,
+          "width": 535.7660924531684,
+          "height": 301.14666951630915,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": -298.4406259139549,
+          "cy": 146.76927309523853,
+          "width": 535.7660924531684,
+          "height": 301.1466695163091,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 7.388292543076375,
+          "deltaY": 0.6709301997307193,
+          "widthFactor": 1.0546576623093866,
+          "heightFactor": 1.0548583438157129,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame7877",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 260.8317603306185,
+          "cy": 146.7692730952386,
+          "width": 535.7660924531684,
+          "height": 301.14666951630915,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 260.8317603306185,
+          "cy": 146.7692730952386,
+          "width": 535.7660924531684,
+          "height": 301.1466695163091,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 7.919528885306022,
+          "deltaY": 0.14175539504327617,
+          "widthFactor": 1.0546576623093866,
+          "heightFactor": 1.0548583438157129,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8590",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "<p style=\"margin-bottom: 0cm; line-height: 100%;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>Éducation\npopulaire</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nPromouvoir une éducation visant l'amélioration du système social</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nFaciliter l’accès aux\nsavoirs, à\nla culture et aux sports</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nPermettre à chacun de s'épanouir et de trouver une place dans la\nsociété</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nDévelopper la\nconscientisation (comprendre\nle monde) et l’émancipation</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nRendre\nchacun·e acteur·trice\nde ses apprentissages\nqu’il/elle\npartage avec les autres</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><br>\n\n</p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>+\nde 150 ans</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nAppel de Jean Macé le 25 octobre 1866, Jean Macé dans L’Opinion\nnationale un article</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nCréation d’une Ligue en faveur de l’enseignement populaire en\nFrance, en la situant « sur un terrain \tneutre, politiquement et\nreligieusement ».</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<br>\n\n</p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>1er\npartenaire de l’éducation nationale</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t• La Ligue de l'Enseignement propose des activités éducatives,\nculturelles, sportives et de loisirs, à \ttravers 103 fédérations\ndépartementales qui accompagnent des associations présentes dans 24\n000 \tcommunes.</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><br>\n\n</p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>Loi\ndu 1<sup>er</sup> juillet 1901 : Liberté de se réunir en\nassociation</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nLa Ligue de l'enseignement mène une action de pression parlementaire\nintense \tpour obtenir le vote \tde ce qui deviendra l’article 14 de\ncette loi, interdisant l’enseignement aux congrégations non\n\tautorisées (combat anticlérical).</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t•\nNe constitue pas un point de départ absolu pour la Ligue de\nl'enseignement, dont la plupart des \tassociations adhérentes étaient\nautorisées par les pouvoirs publics, mais elle permet à celles-ci\n\td’acquérir un statut juridique légal.</font></font></p>",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-4",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 820.9911765295848,
+          "cy": 145.43872816364956,
+          "width": 535.7660924531684,
+          "height": 301.14666951630915,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 820.9911765295848,
+          "cy": 145.43872816364956,
+          "width": 535.7660924531684,
+          "height": 301.1466695163091,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 8.250087662397277,
+          "deltaY": 0.42816908161830725,
+          "widthFactor": 1.0546576623093866,
+          "heightFactor": 1.0548583438157129,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame1995",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "<p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b>Centre confédéral à Paris</b></font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Soutien aux fédérations</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Pas de lien de hiérarchie</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Propose des pôles d'appui (mallettes, outillages, kit, projets…)</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Récupère les fonds et re-dispatchent dans les fédérations</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px;\"><br></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b>Union Régionale d'Île-de-France</b></font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Regroupement principalement autour des projets Engagement Jeunesse</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Caroline GARCIA, Robert (Trésorier)</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px;\"><br></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b>Fédération des Œuvres Laïques de Seine-Saint-Denis - FOL 93</b></font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Association Loi 1901 et fédération d’associations</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Mouvement d’éducation populaire créée en 1967</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Fédération d’associations (environ 250 associations + villes + autres structures déclarées)</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Affiliation : 148,33€ par an / Comprend 3 adhésions de personnes physiques</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Mise à disposition d'outils, même sans affiliation</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><br></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b>Sport :</b></font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">• Union Sportive d'Éducation Physique USEP : (Eq. UNSS pour le primaire)</font></font></p><p style=\"font-size: 14.6667px; margin-bottom: 0cm; line-height: 14.6667px; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">• Union Fédérale des Œuvres Laïques d'Éducation Physique UFOLEP : Bobigny et Champs-sur-\tMarnes</font></font></p>",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 1378.933017842568,
+          "cy": 143.66466825486424,
+          "width": 535.7660924531684,
+          "height": 301.14666951630915,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 1378.933017842568,
+          "cy": 143.66466825486424,
+          "width": 535.7660924531684,
+          "height": 301.1466695163091,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 7.450840108193006,
+          "deltaY": 0.5650893974423639,
+          "widthFactor": 1.0546576623093866,
+          "heightFactor": 1.0548583438157129,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame5294",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "<p style=\"margin-bottom: 0cm; line-height: 100%;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>Pôle\nengagement / vie associative :</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">Favoriser\net soutenir le développement des initiatives collectives et de\nl'engagement bénévole.</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%;\"><br>\n\n</p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t<b>Public\nAdulte (Cédric) :</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\tFavoriser\net soutenir le développement des initiatives collectives et de\nl'engagement bénévole</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t<b>Formation\ndes acteurs associatifs</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tLe\nmardi soir de 18h30 à 21h30</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tGratuites\npour toutes les structures de Seine Saint-Denis</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tAccompagner\nà consolider ou développer leur projet</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nFonctionnement statutaire loi 1901</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nConception de projets et de budgets</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nComptabilité associative / Basi Compta</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nOrganisation collective</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nCommunication</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nCréation d'emploi</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nAppropriation du Service civique</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nGestion de conflit...</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<br>\n\n</p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t<b>Centre\nde Ressources de la Vie Associative (Cécile) :</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tAccompagnement\nde projets associatifs ou collectifs</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tPlutôt\npour les assos sans salariés</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tOuvert\nà tous de la SSD</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tAccompagnement\nindividuel</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<br>\n\n</p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\tDispositif\nLocal d'Accompagnement</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tDispositif\nnational porté depuis 2007</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tPour\nle structures employeuses de la SSD principalement ESS</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tAppui\ndans leur démarche de consolidation ou de développement</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tLien\nvers le fichier actions coll</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<br>\n\n</p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t<b>L'accompagnement\ndu DLA se décline sous trois formes :</b></font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nUn diagnostic partagé de la structure effectué par un·e chargé·e\nde mission pour \tmettre en \t\tlumière les forces et les points de\nfragilité de la structure ;</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nUn accompagnement individuel par un·e intervenant·e extérieur·e\nspécialisé·e sur une \t\t\tproblématique précise, si le diagnostic\nen fait apparaître le besoin ;</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\"><span style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">&nbsp; &nbsp; &nbsp;•\nCulture &amp; Marchés publics</span></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">&nbsp; &nbsp; &nbsp;•\nOutils de gestion et de pilotage</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">&nbsp; &nbsp; &nbsp;•\nCalculs des coûts et de la rentabilité</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">&nbsp; &nbsp; &nbsp;•\nFormaliser des hypothèses de développement</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nUn accompagnement collectif de quelques jours pour approfondir une\nproblématique \t\t\tcommune avec d'autres structures de l'Économie\nSociale et Solidaire du département.</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">&nbsp; &nbsp; &nbsp;•\nDemande d'agrément de formation</font></font></p>\n<p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">&nbsp; &nbsp; &nbsp;•\nFinancement Européen</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">---------------------------------</p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b>Public Jeune (</b><b>Annick</b><b>) :</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Encourager et favoriser l'engagement des jeunes et leur capacité d'agir</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium; break-before: auto;\"><br></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b>Le Service civique -</b><b> (16-25 ans)</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Élargi à 30 (31?) ans pour les jeunes en situation de handicap</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"></font></font><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Enveloppe de 120 postes / Missions entre 6 et 9 mois / 24 à 32h max.</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><br></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">• Toutes les assos qui accueillent des volontaires service civique sont affiliées</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">• Mise à disposition de l’agrément de SC pour les assos affiliées</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">• Accompagnement et formation des tuteurs (FOA avec Unis-cité)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">• Prévention et secours civiques de niveau 1 (PSC1 en partenariat avec l’UFOLEP)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"></font></font><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">• </font></font><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Formations civiques et citoyennes </font></font><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">(</font></font><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">Ouvertes à tout public / catalogue commun&nbsp;</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">avec les FD IDF</font></font><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Lutte contre les discriminations</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Laïcité</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Éducation aux médias</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Lutte contre les stéréotypes de genres</font></font><span style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">&nbsp; &nbsp; &nbsp; &nbsp;</span></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Pratiques et usages numériques</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Inclusion et handicap</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Sport et laïcité</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b><br></b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b>L</b><b>es Juniors Associations</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">De 12-18 ans puis Junior majeur jusqu’à 20 ans</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b></b>RNJA&nbsp;: Réseau National des Juniors Associations</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><b></b>Agrément national / Intermédiation / double tutorat&nbsp;:</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Accompagnement des jeunes mineur·e·s dans l’organisation de leur projet&nbsp;</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;collectif (</font></font><span style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">30 juniors assos accompagnées / 200 membres)</span></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp;• Formation des tuteurs / 25 accompagnateurs habilités lors de commission</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\">&nbsp; &nbsp; &nbsp; RNJA</font></font></p><p style=\"margin-bottom: 0cm; line-height: 1px; background: transparent; font-size: medium;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt;\"><br></font></font></p>",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 1936.8748591555527,
+          "cy": 141.44709336888266,
+          "width": 535.7660924531684,
+          "height": 301.14666951630915,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 1936.8748591555527,
+          "cy": 141.44709336888266,
+          "width": 535.7660924531684,
+          "height": 301.1466695163091,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 6.651470483677713,
+          "deltaY": 0.25849473607016193,
+          "widthFactor": 1.0546576623093866,
+          "heightFactor": 1.0548583438157129,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame5432",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "<p style=\"margin-bottom: 0cm; line-height: 100%;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>Pôle\nactions éducatives (Alice) :</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">Contribuer\nà outiller la communauté éducative et mutualiser les ressources et\nles connaissances.</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\">\n       \n</p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t<b>Public\nAdulte :</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b><br></b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><b style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">Formation\ndes acteurs éducatifs</b><br></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\tFormations\ngratuites destinées aux acteurs·trices socio-éducatifs de\nSeine-Saint-Denis</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nLes stéréotypes de genre et leurs conséquences (3 jours)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nLutte contre les discriminations (4 jours)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nÉducation aux médias et théories du complot (4 jours)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nGestion de conflits (4 jours)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t•\nValeurs de la République et laïcité (2 jours)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t<b>\tMise\nà disposition de </b><b>ressources</b><b> pédagogique</b><b>s</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t</b><b>•\n</b>Malles\nde livres</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t</b><b>•\n</b>Expositions</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t\t<b>•\n</b>Colonisation, esclavage,\ndéportation</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t\t<b>•\n</b>Migrations, mémoires</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t\t<b>•</b>\nRacisme / discrimination</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t\t<b>•</b>\nLaïcité, Droits de\nl’enfant, Démocratie et Citoyenneté</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t\t•\nCitoyenneté locale, Citoyenneté</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t</b><b>•\n</b>Vidéos\n(Documentaires, fictions,\ncourts métrages)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t</b><b>•\n</b>Jeux\ncoopératifs</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t\t\t<b>•\n</b>Crayon coopératif</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t\t•\n</b>Puzzle\ncoopératif</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t\t•\n</b>La rivière</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t\t•\n</b>Le labyrinthe</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t\t\t•\n</b>Le parachute</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\t</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t\tLire\net faire lire (130 bénévoles)</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><br>\n\n</p><p style=\"margin-bottom: 0cm; line-height: 100%;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t<b>Public\n</b><b>enfants / j</b><b>eune</b><b>s&nbsp;:</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>\t</b>Principalement\nen primaire, développement collège et lycée</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\tInterventions\nen milieu scolaire / hors temps scolaires</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t<b>Éducation\nà la différence</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nFilles - Garçons Cassons les clichés</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nJouons la carte de la Fraternité</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nCiné débat</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t<b>Vie\net citoyenneté scolaire</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nCharte de la Laïcité à l'école</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nAteliers débats</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nParcours '' Les Veilleurs de l'info ''</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nMieux Vivre Ensemble</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nRencontre régionale des délégués élèves</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%;\">\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">\t\t•\nFormation des délégués élèves</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-----------------------------</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\"><b>Promeneurs\ndu Net</b></font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">21\ndépartements en France dont la ligue est Coordo PDN</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\"><span style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">Les\nPilotes&nbsp;: CNAF, DDCS, CD</span><br></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\"><span style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">Un\nPromeneur du Net est un professionnel qui assure une présence\néducative sur Internet auprès des jeunes, dans le cadre de ses\nmissions habituelles.</span><br></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\"><b style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">Ses\nmissions&nbsp;:</b><br></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\"><span style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">-\nécoute, accompagnement, prévention, conseil, dialogue, confiance,\nsecret professionel</span><br></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nDévelopper une relation de confiance</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nRenforcer le lien social</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nAugmenter la fréquentation des structures (com’, toucher les\njeunes éloignées…)</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nCréer des espaces de parole et d’échange sur Internet</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nAccompagner les initiatives et les projets individuels</font></font></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\"><span style=\"font-size: 10pt; font-family: &quot;Liberation Sans&quot;, sans-serif; background-color: transparent;\">-\nSensibiliser aux usages des écrans</span><br></p><p style=\"margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nPrévenir les comportements à risque et le mal être</font></font></p><p style=\"margin-left: 1cm; margin-bottom: 0cm; line-height: 100%; background: transparent; break-before: auto;\"><font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nÉducation aux Médias et à l’Information, fake news, développer\nl’esprit critique</font></font></p><p style=\"margin-left: 1cm; margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nViolences, harcèlement, rixes entre quartier, grooming</font></font></p><p style=\"margin-left: 1cm; margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nImage, estime de soi, consentement, sexting, chantage</font></font></p><p align=\"left\" style=\"margin-bottom: 0cm; line-height: 100%\">\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</p><p style=\"margin-left: 1cm; margin-bottom: 0cm; line-height: 100%; background: transparent;\">\n<font face=\"Liberation Sans, sans-serif\"><font style=\"font-size: 10pt\">-\nUsages : Addiction, Révision, Environnement, Protection de la vie\nprivée données</font></font></p>",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 2495.2602154457304,
+          "cy": 141.44709336888295,
+          "width": 535.7660924531684,
+          "height": 301.14666951630915,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 2495.2602154457304,
+          "cy": 141.44709336888295,
+          "width": 535.7660924531684,
+          "height": 301.1466695163091,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 6.2956158363554096,
+          "deltaY": 0.25849473607044615,
+          "widthFactor": 1.0546576623093866,
+          "heightFactor": 1.0548583438157129,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame2434",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 3053.6455717359095,
+          "cy": 142.3341233232758,
+          "width": 535.7660924531684,
+          "height": 301.14666951630915,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 3053.6455717359095,
+          "cy": 142.3341233232758,
+          "width": 535.7660924531684,
+          "height": 301.1466695163091,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1.0000000000000002,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -552.8019380297155,
+          "deltaY": 3.0565049150726793,
+          "widthFactor": 1.0546576623093866,
+          "heightFactor": 1.0548583438157129,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8246",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-7",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 3615.2657486528356,
+          "cy": 140.29023518206913,
+          "width": 535.7660924531709,
+          "height": 301.1466695163105,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999951,
+          "clipHeightFactor": 0.9999999999999972
+        },
+        "__sozi_auto__": {
+          "cx": 3615.2657486528356,
+          "cy": 140.29023518206913,
+          "width": 535.7660924531709,
+          "height": 301.1466695163105,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999951,
+          "clipHeightFactor": 0.9999999999999972
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -549.9227279096644,
+          "deltaY": 2.923596998475375,
+          "widthFactor": 1.0546576623093915,
+          "heightFactor": 1.0548583438157177,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame2500",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image7110",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 3619.854844753681,
+          "cy": 159.67947219976932,
+          "width": 345.35960020248274,
+          "height": 194.1218282595081,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999944,
+          "clipHeightFactor": 0.9999999999999968
+        },
+        "__sozi_auto__": {
+          "cx": 3619.854844753681,
+          "cy": 159.67947219976932,
+          "width": 345.35960020248274,
+          "height": 194.1218282595081,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999944,
+          "clipHeightFactor": 0.9999999999999968
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -1.0982802463190637,
+          "deltaY": -0.8791978441759909,
+          "widthFactor": 0.9920606505332944,
+          "heightFactor": 0.9921051825043056,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame6335",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-7",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 4169.5851446190445,
+          "cy": 137.30735959787404,
+          "width": 535.7660924531714,
+          "height": 301.1466695163108,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        },
+        "__sozi_auto__": {
+          "cx": 4169.5851446190445,
+          "cy": 137.30735959787404,
+          "width": 535.7660924531714,
+          "height": 301.14666951631074,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 4.396668056544513,
+          "deltaY": -0.05927858571971001,
+          "widthFactor": 1.0546576623093924,
+          "heightFactor": 1.0548583438157186,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame2848",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-7-4",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 4729.744560818016,
+          "cy": 138.19438955226684,
+          "width": 535.7660924531714,
+          "height": 301.1466695163108,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        },
+        "__sozi_auto__": {
+          "cx": 4729.744560818016,
+          "cy": 138.19438955226684,
+          "width": 535.7660924531714,
+          "height": 301.14666951631074,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 5.814385036765998,
+          "deltaY": 0.8277513686730913,
+          "widthFactor": 1.0546576623093924,
+          "heightFactor": 1.0548583438157186,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame5583",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8189",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 4735.903264348904,
+          "cy": 175.45377794126364,
+          "width": 380.75895922323775,
+          "height": 214.019315656108,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999936,
+          "clipHeightFactor": 0.999999999999996
+        },
+        "__sozi_auto__": {
+          "cx": 4735.903264348904,
+          "cy": 175.45377794126364,
+          "width": 380.75895922323775,
+          "height": 214.01931565610798,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999936,
+          "clipHeightFactor": 0.999999999999996
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 543.2733815364036,
+          "deltaY": 2.4690519891152007,
+          "widthFactor": 0.8403092167321572,
+          "heightFactor": 1.0170702159084375,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame9398",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8263",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 5291.234521948575,
+          "cy": 136.86384462067778,
+          "width": 535.7660924531714,
+          "height": 301.1466695163108,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        },
+        "__sozi_auto__": {
+          "cx": 5291.234521948575,
+          "cy": 136.86384462067778,
+          "width": 535.7660924531714,
+          "height": 301.14666951631074,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 553.7437992923251,
+          "deltaY": -35.97752500822847,
+          "widthFactor": 1.422238441264196,
+          "heightFactor": 1.420561131285353,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame7402",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-7",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 5846.958788375584,
+          "cy": 134.20275475749975,
+          "width": 535.7660924531714,
+          "height": 301.1466695163108,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        },
+        "__sozi_auto__": {
+          "cx": 5846.958788375584,
+          "cy": 134.20275475749975,
+          "width": 535.7660924531714,
+          "height": 301.14666951631074,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 564.2874016568339,
+          "deltaY": -1.252903201484628,
+          "widthFactor": 1.0546576623093924,
+          "heightFactor": 1.0548583438157186,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame1649",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6403.126569779791,
+          "cy": 131.09814991712537,
+          "width": 535.7660924531714,
+          "height": 301.1466695163108,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        },
+        "__sozi_auto__": {
+          "cx": 6403.126569779791,
+          "cy": 131.09814991712537,
+          "width": 535.7660924531714,
+          "height": 301.14666951631074,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 2.9717846235407706,
+          "deltaY": -2.446527817249631,
+          "widthFactor": 1.0546576623093924,
+          "heightFactor": 1.0548583438157186,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame4004",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0-3",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6406.674689597361,
+          "cy": -204.19917284330313,
+          "width": 535.7660924531714,
+          "height": 301.1466695163108,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        },
+        "__sozi_auto__": {
+          "cx": 6406.674689597361,
+          "cy": -204.19917284330313,
+          "width": 535.7660924531714,
+          "height": 301.14666951631074,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999942,
+          "clipHeightFactor": 0.9999999999999966
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 6.519904441111066,
+          "deltaY": 0.6581574789624938,
+          "widthFactor": 1.0546576623093924,
+          "heightFactor": 1.0548583438157186,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame3829",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8702",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6293.7680334918805,
+          "cy": -229.0595771940677,
+          "width": 166.1238726872562,
+          "height": 93.37591850550247,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999925,
+          "clipHeightFactor": 0.9999999999999953
+        },
+        "__sozi_auto__": {
+          "cx": 6293.7680334918805,
+          "cy": -229.0595771940677,
+          "width": 166.1238726872562,
+          "height": 93.37591850550247,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999925,
+          "clipHeightFactor": 0.9999999999999953
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 0.5736975543804874,
+          "deltaY": -1.998969283911464,
+          "widthFactor": 0.981046521715257,
+          "heightFactor": 1.2426649317662812,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame6872",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8713",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6517.497446121322,
+          "cy": -224.9178096986089,
+          "width": 222.62187759193478,
+          "height": 125.13266132857927,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999916,
+          "clipHeightFactor": 0.9999999999999948
+        },
+        "__sozi_auto__": {
+          "cx": 6517.497446121322,
+          "cy": -224.9178096986089,
+          "width": 222.6218775919348,
+          "height": 125.13266132857926,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999916,
+          "clipHeightFactor": 0.9999999999999948
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -3.127065597427645,
+          "deltaY": -1.3651058411870167,
+          "widthFactor": 0.8989375452397098,
+          "heightFactor": 1.2659056016644588,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8339",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8713",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6328.047702607653,
+          "cy": -118.7669806481499,
+          "width": 222.6218775919348,
+          "height": 125.13266132857927,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999916,
+          "clipHeightFactor": 0.9999999999999948
+        },
+        "__sozi_auto__": {
+          "cx": 6328.047702607653,
+          "cy": -118.7669806481499,
+          "width": 222.6218775919348,
+          "height": 125.13266132857926,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999916,
+          "clipHeightFactor": 0.9999999999999948
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -192.57680911109674,
+          "deltaY": 104.78572320927198,
+          "widthFactor": 0.8989375452397099,
+          "heightFactor": 1.2659056016644588,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame3647",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6407.723273714129,
+          "cy": 134.19185199413155,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        },
+        "__sozi_auto__": {
+          "cx": 6407.723273714129,
+          "cy": 134.19185199413155,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 7.568488557879391,
+          "deltaY": 0.6471742597565537,
+          "widthFactor": 1.0546576623093977,
+          "heightFactor": 1.0548583438157237,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8794",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0-8",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6965.221600049925,
+          "cy": 132.4177920853463,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        },
+        "__sozi_auto__": {
+          "cx": 6965.221600049925,
+          "cy": 132.4177920853463,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 6.325603956174746,
+          "deltaY": -1.1268856490287078,
+          "widthFactor": 1.0546576623093977,
+          "heightFactor": 1.0548583438157237,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame6299",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0-8-1",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 7522.7199263857165,
+          "cy": 132.41779208534615,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        },
+        "__sozi_auto__": {
+          "cx": 7522.7199263857165,
+          "cy": 132.41779208534615,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 5.082719354466462,
+          "deltaY": -1.12688564902885,
+          "widthFactor": 1.0546576623093977,
+          "heightFactor": 1.0548583438157237,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame7609",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0-8-1-6-4",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 8079.331222767119,
+          "cy": 131.0872471537572,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        },
+        "__sozi_auto__": {
+          "cx": 8079.331222767119,
+          "cy": 131.0872471537572,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 2.952804798368561,
+          "deltaY": -2.457430580617796,
+          "widthFactor": 1.0546576623093977,
+          "heightFactor": 1.0548583438157237,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame4413",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "rect1889-9-8-4-1-9-3-2-7-3-6-7-0",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 8639.490638966083,
+          "cy": 132.4177920853463,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        },
+        "__sozi_auto__": {
+          "cx": 8639.490638966083,
+          "cy": 132.4177920853463,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 842.4828264660828,
+          "deltaY": -0.1713955367240203,
+          "widthFactor": 10.558818968576405,
+          "heightFactor": 1.0619669305029191,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame2646",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0-8-1-6",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 9198.31951023347,
+          "cy": 131.5307621309536,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        },
+        "__sozi_auto__": {
+          "cx": 9198.31951023347,
+          "cy": 131.5307621309536,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 563.2003696084703,
+          "deltaY": -2.0139156034213954,
+          "widthFactor": 1.0546576623093977,
+          "heightFactor": 1.0548583438157237,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8994",
+      "title": "Présentation des outils et ressources disponibles",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": true,
+          "referenceElementId": "image1279-3-2-7-7-6-8-0-0-8-1-6-1",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": true,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 9198.31951023347,
+          "cy": 131.5307621309536,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        },
+        "__sozi_auto__": {
+          "cx": 9198.31951023347,
+          "cy": 131.5307621309536,
+          "width": 535.766092453174,
+          "height": 301.1466695163122,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999898,
+          "clipHeightFactor": 0.9999999999999936
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 4.459158670970282,
+          "deltaY": -2.0139156034213954,
+          "widthFactor": 1.0546576623093977,
+          "heightFactor": 1.0548583438157237,
+          "deltaAngle": 0
+        }
+      }
+    }
+  ],
+  "elementsToHide": [],
+  "customFiles": [],
+  "selectedFrames": [
+    "frame5294"
+  ],
+  "selectedLayers": [
+    "layer1",
+    "__sozi_auto__"
+  ],
+  "editableLayers": []
+}
