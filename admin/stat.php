@@ -2,70 +2,89 @@
 include("header.php"); ?>
 
 <div class="container-fluid" style="max-width:80%" >
-    <div class="d-flex justify-content-center" style="margin-top: 5em !important;">
-        <!-- <div class="row search_bar">
-            <div class="col-12 col-sm-6 col-lg-3 py-4 pr-1 pl-3 text-center">
-                <select class="form-select type_m" id="type1" aria-label="Type d'événement *">
-                    <option selected value="">Séléctionner un type d'événement *</option>
-                    <option value="Rencontre partenaire">Rencontre partenaire</option>
-                    <option value="Accompagnement PDN">Accompagnement PDN</option>
-                    <option value="Organisation réunion ou formation PDN">Organisation réunion ou formation PDN</option>
-                    <option value="Journée de formation PDN">Journée de formation PDN</option>
-                    <option value="Réunion de réseau PDN">Réunion de réseau PDN</option>
-                    <option value="Rencontre départementale">Rencontre départementale</option>
-                    <option value="Publication">Publication</option>
-                    <option value="Réunion d’information AAP">Réunion d’information AAP</option>
-                    <option value="Temps de formation Coordo">Temps de formation Coordo</option>
-                    <option value="Comité de pilotage">Comité de pilotage</option>
-                    <option value="Comité technique">Comité technique</option>
-                    <option value="Accueil">Accueil</option>
-                </select>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 py-4 pr-3 pl-1 text-center">
-                <select class="form-select type_m" id="support1" aria-label="Support de communication *">
-                    <option selected value="">Séléctionner un support *</option>
-                    <option value="Présentiel">Présentiel</option>
-                    <option value="E-mail">E-mail</option>
-                    <option value="Téléphone">Téléphone</option>
-                    <option value="Visio">Visio</option>
-                    <option value="Réseaux Sociaux">Réseaux Sociaux</option>
-                </select>
-            </div>
-            <div class="col-12 col-lg-3 py-4 px-1 text-center">
-                <select class="form-select type_m" id="duree1" aria-label="Durée *">
-                    <option selected value="">Séléctionner une durée *</option>
-                    <option value="Moins d'une heure">Moins d'une heure</option>
-                    <option value="De 1h à 2h">De 1h à 2h</option>
-                    <option value="1/2 journée">1/2 journée</option>
-                    <option value="1 journée">1 journée</option>
-                </select>
-            </div>
-            <div class="col-12 col-lg-3 py-4 px-1 text-center">
-                <button type="button" id="btn_stats" class="btn btn-primary btn-bleu">Afficher les statistiques</button>
-            </div>
-        </div> -->
-    </div>
 <!--                                                                            C H A R T S -->
-    <div class="d-flex justify-content-center mt-4">
+    <div class="mt-5">
         <div class="row charts">
-            <div id="div_pdn" class="col-12 col-xl-6 mb-5">
-                <h2 class="text-dark mb-4">Type</h2>
-                <canvas id="type"></canvas>
-            </div>
             <div id="div_part" class="col-12 col-xl-6 mb-5">
-                <h2 class="text-dark mb-4">Support</h2>
+                <h1 class="text-dark mb-4">SUPPORT</h1>
                 <canvas id="support"></canvas>
             </div>
             <div id="div_pers" class="col-12 col-xl-6 mb-5">
-                <h2 class="text-dark mb-4">Durée</h2>
+                <h1 class="text-dark mb-4">DURÉE</h1>
                 <canvas id="duree"></canvas>
             </div>
-            <!-- <div id="div_ress" class="col-12 col-xl-6 mb-5">
-                <h2 class="text-dark mb-4">Nombre de PDN</h2>
-                <canvas id="nb_pdn"></canvas>
-            </div> -->
         </div>
     </div>
+    <div class="mx-auto mt-5" style="max-width:80%">
+        <!--                                                                            F I L E S -->
+        <div class="text-center fw_bold">
+            <h1 class="text-dark">COORDINATION PDN</h1>
+        </div>
+        <div class="row mb-5">
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Promeneurs">
+                    <button id="csv_Promeneurs" type="submit" class="btn btn-outline-primary">Promeneurs</button>
+                </form>
+            </div>
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Structures">
+                    <button id="csv_Structures" type="submit" class="btn btn-outline-primary">Structures</button>
+                </form>
+            </div>
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Ressources">
+                    <button id="csv_Ressources" type="submit" class="btn btn-outline-primary">Ressources</button>
+                </form>
+            </div>
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Actions">
+                    <button id="csv_Actions" type="submit" class="btn btn-outline-primary">Actions</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center fw_bold" style="margin-top:5em;">
+            <h1 class="text-dark">FORMULAIRES PDN</h1>
+        </div>
+        <div class="row mb-5">
+            <div class="col-6 col-lg-3 py-2 py-2 d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Formulaires">
+                    <button id="csv_Formulaires" type="submit" class="btn btn-outline-primary">Formulaires</button>
+                </form>
+            </div>
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Reseaux_Sociaux">
+                    <button id="csv_Reseaux_Sociaux" type="submit" class="btn btn-outline-primary">Réseaux Sociaux</button>
+                </form>
+            </div>
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Initiatives">
+                    <button id="csv_Initiatives" type="submit" class="btn btn-outline-primary">Initiatives</button>
+                </form>
+            </div>
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Initiatives_Prevues">
+                    <button id="csv_Initiatives_Prevues" type="submit" class="btn btn-outline-primary">Init. prévues</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!--                                                                            M O D A L-->
