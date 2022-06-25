@@ -1,0 +1,1621 @@
+{
+  "aspectWidth": 16,
+  "aspectHeight": 9,
+  "enableKeyboardZoom": true,
+  "enableKeyboardRotation": true,
+  "enableKeyboardNavigation": true,
+  "enableMouseTranslation": true,
+  "enableMouseZoom": true,
+  "enableMouseRotation": true,
+  "enableMouseNavigation": true,
+  "updateURLOnFrameChange": true,
+  "exportType": "pdf",
+  "exportToPDFPageSize": "A4",
+  "exportToPDFPageOrientation": "landscape",
+  "exportToPDFInclude": "",
+  "exportToPDFExclude": "",
+  "exportToPPTXSlideSize": "screen4x3",
+  "exportToPPTXInclude": "",
+  "exportToPPTXExclude": "",
+  "exportToVideoFormat": "webm",
+  "exportToVideoWidth": 1280,
+  "exportToVideoHeight": 720,
+  "exportToVideoFrameRate": 50,
+  "exportToVideoBitRate": 2000000,
+  "frames": [
+    {
+      "frameId": "frame4030",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": -307.1543094664381,
+          "cy": 138.9593489167045,
+          "width": 535.8466122439677,
+          "height": 301.635510203558,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999998,
+          "clipHeightFactor": 0.9999999999999999
+        },
+        "__sozi_auto__": {
+          "cx": -307.1543094664381,
+          "cy": 138.9593489167045,
+          "width": 535.8466122439677,
+          "height": 301.635510203558,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999998,
+          "clipHeightFactor": 0.9999999999999999
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -1.3253910094068715,
+          "deltaY": -0.6111619475533132,
+          "widthFactor": 1.054816165834582,
+          "heightFactor": 1.0565706578803822,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame5338",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 257.0815272672762,
+          "cy": 141.17725707996595,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 257.0815272672762,
+          "cy": 141.17725707996595,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 4.169356857119965,
+          "deltaY": 1.6067462157081422,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame9560",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 814.6636395112059,
+          "cy": 138.5157672840522,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 814.6636395112059,
+          "cy": 138.5157672840522,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 3.010380233862179,
+          "deltaY": -1.05474358020561,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame1189",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 1372.689333387788,
+          "cy": 138.07218565139996,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 1372.689333387788,
+          "cy": 138.07218565139996,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 2.2950462784131105,
+          "deltaY": -1.49832521285785,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame3310",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 1930.7150272643696,
+          "cy": 139.84651218200918,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 1930.7150272643696,
+          "cy": 139.84651218200918,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 2.74896281124461,
+          "deltaY": 0.2764285638451156,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame4211",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-6",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 2491.4022109368675,
+          "cy": 139.402930549357,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 2491.4022109368675,
+          "cy": 139.402930549357,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 3.5591933587425046,
+          "deltaY": -0.16715306880706748,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8555",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-8",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 3049.8714864460985,
+          "cy": 139.402930549357,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 3049.8714864460985,
+          "cy": 139.402930549357,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 3.2870137898485154,
+          "deltaY": -0.16715306880706748,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame2104",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 3608.340761955333,
+          "cy": 141.17725707996618,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 3608.340761955333,
+          "cy": 141.17725707996618,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 3.0150783615831642,
+          "deltaY": 1.6071734618021196,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame9907",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image707",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 3623.1725463384387,
+          "cy": 160.87130504139324,
+          "width": 440.8423340019583,
+          "height": 247.79134502262391,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999993,
+          "clipHeightFactor": 0.9999999999999997
+        },
+        "__sozi_auto__": {
+          "cx": 3623.1725463384387,
+          "cy": 160.87130504139324,
+          "width": 440.8423340019583,
+          "height": 247.79134502262391,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999993,
+          "clipHeightFactor": 0.9999999999999997
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 2.1166381353136785,
+          "deltaY": 1.1911292601432422,
+          "widthFactor": 1.2393607446445523,
+          "heightFactor": 0.9881241121094566,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8844",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 4170.802272158433,
+          "cy": 145.61307340648924,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 4170.802272158433,
+          "cy": 145.61307340648924,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 6.73537762718297,
+          "deltaY": 0.33792692211423514,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame1978",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 4730.158710932972,
+          "cy": 145.1694917738369,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 4730.158710932972,
+          "cy": 145.1694917738369,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 7.350605464222099,
+          "deltaY": -0.10565471053809006,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame2091",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 5285.522915013635,
+          "cy": 146.05665503914153,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 5285.522915013635,
+          "cy": 146.05665503914153,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 3.9735986073847016,
+          "deltaY": 0.7815085547665319,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame8508",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 5844.879353788167,
+          "cy": 143.83874687588013,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 5844.879353788167,
+          "cy": 143.83874687588013,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 4.588826444416554,
+          "deltaY": -1.4363996084948667,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame3412",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2-1",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6402.905047664746,
+          "cy": 143.39516524322795,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 6402.905047664746,
+          "cy": 143.39516524322795,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 3.8733093834962347,
+          "deltaY": -1.8799812411470498,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame3060",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2-1-0",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6960.043578276021,
+          "cy": 142.06442034527126,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        },
+        "__sozi_auto__": {
+          "cx": 6960.043578276021,
+          "cy": 142.06442034527126,
+          "width": 535.8466122439676,
+          "height": 301.19192857090565,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 1,
+          "clipHeightFactor": 1
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 2.270629057271435,
+          "deltaY": -3.210726139103741,
+          "widthFactor": 1.0548161658345818,
+          "heightFactor": 1.0550168775011461,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame4770",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image731",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6848.140980643568,
+          "cy": 118.2945354594336,
+          "width": 174.45628125505095,
+          "height": 98.2038669316512,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999987,
+          "clipHeightFactor": 0.998529411764705
+        },
+        "__sozi_auto__": {
+          "cx": 6848.140980643568,
+          "cy": 118.2945354594336,
+          "width": 174.45628125505095,
+          "height": 98.2038669316512,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999987,
+          "clipHeightFactor": 0.998529411764705
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 0.4744767373176728,
+          "deltaY": -6.491017519082021,
+          "widthFactor": 1.0302536604046775,
+          "heightFactor": 1.308144534429928,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame9566",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8713-0",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 7073.638026970917,
+          "cy": 124.93163948600944,
+          "width": 233.78810198954298,
+          "height": 131.40904077061234,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999978,
+          "clipHeightFactor": 0.9999999999999984
+        },
+        "__sozi_auto__": {
+          "cx": 7073.638026970917,
+          "cy": 124.93163948600944,
+          "width": 233.78810198954298,
+          "height": 131.40904077061234,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999978,
+          "clipHeightFactor": 0.9999999999999984
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -2.1920511540829466,
+          "deltaY": -3.39737052375618,
+          "widthFactor": 0.9440262780190677,
+          "heightFactor": 1.3294006461195442,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame9283",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8724-2",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 6881.0724959447625,
+          "cy": 233.50376300929904,
+          "width": 233.78810198954298,
+          "height": 131.40904077061234,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999978,
+          "clipHeightFactor": 0.9999999999999984
+        },
+        "__sozi_auto__": {
+          "cx": 6881.0724959447625,
+          "cy": 233.50376300929904,
+          "width": 233.78810198954298,
+          "height": 131.40904077061234,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999978,
+          "clipHeightFactor": 0.9999999999999984
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -5.330336086487478,
+          "deltaY": -1.816534231911902,
+          "widthFactor": 0.9384118771417892,
+          "heightFactor": 1.5329138887098666,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame1709",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image8735-9",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 7100.6077859601355,
+          "cy": 234.94974772015908,
+          "width": 174.45628125505115,
+          "height": 98.05944948028124,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999973,
+          "clipHeightFactor": 0.9999999999999983
+        },
+        "__sozi_auto__": {
+          "cx": 7100.6077859601355,
+          "cy": 234.94974772015908,
+          "width": 174.45628125505115,
+          "height": 98.05944948028124,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999973,
+          "clipHeightFactor": 0.9999999999999983
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": -4.476686696114484,
+          "deltaY": 0.5245310453543937,
+          "widthFactor": 1.9620576315052867,
+          "heightFactor": 1.1053434187927993,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame9574",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2-1-0-0",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 7518.294617283845,
+          "cy": 144.41180288491853,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        },
+        "__sozi_auto__": {
+          "cx": 7518.294617283845,
+          "cy": 144.41180288491853,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 1.7804571275946728,
+          "deltaY": -0.8633435994564707,
+          "widthFactor": 1.054816165834589,
+          "heightFactor": 1.0550168775011532,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame1838",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2-1-0-0-8",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 8076.763892793079,
+          "cy": 144.41180288491853,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        },
+        "__sozi_auto__": {
+          "cx": 8076.763892793079,
+          "cy": 144.41180288491853,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 1.5085216993293216,
+          "deltaY": -0.8633435994564707,
+          "widthFactor": 1.054816165834589,
+          "heightFactor": 1.0550168775011532,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame2515",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2-1-0-0-0",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 8638.781821363542,
+          "cy": 143.524639619614,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        },
+        "__sozi_auto__": {
+          "cx": 8638.781821363542,
+          "cy": 143.524639619614,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 4.785727613541894,
+          "deltaY": -1.7505068647610074,
+          "widthFactor": 1.054816165834589,
+          "heightFactor": 1.0550168775011532,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame4293",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2-1-0-0-0-9",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 9196.80751524013,
+          "cy": 146.62971104818007,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        },
+        "__sozi_auto__": {
+          "cx": 9196.80751524013,
+          "cy": 146.62971104818007,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 6.4383746151306696,
+          "deltaY": 1.35456456380507,
+          "widthFactor": 1.054816165834589,
+          "heightFactor": 1.0550168775011532,
+          "deltaAngle": 0
+        }
+      }
+    },
+    {
+      "frameId": "frame4077",
+      "title": "Présentation du réseau \"Promeneurs du Net 93\"",
+      "titleLevel": 0,
+      "notes": "",
+      "timeoutMs": 0,
+      "timeoutEnable": false,
+      "transitionDurationMs": 1000,
+      "showInFrameList": true,
+      "showFrameNumber": true,
+      "layerProperties": {
+        "layer1": {
+          "link": false,
+          "referenceElementId": "image1279-3-3-9-9-9-7-3-2-6-1-2-1-0-0-0-9-1",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        },
+        "__sozi_auto__": {
+          "link": false,
+          "referenceElementId": "",
+          "outlineElementId": "",
+          "transitionTimingFunction": "linear",
+          "transitionRelativeZoom": 0,
+          "transitionPathId": ""
+        }
+      },
+      "cameraStates": {
+        "layer1": {
+          "cx": 9754.389627484064,
+          "cy": 146.18612941552774,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        },
+        "__sozi_auto__": {
+          "cx": 9754.389627484064,
+          "cy": 146.18612941552774,
+          "width": 535.8466122439712,
+          "height": 301.1919285709077,
+          "opacity": 1,
+          "angle": 0,
+          "clipped": true,
+          "clipXOffset": 0,
+          "clipYOffset": 0,
+          "clipWidthFactor": 0.9999999999999933,
+          "clipHeightFactor": 0.9999999999999959
+        }
+      },
+      "cameraOffsets": {
+        "layer1": {
+          "deltaX": 5.2792759215644764,
+          "deltaY": 0.9109829311527449,
+          "widthFactor": 1.054816165834589,
+          "heightFactor": 1.0550168775011532,
+          "deltaAngle": 0
+        }
+      }
+    }
+  ],
+  "elementsToHide": [],
+  "customFiles": [],
+  "selectedFrames": [
+    "frame4030"
+  ],
+  "selectedLayers": [
+    "layer1",
+    "__sozi_auto__"
+  ],
+  "editableLayers": []
+}
