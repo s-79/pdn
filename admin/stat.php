@@ -72,14 +72,14 @@ include("header.php"); ?>
                 <form action="php/export.php" method="post">
                     <!--                                                            Récupération de la valeur dans un input invisible -->
                     <input type="text" class="form-control d-none" name="view" value="Initiatives">
-                    <button id="csv_Initiatives" type="submit" class="btn btn-outline-primary">Initiatives</button>
+                    <button id="csv_Initiatives" type="submit" class="btn btn-outline-primary">Initiatives effectuées</button>
                 </form>
             </div>
             <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
                 <form action="php/export.php" method="post">
                     <!--                                                            Récupération de la valeur dans un input invisible -->
                     <input type="text" class="form-control d-none" name="view" value="Initiatives_Prevues">
-                    <button id="csv_Initiatives_Prevues" type="submit" class="btn btn-outline-primary">Init. prévues</button>
+                    <button id="csv_Initiatives_Prevues" type="submit" class="btn btn-outline-primary">Initiatives prévues</button>
                 </form>
             </div>
         </div>
