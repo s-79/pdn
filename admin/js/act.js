@@ -72,7 +72,7 @@ $(function(){
             if(vLen("Prénom",prenom,100) && vLen("Nom",nom,100)) {
 
                 //-------------------------------------------------------------- Envoie des infos vers la BDD
-                coordo_Create(nom, prenom, actif);
+                coordo_Create(prenom, nom, actif);
             }
         }
     })

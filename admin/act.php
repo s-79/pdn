@@ -6,7 +6,7 @@ include("header.php"); ?>
         <div class="row search_bar">
             <!--                                                                Zone de recherche -->
             <div class="col-12 col-sm-4 py-4 pr-1 pl-3 text-center">
-                <input type="text" class="form-control" id="act_search" placeholder="Saisir la date, le type ou le lieu">
+                <input type="text" class="form-control" id="act_search" placeholder="Saisir la date, le type ou l'intitulé'">
                 <label for="act_search" class="d-none">Saisir la date, le type ou l'intitulé'</label>
             </div>
             <!--                                                                Résultat de recherche -->
@@ -46,13 +46,13 @@ include("header.php"); ?>
                                 <option value="Accueil nouveau PDN">Accueil nouveau PDN</option>
                                 <option value="Accompagnement PDN">Accompagnement PDN</option>
                                 <option value="Accompagnement structure">Accompagnement structure</option>
+                                <option value="Information AAP">Information AAP</option>
                                 <option value="Partenariat">Partenariat</option>
                                 <option value="Organisation réunion ou formation PDN">Organisation réunion ou formation PDN</option>
                                 <option value="Réunion de réseau ou journée de formation PDN">Réunion de réseau ou journée de formation PDN</option>
                                 <option value="Préparation ou compte-rendu COPIL / COTECH">Préparation ou compte-rendu COPIL / COTECH</option>
                                 <option value="COPIL / COTECH / Réunion technique">COPIL / COTECH / Réunion technique</option>
                                 <option value="Formation Coordo">Formation Coordo</option>
-                                <option value="Information AAP">Information AAP</option>
                                 <option value="Bilan">Bilan</option>
                             </select>
                             <label for="type">Type *</label>
@@ -128,6 +128,7 @@ include("header.php"); ?>
                         <div class="form-floating mx-3 mt-4">
                             <select class="form-select type_m" id="duree" aria-label="Durée *">
                                 <option selected value="">Séléctionner une durée *</option>
+                                <option value="Moins d'une heure">Moins d'une demie-heure</option>
                                 <option value="Moins d'une heure">Moins d'une heure</option>
                                 <option value="De 1h à 2h">De 1h à 2h</option>
                                 <option value="1/2 journée">1/2 journée</option>

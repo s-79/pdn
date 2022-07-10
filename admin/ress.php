@@ -96,8 +96,8 @@
                                 <label for="description">Description (700 car.max.)</label>
                             </div>
                             <div class="m-3">
-                                <label class="form-check-label text-white pe-2" for="valide">Valider le ressource</label>
-                                <input class="form-check-input" type="checkbox" value="" id="valide">
+                                <label class="form-check-label text-white pe-2" for="valide">Valider la ressource</label>
+                                <input class="form-check-input" type="checkbox" value="" id="valide" checked>
                             </div>
                             <div id="btn_ress_create" class="form-group d-flex justify-content-center mx-3">
                                 <button type="button" id="ress_create" class="btn btn-warning mx-3 mb-3 px-3 pb-2" data-bs-toggle="modal" data-bs-target="#modalRessAdmin">Enregistrer<br>la ressource</button>

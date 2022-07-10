@@ -207,7 +207,7 @@ const ajaxListStr = (liste, checked) => {
 /* ---------------------------------------------------------------------------- Remplissage de la liste des Coordo */
 const ajaxListCoordo = (liste) => {
     $.ajax({
-        url: "php/populate.php",
+        url: "php/act_Get.php",
         dataType: 'JSON',
         data : {v_coordo:"v_coordo"},
         success: function(response){
@@ -217,15 +217,18 @@ const ajaxListCoordo = (liste) => {
             for (let i = 0; i < len; i++) {
                 const id = response[i].id;
                 const nom = response[i].nom;
-                res += `<div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="coordo${id}">
-                <label class="form-check-label text-white" for="coordo${id}">${nom}</label></div>`;
-                const coordoId = `#coordo${id}`;
-                $(coordoId).prop('checked', false);
-                // -------------------------------------------------------------  Remplissage du tableau, conversion en string Json et stockage dans la variable de session
-                arrayIdCoordo.push(coordoId);
-                const jsonIdCoordo = JSON.stringify(arrayIdCoordo);
-                sessionStorage.setItem('jsonIdCoordo', jsonIdCoordo);
+                const actif = response[i].actif;
+                if (parseInt(actif) === 1) {
+                    res += `<div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="coordo${id}">
+                    <label class="form-check-label text-white" for="coordo${id}">${nom}</label></div>`;
+                    const coordoId = `#coordo${id}`;
+                    $(coordoId).prop('checked', false);
+                    // -------------------------------------------------------------  Remplissage du tableau, conversion en string Json et stockage dans la variable de session
+                    arrayIdCoordo.push(coordoId);
+                    const jsonIdCoordo = JSON.stringify(arrayIdCoordo);
+                    sessionStorage.setItem('jsonIdCoordo', jsonIdCoordo);
+                }
             }
             $(liste).html(res);
         }

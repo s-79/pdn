@@ -126,7 +126,7 @@
             <div class="modal-body">
                 <form id="form_coordo_create">
                     <div class="form-floating mx-3 mt-3">
-                        <input type="text" class="form-control" id="create_prenom_coordo" placeholder="Nom *">
+                        <input type="text" class="form-control" id="create_prenom_coordo" placeholder="Prénom *">
                         <label for="create_prenom_coordo">Prénom *</label>
                     </div>
                     <div class="form-floating mx-3 mt-3">

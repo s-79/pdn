@@ -19,6 +19,7 @@ $id_act_table_str = mysqli_real_escape_string($conn, $_GET['id_act_table_str']);
 
 $v_pdn_actifs = mysqli_real_escape_string($conn, $_GET['v_pdn_actifs']);
 $v_str_actives = mysqli_real_escape_string($conn, $_GET['v_str_actives']);
+$v_coordo = mysqli_real_escape_string($conn, $_GET['v_coordo']);
 
 if($id) {
     $query = "SELECT * FROM `v_act` WHERE `id` = '$id';";
@@ -256,6 +257,24 @@ if($id) {
             "nom" => $nom,
             "nb_pdn_act" => $nb_pdn_act,
             "statut" => $statut
+        );
+    }
+}
+
+elseif($v_coordo) {
+    $query = "SELECT `id`, `nom`, `actif` FROM `v_coordo` ORDER BY `id` DESC;";
+
+    $result = mysqli_query($conn,$query);
+
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $nom = $row['nom'];
+        $actif = $row['actif'];
+
+        $return_arr[] = array(
+            "id" => $id,
+            "nom" => $nom,
+            "actif" => $actif
         );
     }
 }
