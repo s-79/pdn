@@ -75,13 +75,15 @@ if($view == "Structures") {
 
 // ----------------------------------------------------------------------------- RESS
 if($view == "Ressources") {
-    $query = "SELECT * FROM `v_ress`";
+    $query = "SELECT * FROM `v_ress_csv`";
     $result = mysqli_query($conn,$query);
 
-    $en_tete = "NOM,LIEN,IMAGE,AGE,EDITEUR,DESCRIPTION,VALIDE\r";
+    $en_tete = "CATEGORIE,THEMATIQUE,RESSOURCE,LIEN,IMAGE,AGE,EDITEUR,DESCRIPTION,VALIDE\r";
 
     while($row = mysqli_fetch_array($result)){
-        $nom = $row['nom'];
+        $cat = $row['cat'];
+        $them = $row['them'];
+        $ress = $row['ress'];
         $lien = $row['lien'];
         $image = $row['image'];
         $age = $row['age'];
@@ -90,7 +92,9 @@ if($view == "Ressources") {
         $valide = $row['valide'];
 
         $return_arr[] = array(
-            "nom" => $nom,
+            "cat" => $cat,
+            "them" => $them,
+            "ress" => $ress,
             "lien" => $lien,
             "image" => $image,
             "age" => $age,
