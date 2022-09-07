@@ -83,6 +83,27 @@ include("header.php"); ?>
                 </form>
             </div>
         </div>
+        <div class="text-center fw_bold" style="margin-top:5em;">
+            <h1 class="text-dark">MAILING LIST THUNDERBIRD</h1>
+        </div>
+        <div class="row mb-5">
+            <div class="col-6 col-lg-3 py-2 py-2 d-flex justify-content-around">
+            </div>
+            <div class="col-6 col-lg-3 py-2 py-2 d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Mailing_PDN">
+                    <button id="csv_MailingPdn" type="submit" class="btn btn-outline-primary">Mailing PDN</button>
+                </form>
+            </div>
+            <div class="col-6 col-lg-3 py-2  d-flex justify-content-around">
+                <form action="php/export.php" method="post">
+                    <!--                                                            Récupération de la valeur dans un input invisible -->
+                    <input type="text" class="form-control d-none" name="view" value="Mailing_STR">
+                    <button id="csv_MailingResp" type="submit" class="btn btn-outline-primary">Mailing STR</button>
+                </form>
+            </div>
+        </div>
     </div>
 
 </div>

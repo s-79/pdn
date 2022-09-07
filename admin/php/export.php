@@ -327,6 +327,124 @@ if($view == "Initiatives_Prevues") {
     }
 }
 
+// ----------------------------------------------------------------------------- MAILING PDN
+if($view == "Mailing_PDN") {
+    $query = "SELECT * FROM `v_mailing_pdn`";
+    $result = mysqli_query($conn,$query);
+
+    $en_tete = "Prénom,Nom de famille,Nom à afficher,Surnom,Adresse électronique principale,Adresse électronique secondaire,Nom de l’écran,Tél. professionnel,Tél. personnel,Fax,Pager,Portable,Adresse privée,Adresse privée 2,Ville,Pays/État,Code postal,Pays/Région (domicile),Adresse professionnelle,Adresse professionnelle 2,Ville,Pays/État,Code postal,Pays/Région (bureau),Profession,Service,Société,Site web 1,Site web 2,Année de naissance,Mois,Jour,Divers 1,Divers 2,Divers 3,Divers 4,Notes\r";
+
+    while($row = mysqli_fetch_array($result)){
+        $vide = "";
+        $prenom = $row['prenom'];
+        $nom = $row['nom'];
+        $mail = $row['mail'];
+        $portable = $row['portablePro'];
+        $ville = $row['nom_ville'];
+        $fonction = $row['fonction'];
+        $str = $row['nom_str'];
+
+        $return_arr[] = array(
+            "Prénom" => $prenom,
+            "Nom de famille" => $nom,
+            "Nom à afficher" => $prenom." ".$nom,
+            "Surnom" => $vide,
+            "Adresse électronique principale" => $mail,
+            "Adresse électronique secondaire" => $vide,
+            "Nom de l’écran" => $vide,
+            "Tél. professionnel" => $portable,
+            "Tél. personnel" => $vide,
+            "Fax" => $vide,
+            "Pager" => $vide,
+            "Portable" => $vide,
+            "Adresse privée" => $vide,
+            "Adresse privée 2" => $vide,
+            "Ville" => $ville,
+            "Pays/État" => $vide,
+            "Code postal" => $vide,
+            "Pays/Région (domicile)" => $vide,
+            "Adresse professionnelle" => $vide,
+            "Adresse professionnelle 2" => $vide,
+            "Ville" => $vide,
+            "Pays/État" => $vide,
+            "Code postal" => $vide,
+            "Pays/Région (bureau)" => $vide,
+            "Profession" => $fonction,
+            "Service" => $vide,
+            "Société" => $str,
+            "Site web 1" => $vide,
+            "Site web 2" => $vide,
+            "Année de naissance" => $vide,
+            "Mois" => $vide,
+            "Jour" => $vide,
+            "Divers 1" => $vide,
+            "Divers 2" => $vide,
+            "Divers 3" => $vide,
+            "Divers 4" => $vide,
+            "Notes" => $vide
+        );
+    }
+}
+
+// ----------------------------------------------------------------------------- MAILING STR
+if($view == "Mailing_STR") {
+    $query = "SELECT * FROM `v_mailing_str`";
+    $result = mysqli_query($conn,$query);
+
+    $en_tete = "Prénom,Nom de famille,Nom à afficher,Surnom,Adresse électronique principale,Adresse électronique secondaire,Nom de l’écran,Tél. professionnel,Tél. personnel,Fax,Pager,Portable,Adresse privée,Adresse privée 2,Ville,Pays/État,Code postal,Pays/Région (domicile),Adresse professionnelle,Adresse professionnelle 2,Ville,Pays/État,Code postal,Pays/Région (bureau),Profession,Service,Société,Site web 1,Site web 2,Année de naissance,Mois,Jour,Divers 1,Divers 2,Divers 3,Divers 4,Notes\r";
+
+    while($row = mysqli_fetch_array($result)){
+        $vide = "";
+        $prenom = $row['resp_prenom'];
+        $nom = $row['resp_nom'];
+        $mail = $row['mail'];
+        $portable = $row['resp_tel'];
+        $ville = $row['nom_ville'];
+        $fonction = "Responsable";
+        $str = $row['structure'];
+
+        $return_arr[] = array(
+            "Prénom" => $prenom,
+            "Nom de famille" => $nom,
+            "Nom à afficher" => $prenom." ".$nom,
+            "Surnom" => $vide,
+            "Adresse électronique principale" => $mail,
+            "Adresse électronique secondaire" => $vide,
+            "Nom de l’écran" => $vide,
+            "Tél. professionnel" => $portable,
+            "Tél. personnel" => $vide,
+            "Fax" => $vide,
+            "Pager" => $vide,
+            "Portable" => $vide,
+            "Adresse privée" => $vide,
+            "Adresse privée 2" => $vide,
+            "Ville" => $ville,
+            "Pays/État" => $vide,
+            "Code postal" => $vide,
+            "Pays/Région (domicile)" => $vide,
+            "Adresse professionnelle" => $vide,
+            "Adresse professionnelle 2" => $vide,
+            "Ville" => $vide,
+            "Pays/État" => $vide,
+            "Code postal" => $vide,
+            "Pays/Région (bureau)" => $vide,
+            "Profession" => $fonction,
+            "Service" => $vide,
+            "Société" => $str,
+            "Site web 1" => $vide,
+            "Site web 2" => $vide,
+            "Année de naissance" => $vide,
+            "Mois" => $vide,
+            "Jour" => $vide,
+            "Divers 1" => $vide,
+            "Divers 2" => $vide,
+            "Divers 3" => $vide,
+            "Divers 4" => $vide,
+            "Notes" => $vide
+        );
+    }
+}
+
 // ---------------------------------------------------------------------------- Create Csv
 $filename = $view.".csv";
 
